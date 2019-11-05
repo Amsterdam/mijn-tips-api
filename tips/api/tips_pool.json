@@ -101,7 +101,7 @@
     "conditional": "datetime.now() < datetime(2020, 1, 1) and value_of(data, 'erfpacht') == True",
     "link": {
       "title": "Bekijk uw aanbieding",
-      "to": "/"
+      "to": "https://www.amsterdam.nl/veelgevraagd/?productid=%7BD7C52681-9C97-4058-A6CE-EE00183300FA%7D",
     },
     "imgUrl": "api/tips/static/tip_images/erfpacht.jpg"
   },
