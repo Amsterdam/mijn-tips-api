@@ -287,3 +287,20 @@ class ConditionalTest(TestCase):
         self.assertEqual(len(tips), 1)
         self.assertEqual(tips[0]['id'], tip1_mock['id'])
         self.assertEqual(tips[0]['isPersonalized'], True)
+
+    def test_is_personalized(self):
+        tip1_mock = get_tip()
+        tip1_mock['conditional'] = "True"
+        tip1_mock['isPersonalized'] = True
+
+        tip2_mock = get_tip()
+        tip2_mock['conditional'] = "True"
+        # do not add isPersonalized to tip 2. It should default to False
+        tips_pool = [tip1_mock, tip2_mock]
+
+        result = tips_generator(self.get_client_data(), tips_pool)
+        tips = result['items']
+
+        self.assertEqual(len(tips), 2)
+        self.assertEqual(tips[0]['isPersonalized'], True)
+        self.assertEqual(tips[1]['isPersonalized'], False)

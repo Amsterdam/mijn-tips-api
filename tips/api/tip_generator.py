@@ -157,7 +157,10 @@ def tip_filterer(tip, userdata):
 
 
 def clean_tip(tip):
-    """ Only select the relevant frontend fields. """
+    """ Only select the relevant frontend fields and default isPersonalized to False. """
+    if not tip.get('isPersonalized', False):
+        tip['isPersonalized'] = False
+    # Only add fields which are allowed to go to the frontend
     return {k: v for (k, v) in tip.items() if k in FRONT_END_TIP_KEYS}
 
 
