@@ -7,25 +7,10 @@ import dateutil.parser
 import pytz
 
 from tips.config import PROJECT_PATH
-"""
-
-    {
-        "priority": 0,
-        "datePublished": "2019-07-24",
-        "title": "",
-        "subtitle": "",
-        "description": "",
-        "link": {
-            "title": "",
-            "to": ""
-        }
-    },
-
-"""
 
 TIPS_POOL_FILE = os.path.join(PROJECT_PATH, 'api', 'tips_pool.json')
 
-FRONT_END_TIP_KEYS = ['datePublished', 'description', 'id', 'link', 'title', 'priority', 'imgUrl']
+FRONT_END_TIP_KEYS = ['datePublished', 'description', 'id', 'link', 'title', 'priority', 'imgUrl', 'isPersonalized']
 
 
 tips_pool = []

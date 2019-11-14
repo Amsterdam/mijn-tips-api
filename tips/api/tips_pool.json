@@ -99,6 +99,7 @@
     "title": "Koop uw erfpacht af",
     "description": "Tot eind 2019 krijgt u korting als u uw erfpacht afkoopt",
     "conditional": "datetime.now() < datetime(2020, 1, 1) and value_of(data, 'erfpacht') == True",
+    "isPersonalized": true,
     "link": {
       "title": "Bekijk uw aanbieding",
       "to": "https://www.amsterdam.nl/veelgevraagd/?productid=%7BD7C52681-9C97-4058-A6CE-EE00183300FA%7D"
@@ -127,6 +128,7 @@
     "title": "Bekijk de afvalpunten in de buurt ",
     "description": "Kijk waar het dichtstbijzijnde Afvalpunt is. En welke vergunningen de gemeente heeft uitgegeven in uw buurt",
     "conditional": "after(value_of(data, 'brp.adres.begindatumVerblijf'), months=3)",
+    "isPersonalized": true,
     "link": {
       "title": "Kijk op de kaart",
       "to": "/buurt"
@@ -141,6 +143,7 @@
     "title": "Wat kan ik doen met mijn Stadspas?",
     "description": "U hebt een Stadspas met een groene stip",
     "conditional": "object_where(value_of(data, 'focus'), {'soortProduct': 'Minimafonds'})",
+    "isPersonalized": true,
     "link": {
       "title": "Bekijk de aanbiedingen",
       "to": "https://www.amsterdam.nl/toerisme-vrije-tijd/stadspas/"

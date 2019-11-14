@@ -148,7 +148,7 @@ class TipsGeneratorTest(TestCase):
         tips = result['items']
 
         # only these fields are allowed
-        allow_list = ['datePublished', 'description', 'id', 'link', 'title', 'priority', 'imgUrl'].sort()
+        allow_list = ['datePublished', 'description', 'id', 'link', 'title', 'priority', 'imgUrl', 'isPersonalized'].sort()
 
         for tip in tips:
             fields = list(tip.keys()).sort()
@@ -277,6 +277,7 @@ class ConditionalTest(TestCase):
     def test_data_based_tip_with_list(self):
         tip1_mock = get_tip()
         tip1_mock['conditional'] = "value_of(object_where(value_of(data, 'focus'), {'_id': '0-0'}), 'processtappen.aanvraag._id') == 0 "
+        tip1_mock['isPersonalized'] = True
         tips_pool = [tip1_mock]
 
         client_data = self.get_client_data(optin=True)
@@ -285,3 +286,4 @@ class ConditionalTest(TestCase):
 
         self.assertEqual(len(tips), 1)
         self.assertEqual(tips[0]['id'], tip1_mock['id'])
+        self.assertEqual(tips[0]['isPersonalized'], True)
