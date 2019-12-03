@@ -141,7 +141,7 @@
     "priority": 70,
     "datePublished": "2019-10-22",
     "title": "Wat kan ik doen met mijn Stadspas?",
-    "description": "U hebt een Stadspas met een groene stip",
+    "description": "U hebt een Stadspas",
     "conditional": "object_where(value_of(data, 'focus'), {'soortProduct': 'Minimafonds'})",
     "isPersonalized": true,
     "link": {
