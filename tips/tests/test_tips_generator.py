@@ -148,10 +148,10 @@ class TipsGeneratorTest(TestCase):
         tips = result['items']
 
         # only these fields are allowed
-        allow_list = ['datePublished', 'description', 'id', 'link', 'title', 'priority', 'imgUrl', 'isPersonalized'].sort()
+        allow_list = sorted(['datePublished', 'description', 'id', 'link', 'title', 'priority', 'imgUrl', 'isPersonalized'])
 
         for tip in tips:
-            fields = list(tip.keys()).sort()
+            fields = sorted(list(tip.keys()))
             self.assertEqual(allow_list, fields)
 
     def test_generator(self):
