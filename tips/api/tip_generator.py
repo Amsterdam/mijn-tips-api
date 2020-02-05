@@ -164,10 +164,66 @@ def clean_tip(tip):
     return {k: v for (k, v) in tip.items() if k in FRONT_END_TIP_KEYS}
 
 
+def fix_id(tip, source):
+    """ Some of our datasources do not follow our id guidelines, fix them here. """
+    print("fixing_tip", tip['id'])
+    if source == "belasting":
+        tip['id'] = "belasting-" + str(tip['id'])
+    print("fixed_tip", tip['id'])
+
+
+def format_tip(tip):
+    if "link" in tip:
+        link_data = tip["link"]
+        link = {
+            "title": link_data.get("title", None),
+            "to": link_data.get("to", None)
+        }
+    else:
+        link = {"title": None, "to": None}
+
+    return {
+        "id": tip.get('id', None),
+        "active": True,
+        "priority": tip.get('priority', None),
+        "datePublished": tip.get('datePublished', None),
+        "title": tip.get('title', None),
+        "description": tip.get('description', None),
+        "link": link,
+        "imgUrl": tip.get("imgUrl")
+    }
+
+
+def get_tips_from_user_data(user_data):
+    source_tips = []
+    for source, value in user_data['data'].items():
+        if type(value) == dict and 'tips' in value:
+            for tip in value['tips']:
+                fix_id(tip, source)
+            source_tips = source_tips + value['tips']
+
+    # make sure they follow the format
+    source_tips = [format_tip(tip) for tip in source_tips]
+
+    # remove any conditionals because of security
+    for tip in source_tips:
+        if 'conditional' in tip:
+            del tip['conditional']
+
+    return source_tips
+
+
 def tips_generator(user_data, tips=None):
     """ Generate tips. """
+    print("\n\n-----")
     if tips is None:
         tips = tips_pool
+
+    # add source tips
+    source_tips = get_tips_from_user_data(user_data)
+    if source_tips:
+        tips = tips + source_tips
+
     tips = [tip for tip in tips if tip_filterer(tip, user_data)]
     tips = [clean_tip(tip) for tip in tips]
 

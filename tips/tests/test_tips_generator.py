@@ -14,7 +14,7 @@ def get_tip(priority=50):
     counter = _counter
     _counter += 1
     return {
-        'id': counter,
+        'id': 'test-' + str(counter),
         'active': True,
         'priority': priority,
         'datePublished': '2019-07-24',
@@ -168,7 +168,7 @@ class TipsGeneratorTest(TestCase):
         result = tips_generator(self.get_client_data(), tips_pool)
         tips = result['items']
 
-        self.assertEqual(len(tips), 4)
+        self.assertEqual(len(tips), 5)
 
         # check order
         self.assertEqual(tips[3]['id'], tip0['id'])
@@ -192,11 +192,12 @@ class ConditionalTest(TestCase):
 
         result = tips_generator(self.get_client_data(), tips_pool)
         tips = result['items']
-        self.assertEqual(len(tips), 1)
+        print(tips)
+        self.assertEqual(len(tips), 2)
 
         # Test if the correct ones are accepted
         ids = [tip['id'] for tip in tips]
-        self.assertEqual(ids, [tip2_mock['id']])
+        self.assertEqual(ids, [tip2_mock['id'], 'belasting-5'])
 
     def test_conditional(self):
         """ Test one passing conditional, one failing and one without (the default) """
@@ -209,11 +210,11 @@ class ConditionalTest(TestCase):
         tips_pool = [tip1_mock, tip2_mock, tip3_mock]
         result = tips_generator(self.get_client_data(), tips_pool)
         tips = result['items']
-        self.assertEqual(len(tips), 2)
+        self.assertEqual(len(tips), 3)
 
         # Test if the correct ones are accepted
         ids = [tip['id'] for tip in tips]
-        self.assertEqual(ids, [tip2_mock['id'], tip3_mock['id']])
+        self.assertEqual(ids, [tip2_mock['id'], tip3_mock['id'], 'belasting-5'])
 
     def test_conditional_exception(self):
         """ Test that invalid conditional is (silently) ignored. Probably not the best idea... """
@@ -226,7 +227,7 @@ class ConditionalTest(TestCase):
         tips = result['items']
 
         # make sure the other is in there
-        self.assertEqual(len(tips), 1)
+        self.assertEqual(len(tips), 2)
         self.assertEqual(tips[0]['id'], tip2_mock['id'])
 
     def test_conditional_invalid(self):
@@ -254,7 +255,7 @@ class ConditionalTest(TestCase):
         tips = result['items']
 
         # make sure the other is in there
-        self.assertEqual(len(tips), 2)
+        self.assertEqual(len(tips), 3)
 
     def test_data_based_tip_path(self):
         tip1_mock = get_tip()
@@ -270,7 +271,7 @@ class ConditionalTest(TestCase):
         tips = result['items']
 
         # make sure the other is in there
-        self.assertEqual(len(tips), 2)
+        self.assertEqual(len(tips), 3)
         self.assertEqual(tips[0]['id'], tip1_mock['id'])
         self.assertEqual(tips[1]['id'], tip2_mock['id'])
 
@@ -284,7 +285,7 @@ class ConditionalTest(TestCase):
         result = tips_generator(client_data, tips_pool)
         tips = result['items']
 
-        self.assertEqual(len(tips), 1)
+        self.assertEqual(len(tips), 2)
         self.assertEqual(tips[0]['id'], tip1_mock['id'])
         self.assertEqual(tips[0]['isPersonalized'], True)
 
@@ -301,6 +302,6 @@ class ConditionalTest(TestCase):
         result = tips_generator(self.get_client_data(), tips_pool)
         tips = result['items']
 
-        self.assertEqual(len(tips), 2)
+        self.assertEqual(len(tips), 3)
         self.assertEqual(tips[0]['isPersonalized'], True)
         self.assertEqual(tips[1]['isPersonalized'], False)

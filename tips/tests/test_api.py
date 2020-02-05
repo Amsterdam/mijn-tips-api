@@ -14,21 +14,21 @@ class ApiTests(TestCase):
         app.config['TESTING'] = True
         return app
 
-    def get_client_data(self):
+    def _get_client_data(self):
         return get_fixture(optin=True)
 
-    def test_status(self):
+    def test_health(self):
         response = self.client.get('/status/health')
         self.assert200(response)
         self.assertEqual(response.data, b"OK")
 
     def test_tips(self):
-        response = self.client.post('/tips/gettips', json=self.get_client_data())
+        response = self.client.post('/tips/gettips', json=self._get_client_data())
 
         data = response.get_json()
         tips = data['items']
 
-        self.assertEqual(len(tips), 6)
+        self.assertEqual(7, len(tips))
 
     def test_images(self):
         for tip in tips_pool:

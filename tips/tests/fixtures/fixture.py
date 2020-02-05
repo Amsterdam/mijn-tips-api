@@ -8,6 +8,7 @@ _FIXTURE_PATH = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'data')
 BRP = os.path.join(_FIXTURE_PATH, "brp.json")
 FOCUS = os.path.join(_FIXTURE_PATH, "focus.json")
 WMO = os.path.join(_FIXTURE_PATH, "wmo.json")
+BELASTING = os.path.join(_FIXTURE_PATH, "belasting.json")
 
 
 def get_fixture(optin=False):
@@ -20,6 +21,9 @@ def get_fixture(optin=False):
     with open(WMO) as wmo_file:
         wmo = json.load(wmo_file)
 
+    with open(BELASTING) as belasting_file:
+        belasting = json.load(belasting_file)
+
     return {
         "optin": optin,
         "data": {
@@ -27,5 +31,6 @@ def get_fixture(optin=False):
             "focus": focus,
             "wmo": wmo,
             "erfpacht": True,
+            "belasting": belasting,
         }
     }
