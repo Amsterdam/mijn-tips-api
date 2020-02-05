@@ -137,17 +137,10 @@ def tip_filterer(tip, userdata):
         eval_locals = {}
         if userdata['optin']:
             eval_locals['data'] = userdata['data']
-        # print("\n------\noptin", userdata['optin'])
-        # print("trying ", conditional)
-
-        # breakpoint()
 
         if eval(conditional, EVAL_GLOBALS, eval_locals):
-            # print("True")
-            # breakpoint()
             return tip
         else:
-            # print("false")
             return False
     except TypeError:  # Input must be a string. If its anything else, the tip conditional is malformed
         raise
@@ -165,7 +158,7 @@ def clean_tip(tip):
 
 
 def fix_id(tip, source):
-    """ Some of our datasources do not follow our id guidelines, fix them here. """
+    """ Some of our data sources do not follow our id guidelines, fix the tip here inplace. """
     print("fixing_tip", tip['id'])
     if source == "belasting":
         tip['id'] = "belasting-" + str(tip['id'])

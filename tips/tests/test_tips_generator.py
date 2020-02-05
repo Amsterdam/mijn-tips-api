@@ -3,7 +3,8 @@ from unittest import TestCase
 
 from dateutil.relativedelta import relativedelta
 
-from tips.api.tip_generator import tips_generator, to_datetime, value_of, before_or_on, is_18, object_where
+from tips.api.tip_generator import tips_generator, to_datetime, value_of, before_or_on, is_18, object_where, fix_id, \
+    format_tip
 from tips.tests.fixtures.fixture import get_fixture
 
 _counter = 0
@@ -305,3 +306,57 @@ class ConditionalTest(TestCase):
         self.assertEqual(len(tips), 3)
         self.assertEqual(tips[0]['isPersonalized'], True)
         self.assertEqual(tips[1]['isPersonalized'], False)
+
+
+class SourceTipsTests(TestCase):
+    def setUp(self) -> None:
+        pass
+
+    def test_get_tips_from_user_data(self):
+        pass
+
+    def test_format_tip(self):
+        # test all the fill cases
+        result = format_tip({})
+        expected = {
+            'id': None,
+            'active': True,
+            'priority': None,
+            'datePublished': None,
+            'title': None,
+            'description': None,
+            'link': {
+                'title': None,
+                'to': None
+            },
+            'imgUrl': None
+        }
+        self.assertEqual(expected, result)
+
+        # test with extra data
+        tip = {
+            'id': 1,
+            'foo': 'bar'
+        }
+        result = format_tip(tip)
+        self.assertEqual(tip['id'], 1)
+        self.assertNotIn('foo', result)
+
+    def test_delete_conditional(self):
+        pass
+
+
+    def test_fix_id(self):
+        belasting_tip = {
+            'id': 1,
+            'title': 'foo',
+        }
+        fix_id(belasting_tip, 'belasting')
+        self.assertEqual(belasting_tip['id'], 'belasting-1')
+
+        other_tip = {
+            'id': '1',
+            'title': 'bar',
+        }
+        fix_id(other_tip, 'something else')
+        self.assertEqual(other_tip['id'], '1')
