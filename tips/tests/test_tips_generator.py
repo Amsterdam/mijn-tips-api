@@ -1,10 +1,11 @@
 import datetime
+from pprint import pprint
 from unittest import TestCase
 
 from dateutil.relativedelta import relativedelta
 
 from tips.api.tip_generator import tips_generator, to_datetime, value_of, before_or_on, is_18, object_where, fix_id, \
-    format_tip
+    format_tip, get_tips_from_user_data
 from tips.tests.fixtures.fixture import get_fixture
 
 _counter = 0
@@ -313,7 +314,38 @@ class SourceTipsTests(TestCase):
         pass
 
     def test_get_tips_from_user_data(self):
-        pass
+        user_data = {
+            'source1': {
+                'tips': [
+                    {
+                        'id': 'source1-1',
+                        'conditional': 'True',
+                    }
+                ]
+            },
+            'source2': {
+                'tips': [
+                    {
+                        'id': 'foo-1',
+                        'conditional': 'print("something")'
+                    },
+                    {
+                        'id': 'foo-2',
+                    }
+                ]
+            }
+        }
+        result = get_tips_from_user_data({'data': user_data})
+
+        # make sure they are all picked up
+        self.assertEqual(result[0]['id'], 'source1-1')
+        self.assertEqual(result[1]['id'], 'foo-1')
+        self.assertEqual(result[2]['id'], 'foo-2')
+
+        # make sure the conditional is removed
+        self.assertNotIn('conditional', result[0])
+        self.assertNotIn('conditional', result[1])
+        self.assertNotIn('conditional', result[2])
 
     def test_format_tip(self):
         # test all the fill cases
@@ -341,10 +373,6 @@ class SourceTipsTests(TestCase):
         result = format_tip(tip)
         self.assertEqual(tip['id'], 1)
         self.assertNotIn('foo', result)
-
-    def test_delete_conditional(self):
-        pass
-
 
     def test_fix_id(self):
         belasting_tip = {

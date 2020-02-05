@@ -159,10 +159,8 @@ def clean_tip(tip):
 
 def fix_id(tip, source):
     """ Some of our data sources do not follow our id guidelines, fix the tip here inplace. """
-    print("fixing_tip", tip['id'])
     if source == "belasting":
         tip['id'] = "belasting-" + str(tip['id'])
-    print("fixed_tip", tip['id'])
 
 
 def format_tip(tip):
