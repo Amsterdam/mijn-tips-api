@@ -196,7 +196,6 @@ class ConditionalTest(TestCase):
 
         result = tips_generator(self.get_client_data(), tips_pool)
         tips = result['items']
-        print(tips)
         self.assertEqual(len(tips), 2)
 
         # Test if the correct ones are accepted
