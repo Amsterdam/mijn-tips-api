@@ -9,11 +9,13 @@ import pytz
 from tips.config import PROJECT_PATH
 
 TIPS_POOL_FILE = os.path.join(PROJECT_PATH, 'api', 'tips_pool.json')
+TIP_ENRICHMENT_FILE = os.path.join(PROJECT_PATH, 'api', 'tip_enrichments.json')
 
 FRONT_END_TIP_KEYS = ['datePublished', 'description', 'id', 'link', 'title', 'priority', 'imgUrl', 'isPersonalized']
 
 
 tips_pool = []
+tip_enrichments = []
 
 
 def value_of(data: dict, path: str, default=None):
@@ -119,11 +121,18 @@ EVAL_GLOBALS = {
 
 def refresh_tips_pool():
     global tips_pool
-    with open(TIPS_POOL_FILE) as fh:
-        tips_pool = json.load(fh)
+    with open(TIPS_POOL_FILE) as fp:
+        tips_pool = json.load(fp)
+
+
+def refresh_tip_enrichments():
+    global tip_enrichments
+    with open(TIP_ENRICHMENT_FILE) as fp:
+        tip_enrichments = json.load(fp)
 
 
 refresh_tips_pool()
+refresh_tip_enrichments()
 
 
 def tip_filterer(tip, userdata):
@@ -164,6 +173,7 @@ def fix_id(tip, source):
 
 
 def format_tip(tip):
+    """ Make sure the tip has all the required fields. """
     if "link" in tip:
         link_data = tip["link"]
         link = {
@@ -186,6 +196,7 @@ def format_tip(tip):
 
 
 def get_tips_from_user_data(user_data):
+    """ If the data from the client has source tips, return them as a list """
     source_tips = []
     for source, value in user_data['data'].items():
         if type(value) == dict and 'tips' in value:
@@ -204,9 +215,20 @@ def get_tips_from_user_data(user_data):
     return source_tips
 
 
+def apply_enrichment(tip, enrichment):
+    for key, value in enrichment['fields'].items():
+        tip[key] = value
+
+
+def enrich_tip(tip):
+    for enrichment in tip_enrichments:
+        if tip['id'] in enrichment['for_ids']:
+            apply_enrichment(tip, enrichment)
+            break  # only one enrichment per tip allowed
+
+
 def tips_generator(user_data, tips=None):
     """ Generate tips. """
-    print("\n\n-----")
     if tips is None:
         tips = tips_pool
 
@@ -217,6 +239,8 @@ def tips_generator(user_data, tips=None):
 
     tips = [tip for tip in tips if tip_filterer(tip, user_data)]
     tips = [clean_tip(tip) for tip in tips]
+    for tip in tips:
+        enrich_tip(tip)
 
     tips.sort(key=lambda t: t['priority'], reverse=True)
 

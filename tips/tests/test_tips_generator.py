@@ -1,5 +1,4 @@
 import datetime
-from pprint import pprint
 from unittest import TestCase
 
 from dateutil.relativedelta import relativedelta
@@ -177,6 +176,9 @@ class TipsGeneratorTest(TestCase):
         self.assertEqual(tips[2]['id'], tip1['id'])
         self.assertEqual(tips[1]['id'], tip2['id'])
         self.assertEqual(tips[0]['id'], tip3['id'])
+
+        # check enrichment
+        self.assertEqual(tips[4]['imgUrl'], 'api/tips/static/tip_images/???????.jpg')
 
 
 class ConditionalTest(TestCase):
