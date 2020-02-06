@@ -135,7 +135,7 @@ refresh_tips_pool()
 refresh_tip_enrichments()
 
 
-def tip_filterer(tip, userdata):
+def tip_filter(tip, userdata):
     # if a tip has a conditional field, it must be true. If it does not. it's always included
     if not tip['active']:
         return False
@@ -237,7 +237,7 @@ def tips_generator(user_data, tips=None):
     if source_tips:
         tips = tips + source_tips
 
-    tips = [tip for tip in tips if tip_filterer(tip, user_data)]
+    tips = [tip for tip in tips if tip_filter(tip, user_data)]
     tips = [clean_tip(tip) for tip in tips]
     for tip in tips:
         enrich_tip(tip)

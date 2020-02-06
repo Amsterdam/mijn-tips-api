@@ -1,16 +1,9 @@
 [
   {
-    "id": "1",
-    "for_ids": ["belasting-4"],
-    "fields": {
-      "imgUrl": "api/tips/static/tip_images/???.jpg"
-    }
-  },
-  {
     "id": "2",
     "for_ids": ["belasting-5"],
     "fields": {
-      "imgUrl": "api/tips/static/tip_images/???????.jpg"
+      "imgUrl": "api/tips/static/tip_images/belastingen.jpg"
     }
   }
 ]

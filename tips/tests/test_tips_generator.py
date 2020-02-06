@@ -178,7 +178,7 @@ class TipsGeneratorTest(TestCase):
         self.assertEqual(tips[0]['id'], tip3['id'])
 
         # check enrichment
-        self.assertEqual(tips[4]['imgUrl'], 'api/tips/static/tip_images/???????.jpg')
+        self.assertEqual(tips[4]['imgUrl'], 'api/tips/static/tip_images/belastingen.jpg')
 
 
 class ConditionalTest(TestCase):
