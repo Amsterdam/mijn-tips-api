@@ -169,7 +169,7 @@ def clean_tip(tip):
 def fix_id(tip, source):
     """ Some of our data sources do not follow our id guidelines, fix the tip here inplace. """
     if source == "belasting":
-        tip['id'] = "belasting-" + str(tip['id'])
+        tip['id'] = f"belasting-{tip['id']}"
 
 
 def format_tip(tip):
@@ -177,19 +177,19 @@ def format_tip(tip):
     if "link" in tip:
         link_data = tip["link"]
         link = {
-            "title": link_data.get("title", None),
-            "to": link_data.get("to", None)
+            "title": link_data.get("title"),
+            "to": link_data.get("to")
         }
     else:
         link = {"title": None, "to": None}
 
     return {
-        "id": tip.get('id', None),
+        "id": tip.get('id'),
         "active": True,
-        "priority": tip.get('priority', None),
-        "datePublished": tip.get('datePublished', None),
-        "title": tip.get('title', None),
-        "description": tip.get('description', None),
+        "priority": tip.get('priority'),
+        "datePublished": tip.get('datePublished'),
+        "title": tip.get('title'),
+        "description": tip.get('description'),
         "link": link,
         "imgUrl": tip.get("imgUrl")
     }

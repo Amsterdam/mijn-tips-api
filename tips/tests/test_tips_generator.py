@@ -15,7 +15,7 @@ def get_tip(priority=50):
     counter = _counter
     _counter += 1
     return {
-        'id': 'test-' + str(counter),
+        'id': f'test-{counter}',
         'active': True,
         'priority': priority,
         'datePublished': '2019-07-24',
@@ -152,7 +152,7 @@ class TipsGeneratorTest(TestCase):
         allow_list = sorted(['datePublished', 'description', 'id', 'link', 'title', 'priority', 'imgUrl', 'isPersonalized'])
 
         for tip in tips:
-            fields = sorted(list(tip.keys()))
+            fields = sorted(tip.keys())
             self.assertEqual(allow_list, fields)
 
     def test_generator(self):
