@@ -1,7 +1,7 @@
 from objectpath import Tree
 
 
-def get_tips(userdata, tips, compound_rules):
+def get_tips(userdata, tips, compound_rules):  # fixme: does not belong here.
     new_tips = []
 
     user_data_tree = Tree(userdata)
@@ -20,11 +20,11 @@ def get_tips(userdata, tips, compound_rules):
 
 def apply_rules(userdata, rules, compound_rules):
     """ returns True when it matches the rules. """
-    return all([apply_rule(userdata, r, compound_rules) for r in rules])
+    return all([_apply_rule(userdata, r, compound_rules) for r in rules])
 
 
-def apply_rule(userdata, rule, compound_rules):
-    print("rule", [rule])
+def _apply_rule(userdata, rule, compound_rules):
+    # print("rule", [rule])
     if rule['type'] == "rule":
         return userdata.execute(rule['rule'])
 
