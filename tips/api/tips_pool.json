@@ -1,7 +1,7 @@
 [
   {
     "id": "mijn-1",
-    "active": true,
+    "active": false,
     "priority": 50,
     "datePublished": "2019-07-24",
     "title": "Geen telefoon op de fiets",
@@ -71,7 +71,9 @@
     "datePublished": "2019-07-24",
     "title": "Nieuw in Mijn Amsterdam",
     "description": "U vindt nu ook gemeentelijke belastinginformatie in Mijn Amsterdam",
-    "conditional": "datetime.now() < datetime(2019, 9, 1) ",
+    "rules": [
+      {"type": "rule", "rule": "now() < datetime(2019, 9, 1)"}
+    ],
     "link": {
       "title": "Naar Mijn Belastingen",
       "to": "/"
@@ -98,7 +100,10 @@
     "datePublished": "2019-07-24",
     "title": "Eeuwigdurende erfpacht",
     "description": "Tot 1 januari 2020 kunt u gebruik maken van de gunstige voorwaarden",
-    "conditional": "datetime.now() < datetime(2020, 1, 1) and value_of(data, 'erfpacht') == True",
+    "rules": [
+      {"type": "rule", "rule": "datetime.now() < datetime(2020, 1, 1)"},
+      {"type": "rule", "rule": "$.erfpacht is true"}
+    ],
     "isPersonalized": true,
     "link": {
       "title": "Ga naar het overstapportaal",
@@ -113,7 +118,7 @@
     "datePublished": "2019-08-18",
     "title": "Mijn buurt",
     "description": "Kijk waar het dichtstbijzijnde Afvalpunt is. En welke vergunningen de gemeente heeft uitgegeven in uw buurt",
-    "conditional": "",
+    "rules": [],
     "link": {
       "title": "Kijk op de kaart",
       "to": "/buurt"
@@ -127,7 +132,12 @@
     "datePublished": "2019-08-18",
     "title": "Bekijk de afvalpunten in de buurt ",
     "description": "Kijk waar het dichtstbijzijnde Afvalpunt is. En welke vergunningen de gemeente heeft uitgegeven in uw buurt",
-    "conditional": "after(value_of(data, 'brp.adres.begindatumVerblijf'), months=3)",
+    "rules": [
+      {
+        "type": "rule",
+        "rule": "age($.brp.adres.begindatumVerblijf) < timedelta(0, 3, 0, 0, 0, 0)"
+      }
+    ],
     "isPersonalized": true,
     "link": {
       "title": "Kijk op de kaart",
@@ -142,7 +152,7 @@
     "datePublished": "2019-10-22",
     "title": "Wat kan ik doen met mijn Stadspas?",
     "description": "U hebt een Stadspas",
-    "conditional": "object_where(value_of(data, 'focus'), {'soortProduct': 'Minimafonds'})",
+    "rules": [{"type": "ref", "ref_id": "1"}],
     "isPersonalized": true,
     "link": {
       "title": "Bekijk de aanbiedingen",

@@ -24,13 +24,16 @@ def apply_rules(userdata, rules, compound_rules):
 
 
 def _apply_rule(userdata, rule, compound_rules):
-    # print("rule", [rule])
+    print("rule", [rule])
     if rule['type'] == "rule":
+        print("2-1")
+        print("> ", userdata.execute(rule['rule']))
         return userdata.execute(rule['rule'])
 
     if rule['type'] == "ref":
+        print("2-2")
         compound_rule = compound_rules[rule['ref_id']]
         return apply_rules(userdata, compound_rule['rules'], compound_rules)
-    return True
+    return False
 
 

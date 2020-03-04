@@ -134,7 +134,7 @@ compound_rules = {
         "rules": [
             {
                 'type': 'rule',
-                'rule': 'age($.brp.persoon.geboortedatum)).years > 18'
+                'rule': 'dateTime($.brp.persoon.geboortedatum) - timeDelta(18, 0, 0, 0, 0, 0) <= now()'
             }
         ]
     },
@@ -261,18 +261,6 @@ class RuleEngineTestRealLifeData(TestCase):
 
         userdata = get_fixture_stadspas()
 
-        # tree = objectpath.Tree(userdata)
-        # result = tree.execute('$.focus.*[age(dateTime(@.processtappen.beslissing.datum)) ]')
-        # result = tree.execute('$.focus.*[@.soortProduct is "Minimafonds" and @.typeBesluit is "Toekenning" and age(dateTime(@.processstappen.beslissing.datum))]')
-
-        # print(result)
-
-
         result = get_tips(userdata, tips_pool, compound_rules)
         print("result", result)
-
-
-        # from pprint import pprint
-        # pprint([i for i in result])
-
 

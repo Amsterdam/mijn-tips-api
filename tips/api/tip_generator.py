@@ -5,118 +5,22 @@ from typing import Union
 
 import dateutil.parser
 import pytz
+from objectpath import Tree
 
 from tips.config import PROJECT_PATH
+from tips.generator.rule_engine import apply_rules
 
 TIPS_POOL_FILE = os.path.join(PROJECT_PATH, 'api', 'tips_pool.json')
 TIP_ENRICHMENT_FILE = os.path.join(PROJECT_PATH, 'api', 'tip_enrichments.json')
+COMPOUND_RULES_FILE = os.path.join(PROJECT_PATH, 'api', 'compound_rules.json')
 
 FRONT_END_TIP_KEYS = ['datePublished', 'description', 'id', 'link', 'title', 'priority', 'imgUrl', 'isPersonalized']
 
 
 tips_pool = []
 tip_enrichments = []
+compound_rules = []
 
-
-def value_of(data: dict, path: str, default=None):
-    """
-    Try to get the value of path '.' with as separator. When not possible, return the default.
-    :param data: data in which to search
-    :param path: . separated path to the nested data
-    :param default: value which is returned when path is not found
-    :return: The value of path when found, otherwise default.
-
-    TODO: how to deal with lists?
-    """
-    path_sep = path.split('.')
-    value = data
-    for part in path_sep:
-        try:
-            value = value[part]
-        except KeyError:
-            return default
-    return value
-
-
-def object_where(data: list, query: dict):
-    """
-    Select the first object that matches the query
-    :param data: data in which to search
-    :param query:
-    :return: the first object that matches  # TODO: is the first a good idea?
-    """
-    for i in data:
-        if type(i) == dict:
-            try:
-                for field_name, field_value in query.items():
-                    if i[field_name] != field_value:
-                        return None
-
-                return i
-            except KeyError:
-                return None
-
-        else:
-            return None
-
-
-def to_datetime(value: str):
-    """ Converts a string containing an iso8601 date to a datetime object. """
-    # 1950-01-01T00:00:00Z
-    date = dateutil.parser.isoparse(value)
-
-    return date
-
-
-def is_18(value: Union[datetime.date, datetime.datetime, str]):
-    return before_or_on(value, years=18)
-
-
-def after(value: Union[datetime.date, datetime.datetime, str], **kwargs):
-    return not before_or_on(value, **kwargs)
-
-
-# TODO: better name
-def before_or_on(value: Union[datetime.date, datetime.datetime, str], **kwargs):
-    """
-    Check if the value is before or on the specified timedelta values.
-    # TODO: Improve docstring
-    The keyword arguments are fed into a dateutils relative timedelta
-    https://dateutil.readthedocs.io/en/stable/relativedelta.html
-
-    """
-    delta = dateutil.relativedelta.relativedelta(**kwargs)
-
-    if type(value) == str:
-        value = to_datetime(value)
-
-    if type(value) == datetime.datetime:
-        now = datetime.datetime.now(datetime.timezone.utc)
-
-        # Set utz for dates which have no timezone
-        if value.tzinfo is None:
-            value = pytz.UTC.localize(value)
-
-        result = value <= now - delta
-        return result
-    elif type(value) == datetime.date:
-        # Date has no timezone
-        today = datetime.date.today()
-        result = value <= today - delta
-        return result
-
-
-EVAL_GLOBALS = {
-    "datetime": datetime.datetime,
-    "timedelta": dateutil.relativedelta.relativedelta,
-    "before_or_on": before_or_on,
-    "after": after,
-    "value_of": value_of,
-    "object_where": object_where,
-    "to_datetime": to_datetime,
-    "is_18": is_18,
-    "len": len,
-}
 
 
 def refresh_tips_pool():
@@ -131,31 +35,36 @@ def refresh_tip_enrichments():
         tip_enrichments = json.load(fp)
 
 
+def refresh_compound_rules():
+    global compound_rules
+    with open(COMPOUND_RULES_FILE) as fp:
+        compound_rules = json.load(fp)
+
+
 refresh_tips_pool()
 refresh_tip_enrichments()
+refresh_compound_rules()
 
 
-def tip_filter(tip, userdata):
-    # if a tip has a conditional field, it must be true. If it does not. it's always included
+def tip_filter(tip, userdata_tree):
+    """
+    If tip has a field "rules", the result must be true for it to be included.
+    If tip does not have "rules, it is included.
+    """
+    print("\n\n-------")
+    print(tip)
+    print(1)
     if not tip['active']:
         return False
-    conditional = tip.get("conditional", None)
-    if conditional is None or conditional == '':
+    print(2)
+    if 'rules' not in tip:
         return tip
-    try:
-        eval_locals = {}
-        if userdata['optin']:
-            eval_locals['data'] = userdata['data']
+    print(3)
 
-        if eval(conditional, EVAL_GLOBALS, eval_locals):
-            return tip
-        else:
-            return False
-    except TypeError:  # Input must be a string. If its anything else, the tip conditional is malformed
-        raise
-    except Exception as e:
-        print("!! Conditional exception: ", e)
-        return False
+    print("testing rules:", tip["rules"])
+    passed = apply_rules(userdata_tree, tip["rules"], compound_rules)
+    print("filter result", passed)
+    return passed
 
 
 def clean_tip(tip):
@@ -237,7 +146,14 @@ def tips_generator(user_data, tips=None):
     if source_tips:
         tips = tips + source_tips
 
-    tips = [tip for tip in tips if tip_filter(tip, user_data)]
+    if user_data['optin']:
+        user_data_prepared = Tree(user_data['data'])
+    else:
+        user_data_prepared = Tree({})
+
+    from pprint import pprint
+    pprint(tips)
+    tips = [tip for tip in tips if tip_filter(tip, user_data_prepared)]
     tips = [clean_tip(tip) for tip in tips]
     for tip in tips:
         enrich_tip(tip)

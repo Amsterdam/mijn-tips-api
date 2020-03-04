@@ -1,9 +1,10 @@
 import datetime
+from pprint import pprint
 from unittest import TestCase
 
 from dateutil.relativedelta import relativedelta
 
-from tips.api.tip_generator import tips_generator, to_datetime, value_of, before_or_on, is_18, object_where, fix_id, \
+from tips.api.tip_generator import tips_generator, fix_id, \
     format_tip, get_tips_from_user_data
 from tips.tests.fixtures.fixture import get_fixture
 
@@ -26,6 +27,13 @@ def get_tip(priority=50):
         },
         'title': 'Tip title %i' % counter,
         'imgUrl': '/api/tips/static/tip_images/erfpacht.jpg'
+    }
+
+
+def new_rule(rule: str):
+    return {
+        "type": "rule",
+        "rule": rule
     }
 
 
@@ -205,9 +213,9 @@ class ConditionalTest(TestCase):
     def test_conditional(self):
         """ Test one passing conditional, one failing and one without (the default) """
         tip1_mock = get_tip()
-        tip1_mock['conditional'] = "False"
+        tip1_mock['rules'] = [new_rule("false")]
         tip2_mock = get_tip()
-        tip2_mock['conditional'] = "True"
+        tip2_mock['rules'] = [new_rule("true")]
         tip3_mock = get_tip()
 
         tips_pool = [tip1_mock, tip2_mock, tip3_mock]
@@ -222,7 +230,7 @@ class ConditionalTest(TestCase):
     def test_conditional_exception(self):
         """ Test that invalid conditional is (silently) ignored. Probably not the best idea... """
         tip1_mock = get_tip()
-        tip1_mock['conditional'] = "syntax error"
+        tip1_mock['rules'] = [new_rule("@")]
         tip2_mock = get_tip()
 
         tips_pool = [tip1_mock, tip2_mock]
@@ -236,7 +244,7 @@ class ConditionalTest(TestCase):
     def test_conditional_invalid(self):
         """ Test that it errors on completely wrong conditional. """
         tip1_mock = get_tip()
-        tip1_mock['conditional'] = True
+        tip1_mock['rules'] = new_rule('true')
         tip2_mock = get_tip()
 
         tips_pool = [tip1_mock, tip2_mock]
@@ -248,7 +256,7 @@ class ConditionalTest(TestCase):
         Test whether a tip works correctly when based on user data.
         """
         tip1_mock = get_tip()
-        tip1_mock['conditional'] = "data['erfpacht'] == True"
+        tip1_mock['rule'] = [new_rule('$.erfpacht is true')]
         tip2_mock = get_tip()
         tips_pool = [tip1_mock, tip2_mock]
 
@@ -262,10 +270,10 @@ class ConditionalTest(TestCase):
 
     def test_data_based_tip_path(self):
         tip1_mock = get_tip()
-        tip1_mock['conditional'] = "value_of(data, 'erfpacht') == True"
+        tip1_mock['rules'] = [new_rule("$.erfpacht is true")]
         tip2_mock = get_tip()
         # 18 or older
-        tip2_mock['conditional'] = "is_18(value_of(data, 'brp.persoon.geboortedatum'))"
+        tip2_mock['rules'] = [{"type": "ref", "ref_id": "2"}]
         tips_pool = [tip1_mock, tip2_mock]
 
         client_data = self.get_client_data(optin=True)
@@ -275,8 +283,11 @@ class ConditionalTest(TestCase):
 
         # make sure the other is in there
         self.assertEqual(len(tips), 3)
+        print(tips)
         self.assertEqual(tips[0]['id'], tip1_mock['id'])
+        self.assertEqual(tips[0]['isPersonalized'], True)
         self.assertEqual(tips[1]['id'], tip2_mock['id'])
+        assert False
 
     def test_data_based_tip_with_list(self):
         tip1_mock = get_tip()
@@ -320,7 +331,9 @@ class SourceTipsTests(TestCase):
                 'tips': [
                     {
                         'id': 'source1-1',
-                        'conditional': 'True',
+                        'rules': [
+                            'true',
+                        ],
                     }
                 ]
             },
