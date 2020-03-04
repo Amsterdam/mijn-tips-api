@@ -1,8 +1,4 @@
-import datetime
-from pprint import pprint
 from unittest import TestCase
-
-from dateutil.relativedelta import relativedelta
 
 from tips.api.tip_generator import tips_generator, fix_id, \
     format_tip, get_tips_from_user_data
@@ -66,10 +62,10 @@ class TipsGeneratorTest(TestCase):
         tip3 = get_tip(40)
         tip4 = get_tip(50)
 
-        tip4['conditional'] = "False"
+        tip4['rules'] = [new_rule("False")]
 
         # add them out of order to test the ordering
-        tips_pool = [tip1, tip0, tip2, tip3]
+        tips_pool = [tip1, tip0, tip2, tip3, tip4]
         result = tips_generator(self.get_client_data(), tips_pool)
         tips = result['items']
 
@@ -181,7 +177,6 @@ class ConditionalTest(TestCase):
 
         # make sure the other is in there
         self.assertEqual(len(tips), 3)
-        print(tips)
         self.assertEqual(tips[0]['id'], tip1_mock['id'])
         self.assertEqual(tips[0]['isPersonalized'], True)
         self.assertEqual(tips[1]['id'], tip2_mock['id'])
@@ -189,7 +184,7 @@ class ConditionalTest(TestCase):
 
     def test_data_based_tip_with_list(self):
         tip1_mock = get_tip()
-        tip1_mock['conditional'] = "value_of(object_where(value_of(data, 'focus'), {'_id': '0-0'}), 'processtappen.aanvraag._id') == 0 "
+        tip1_mock['rules'] = [new_rule("$.focus[@._id is '0-0' and @.processtappen.aanvraag._id is 0]")]
         tip1_mock['isPersonalized'] = True
         tips_pool = [tip1_mock]
 
@@ -203,11 +198,11 @@ class ConditionalTest(TestCase):
 
     def test_is_personalized(self):
         tip1_mock = get_tip()
-        tip1_mock['conditional'] = "True"
+        tip1_mock['rules'] = [new_rule("True")]
         tip1_mock['isPersonalized'] = True
 
         tip2_mock = get_tip()
-        tip2_mock['conditional'] = "True"
+        tip2_mock['rules'] = [new_rule("True")]
         # do not add isPersonalized to tip 2. It should default to False
         tips_pool = [tip1_mock, tip2_mock]
 
@@ -239,7 +234,7 @@ class SourceTipsTests(TestCase):
                 'tips': [
                     {
                         'id': 'foo-1',
-                        'conditional': 'print("something")'
+                        'rules': [new_rule('print("something")')]
                     },
                     {
                         'id': 'foo-2',
@@ -255,9 +250,9 @@ class SourceTipsTests(TestCase):
         self.assertEqual(result[2]['id'], 'foo-2')
 
         # make sure the conditional is removed
-        self.assertNotIn('conditional', result[0])
-        self.assertNotIn('conditional', result[1])
-        self.assertNotIn('conditional', result[2])
+        self.assertNotIn('rules', result[0])
+        self.assertNotIn('rules', result[1])
+        self.assertNotIn('rules', result[2])
 
     def test_format_tip(self):
         # test all the fill cases

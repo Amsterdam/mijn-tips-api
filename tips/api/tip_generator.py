@@ -1,10 +1,6 @@
-import datetime
 import json
 import os
-from typing import Union
 
-import dateutil.parser
-import pytz
 from objectpath import Tree
 
 from tips.config import PROJECT_PATH
@@ -20,7 +16,6 @@ FRONT_END_TIP_KEYS = ['datePublished', 'description', 'id', 'link', 'title', 'pr
 tips_pool = []
 tip_enrichments = []
 compound_rules = []
-
 
 
 def refresh_tips_pool():
@@ -51,19 +46,12 @@ def tip_filter(tip, userdata_tree):
     If tip has a field "rules", the result must be true for it to be included.
     If tip does not have "rules, it is included.
     """
-    print("\n\n-------")
-    print(tip)
-    print(1)
     if not tip['active']:
         return False
-    print(2)
     if 'rules' not in tip:
         return tip
-    print(3)
 
-    print("testing rules:", tip["rules"])
     passed = apply_rules(userdata_tree, tip["rules"], compound_rules)
-    print("filter result", passed)
     return passed
 
 
@@ -151,8 +139,6 @@ def tips_generator(user_data, tips=None):
     else:
         user_data_prepared = Tree({})
 
-    from pprint import pprint
-    pprint(tips)
     tips = [tip for tip in tips if tip_filter(tip, user_data_prepared)]
     tips = [clean_tip(tip) for tip in tips]
     for tip in tips:

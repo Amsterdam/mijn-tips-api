@@ -2,10 +2,7 @@ from unittest import TestCase
 
 import objectpath
 
-from tips.generator.rule_engine import apply_rules, get_tips
-from tips.tests.fixtures.fixture import get_fixture
-
-import dictquery as dq
+from tips.generator.rule_engine import apply_rules
 
 
 def get_fixture_stadspas():
@@ -242,25 +239,3 @@ class RuleEngineTest(TestCase):
         rules = [{"type": "ref", "ref_id": "1"}]
         with self.assertRaises(RecursionError):
             apply_rules(self.test_data, rules, compound_rules)
-
-
-class RuleEngineTestRealLifeData(TestCase):
-    def setUp(self) -> None:
-        pass
-
-    def test_apply_rules(self):
-
-        # moet hebben: 1 focus entry hebben die voldoen aan:
-        #  soortProduct == "Minimafonds"
-        #  typeBesluit == "Toekenning"
-        #  processtappen.beslissing.datum   minder dan een jaar geleden
-
-        # loopen door de entries, scope setten naar de entry. 1 moet True zijn   <-- nesting
-        #   > tests uitvoeren
-
-
-        userdata = get_fixture_stadspas()
-
-        result = get_tips(userdata, tips_pool, compound_rules)
-        print("result", result)
-
