@@ -135,7 +135,7 @@
     "rules": [
       {
         "type": "rule",
-        "rule": "age($.brp.adres.begindatumVerblijf) < timedelta(0, 3, 0, 0, 0, 0)"
+        "rule": "dateTime($.brp.adres.begindatumVerblijf) + timeDelta(0, 3, 0, 0, 0, 0) <= now()"
       }
     ],
     "isPersonalized": true,
