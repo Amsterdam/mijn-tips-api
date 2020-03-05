@@ -1,3 +1,5 @@
+from objectpath import ExecutionError
+
 
 def apply_rules(userdata, rules, compound_rules):
     """ returns True when it matches the rules. """
@@ -6,7 +8,10 @@ def apply_rules(userdata, rules, compound_rules):
 
 def _apply_rule(userdata, rule, compound_rules):
     if rule['type'] == "rule":
-        return userdata.execute(rule['rule'])
+        try:
+            return userdata.execute(rule['rule'])
+        except ExecutionError:
+            return False
 
     if rule['type'] == "ref":
         compound_rule = compound_rules[rule['ref_id']]
