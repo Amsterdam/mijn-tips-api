@@ -146,6 +146,10 @@ def tips_generator(user_data, tips=None):
 
     tips.sort(key=lambda t: t['priority'], reverse=True)
 
+    # if optin is on, only show personalised tips
+    if user_data['optin']:
+        tips = [t for t in tips if t['isPersonalized']]
+
     return {
         "items": tips,
         "total": len(tips),

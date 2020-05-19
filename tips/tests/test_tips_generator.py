@@ -149,6 +149,7 @@ class ConditionalTest(TestCase):
         """
         tip1_mock = get_tip()
         tip1_mock['rule'] = [new_rule('$.erfpacht is true')]
+        tip1_mock['isPersonalized'] = True
         tip2_mock = get_tip()
         tips_pool = [tip1_mock, tip2_mock]
 
@@ -158,7 +159,7 @@ class ConditionalTest(TestCase):
         tips = result['items']
 
         # make sure the other is in there
-        self.assertEqual(len(tips), 3)
+        self.assertEqual(len(tips), 1)
 
     def test_data_based_tip_path(self):
         tip1_mock = get_tip()
@@ -176,7 +177,7 @@ class ConditionalTest(TestCase):
         tips = result['items']
 
         # make sure the other is in there
-        self.assertEqual(len(tips), 3)
+        self.assertEqual(len(tips), 2)
         self.assertEqual(tips[0]['id'], tip1_mock['id'])
         self.assertEqual(tips[0]['isPersonalized'], True)
         self.assertEqual(tips[1]['id'], tip2_mock['id'])
@@ -192,7 +193,7 @@ class ConditionalTest(TestCase):
         result = tips_generator(client_data, tips_pool)
         tips = result['items']
 
-        self.assertEqual(len(tips), 2)
+        self.assertEqual(len(tips), 1)
         self.assertEqual(tips[0]['id'], tip1_mock['id'])
         self.assertEqual(tips[0]['isPersonalized'], True)
 
