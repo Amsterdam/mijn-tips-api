@@ -164,6 +164,7 @@
     "id": "mijn-12",
     "owner": "Daniel Nagel",
     "dateActiveStart": "2020-04-01",
+    "dateActiveEnd": null,
     "active": true,
     "priority": 70,
     "datePublished": "2020-06-15",
