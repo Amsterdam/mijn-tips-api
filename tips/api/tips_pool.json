@@ -159,5 +159,76 @@
       "to": "https://www.amsterdam.nl/toerisme-vrije-tijd/stadspas/"
     },
     "imgUrl": "/api/tips/static/tip_images/stadspas.jpg"
+  },
+  {
+    "id": "mijn-12",
+    "owner": "Daniel Nagel",
+    "dateActiveStart": "2020-04-01",
+    "active": true,
+    "priority": 70,
+    "datePublished": "2020-06-15",
+    "title": "Amsterdammers helpen Amsterdammers",
+    "description": "Maakt u mondkapjes? Of zoekt u manieren om te blijven bewegen? Amsterdammers helpen elkaar tijdens de coronacrisis.",
+    "rules": [],
+    "isPersonalized": false,
+    "link": {
+      "title": "Vind elkaar",
+      "to": "https://wijamsterdam.nl/",
+    },
+    "imgUrl": "/api/tips/static/tip_images/mondkapjes.jpg"
+  },
+  {
+    "id": "mijn-13",
+    "owner": null,
+    "dateActiveStart": "2020-05-18",
+    "dateActiveEnd": "2020-08-18",
+    "active": true,
+    "priority": 70,
+    "datePublished": "2020-06-15",
+    "title": "Gratis energieadvies",
+    "description": "Werkt u thuis? Dan neemt uw energieverbruik toe. Wij geven gratis energieadvies aan woningeigenaren",
+    "rules": [],
+    "isPersonalized": false,
+    "link": {
+      "title": "Kijk hoe u energie kunt besparen",
+      "to": "https://www.amsterdam.nl/wonen-leefomgeving/duurzaam-amsterdam/nieuws/gratis-energieadvies-afstand-!/",
+    },
+    "imgUrl": "/api/tips/static/tip_images/energieadvies.jpg"
+  },
+  {
+    "id": "mijn-14",
+    "owner": "OIS / Chief Science Officer",
+    "dateActiveStart": "2020-05-26",
+    "dateActiveEnd": null,
+    "active": true,
+    "priority": 70,
+    "datePublished": "2020-06-15",
+    "title": "Voor nieuwsgierige Amsterdammers",
+    "description": "Bent u op zoek naar gegevens of onderzoek over uw stad of buurt? U vindt al deze informatie nu op 1 website.",
+    "rules": [],
+    "isPersonalized": false,
+    "link": {
+      "title": "Kijk op openresearch.amsterdam",
+      "to": "https://openresearch.amsterdam/"
+    },
+    "imgUrl": "/api/tips/static/tip_images/openresearch.jpg"
+  },
+  {
+    "id": "mijn-15",
+    "owner": "Diana Le",
+    "dateActiveStart": "2020-05-20",
+    "dateActiveEnd": "2020-08-20",
+    "active": true,
+    "priority": 70,
+    "datePublished": "2020-06-15",
+    "title": "Gratis uw fiets laten graveren",
+    "description": "Voorkom diefstal van uw fiets en laat een code in uw frame graveren",
+    "rules": [],
+    "isPersonalized": false,
+    "link": {
+      "title": "Kijk wanneer de graveeracties zijn",
+      "to": "https://www.amsterdam.nl/parkeren-verkeer/fiets/fietsdepot/fiets-graveren/"
+    },
+    "imgUrl": "/api/tips/static/tip_images/fietsgraveren.jpg"
   }
 ]
