@@ -104,6 +104,7 @@
       {"type": "rule", "rule": "datetime.now() < datetime(2020, 1, 1)"},
       {"type": "rule", "rule": "$.erfpacht is true"}
     ],
+    "reason": "Heeft erfpacht",
     "isPersonalized": true,
     "link": {
       "title": "Ga naar het overstapportaal",
@@ -138,6 +139,7 @@
         "rule": "dateTime($.brp.adres.begindatumVerblijf) + timeDelta(0, 3, 0, 0, 0, 0) <= now()"
       }
     ],
+    "reason": "Afgelopen 3 maanden verhuisd",
     "isPersonalized": true,
     "link": {
       "title": "Kijk op de kaart",
@@ -153,6 +155,7 @@
     "title": "Wat kan ik doen met mijn Stadspas?",
     "description": "U hebt een Stadspas.",
     "rules": [{"type": "ref", "ref_id": "1"}],
+    "reason": "Heeft een geldige stadspas",
     "isPersonalized": true,
     "link": {
       "title": "Bekijk de aanbiedingen",

@@ -45,6 +45,9 @@ components:
           minimum: 0
         isPersonalized:
           type: boolean
+        reason:
+          description: "Front-facing-human-readable description of why the rule is selected"
+          type: string
         link:
           type: object
           properties:
