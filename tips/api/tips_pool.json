@@ -155,7 +155,6 @@
     "title": "Wat kan ik doen met mijn Stadspas?",
     "description": "U hebt een Stadspas.",
     "rules": [{"type": "ref", "ref_id": "1"}],
-    "reason": "Heeft een geldige stadspas",
     "isPersonalized": true,
     "link": {
       "title": "Bekijk de aanbiedingen",

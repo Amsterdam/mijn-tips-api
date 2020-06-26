@@ -30,6 +30,9 @@ class ApiTests(TestCase):
 
         self.assertEqual(2, len(tips))
 
+        self.assertEqual(tips[0]['reason'], ["Afgelopen 3 maanden verhuisd"])
+        self.assertEqual(tips[1]['reason'], ["Heeft een geldige stadspas"])
+
     def test_images(self):
         for tip in tips_pool:
             url = tip['imgUrl']

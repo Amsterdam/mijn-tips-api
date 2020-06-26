@@ -10,7 +10,7 @@ TIPS_POOL_FILE = os.path.join(PROJECT_PATH, 'api', 'tips_pool.json')
 TIP_ENRICHMENT_FILE = os.path.join(PROJECT_PATH, 'api', 'tip_enrichments.json')
 COMPOUND_RULES_FILE = os.path.join(PROJECT_PATH, 'api', 'compound_rules.json')
 
-FRONT_END_TIP_KEYS = ['datePublished', 'description', 'id', 'link', 'title', 'priority', 'imgUrl', 'isPersonalized']
+FRONT_END_TIP_KEYS = ['datePublished', 'description', 'id', 'link', 'title', 'priority', 'imgUrl', 'isPersonalized', 'reason']
 
 
 tips_pool = []
@@ -36,9 +36,26 @@ def refresh_compound_rules():
         compound_rules = json.load(fp)
 
 
+def get_reasoning(tip):
+    reasons = []
+    reason = tip.get('reason')
+    if reason:
+        reasons.append(reason)
+    rules = tip.get('rules', [])
+    for rule in rules:
+        if rule['type'] == 'ref':
+            reasons.extend(get_reasoning(compound_rules[rule['ref_id']]))
+
+    return reasons
+
+
 refresh_tips_pool()
 refresh_tip_enrichments()
 refresh_compound_rules()
+
+for tip in tips_pool:
+    reasons = get_reasoning(tip)
+    tip['reason'] = reasons
 
 
 def tip_filter(tip, userdata_tree):

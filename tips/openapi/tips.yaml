@@ -47,7 +47,10 @@ components:
           type: boolean
         reason:
           description: "Front-facing-human-readable description of why the rule is selected"
-          type: string
+          type: array
+          items:
+            type: string
+
         link:
           type: object
           properties:
