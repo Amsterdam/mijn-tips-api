@@ -1,3 +1,5 @@
+import logging
+
 from objectpath import ExecutionError
 from objectpath.core import generator
 
@@ -15,6 +17,9 @@ def _apply_rule(userdata, rule, compound_rules):
                 return list(result)
             return result
         except ExecutionError:
+            return False
+        except TypeError:
+            logging.error(f"Rule failed: {rule['rule']}")
             return False
 
     if rule['type'] == "ref":
