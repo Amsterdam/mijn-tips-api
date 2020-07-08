@@ -4,7 +4,7 @@
     "rules": [
       {
         "type": "rule",
-        "rule": "len($.focus.*[@.soortProduct is 'Minimafonds' and @.typeBesluit is 'Toekenning' and now() - timeDelta(1, 0, 0, 0, 0, 0) <= dateTime(@.processtappen.beslissing.datum)]) >= 1"
+        "rule": "$.focus.*[@.soortProduct is 'Minimafonds' and @.typeBesluit is 'Toekenning' and now() - timeDelta(1, 0, 0, 0, 0, 0) <= dateTime(@.processtappen.beslissing.datum)]"
       }
     ],
     "reason": "Heeft een geldige stadspas"

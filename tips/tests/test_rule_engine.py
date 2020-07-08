@@ -127,6 +127,13 @@ class RuleEngineTest(TestCase):
         user_data = objectpath.Tree(fixture["data"])
         self.assertFalse(apply_rules(user_data, rules, compound_rules))
 
+        # regression test for when there is no stadspas data
+        fixture_no_stadspas = get_fixture()
+        fixture_no_stadspas['data']['focus'] = [item for item in fixture_no_stadspas['data']['focus'] if item['naam'] != 'Stadspas']
+
+        user_data = objectpath.Tree(fixture_no_stadspas)
+        self.assertFalse(apply_rules(user_data, rules, compound_rules))
+
     def test_is_18_of_ouder(self):
         fixture = get_fixture()
         user_data = objectpath.Tree(fixture["data"])
