@@ -29,9 +29,16 @@ class ApiTests(TestCase):
         tips = data['items']
         self.assertEqual(1, len(tips))
         self.assertEqual(tips[0]['title'], 'Bekijk de afvalpunten in de buurt')
-
+        
         self.assertEqual(tips[0]['reason'], ["Afgelopen 3 maanden verhuisd"])
 
+    def test_income_tips(self):
+        response = self.client.post('/tips/getincometips', json=self._get_client_data())
+
+        data = response.get_json()
+        tips = data['items']
+        self.assertEqual(24, len(tips))
+        
     def test_images(self):
         for tip in tips_pool:
             url = tip['imgUrl']
