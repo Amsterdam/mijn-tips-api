@@ -49,7 +49,7 @@
     "rules": [
       {
         "type": "ref",
-        "ref_id": "7" 
+        "ref_id": "6" 
       },
       {
           "type": "ref",
@@ -121,7 +121,7 @@
     "rules": [
       {
         "type": "ref",
-        "ref_id": "7"
+        "ref_id": "6"
       },
       {
           "type": "ref",
@@ -177,11 +177,11 @@
       },
       {
         "type": "ref",
-        "ref_id": "6"
+        "ref_id": "5"
       },
       {
         "type": "ref",
-        "ref_id": "7"
+        "ref_id": "6"
       }
     ],
     "isPersonalized": true,
@@ -353,7 +353,7 @@
       },
       {
         "type": "ref",
-        "ref_id": "5"
+        "ref_id": "3"
       }
     ],
     "isPersonalized": true,
@@ -373,7 +373,7 @@
     "rules": [
       {
         "type": "ref",
-        "ref_id": "6"
+        "ref_id": "5"
       } 
     ],
     "isPersonalized": true,
@@ -393,7 +393,7 @@
     "rules": [
       {
         "type": "ref",
-        "ref_id": "6"
+        "ref_id": "5"
       } 
     ],
     "isPersonalized": true,
@@ -433,7 +433,7 @@
       },
       {
         "type": "ref",
-        "ref_id": "5"
+        "ref_id": "3"
       }
     ],
     "isPersonalized": true,
@@ -610,6 +610,10 @@
       {
         "type": "rule",
         "rule": "dateTime($.brp.persoon.geboortedatum) + timeDelta(21, 0, 0, 0, 0, 0) <= now()"
+      },
+      {
+        "type": "ref",
+        "ref_id": "3"
       }
     ],
     "isPersonalized": true,
