@@ -1,4 +1,5 @@
 import os
+import datetime
 
 from flask_testing import TestCase
 
@@ -23,21 +24,37 @@ class ApiTests(TestCase):
         self.assertEqual(response.data, b"OK")
 
     def test_tips(self):
-        response = self.client.post('/tips/gettips', json=self._get_client_data())
 
-        data = response.get_json()
-        tips = data['items']
-        self.assertEqual(1, len(tips))
+        client_data = self._get_client_data()
+        recent_date = (datetime.date.today() - datetime.timedelta(days=60)).strftime("%Y-%m-%dT%H:%M:%SZ")
+
+        # Change date which we compare to now() in our tests.
+        client_data['data']['BRP']['adres']['begindatumVerblijf'] = recent_date
+
+        for index, item in enumerate(client_data['data']['FOCUS_AANVRAGEN']):
+            if item['id'] == 'test-stadspas-validity':
+                client_data['data']['FOCUS_AANVRAGEN'][index]['steps'][-1]['datePublished'] = recent_date
+                break
+
+        response = self.client.post('/tips/gettips', json=client_data)
+
+        tips = response.get_json()
+
+        self.assertEqual(2, len(tips))
+
         self.assertEqual(tips[0]['title'], 'Bekijk de afvalpunten in de buurt')
+        self.assertEqual(tips[0]['reason'], ['Afgelopen 3 maanden verhuisd'])
 
-        self.assertEqual(tips[0]['reason'], ["Afgelopen 3 maanden verhuisd"])
+        self.assertEqual(tips[1]['title'], 'Wat kan ik doen met mijn Stadspas?')
+        self.assertEqual(tips[1]['reason'], ['Heeft een geldige stadspas'])
 
     def test_income_tips(self):
         response = self.client.post('/tips/getincometips', json=self._get_client_data())
 
-        data = response.get_json()
-        tips = data['items']
-        self.assertEqual(24, len(tips))
+        tips = response.get_json()
+
+        # Asserting the length of the response here would mean to fix all dates that compare to now() which is somewhat besides the point of this test.
+        self.assertEqual(26, len(tips))
 
     def test_images(self):
         for tip in tips_pool:

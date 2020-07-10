@@ -1,8 +1,7 @@
 import json
 import os
 
-from objectpath import Tree
-
+from tips.api.user_data_tree import UserDataTree
 from tips.config import PROJECT_PATH
 from tips.generator.rule_engine import apply_rules
 
@@ -82,7 +81,7 @@ def clean_tip(tip):
 
 def fix_id(tip, source):
     """ Some of our data sources do not follow our id guidelines, fix the tip here inplace. """
-    if source == "belasting":
+    if source == "BELASTING":
         tip['id'] = f"belasting-{tip['id']}"
 
 
@@ -152,9 +151,9 @@ def tips_generator(user_data, tips=None):
         tips = tips + source_tips
 
     if user_data['optin']:
-        user_data_prepared = Tree(user_data['data'])
+        user_data_prepared = UserDataTree(user_data['data'])
     else:
-        user_data_prepared = Tree({})
+        user_data_prepared = UserDataTree({})
 
     tips = [tip for tip in tips if tip_filter(tip, user_data_prepared)]
     tips = [clean_tip(tip) for tip in tips]
@@ -167,7 +166,4 @@ def tips_generator(user_data, tips=None):
     if user_data['optin']:
         tips = [t for t in tips if t['isPersonalized']]
 
-    return {
-        "items": tips,
-        "total": len(tips),
-    }
+    return tips
