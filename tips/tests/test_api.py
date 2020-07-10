@@ -54,7 +54,7 @@ class ApiTests(TestCase):
         tips = response.get_json()
 
         # Asserting the length of the response here would mean to fix all dates that compare to now() which is somewhat besides the point of this test.
-        self.assertEqual(24, len(tips))
+        self.assertEqual(26, len(tips))
 
     def test_images(self):
         for tip in tips_pool:
