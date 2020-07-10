@@ -50,14 +50,14 @@ class TipsGeneratorTest(TestCase):
 
         # only these fields are allowed
         extended_fields_list = sorted(FRONT_END_TIP_KEYS)
-        source_fields_list = [a for a in extended_fields_list if a is not 'reason']
+        source_fields_list = [a for a in extended_fields_list if a != 'reason']
 
         fields = sorted(tips[0].keys())
         self.assertEqual(extended_fields_list, fields)
 
         fields = sorted(tips[1].keys())
         self.assertEqual(extended_fields_list, fields)
-        
+
         # Source tips don't have a reason (yet)
         fields = sorted(tips[2].keys())
         self.assertNotEqual(extended_fields_list, fields)
