@@ -241,7 +241,6 @@ class RuleEngineTest(TestCase):
         fixture["data"]['BRP']['kinderen'][1]['geboortedatum'] = get_date_years_ago(16)
         self.assertTrue(get_result())
 
-
     def test_kind_is_10_11_12(self):
 
         fixture = get_fixture()

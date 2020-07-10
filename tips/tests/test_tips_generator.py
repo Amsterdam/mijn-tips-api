@@ -223,30 +223,30 @@ class SourceTipsTests(TestCase):
 
     def test_get_tips_from_user_data(self):
         user_data = {
-  "source1": {
-    "tips": [
-      {
-        "id": "source1-1",
-        "rules": [
-          "true"
-        ]
-      }
-    ]
-  },
-  "source2": {
-    "tips": [
-      {
-        "id": "foo-1",
-        "rules": [
-          "new_rule('print(\"something\")')"
-        ]
-      },
-      {
-        "id": "foo-2"
-      }
-    ]
-  }
-}
+            "source1": {
+                "tips": [
+                    {
+                        "id": "source1-1",
+                        "rules": [
+                            "true"
+                        ]
+                    }
+                ]
+            },
+            "source2": {
+                "tips": [
+                    {
+                        "id": "foo-1",
+                        "rules": [
+                            "new_rule('print(\"something\")')"
+                        ]
+                    },
+                    {
+                        "id": "foo-2"
+                    }
+                ]
+            }
+        }
         result = get_tips_from_user_data({'data': user_data})
 
         # make sure they are all picked up
