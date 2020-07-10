@@ -6,10 +6,10 @@ from dateutil import parser
 
 # taken concept from https://stackoverflow.com/a/9388462/756075
 def yearsAgo(datestring):
-    birth_date = parser.isoparse(datestring)
+    subject_date = parser.isoparse(datestring)
     today = datetime.date.today()
-    years = today.year - birth_date.year
-    if today.month < birth_date.month or today.month == birth_date.month and today.day < birth_date.day:
+    years = today.year - subject_date.year
+    if today.month < subject_date.month or today.month == subject_date.month and today.day < subject_date.day:
         years -= 1
 
     return years
