@@ -5,7 +5,6 @@ import os
 import datetime
 
 from tips.api.user_data_tree import UserDataTree
-from dateutil import relativedelta, parser
 from tips.generator.rule_engine import apply_rules
 from tips.config import PROJECT_PATH
 from tips.tests.fixtures.fixture import get_fixture
