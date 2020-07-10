@@ -1,10 +1,11 @@
 from unittest import TestCase
 
-import objectpath
 import json
 import os
 import datetime
 
+from tips.api.user_data_tree import UserDataTree
+from dateutil import relativedelta, parser
 from tips.generator.rule_engine import apply_rules
 from tips.config import PROJECT_PATH
 from tips.tests.fixtures.fixture import get_fixture
@@ -19,7 +20,7 @@ def get_compound_rules():
 
 
 def get_date_years_ago(years):
-    return (datetime.datetime.now() - datetime.timedelta(days=years * 365.25)).strftime("%Y-%m-%dT%H:%M:%SZ")
+    return (datetime.datetime.now() - relativedelta.relativedelta(years=years)).strftime("%Y-%m-%dT%H:%M:%SZ")
 
 
 compound_rules = get_compound_rules()
@@ -38,7 +39,7 @@ class RuleEngineTest(TestCase):
             ]
         }
 
-        self.test_data = objectpath.Tree(_test_data)
+        self.test_data = UserDataTree(_test_data)
 
     def test_apply_rules_simple(self):
         rules = [
@@ -120,11 +121,11 @@ class RuleEngineTest(TestCase):
         ]
 
         def is_valid(stadspas):
-            user_data = objectpath.Tree({"FOCUS_AANVRAGEN": [stadspas]})
+            user_data = UserDataTree({"FOCUS_AANVRAGEN": [stadspas]})
             return apply_rules(user_data, rules, compound_rules)
 
         # Use invalid date
-        invalid_date = (datetime.date.today() - datetime.timedelta(days=400)).strftime("%Y-%m-%dT%H:%M:%SZ")
+        invalid_date = get_date_years_ago(2)
 
         stadspas = {
             "productTitle": "Stadspas",
@@ -133,7 +134,7 @@ class RuleEngineTest(TestCase):
         self.assertFalse(is_valid(stadspas))
 
         # Use valid date
-        valid_date = (datetime.date.today() - datetime.timedelta(days=200)).strftime("%Y-%m-%dT%H:%M:%SZ")
+        valid_date = get_date_years_ago(1)
 
         stadspas = {
             "productTitle": "Stadspas",
@@ -159,7 +160,7 @@ class RuleEngineTest(TestCase):
         self.assertFalse(is_valid(None))
         self.assertFalse(is_valid({"steps": ["hy"]}))
 
-        user_data = objectpath.Tree({"bliep": None})
+        user_data = UserDataTree({"bliep": None})
         is_valid_data = apply_rules(user_data, rules, compound_rules)
         self.assertFalse(is_valid_data)
 
@@ -171,7 +172,7 @@ class RuleEngineTest(TestCase):
         ]
 
         def get_result():
-            user_data = objectpath.Tree(fixture["data"])
+            user_data = UserDataTree(fixture["data"])
             return apply_rules(user_data, rules, compound_rules)
 
         fixture["data"]['BRP']['persoon']['geboortedatum'] = get_date_years_ago(19)
@@ -188,30 +189,30 @@ class RuleEngineTest(TestCase):
 
     def test_woont_in_gemeente_Amsterdam(self):
         fixture = get_fixture()
-        user_data = objectpath.Tree(fixture["data"])
+        user_data = UserDataTree(fixture["data"])
         rules = [
             {"type": "ref", "ref_id": "3"}
         ]
         self.assertTrue(apply_rules(user_data, rules, compound_rules))
 
         fixture["data"]['BRP']['persoon']['mokum'] = True
-        user_data = objectpath.Tree(fixture["data"])
+        user_data = UserDataTree(fixture["data"])
         self.assertTrue(apply_rules(user_data, rules, compound_rules))
 
         fixture["data"]['BRP']['persoon']['mokum'] = False
-        user_data = objectpath.Tree(fixture["data"])
+        user_data = UserDataTree(fixture["data"])
         self.assertFalse(apply_rules(user_data, rules, compound_rules))
 
     def test_heeft_kinderen(self):
         fixture = get_fixture()
-        user_data = objectpath.Tree(fixture["data"])
+        user_data = UserDataTree(fixture["data"])
         rules = [
             {"type": "ref", "ref_id": "4"}
         ]
         self.assertTrue(apply_rules(user_data, rules, compound_rules))
 
         fixture["data"]['BRP']['kinderen'] = []
-        user_data = objectpath.Tree(fixture["data"])
+        user_data = UserDataTree(fixture["data"])
         self.assertFalse(apply_rules(user_data, rules, compound_rules))
 
     def test_kind_is_tussen_2_en_18_jaar(self):
@@ -222,7 +223,7 @@ class RuleEngineTest(TestCase):
         ]
 
         def get_result():
-            user_data = objectpath.Tree(fixture["data"])
+            user_data = UserDataTree(fixture["data"])
             return apply_rules(user_data, rules, compound_rules)
 
         fixture["data"]['BRP']['kinderen'][0]['geboortedatum'] = get_date_years_ago(1)
@@ -250,7 +251,7 @@ class RuleEngineTest(TestCase):
         ]
 
         def get_result():
-            user_data = objectpath.Tree(fixture["data"])
+            user_data = UserDataTree(fixture["data"])
             return apply_rules(user_data, rules, compound_rules)
 
         # mixed valid / invalid
@@ -286,7 +287,7 @@ class RuleEngineTest(TestCase):
         ]
 
         def get_result():
-            user_data = objectpath.Tree(fixture["data"])
+            user_data = UserDataTree(fixture["data"])
             return apply_rules(user_data, rules, compound_rules)
 
         fixture["data"]['BRP']['persoon']['geboortedatum'] = get_date_years_ago(67)
@@ -318,7 +319,7 @@ class RuleEngineTest(TestCase):
         ]
 
         def get_result():
-            user_data = objectpath.Tree(fixture["data"])
+            user_data = UserDataTree(fixture["data"])
             return apply_rules(user_data, rules, pio_rule)
 
         self.assertTrue(get_result())
@@ -337,7 +338,7 @@ class RuleEngineTest(TestCase):
         ]
 
         def get_result():
-            user_data = objectpath.Tree(fixture["data"])
+            user_data = UserDataTree(fixture["data"])
             return apply_rules(user_data, rules, compound_rules)
 
         fixture["data"]['BRP']['persoon']['geboortedatum'] = get_date_years_ago(22)

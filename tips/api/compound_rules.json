@@ -4,7 +4,7 @@
     "rules": [
       {
         "type": "rule",
-        "rule": "$.FOCUS_AANVRAGEN.*[@.productTitle is 'Stadspas' and len(@.steps.*[@.decision is 'toekenning' and (now() - timeDelta(1, 0, 0, 0, 0, 0)) <= dateTime(@.datePublished)]) >= 1]"
+        "rule": "$.FOCUS_AANVRAGEN.*[@.productTitle is 'Stadspas' and len(@.steps.*[@.decision is 'toekenning' and yearsAgo(@.datePublished) <= 1]) >= 1]"
       }
     ],
     "reason": "Heeft een geldige stadspas"
@@ -14,7 +14,7 @@
     "rules": [
       {
         "type": "rule",
-        "rule": "now().year - dateTime($.BRP.persoon.geboortedatum).year >= 18"
+        "rule": "yearsAgo($.BRP.persoon.geboortedatum) >= 18"
       }
     ]
   },
@@ -41,7 +41,7 @@
     "rules": [
       {
         "type": "rule",
-        "rule": "len($.BRP.kinderen[now().year - dateTime(@.geboortedatum).year >= 2 and now().year - dateTime(@.geboortedatum).year <= 18]) >= 1"
+        "rule": "len($.BRP.kinderen[yearsAgo(@.geboortedatum) >= 2 and yearsAgo(@.geboortedatum) <= 18]) >= 1"
       }
     ]
   },
@@ -50,7 +50,7 @@
     "rules": [
       {
         "type": "rule",
-        "rule": "now().year - dateTime($.BRP.persoon.geboortedatum).year >= 66"
+        "rule": "yearsAgo($.BRP.persoon.geboortedatum) >= 66"
       }
     ]
   },
@@ -59,7 +59,7 @@
     "rules": [
       {
         "type": "rule",
-        "rule": "now().year - dateTime($.BRP.persoon.geboortedatum).year >= 21"
+        "rule": "yearsAgo($.BRP.persoon.geboortedatum) >= 21"
       }
     ]
   },
@@ -68,7 +68,7 @@
     "rules": [
       {
         "type": "rule",
-        "rule": "len($.BRP.kinderen.*[now().year - dateTime(@.geboortedatum).year >= 10 and now().year - dateTime(@.geboortedatum).year <= 12]) >= 1"
+        "rule": "len($.BRP.kinderen.*[yearsAgo(@.geboortedatum) >= 10 and yearsAgo(@.geboortedatum) <= 12]) >= 1"
       }
     ]
   }
