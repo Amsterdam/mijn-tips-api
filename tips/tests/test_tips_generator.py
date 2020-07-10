@@ -1,7 +1,7 @@
 from unittest import TestCase
 
 from tips.api.tip_generator import tips_generator, fix_id, \
-    format_tip, get_tips_from_user_data
+    format_tip, get_tips_from_user_data, FRONT_END_TIP_KEYS
 from tips.tests.fixtures.fixture import get_fixture
 
 _counter = 0
@@ -22,7 +22,8 @@ def get_tip(priority=50):
             'to': 'https://amsterdam.nl/'
         },
         'title': 'Tip title %i' % counter,
-        'imgUrl': '/api/tips/static/tip_images/erfpacht.jpg'
+        'imgUrl': '/api/tips/static/tip_images/erfpacht.jpg',
+        'reason': ['The reason for this Tip to appear', 'and more']
     }
 
 
@@ -45,15 +46,24 @@ class TipsGeneratorTest(TestCase):
         tip2_mock = get_tip()
         tips_pool = [tip1_mock, tip2_mock]
 
-        result = tips_generator(self.get_client_data(), tips_pool)
-        tips = result['items']
+        tips = tips_generator(self.get_client_data(), tips_pool)
 
         # only these fields are allowed
-        allow_list = sorted(['datePublished', 'description', 'id', 'link', 'title', 'priority', 'imgUrl', 'isPersonalized'])
+        extended_fields_list = sorted(FRONT_END_TIP_KEYS)
+        source_fields_list = [a for a in extended_fields_list if a is not 'reason']
 
-        for tip in tips:
-            fields = sorted(tip.keys())
-            self.assertEqual(allow_list, fields)
+        fields = sorted(tips[0].keys())
+        self.assertEqual(extended_fields_list, fields)
+
+        fields = sorted(tips[1].keys())
+        self.assertEqual(extended_fields_list, fields)
+        
+        # Source tips don't have a reason (yet)
+        fields = sorted(tips[2].keys())
+        self.assertNotEqual(extended_fields_list, fields)
+
+        fields = sorted(tips[2].keys())
+        self.assertEqual(source_fields_list, fields)
 
     def test_generator(self):
         tip0 = get_tip(10)
@@ -66,8 +76,7 @@ class TipsGeneratorTest(TestCase):
 
         # add them out of order to test the ordering
         tips_pool = [tip1, tip0, tip2, tip3, tip4]
-        result = tips_generator(self.get_client_data(), tips_pool)
-        tips = result['items']
+        tips = tips_generator(self.get_client_data(), tips_pool)
 
         self.assertEqual(len(tips), 5)
 
@@ -94,8 +103,7 @@ class ConditionalTest(TestCase):
 
         tips_pool = [tip1_mock, tip2_mock]
 
-        result = tips_generator(self.get_client_data(), tips_pool)
-        tips = result['items']
+        tips = tips_generator(self.get_client_data(), tips_pool)
         self.assertEqual(len(tips), 2)
 
         # Test if the correct ones are accepted
@@ -111,8 +119,7 @@ class ConditionalTest(TestCase):
         tip3_mock = get_tip()
 
         tips_pool = [tip1_mock, tip2_mock, tip3_mock]
-        result = tips_generator(self.get_client_data(), tips_pool)
-        tips = result['items']
+        tips = tips_generator(self.get_client_data(), tips_pool)
         self.assertEqual(len(tips), 3)
 
         # Test if the correct ones are accepted
@@ -126,8 +133,7 @@ class ConditionalTest(TestCase):
         tip2_mock = get_tip()
 
         tips_pool = [tip1_mock, tip2_mock]
-        result = tips_generator(self.get_client_data(), tips_pool)
-        tips = result['items']
+        tips = tips_generator(self.get_client_data(), tips_pool)
 
         # make sure the other is in there
         self.assertEqual(len(tips), 2)
@@ -148,22 +154,21 @@ class ConditionalTest(TestCase):
         Test whether a tip works correctly when based on user data.
         """
         tip1_mock = get_tip()
-        tip1_mock['rule'] = [new_rule('$.erfpacht is true')]
+        tip1_mock['rule'] = [new_rule('$.ERFPACHT.isKnown is true')]
         tip1_mock['isPersonalized'] = True
         tip2_mock = get_tip()
         tips_pool = [tip1_mock, tip2_mock]
 
         client_data = self.get_client_data(optin=True)
 
-        result = tips_generator(client_data, tips_pool)
-        tips = result['items']
+        tips = tips_generator(client_data, tips_pool)
 
         # make sure the other is in there
         self.assertEqual(len(tips), 1)
 
     def test_data_based_tip_path(self):
         tip1_mock = get_tip()
-        tip1_mock['rules'] = [new_rule("$.erfpacht is true")]
+        tip1_mock['rules'] = [new_rule("$.ERFPACHT.isKnown is true")]
         tip1_mock['isPersonalized'] = True
         tip2_mock = get_tip()
         # 18 or older
@@ -173,8 +178,7 @@ class ConditionalTest(TestCase):
 
         client_data = self.get_client_data(optin=True)
 
-        result = tips_generator(client_data, tips_pool)
-        tips = result['items']
+        tips = tips_generator(client_data, tips_pool)
 
         # make sure the other is in there
         self.assertEqual(len(tips), 2)
@@ -185,13 +189,12 @@ class ConditionalTest(TestCase):
 
     def test_data_based_tip_with_list(self):
         tip1_mock = get_tip()
-        tip1_mock['rules'] = [new_rule("$.focus[@._id is '0-0' and @.processtappen.aanvraag._id is 0]")]
+        tip1_mock['rules'] = [new_rule("$.FOCUS_AANVRAGEN[@.id is '810805911' and @.steps.*[@.id is 'aanvraag']]")]
         tip1_mock['isPersonalized'] = True
         tips_pool = [tip1_mock]
 
         client_data = self.get_client_data(optin=True)
-        result = tips_generator(client_data, tips_pool)
-        tips = result['items']
+        tips = tips_generator(client_data, tips_pool)
 
         self.assertEqual(len(tips), 1)
         self.assertEqual(tips[0]['id'], tip1_mock['id'])
@@ -207,8 +210,7 @@ class ConditionalTest(TestCase):
         # do not add isPersonalized to tip 2. It should default to False
         tips_pool = [tip1_mock, tip2_mock]
 
-        result = tips_generator(self.get_client_data(), tips_pool)
-        tips = result['items']
+        tips = tips_generator(self.get_client_data(), tips_pool)
 
         self.assertEqual(len(tips), 3)
         self.assertEqual(tips[0]['isPersonalized'], True)
@@ -287,7 +289,7 @@ class SourceTipsTests(TestCase):
             'id': 1,
             'title': 'foo',
         }
-        fix_id(belasting_tip, 'belasting')
+        fix_id(belasting_tip, 'BELASTING')
         self.assertEqual(belasting_tip['id'], 'belasting-1')
 
         other_tip = {

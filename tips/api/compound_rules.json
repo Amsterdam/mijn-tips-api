@@ -4,7 +4,7 @@
     "rules": [
       {
         "type": "rule",
-        "rule": "$.focus.*[@.soortProduct is 'Minimafonds' and @.typeBesluit is 'Toekenning' and now() - timeDelta(1, 0, 0, 0, 0, 0) <= dateTime(@.processtappen.beslissing.datum)]"
+        "rule": "$.FOCUS_AANVRAGEN.*[@.productTitle is 'Stadspas' and len(@.steps.*[@.decision is 'toekenning' and (now() - timeDelta(1, 0, 0, 0, 0, 0)) <= dateTime(@.datePublished)]) >= 1]"
       }
     ],
     "reason": "Heeft een geldige stadspas"
@@ -14,7 +14,7 @@
     "rules": [
       {
         "type": "rule",
-        "rule": "dateTime($.brp.persoon.geboortedatum) + timeDelta(18, 0, 0, 0, 0, 0) <= now()"
+        "rule": "now().year - dateTime($.BRP.persoon.geboortedatum).year >= 18"
       }
     ]
   },
@@ -23,7 +23,7 @@
     "rules": [
       {
         "type": "rule",
-        "rule": "$.brp.persoon.mokum is true"
+        "rule": "$.BRP.persoon.mokum is true"
       }
     ]
   },
@@ -32,7 +32,7 @@
     "rules": [
       {
         "type": "rule",
-        "rule": "len($.brp.kinderen) >= 1"
+        "rule": "len($.BRP.kinderen) >= 1"
       }
     ]
   },
@@ -41,18 +41,35 @@
     "rules": [
       {
         "type": "rule",
-        "rule": "len($.brp.kinderen[now() - timeDelta(2, 0, 0, 0, 0, 0) >= dateTime(@.geboortedatum) and now() - timeDelta(18, 0, 0, 0, 0, 0) <= dateTime(@.geboortedatum)]) >= 1"
+        "rule": "len($.BRP.kinderen[now().year - dateTime(@.geboortedatum).year >= 2 and now().year - dateTime(@.geboortedatum).year <= 18]) >= 1"
       }
     ]
   },
   "6": {
-    "name": "Kind is op 30 september 2020 geen 18",
+    "name": "Persoon is 66 of ouder",
     "rules": [
       {
         "type": "rule",
-        "rule": "len($.brp.kinderen[dateTime('2020-09-30T00:00:00Z') - timeDelta(18, 0, 0, 0, 0, 0) <= dateTime(@.geboortedatum)]) >= 1"
+        "rule": "now().year - dateTime($.BRP.persoon.geboortedatum).year >= 66"
       }
-    ],
-    "reason": "Is ouder dan 18 jaar"
+    ]
+  },
+  "7": {
+    "name": "Persoon is 21 of ouder",
+    "rules": [
+      {
+        "type": "rule",
+        "rule": "now().year - dateTime($.BRP.persoon.geboortedatum).year >= 21"
+      }
+    ]
+  },
+  "8": {
+    "name": "Kind is 10,11 of 12",
+    "rules": [
+      {
+        "type": "rule",
+        "rule": "len($.BRP.kinderen.*[now().year - dateTime(@.geboortedatum).year >= 10 and now().year - dateTime(@.geboortedatum).year <= 12]) >= 1"
+      }
+    ]
   }
 }

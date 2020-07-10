@@ -5,9 +5,10 @@ _FIXTURE_PATH = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'data')
 
 # these fixtures are copied from the frontend
 BRP = os.path.join(_FIXTURE_PATH, "brp.json")
-FOCUS = os.path.join(_FIXTURE_PATH, "focus.json")
+FOCUS = os.path.join(_FIXTURE_PATH, "focus_aanvragen.json")
 WMO = os.path.join(_FIXTURE_PATH, "wmo.json")
 BELASTING = os.path.join(_FIXTURE_PATH, "belasting.json")
+ERFPACHT = os.path.join(_FIXTURE_PATH, "erfpacht.json")
 
 
 def get_fixture(optin=False):
@@ -23,13 +24,16 @@ def get_fixture(optin=False):
     with open(BELASTING) as belasting_file:
         belasting = json.load(belasting_file)
 
+    with open(ERFPACHT) as erfpacht_file:
+        erfpacht = json.load(erfpacht_file)
+
     return {
         "optin": optin,
         "data": {
-            "brp": brp,
-            "focus": focus,
-            "wmo": wmo,
-            "erfpacht": True,
-            "belasting": belasting,
+            "BRP": brp,
+            "FOCUS_AANVRAGEN": focus,
+            "WMO": wmo,
+            "BELASTING": belasting,
+            "ERFPACHT": erfpacht
         }
     }

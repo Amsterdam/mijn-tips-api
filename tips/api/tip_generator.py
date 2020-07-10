@@ -82,7 +82,7 @@ def clean_tip(tip):
 
 def fix_id(tip, source):
     """ Some of our data sources do not follow our id guidelines, fix the tip here inplace. """
-    if source == "belasting":
+    if source == "BELASTING":
         tip['id'] = f"belasting-{tip['id']}"
 
 
@@ -167,7 +167,4 @@ def tips_generator(user_data, tips=None):
     if user_data['optin']:
         tips = [t for t in tips if t['isPersonalized']]
 
-    return {
-        "items": tips,
-        "total": len(tips),
-    }
+    return tips

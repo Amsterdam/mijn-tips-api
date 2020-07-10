@@ -49,11 +49,7 @@
     "rules": [
       {
         "type": "ref",
-        "ref_id": "6" 
-      },
-      {
-          "type": "ref",
-          "ref_id": "3"
+        "ref_id": "3"
       }
     ],
     "isPersonalized": true,
@@ -72,12 +68,12 @@
     "description": "Een gratis laptop of tablet voor uw kind van 10, 11 of 12 jaar op de basisschool.",
     "rules": [
       {
-        "type": "rule",
-        "rule": "len($.brp.kinderen[now() - timeDelta(10, 0, 0, 0, 0, 0) >= dateTime(@.geboortedatum) and now() - timeDelta(13, 0, 0, 0, 0, 0) < dateTime(@.geboortedatum)]) >= 1"
+        "type": "ref",
+        "ref_id": "3"
       },
       {
-          "type": "ref",
-          "ref_id": "3"
+        "type": "ref",
+        "ref_id": "8"
       }
     ],
     "isPersonalized": true,
@@ -100,8 +96,8 @@
         "ref_id": "2"
       },
       {
-          "type": "ref",
-          "ref_id": "3"
+        "type": "ref",
+        "ref_id": "3"
       }
     ],
     "isPersonalized": true,
@@ -121,11 +117,7 @@
     "rules": [
       {
         "type": "ref",
-        "ref_id": "6"
-      },
-      {
-          "type": "ref",
-          "ref_id": "3"
+        "ref_id": "3"
       }
     ],
     "isPersonalized": true,
@@ -148,8 +140,8 @@
         "ref_id": "2"
       },
       {
-          "type": "ref",
-          "ref_id": "3"
+        "type": "ref",
+        "ref_id": "3"
       }
     ],
     "isPersonalized": true,
@@ -178,10 +170,6 @@
       {
         "type": "ref",
         "ref_id": "5"
-      },
-      {
-        "type": "ref",
-        "ref_id": "6"
       }
     ],
     "isPersonalized": true,
@@ -224,8 +212,8 @@
     "description": "Hebt u een korting op uw AOW en hebt u weinig vermogen? Dan kunt u extra geld krijgen. Dit extra geld heet een aanvulling.",
     "rules": [
       {
-        "type": "rule",
-        "rule": "dateTime($.brp.persoon.geboortedatum) + timeDelta(66, 4, 0, 0, 0, 0) <= now()"
+        "type": "ref",
+        "ref_id": "6"
       }
     ],
     "isPersonalized": true,
@@ -242,8 +230,7 @@
     "datePublished": "2019-08-18",
     "title": "Vergoeding eigen bijdrage kinderopvang",
     "description": "De gemeente betaalt 4% van uw kosten voor kinderopvang direct aan de kinderopvangorganisatie. U betaalt daardoor zelf 4% minder voor de kinderopvang.",
-    "rules": [
-    ],
+    "rules": [],
     "isPersonalized": true,
     "link": {
       "title": "Kijk op de kaart",
@@ -258,8 +245,7 @@
     "datePublished": "2019-08-18",
     "title": "Bijzondere bijstand",
     "description": "Bijzondere bijstand is geld. U vraagt het geld aan de gemeente. De gemeente bepaalt of u het geld krijgt. U moet wachten tot de gemeente een beslissing heeft genomen. Krijgt u het geld? Dan gebruikt u het voor uitgaven die echt nodig zijn.",
-    "rules": [
-    ],
+    "rules": [],
     "isPersonalized": true,
     "link": {
       "title": "Kijk op de kaart",
@@ -326,8 +312,7 @@
     "datePublished": "2019-08-18",
     "title": "Financieel spreekuur",
     "description": "Bij een financieel spreekuur kunt u alle vragen stellen over de extra’s voor Amsterdammers met weinig geld. U kunt ook andere vragen stellen over geldproblemen.",
-    "rules": [
-    ],
+    "rules": [],
     "isPersonalized": true,
     "link": {
       "title": "Kijk op de kaart",
@@ -349,7 +334,7 @@
       },
       {
         "type": "rule",
-        "rule": "$.brp.persoon.nationaliteiten[@.omschrijving is Nederlandse]"
+        "rule": "$.BRP.persoon.nationaliteiten[@.omschrijving is Nederlandse]"
       },
       {
         "type": "ref",
@@ -374,7 +359,7 @@
       {
         "type": "ref",
         "ref_id": "5"
-      } 
+      }
     ],
     "isPersonalized": true,
     "link": {
@@ -394,7 +379,7 @@
       {
         "type": "ref",
         "ref_id": "5"
-      } 
+      }
     ],
     "isPersonalized": true,
     "link": {
@@ -410,8 +395,7 @@
     "datePublished": "2019-08-18",
     "title": "Kindbonnen",
     "description": "Met een kindbon kunt u boeken of kleding voor uw kind kopen bij een aantal winkels.",
-    "rules": [
-    ],
+    "rules": [],
     "isPersonalized": true,
     "link": {
       "title": "Kijk op de kaart",
@@ -450,8 +434,7 @@
     "datePublished": "2019-08-18",
     "title": "Kwijtschelding gemeentebelastingen",
     "description": "Gemeentebelastingen zijn bijvoorbeeld afvalstoffenheffing, zuiveringsheffing en onroerendezaakbelasting. Kwijtschelding betekent dat u deze belastingen niet (helemaal) hoeft te betalen.",
-    "rules": [
-    ],
+    "rules": [],
     "isPersonalized": true,
     "link": {
       "title": "Kijk op de kaart",
@@ -466,8 +449,7 @@
     "datePublished": "2019-08-18",
     "title": "Ondersteuning voor ondernemers",
     "description": "Wie onderneemt weet dat het soms tegen kan zitten. Een paar slechte maanden en er blijft te weinig over om van te leven. Schulden kunnen oplopen en er is geen geld om nieuwe investeringen te doen. Ondernemers kunnen bij de gemeente terecht voor ondersteuning.",
-    "rules": [
-    ],
+    "rules": [],
     "isPersonalized": true,
     "link": {
       "title": "Kijk op de kaart",
@@ -482,8 +464,7 @@
     "datePublished": "2019-08-18",
     "title": "Vrijwillige ouderbijdrage betalen met Stadspas",
     "description": "Vraag op de basisschool van uw kind(eren) of het mogelijk is om de vrijwillige ouderbijdrage te betalen met de Stadspas.",
-    "rules": [
-    ],
+    "rules": [],
     "isPersonalized": true,
     "link": {
       "title": "Kijk op de kaart",
@@ -558,8 +539,7 @@
     "datePublished": "2019-08-18",
     "title": "Voedselbank",
     "description": "Bij de Voedselbank krijgt u gratis eten. Bijvoorbeeld melk, brood en groente. U krijgt iedere week een doos met producten. In die doos zit iedere week iets anders.",
-    "rules": [
-    ],
+    "rules": [],
     "isPersonalized": true,
     "link": {
       "title": "Kijk op de kaart",
@@ -574,8 +554,7 @@
     "datePublished": "2019-08-18",
     "title": "Witgoed bij nood",
     "description": "Een speciaal fonds (FBNA) regelt voor u de vervanging van een kapotte wasmachine, koelkast of gasfornuis. Zij doen dit voor Amsterdammers die het apparaat echt nodig hebben. En er niet op een andere manier aan kunnen komen. U krijgt het apparaat te leen. Na 5 jaar mag u het houden.",
-    "rules": [
-    ],
+    "rules": [],
     "isPersonalized": true,
     "link": {
       "title": "Kijk op de kaart",
@@ -590,8 +569,7 @@
     "datePublished": "2019-08-18",
     "title": "Woonkostentoeslag",
     "description": "Wordt uw inkomen plotseling veel lager? En kunt u de huur of hypotheek niet meer betalen? Dan kunnen wij u tijdelijk helpen. U krijgt extra geld om de huur of hypotheek te betalen.",
-    "rules": [
-    ],
+    "rules": [],
     "isPersonalized": true,
     "link": {
       "title": "Kijk op de kaart",
@@ -608,8 +586,8 @@
     "description": "Hebt u drie jaar of langer een laag inkomen en denkt u dat dit voorlopig zo zal blijven? Dan kunt u Individuele inkomenstoeslag aanvragen.",
     "rules": [
       {
-        "type": "rule",
-        "rule": "dateTime($.brp.persoon.geboortedatum) + timeDelta(21, 0, 0, 0, 0, 0) <= now()"
+        "type": "ref",
+        "ref_id": "7"
       },
       {
         "type": "ref",
