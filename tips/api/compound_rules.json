@@ -7,7 +7,7 @@
         "rule": "$.FOCUS_AANVRAGEN.*[@.productTitle is 'Stadspas' and len(@.steps.*[@.decision is 'toekenning' and yearsAgo(@.datePublished) <= 1]) >= 1]"
       }
     ],
-    "reason": "Heeft een geldige stadspas"
+    "reason": "U hebt een geldige stadspas"
   },
   "2": {
     "name": "Is 18 of ouder",
