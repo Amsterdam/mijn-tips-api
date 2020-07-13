@@ -46,7 +46,7 @@ class ApiTests(TestCase):
         self.assertEqual(tips[0]['reason'], ['Afgelopen 3 maanden verhuisd'])
 
         self.assertEqual(tips[1]['title'], 'Wat kan ik doen met mijn Stadspas?')
-        self.assertEqual(tips[1]['reason'], ['Heeft een geldige stadspas'])
+        self.assertEqual(tips[1]['reason'], ['U hebt een geldige stadspas'])
 
     def test_income_tips(self):
         response = self.client.post('/tips/getincometips', json=self._get_client_data())
