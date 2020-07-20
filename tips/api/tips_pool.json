@@ -132,14 +132,14 @@
     "priority": 70,
     "datePublished": "2019-08-18",
     "title": "Bekijk de afvalpunten in de buurt",
-    "description": "Kijk waar het dichtstbijzijnde Afvalpunt is. En welke vergunningen de gemeente heeft uitgegeven in uw buurt.",
+    "description": "Kijk waar het dichtstbijzijnde Afvalpunt is.",
     "rules": [
       {
         "type": "rule",
         "rule": "dateTime($.brp.adres.begindatumVerblijf) + timeDelta(0, 3, 0, 0, 0, 0) <= now()"
       }
     ],
-    "reason": "Afgelopen 3 maanden verhuisd",
+    "reason": "U ziet deze tip omdat u net bent verhuisd",
     "isPersonalized": true,
     "link": {
       "title": "Kijk op de kaart",
@@ -152,8 +152,8 @@
     "active": true,
     "priority": 70,
     "datePublished": "2019-10-22",
-    "title": "Wat kan ik doen met mijn Stadspas?",
-    "description": "U hebt een Stadspas.",
+    "title": "Op stap met uw Stadspas",
+    "description": "Haalt u alles uit uw Stadspas?",
     "rules": [{"type": "ref", "ref_id": "1"}],
     "isPersonalized": true,
     "link": {
@@ -243,14 +243,14 @@
     "priority": 70,
     "datePublished": "2020-07-03",
     "title": "Welkom in Amsterdam",
-    "description": "U bent net in Amsterdam komen wonen, welkom! Blijf op de hoogte van actualiteiten in uw stadseel.",
+    "description": "U bent net in Amsterdam komen wonen, welkom! Blijf op de hoogte van het nieuws in uw stadsdeel.",
     "rules": [
       {
         "type": "rule",
         "rule": "dateTime($.brp.adres.begindatumVerblijf) + timeDelta(0, 6, 0, 0, 0, 0) <= now()"
       }
     ],
-    "reason": "Afgelopen 6 maanden verhuisd",
+    "reason": "U ziet deze tip omdat u net naar Amsterdam bent verhuisd",
     "isPersonalized": true,
     "link": {
       "title": "Lees meer in deze nieuwsbrief",

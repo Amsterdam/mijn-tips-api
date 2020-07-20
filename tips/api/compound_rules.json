@@ -7,7 +7,7 @@
         "rule": "$.focus.*[@.soortProduct is 'Minimafonds' and @.typeBesluit is 'Toekenning' and now() - timeDelta(1, 0, 0, 0, 0, 0) <= dateTime(@.processtappen.beslissing.datum)]"
       }
     ],
-    "reason": "Heeft een geldige stadspas"
+    "reason": "U ziet deze tip omdat u een Stadspas hebt"
   },
   "2": {
     "name": "Is 18 of ouder",
@@ -53,6 +53,6 @@
         "rule": "len($.brp.kinderen[dateTime('2020-09-30T00:00:00Z') - timeDelta(18, 0, 0, 0, 0, 0) <= dateTime(@.geboortedatum)]) >= 1"
       }
     ],
-    "reason": "Is ouder dan 18 jaar"
+    "reason": "U ziet deze tip omdat uw kind op 30 september 2020 jonger dan 18 jaar is/was"
   }
 }
