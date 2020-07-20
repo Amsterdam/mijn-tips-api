@@ -102,7 +102,7 @@
     "description": "Tot 1 januari 2020 kunt u gebruik maken van de gunstige voorwaarden.",
     "rules": [
       {"type": "rule", "rule": "datetime.now() < datetime(2020, 1, 1)"},
-      {"type": "rule", "rule": "$.erfpacht is true"}
+      {"type": "rule", "rule": "$.ERFPACHT.isKnown is true"}
     ],
     "reason": "Heeft erfpacht",
     "isPersonalized": true,
@@ -136,7 +136,7 @@
     "rules": [
       {
         "type": "rule",
-        "rule": "dateTime($.brp.adres.begindatumVerblijf) + timeDelta(0, 3, 0, 0, 0, 0) <= now()"
+        "rule": "dateTime($.BRP.adres.begindatumVerblijf) + timeDelta(0, 3, 0, 0, 0, 0) >= now()"
       }
     ],
     "reason": "U ziet deze tip omdat u net bent verhuisd",
@@ -247,7 +247,7 @@
     "rules": [
       {
         "type": "rule",
-        "rule": "dateTime($.brp.adres.begindatumVerblijf) + timeDelta(0, 6, 0, 0, 0, 0) <= now()"
+        "rule": "dateTime($.BRP.adres.begindatumVerblijf) + timeDelta(0, 6, 0, 0, 0, 0) >= now()"
       }
     ],
     "reason": "U ziet deze tip omdat u net naar Amsterdam bent verhuisd",
