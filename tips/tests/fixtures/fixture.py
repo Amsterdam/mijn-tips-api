@@ -29,7 +29,8 @@ def get_fixture(optin=False):
 
     return {
         "optin": optin,
-        "data": {
+        "tips": belasting['tips'],
+        "userData": {
             "BRP": brp,
             "FOCUS_AANVRAGEN": focus,
             "WMO": wmo,

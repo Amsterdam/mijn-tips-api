@@ -9,6 +9,7 @@ from dateutil import relativedelta
 from tips.generator.rule_engine import apply_rules
 from tips.config import PROJECT_PATH
 from tips.tests.fixtures.fixture import get_fixture
+from tips.server import get_tips_request_data
 
 COMPOUND_RULES_FILE = os.path.join(PROJECT_PATH, 'api', 'compound_rules.json')
 
@@ -40,6 +41,9 @@ class RuleEngineTest(TestCase):
         }
 
         self.test_data = UserDataTree(_test_data)
+
+    def _get_tips_request_data(self):
+        return get_tips_request_data(get_fixture())
 
     def test_apply_rules_simple(self):
         rules = [
@@ -165,145 +169,145 @@ class RuleEngineTest(TestCase):
         self.assertFalse(is_valid_data)
 
     def test_is_18_of_ouder(self):
-        fixture = get_fixture()
+        fixture = self._get_tips_request_data()
 
         rules = [
             {"type": "ref", "ref_id": "2"}
         ]
 
         def get_result():
-            user_data = UserDataTree(fixture["data"])
+            user_data = UserDataTree(fixture["user_data"])
             return apply_rules(user_data, rules, compound_rules)
 
-        fixture["data"]['BRP']['persoon']['geboortedatum'] = get_date_years_ago(19)
+        fixture["user_data"]['BRP']['persoon']['geboortedatum'] = get_date_years_ago(19)
         self.assertTrue(get_result())
 
-        fixture["data"]['BRP']['persoon']['geboortedatum'] = get_date_years_ago(18)
+        fixture["user_data"]['BRP']['persoon']['geboortedatum'] = get_date_years_ago(18)
         self.assertTrue(get_result())
 
-        fixture["data"]['BRP']['persoon']['geboortedatum'] = get_date_years_ago(17)
+        fixture["user_data"]['BRP']['persoon']['geboortedatum'] = get_date_years_ago(17)
         self.assertFalse(get_result())
 
-        fixture["data"]['BRP']['persoon']['geboortedatum'] = get_date_years_ago(1)
+        fixture["user_data"]['BRP']['persoon']['geboortedatum'] = get_date_years_ago(1)
         self.assertFalse(get_result())
 
     def test_woont_in_gemeente_Amsterdam(self):
-        fixture = get_fixture()
-        user_data = UserDataTree(fixture["data"])
+        fixture = self._get_tips_request_data()
+        user_data = UserDataTree(fixture["user_data"])
         rules = [
             {"type": "ref", "ref_id": "3"}
         ]
         self.assertTrue(apply_rules(user_data, rules, compound_rules))
 
-        fixture["data"]['BRP']['persoon']['mokum'] = True
-        user_data = UserDataTree(fixture["data"])
+        fixture["user_data"]['BRP']['persoon']['mokum'] = True
+        user_data = UserDataTree(fixture["user_data"])
         self.assertTrue(apply_rules(user_data, rules, compound_rules))
 
-        fixture["data"]['BRP']['persoon']['mokum'] = False
-        user_data = UserDataTree(fixture["data"])
+        fixture["user_data"]['BRP']['persoon']['mokum'] = False
+        user_data = UserDataTree(fixture["user_data"])
         self.assertFalse(apply_rules(user_data, rules, compound_rules))
 
     def test_heeft_kinderen(self):
-        fixture = get_fixture()
-        user_data = UserDataTree(fixture["data"])
+        fixture = self._get_tips_request_data()
+        user_data = UserDataTree(fixture["user_data"])
         rules = [
             {"type": "ref", "ref_id": "4"}
         ]
         self.assertTrue(apply_rules(user_data, rules, compound_rules))
 
-        fixture["data"]['BRP']['kinderen'] = []
-        user_data = UserDataTree(fixture["data"])
+        fixture["user_data"]['BRP']['kinderen'] = []
+        user_data = UserDataTree(fixture["user_data"])
         self.assertFalse(apply_rules(user_data, rules, compound_rules))
 
     def test_kind_is_tussen_2_en_18_jaar(self):
-        fixture = get_fixture()
+        fixture = self._get_tips_request_data()
 
         rules = [
             {"type": "ref", "ref_id": "5"}
         ]
 
         def get_result():
-            user_data = UserDataTree(fixture["data"])
+            user_data = UserDataTree(fixture["user_data"])
             return apply_rules(user_data, rules, compound_rules)
 
-        fixture["data"]['BRP']['kinderen'][0]['geboortedatum'] = get_date_years_ago(1)
-        fixture["data"]['BRP']['kinderen'][1]['geboortedatum'] = get_date_years_ago(19)
+        fixture["user_data"]['BRP']['kinderen'][0]['geboortedatum'] = get_date_years_ago(1)
+        fixture["user_data"]['BRP']['kinderen'][1]['geboortedatum'] = get_date_years_ago(19)
         self.assertFalse(get_result())
 
-        fixture["data"]['BRP']['kinderen'][0]['geboortedatum'] = get_date_years_ago(1)
-        fixture["data"]['BRP']['kinderen'][1]['geboortedatum'] = get_date_years_ago(3)
+        fixture["user_data"]['BRP']['kinderen'][0]['geboortedatum'] = get_date_years_ago(1)
+        fixture["user_data"]['BRP']['kinderen'][1]['geboortedatum'] = get_date_years_ago(3)
         self.assertTrue(get_result())
 
-        fixture["data"]['BRP']['kinderen'][0]['geboortedatum'] = get_date_years_ago(2)
-        fixture["data"]['BRP']['kinderen'][1]['geboortedatum'] = get_date_years_ago(18)
+        fixture["user_data"]['BRP']['kinderen'][0]['geboortedatum'] = get_date_years_ago(2)
+        fixture["user_data"]['BRP']['kinderen'][1]['geboortedatum'] = get_date_years_ago(18)
         self.assertTrue(get_result())
 
-        fixture["data"]['BRP']['kinderen'][0]['geboortedatum'] = get_date_years_ago(11)
-        fixture["data"]['BRP']['kinderen'][1]['geboortedatum'] = get_date_years_ago(16)
+        fixture["user_data"]['BRP']['kinderen'][0]['geboortedatum'] = get_date_years_ago(11)
+        fixture["user_data"]['BRP']['kinderen'][1]['geboortedatum'] = get_date_years_ago(16)
         self.assertTrue(get_result())
 
     def test_kind_is_10_11_12(self):
 
-        fixture = get_fixture()
+        fixture = self._get_tips_request_data()
 
         rules = [
             {"type": "ref", "ref_id": "8"}
         ]
 
         def get_result():
-            user_data = UserDataTree(fixture["data"])
+            user_data = UserDataTree(fixture["user_data"])
             return apply_rules(user_data, rules, compound_rules)
 
         # mixed valid / invalid
-        fixture["data"]['BRP']['kinderen'][0]['geboortedatum'] = get_date_years_ago(12)
-        fixture["data"]['BRP']['kinderen'][1]['geboortedatum'] = get_date_years_ago(5)
+        fixture["user_data"]['BRP']['kinderen'][0]['geboortedatum'] = get_date_years_ago(12)
+        fixture["user_data"]['BRP']['kinderen'][1]['geboortedatum'] = get_date_years_ago(5)
         self.assertTrue(get_result())
 
         # mixed valid / invalid
-        fixture["data"]['BRP']['kinderen'][0]['geboortedatum'] = get_date_years_ago(10)
-        fixture["data"]['BRP']['kinderen'][1]['geboortedatum'] = get_date_years_ago(14)
+        fixture["user_data"]['BRP']['kinderen'][0]['geboortedatum'] = get_date_years_ago(10)
+        fixture["user_data"]['BRP']['kinderen'][1]['geboortedatum'] = get_date_years_ago(14)
         self.assertTrue(get_result())
 
         # both valid age
-        fixture["data"]['BRP']['kinderen'][0]['geboortedatum'] = get_date_years_ago(11)
-        fixture["data"]['BRP']['kinderen'][1]['geboortedatum'] = get_date_years_ago(11)
+        fixture["user_data"]['BRP']['kinderen'][0]['geboortedatum'] = get_date_years_ago(11)
+        fixture["user_data"]['BRP']['kinderen'][1]['geboortedatum'] = get_date_years_ago(11)
         self.assertTrue(get_result())
 
         # both children are younger
-        fixture["data"]['BRP']['kinderen'][0]['geboortedatum'] = get_date_years_ago(5)
-        fixture["data"]['BRP']['kinderen'][1]['geboortedatum'] = get_date_years_ago(2)
+        fixture["user_data"]['BRP']['kinderen'][0]['geboortedatum'] = get_date_years_ago(5)
+        fixture["user_data"]['BRP']['kinderen'][1]['geboortedatum'] = get_date_years_ago(2)
         self.assertFalse(get_result())
 
         # both children are older
-        fixture["data"]['BRP']['kinderen'][0]['geboortedatum'] = get_date_years_ago(15)
-        fixture["data"]['BRP']['kinderen'][1]['geboortedatum'] = get_date_years_ago(22)
+        fixture["user_data"]['BRP']['kinderen'][0]['geboortedatum'] = get_date_years_ago(15)
+        fixture["user_data"]['BRP']['kinderen'][1]['geboortedatum'] = get_date_years_ago(22)
         self.assertFalse(get_result())
 
     def test_is_66_of_ouder(self):
-        fixture = get_fixture()
+        fixture = self._get_tips_request_data()
 
         rules = [
             {"type": "ref", "ref_id": "6"}
         ]
 
         def get_result():
-            user_data = UserDataTree(fixture["data"])
+            user_data = UserDataTree(fixture["user_data"])
             return apply_rules(user_data, rules, compound_rules)
 
-        fixture["data"]['BRP']['persoon']['geboortedatum'] = get_date_years_ago(67)
+        fixture["user_data"]['BRP']['persoon']['geboortedatum'] = get_date_years_ago(67)
         self.assertTrue(get_result())
 
-        fixture["data"]['BRP']['persoon']['geboortedatum'] = get_date_years_ago(66)
+        fixture["user_data"]['BRP']['persoon']['geboortedatum'] = get_date_years_ago(66)
         self.assertTrue(get_result())
 
-        fixture["data"]['BRP']['persoon']['geboortedatum'] = get_date_years_ago(55)
+        fixture["user_data"]['BRP']['persoon']['geboortedatum'] = get_date_years_ago(55)
         self.assertFalse(get_result())
 
-        fixture["data"]['BRP']['persoon']['geboortedatum'] = get_date_years_ago(65)
+        fixture["user_data"]['BRP']['persoon']['geboortedatum'] = get_date_years_ago(65)
         self.assertFalse(get_result())
 
     def test_nationaliteit(self):
-        fixture = get_fixture()
+        fixture = self._get_tips_request_data()
 
         pio_rule = {
             "1": {
@@ -319,36 +323,36 @@ class RuleEngineTest(TestCase):
         ]
 
         def get_result():
-            user_data = UserDataTree(fixture["data"])
+            user_data = UserDataTree(fixture["user_data"])
             return apply_rules(user_data, rules, pio_rule)
 
         self.assertTrue(get_result())
 
-        fixture["data"]['BRP']['persoon']["nationaliteiten"][0] = {"omschrijving": "Nederlandse"}
+        fixture["user_data"]['BRP']['persoon']["nationaliteiten"][0] = {"omschrijving": "Nederlandse"}
         self.assertTrue(get_result())
 
-        fixture["data"]['BRP']['persoon']["nationaliteiten"][0] = {"omschrijving": "Amerikaanse"}
+        fixture["user_data"]['BRP']['persoon']["nationaliteiten"][0] = {"omschrijving": "Amerikaanse"}
         self.assertFalse(get_result())
 
     def test_is_21_of_ouder(self):
-        fixture = get_fixture()
+        fixture = self._get_tips_request_data()
 
         rules = [
             {"type": "ref", "ref_id": "7"}
         ]
 
         def get_result():
-            user_data = UserDataTree(fixture["data"])
+            user_data = UserDataTree(fixture["user_data"])
             return apply_rules(user_data, rules, compound_rules)
 
-        fixture["data"]['BRP']['persoon']['geboortedatum'] = get_date_years_ago(22)
+        fixture["user_data"]['BRP']['persoon']['geboortedatum'] = get_date_years_ago(22)
         self.assertTrue(get_result())
 
-        fixture["data"]['BRP']['persoon']['geboortedatum'] = get_date_years_ago(21)
+        fixture["user_data"]['BRP']['persoon']['geboortedatum'] = get_date_years_ago(21)
         self.assertTrue(get_result())
 
-        fixture["data"]['BRP']['persoon']['geboortedatum'] = get_date_years_ago(14)
+        fixture["user_data"]['BRP']['persoon']['geboortedatum'] = get_date_years_ago(14)
         self.assertFalse(get_result())
 
-        fixture["data"]['BRP']['persoon']['geboortedatum'] = get_date_years_ago(20)
+        fixture["user_data"]['BRP']['persoon']['geboortedatum'] = get_date_years_ago(20)
         self.assertFalse(get_result())

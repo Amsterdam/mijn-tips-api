@@ -108,15 +108,8 @@ def format_tip(tip):
     }
 
 
-def get_tips_from_user_data(user_data):
+def format_source_tips(source_tips=[]):
     """ If the data from the client has source tips, return them as a list """
-    source_tips = []
-    for source, value in user_data['data'].items():
-        if type(value) == dict and 'tips' in value:
-            for tip in value['tips']:
-                fix_id(tip, source)
-            source_tips = source_tips + value['tips']
-
     # make sure they follow the format
     source_tips = [format_tip(tip) for tip in source_tips]
 
@@ -140,18 +133,17 @@ def enrich_tip(tip):
             break  # only one enrichment per tip allowed
 
 
-def tips_generator(user_data, tips=None):
+def tips_generator(request_data={}, tips=None):
     """ Generate tips. """
     if tips is None:
         tips = tips_pool
 
     # add source tips
-    source_tips = get_tips_from_user_data(user_data)
-    if source_tips:
-        tips = tips + source_tips
+    if request_data['source_tips']:
+        tips = tips + format_source_tips(request_data['source_tips'])
 
-    if user_data['optin']:
-        user_data_prepared = UserDataTree(user_data['data'])
+    if request_data['optin']:
+        user_data_prepared = UserDataTree(request_data['user_data'])
     else:
         user_data_prepared = UserDataTree({})
 
@@ -163,7 +155,7 @@ def tips_generator(user_data, tips=None):
     tips.sort(key=lambda t: t['priority'], reverse=True)
 
     # if optin is on, only show personalised tips
-    if user_data['optin']:
+    if request_data['optin']:
         tips = [t for t in tips if t['isPersonalized']]
 
     return tips
