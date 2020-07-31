@@ -23,11 +23,29 @@ if get_sentry_dsn():  # pragma: no cover
     )
 
 
+def get_tips_request_data(request_data):
+    user_data = {}
+    source_tips = []
+    optin = False
+
+    if 'userData' in request_data:
+        user_data = request_data['userData']
+
+    if 'tips' in request_data:
+        source_tips = request_data['tips']
+
+    if 'optin' in request_data and type(request_data['optin']) is bool:
+        optin = request_data['optin']
+
+    return {'optin': optin, 'user_data': user_data, 'source_tips': source_tips}
+
+
 # Route is defined in swagger/tips.yaml
 def get_tips():
     # This is a POST because the user data gets sent in the body.
     # This data is too large and inappropriate for a GET, also because of privacy reasons
-    tips_data = tips_generator(request.get_json())
+    request_data = get_tips_request_data(request_data=request.get_json())
+    tips_data = tips_generator(request_data)
     return tips_data
 
 
@@ -36,7 +54,8 @@ def get_income_tips():
     # This data is too large and inappropriate for a GET, also because of privacy reasons
     with open(PERSOONLIJK_INKOMENS_TIPS_FILE) as fp:
         persoonlijk_inkomens_tips = json.load(fp)
-    tips_data = tips_generator(request.get_json(), persoonlijk_inkomens_tips)
+    request_data = get_tips_request_data(request_data=request.get_json())
+    tips_data = tips_generator(request_data, persoonlijk_inkomens_tips)
     return tips_data
 
 

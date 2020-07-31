@@ -29,11 +29,11 @@ class ApiTests(TestCase):
         recent_date = (datetime.date.today() - datetime.timedelta(days=60)).strftime("%Y-%m-%dT%H:%M:%SZ")
 
         # Change date which we compare to now() in our tests.
-        client_data['data']['BRP']['adres']['begindatumVerblijf'] = recent_date
+        client_data['userData']['BRP']['adres']['begindatumVerblijf'] = recent_date
 
-        for index, item in enumerate(client_data['data']['FOCUS_AANVRAGEN']):
+        for index, item in enumerate(client_data['userData']['FOCUS_AANVRAGEN']):
             if item['id'] == 'test-stadspas-validity':
-                client_data['data']['FOCUS_AANVRAGEN'][index]['steps'][-1]['datePublished'] = recent_date
+                client_data['userData']['FOCUS_AANVRAGEN'][index]['steps'][-1]['datePublished'] = recent_date
                 break
 
         response = self.client.post('/tips/gettips', json=client_data)

@@ -1,8 +1,9 @@
 from unittest import TestCase
 
 from tips.api.tip_generator import tips_generator, fix_id, \
-    format_tip, get_tips_from_user_data, FRONT_END_TIP_KEYS
+    format_tip, format_source_tips, FRONT_END_TIP_KEYS
 from tips.tests.fixtures.fixture import get_fixture
+from tips.server import get_tips_request_data
 
 _counter = 0
 
@@ -39,7 +40,7 @@ class TipsGeneratorTest(TestCase):
         pass
 
     def get_client_data(self):
-        return get_fixture()
+        return get_tips_request_data(get_fixture())
 
     def test_allow_listed_fields(self):
         tip1_mock = get_tip()
@@ -92,7 +93,7 @@ class TipsGeneratorTest(TestCase):
 
 class ConditionalTest(TestCase):
     def get_client_data(self, optin=False):
-        return get_fixture(optin)
+        return get_tips_request_data(get_fixture(optin))
 
     def test_active(self):
         """ Add one active and one inactive tip. """
@@ -221,33 +222,25 @@ class SourceTipsTests(TestCase):
     def setUp(self) -> None:
         pass
 
-    def test_get_tips_from_user_data(self):
-        user_data = {
-            "source1": {
-                "tips": [
-                    {
-                        "id": "source1-1",
-                        "rules": [
-                            "true"
-                        ]
-                    }
+    def test_format_source_tips(self):
+        source_tips = [
+            {
+                "id": "source1-1",
+                "rules": [
+                    "true"
+                ]
+            }, {
+                "id": "foo-1",
+                "rules": [
+                    "new_rule('print(\"something\")')"
                 ]
             },
-            "source2": {
-                "tips": [
-                    {
-                        "id": "foo-1",
-                        "rules": [
-                            "new_rule('print(\"something\")')"
-                        ]
-                    },
-                    {
-                        "id": "foo-2"
-                    }
-                ]
+            {
+                "id": "foo-2"
             }
-        }
-        result = get_tips_from_user_data({'data': user_data})
+        ]
+
+        result = format_source_tips(source_tips)
 
         # make sure they are all picked up
         self.assertEqual(result[0]['id'], 'source1-1')
