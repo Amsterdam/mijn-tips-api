@@ -134,9 +134,10 @@ def enrich_tip(tip):
 
 
 def tips_generator(request_data=None, tips=None):
-if request_data is None:
-    request_data = {}
     """ Generate tips. """
+    if request_data is None:
+        request_data = {}
+
     if tips is None:
         tips = tips_pool
 
