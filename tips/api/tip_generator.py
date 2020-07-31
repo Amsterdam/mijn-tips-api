@@ -133,7 +133,9 @@ def enrich_tip(tip):
             break  # only one enrichment per tip allowed
 
 
-def tips_generator(request_data={}, tips=None):
+def tips_generator(request_data=None, tips=None):
+if request_data is None:
+    request_data = {}
     """ Generate tips. """
     if tips is None:
         tips = tips_pool
