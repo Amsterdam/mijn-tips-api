@@ -5,6 +5,7 @@
     "priority": 50,
     "datePublished": "2019-07-24",
     "title": "Geen telefoon op de fiets",
+    "audience": ["personal"],
     "description": "U mag geen telefoon meer vasthouden op de fiets.",
     "link": {
       "title": "Meer informatie",
@@ -18,6 +19,7 @@
     "priority": 20,
     "datePublished": "2019-07-24",
     "title": "Vrijwilliger worden?",
+    "audience": ["personal"],
     "description": "Er is altijd vrijwilligerswerk dat bij u past. Bekijk de vacatures.",
     "link": {
       "title": "Vrijwilligerscentrale Amsterdam",
@@ -31,6 +33,7 @@
     "priority": 25,
     "datePublished": "2019-07-24",
     "title": "Grofvuil",
+    "audience": ["personal"],
     "description": "Op een Afvalpunt kunt u uw grofvuil, klein chemisch afval en tweedehands spullen inleveren.",
     "link": {
       "title": "Adressen Afvalpunten",
@@ -44,6 +47,7 @@
     "priority": 20,
     "datePublished": "2019-07-24",
     "title": "Geveltuin",
+    "audience": ["personal"],
     "description": "Bekijk hoe u gratis een geveltuin kunt aanvragen bij uw stadsdeel. Of hoe u de geveltuin kunt laten verwijderen.",
     "link": {
       "title": "Meer informatie",
@@ -57,6 +61,7 @@
     "priority": 20,
     "datePublished": "2019-07-24",
     "title": "Vaccinaties",
+    "audience": ["personal"],
     "description": "De GGD geeft advies en alle vaccinaties die u nodig hebt voor uw vakantie naar het buitenland.",
     "link": {
       "title": "Meer informatie",
@@ -70,6 +75,7 @@
     "priority": 40,
     "datePublished": "2019-07-24",
     "title": "Nieuw in Mijn Amsterdam",
+    "audience": ["personal"],
     "description": "U vindt nu ook gemeentelijke belastinginformatie in Mijn Amsterdam.",
     "rules": [
       {"type": "rule", "rule": "now() < datetime(2019, 9, 1)"}
@@ -86,6 +92,7 @@
     "priority": 20,
     "datePublished": "2019-07-24",
     "title": "Kom snel terug",
+    "audience": ["personal"],
     "description": "U vindt hier steeds weer nieuwe onderwerpen! Bekijk de nieuwe onderwerpen.",
     "link": {
       "title": "Bekijk de nieuwe onderwerpen",
@@ -99,6 +106,7 @@
     "priority": 70,
     "datePublished": "2019-07-24",
     "title": "Eeuwigdurende erfpacht",
+    "audience": ["personal"],
     "description": "Tot 1 januari 2020 kunt u gebruik maken van de gunstige voorwaarden.",
     "rules": [
       {"type": "rule", "rule": "datetime.now() < datetime(2020, 1, 1)"},
@@ -118,6 +126,7 @@
     "priority": 40,
     "datePublished": "2019-08-18",
     "title": "Mijn buurt",
+    "audience": ["personal"],
     "description": "Kijk waar het dichtstbijzijnde Afvalpunt is. En welke vergunningen de gemeente heeft uitgegeven in uw buurt.",
     "rules": [],
     "link": {
@@ -132,6 +141,7 @@
     "priority": 70,
     "datePublished": "2019-08-18",
     "title": "Bekijk de afvalpunten in de buurt",
+    "audience": ["personal"],
     "description": "Kijk waar het dichtstbijzijnde Afvalpunt is.",
     "rules": [
       {
@@ -153,6 +163,7 @@
     "priority": 70,
     "datePublished": "2019-10-22",
     "title": "Op stap met uw Stadspas",
+    "audience": ["personal"],
     "description": "Haalt u alles uit uw Stadspas?",
     "rules": [{"type": "ref", "ref_id": "1"}],
     "isPersonalized": true,
@@ -171,6 +182,7 @@
     "priority": 70,
     "datePublished": "2020-06-15",
     "title": "Amsterdammers helpen Amsterdammers",
+    "audience": ["personal"],
     "description": "Maakt u mondkapjes? Of zoekt u manieren om te blijven bewegen? Amsterdammers helpen elkaar tijdens de coronacrisis.",
     "rules": [],
     "isPersonalized": false,
@@ -189,6 +201,7 @@
     "priority": 70,
     "datePublished": "2020-06-15",
     "title": "Gratis energieadvies",
+    "audience": ["personal"],
     "description": "Werkt u thuis? Dan neemt uw energieverbruik toe. Wij geven gratis energieadvies aan woningeigenaren.",
     "rules": [],
     "isPersonalized": false,
@@ -207,6 +220,7 @@
     "priority": 70,
     "datePublished": "2020-06-15",
     "title": "Voor nieuwsgierige Amsterdammers",
+    "audience": ["personal"],
     "description": "Bent u op zoek naar gegevens of onderzoek over uw stad of buurt? U vindt al deze informatie nu op 1 website.",
     "rules": [],
     "isPersonalized": false,
@@ -225,6 +239,7 @@
     "priority": 70,
     "datePublished": "2020-06-15",
     "title": "Gratis uw fiets laten graveren",
+    "audience": ["personal"],
     "description": "Voorkom diefstal van uw fiets en laat een code in uw frame graveren.",
     "rules": [],
     "isPersonalized": false,
@@ -243,6 +258,7 @@
     "priority": 70,
     "datePublished": "2020-07-03",
     "title": "Welkom in Amsterdam",
+    "audience": ["personal"],
     "description": "U bent net in Amsterdam komen wonen, welkom! Blijf op de hoogte van het nieuws in uw stadsdeel.",
     "rules": [
       {
@@ -257,5 +273,105 @@
       "to": "https://www.amsterdam.nl/nieuwsbrief/"
     },
     "imgUrl": "/api/tips/static/tip_images/nieuwinamsterdam.jpg"
-  }
+  },
+  {
+    "id": "mijn-17",
+    "owner": "",
+    "dateActiveStart": null,
+    "dateActiveEnd": null,
+    "active": false,
+    "priority": 70,
+    "datePublished": "2020-09-09",
+    "title": "Gemeentelijke belastingen voor ondernemers",
+    "audience": ["zakelijk"],
+    "description": "Als ondernemer moet u belastingen en heffingen betalen. Welke belastingen? Dat hangt af van uw type bedrijf.",
+    "rules": [],
+    "reason": "",
+    "isPersonalized": false,
+    "link": {
+      "title": "Kijk wat voor u geldt",
+      "to": "https://www.amsterdam.nl/veelgevraagd/?productid=%7B5DDAF0C4-9649-4E15-90DC-23C6E48A0575%7D"
+    },
+    "imgUrl": "/api/tips/static/tip_images/gemeentelijke belastingen.jpg"
+  },
+  {
+    "id": "mijn-18",
+    "owner": "",
+    "dateActiveStart": null,
+    "dateActiveEnd": null,
+    "active": false,
+    "priority": 70,
+    "datePublished": "2020-09-09",
+    "title": "Idee voor uw buurt of straat?",
+    "audience": ["zakelijk"],
+    "description": "Neem dan contact op met een gebiedsmakelaar. Benieuwd wie in uw buurt de gebiedsmakelaar is?",
+    "rules": [],
+    "reason": "",
+    "isPersonalized": false,
+    "link": {
+      "title": "Kijk op de kaart",
+      "to": "https://www.amsterdam.nl/buurten/"
+    },
+    "imgUrl": "/api/tips/static/tip_images/Idee voor uw buurt.jpg"
+  },
+  {
+    "id": "mijn-19",
+    "owner": "",
+    "dateActiveStart": null,
+    "dateActiveEnd": null,
+    "active": false,
+    "priority": 70,
+    "datePublished": "2020-09-09",
+    "title": "Subsidie Bedrijveninvesteringszones (BIZ)",
+    "audience": ["zakelijk"],
+    "description": "Met dit geld kunt u uw winkelstraat, horecagebied of bedrijventerrein opknappen of veiliger maken.",
+    "rules": [],
+    "reason": "",
+    "isPersonalized": false,
+    "link": {
+      "title": "Lees hoe het werkt",
+      "to": "https://www.amsterdam.nl/veelgevraagd/?productid=%7B17DE644B-ADB1-4AD3-B04E-40D6736566B3%7D"
+    },
+    "imgUrl": "/api/tips/static/tip_images/Bedrijveninvesteringszones.jpg"
+  },
+  {
+    "id": "mijn-20",
+    "owner": "",
+    "dateActiveStart": null,
+    "dateActiveEnd": null,
+    "active": false,
+    "priority": 70,
+    "datePublished": "2020-09-09",
+    "title": "Bedrijfsafval laten ophalen",
+    "audience": ["zakelijk"],
+    "description": "Hebt u per week meer dan 9 vuilniszakken aan afval? Dan moet u een contract afsluiten met een erkende afvalinzamelaar of de gemeente.",
+    "rules": [],
+    "reason": "",
+    "isPersonalized": false,
+    "link": {
+      "title": "Kijk wat de mogelijkheden zijn",
+      "to": "https://www.amsterdam.nl/veelgevraagd/?productid=%7B3D70B70E-8A19-4A95-BE31-8743995BC545%7D"
+    },
+    "imgUrl": "/api/tips/static/tip_images/Bedrijfsafval.jpg"
+  },
+  {
+    "id": "mijn-21",
+    "owner": "",
+    "dateActiveStart": null,
+    "dateActiveEnd": null,
+    "active": false,
+    "priority": 70,
+    "datePublished": "2020-09-09",
+    "title": "Op zoek naar bedrijfsruimte?",
+    "audience": ["zakelijk"],
+    "description": "De Stadsloods helpt u bij het vinden van een geschikte ruimte voor uw bedrijf.",
+    "rules": [],
+    "reason": "",
+    "isPersonalized": false,
+    "link": {
+      "title": "Meld u aan",
+      "to": "https://www.amsterdam.nl/ondernemen/bedrijfsruimte/stadsloods/"
+    },
+    "imgUrl": "/api/tips/static/tip_images/bedrijfsruimte.jpg"
+  },
 ]
