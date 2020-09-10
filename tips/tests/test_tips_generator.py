@@ -17,6 +17,7 @@ def get_tip(priority=50):
         'active': True,
         'priority': priority,
         'datePublished': '2019-07-24',
+        'audience': [],
         'description': 'Tip description %i' % counter,
         'link': {
             'title': 'Tip link title %i' % counter,
@@ -51,7 +52,8 @@ class TipsGeneratorTest(TestCase):
 
         # only these fields are allowed
         extended_fields_list = sorted(FRONT_END_TIP_KEYS)
-        source_fields_list = [a for a in extended_fields_list if a != 'reason']
+        # source tips have a more limited set.
+        source_fields_list = [a for a in extended_fields_list if a not in ['reason', 'audience']]
 
         fields = sorted(tips[0].keys())
         self.assertEqual(extended_fields_list, fields)
@@ -59,7 +61,7 @@ class TipsGeneratorTest(TestCase):
         fields = sorted(tips[1].keys())
         self.assertEqual(extended_fields_list, fields)
 
-        # Source tips don't have a reason (yet)
+        # Source tips don't have a reason (yet) and audience
         fields = sorted(tips[2].keys())
         self.assertNotEqual(extended_fields_list, fields)
 
@@ -216,6 +218,22 @@ class ConditionalTest(TestCase):
         self.assertEqual(len(tips), 3)
         self.assertEqual(tips[0]['isPersonalized'], True)
         self.assertEqual(tips[1]['isPersonalized'], False)
+
+    def test_audience(self):
+        tip1_mock = get_tip()
+        tip1_mock['audience'] = ['zakelijk']
+
+        tips_pool = [tip1_mock]
+
+        tips = tips_generator(self.get_client_data(), tips_pool, audience=['zakelijk'])
+        self.assertEqual(len(tips), 1)
+
+        tips = tips_generator(self.get_client_data(), tips_pool, audience=['somethingelse'])
+        self.assertEqual(len(tips), 0)
+
+        # should not take audience into account when its not passed in
+        tips = tips_generator(self.get_client_data(), tips_pool)
+        self.assertEqual(len(tips), 2)
 
 
 class SourceTipsTests(TestCase):

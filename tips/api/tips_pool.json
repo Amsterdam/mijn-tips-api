@@ -5,7 +5,7 @@
     "priority": 50,
     "datePublished": "2019-07-24",
     "title": "Geen telefoon op de fiets",
-    "audience": ["personal"],
+    "audience": ["persoonlijk"],
     "description": "U mag geen telefoon meer vasthouden op de fiets.",
     "link": {
       "title": "Meer informatie",
@@ -19,7 +19,7 @@
     "priority": 20,
     "datePublished": "2019-07-24",
     "title": "Vrijwilliger worden?",
-    "audience": ["personal"],
+    "audience": ["persoonlijk"],
     "description": "Er is altijd vrijwilligerswerk dat bij u past. Bekijk de vacatures.",
     "link": {
       "title": "Vrijwilligerscentrale Amsterdam",
@@ -33,7 +33,7 @@
     "priority": 25,
     "datePublished": "2019-07-24",
     "title": "Grofvuil",
-    "audience": ["personal"],
+    "audience": ["persoonlijk"],
     "description": "Op een Afvalpunt kunt u uw grofvuil, klein chemisch afval en tweedehands spullen inleveren.",
     "link": {
       "title": "Adressen Afvalpunten",
@@ -47,7 +47,7 @@
     "priority": 20,
     "datePublished": "2019-07-24",
     "title": "Geveltuin",
-    "audience": ["personal"],
+    "audience": ["persoonlijk"],
     "description": "Bekijk hoe u gratis een geveltuin kunt aanvragen bij uw stadsdeel. Of hoe u de geveltuin kunt laten verwijderen.",
     "link": {
       "title": "Meer informatie",
@@ -61,7 +61,7 @@
     "priority": 20,
     "datePublished": "2019-07-24",
     "title": "Vaccinaties",
-    "audience": ["personal"],
+    "audience": ["persoonlijk"],
     "description": "De GGD geeft advies en alle vaccinaties die u nodig hebt voor uw vakantie naar het buitenland.",
     "link": {
       "title": "Meer informatie",
@@ -75,7 +75,7 @@
     "priority": 40,
     "datePublished": "2019-07-24",
     "title": "Nieuw in Mijn Amsterdam",
-    "audience": ["personal"],
+    "audience": ["persoonlijk"],
     "description": "U vindt nu ook gemeentelijke belastinginformatie in Mijn Amsterdam.",
     "rules": [
       {"type": "rule", "rule": "now() < datetime(2019, 9, 1)"}
@@ -92,7 +92,7 @@
     "priority": 20,
     "datePublished": "2019-07-24",
     "title": "Kom snel terug",
-    "audience": ["personal"],
+    "audience": ["persoonlijk"],
     "description": "U vindt hier steeds weer nieuwe onderwerpen! Bekijk de nieuwe onderwerpen.",
     "link": {
       "title": "Bekijk de nieuwe onderwerpen",
@@ -106,7 +106,7 @@
     "priority": 70,
     "datePublished": "2019-07-24",
     "title": "Eeuwigdurende erfpacht",
-    "audience": ["personal"],
+    "audience": ["persoonlijk"],
     "description": "Tot 1 januari 2020 kunt u gebruik maken van de gunstige voorwaarden.",
     "rules": [
       {"type": "rule", "rule": "datetime.now() < datetime(2020, 1, 1)"},
@@ -126,7 +126,7 @@
     "priority": 40,
     "datePublished": "2019-08-18",
     "title": "Mijn buurt",
-    "audience": ["personal"],
+    "audience": ["persoonlijk"],
     "description": "Kijk waar het dichtstbijzijnde Afvalpunt is. En welke vergunningen de gemeente heeft uitgegeven in uw buurt.",
     "rules": [],
     "link": {
@@ -141,7 +141,7 @@
     "priority": 70,
     "datePublished": "2019-08-18",
     "title": "Bekijk de afvalpunten in de buurt",
-    "audience": ["personal"],
+    "audience": ["persoonlijk"],
     "description": "Kijk waar het dichtstbijzijnde Afvalpunt is.",
     "rules": [
       {
@@ -163,7 +163,7 @@
     "priority": 70,
     "datePublished": "2019-10-22",
     "title": "Op stap met uw Stadspas",
-    "audience": ["personal"],
+    "audience": ["persoonlijk"],
     "description": "Haalt u alles uit uw Stadspas?",
     "rules": [{"type": "ref", "ref_id": "1"}],
     "isPersonalized": true,
@@ -182,7 +182,7 @@
     "priority": 70,
     "datePublished": "2020-06-15",
     "title": "Amsterdammers helpen Amsterdammers",
-    "audience": ["personal"],
+    "audience": ["persoonlijk"],
     "description": "Maakt u mondkapjes? Of zoekt u manieren om te blijven bewegen? Amsterdammers helpen elkaar tijdens de coronacrisis.",
     "rules": [],
     "isPersonalized": false,
@@ -201,7 +201,7 @@
     "priority": 70,
     "datePublished": "2020-06-15",
     "title": "Gratis energieadvies",
-    "audience": ["personal"],
+    "audience": ["persoonlijk"],
     "description": "Werkt u thuis? Dan neemt uw energieverbruik toe. Wij geven gratis energieadvies aan woningeigenaren.",
     "rules": [],
     "isPersonalized": false,
@@ -220,7 +220,7 @@
     "priority": 70,
     "datePublished": "2020-06-15",
     "title": "Voor nieuwsgierige Amsterdammers",
-    "audience": ["personal"],
+    "audience": ["persoonlijk"],
     "description": "Bent u op zoek naar gegevens of onderzoek over uw stad of buurt? U vindt al deze informatie nu op 1 website.",
     "rules": [],
     "isPersonalized": false,
@@ -239,7 +239,7 @@
     "priority": 70,
     "datePublished": "2020-06-15",
     "title": "Gratis uw fiets laten graveren",
-    "audience": ["personal"],
+    "audience": ["persoonlijk"],
     "description": "Voorkom diefstal van uw fiets en laat een code in uw frame graveren.",
     "rules": [],
     "isPersonalized": false,
@@ -258,7 +258,7 @@
     "priority": 70,
     "datePublished": "2020-07-03",
     "title": "Welkom in Amsterdam",
-    "audience": ["personal"],
+    "audience": ["persoonlijk"],
     "description": "U bent net in Amsterdam komen wonen, welkom! Blijf op de hoogte van het nieuws in uw stadsdeel.",
     "rules": [
       {
@@ -279,7 +279,7 @@
     "owner": "",
     "dateActiveStart": null,
     "dateActiveEnd": null,
-    "active": false,
+    "active": true,
     "priority": 70,
     "datePublished": "2020-09-09",
     "title": "Gemeentelijke belastingen voor ondernemers",
@@ -299,7 +299,7 @@
     "owner": "",
     "dateActiveStart": null,
     "dateActiveEnd": null,
-    "active": false,
+    "active": true,
     "priority": 70,
     "datePublished": "2020-09-09",
     "title": "Idee voor uw buurt of straat?",
@@ -319,7 +319,7 @@
     "owner": "",
     "dateActiveStart": null,
     "dateActiveEnd": null,
-    "active": false,
+    "active": true,
     "priority": 70,
     "datePublished": "2020-09-09",
     "title": "Subsidie Bedrijveninvesteringszones (BIZ)",
@@ -339,7 +339,7 @@
     "owner": "",
     "dateActiveStart": null,
     "dateActiveEnd": null,
-    "active": false,
+    "active": true,
     "priority": 70,
     "datePublished": "2020-09-09",
     "title": "Bedrijfsafval laten ophalen",
@@ -359,7 +359,7 @@
     "owner": "",
     "dateActiveStart": null,
     "dateActiveEnd": null,
-    "active": false,
+    "active": true,
     "priority": 70,
     "datePublished": "2020-09-09",
     "title": "Op zoek naar bedrijfsruimte?",
@@ -373,5 +373,5 @@
       "to": "https://www.amsterdam.nl/ondernemen/bedrijfsruimte/stadsloods/"
     },
     "imgUrl": "/api/tips/static/tip_images/bedrijfsruimte.jpg"
-  },
+  }
 ]

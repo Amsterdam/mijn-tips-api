@@ -9,7 +9,7 @@ TIPS_POOL_FILE = os.path.join(PROJECT_PATH, 'api', 'tips_pool.json')
 TIP_ENRICHMENT_FILE = os.path.join(PROJECT_PATH, 'api', 'tip_enrichments.json')
 COMPOUND_RULES_FILE = os.path.join(PROJECT_PATH, 'api', 'compound_rules.json')
 
-FRONT_END_TIP_KEYS = ['datePublished', 'description', 'id', 'link', 'title', 'priority', 'imgUrl', 'isPersonalized', 'reason']
+FRONT_END_TIP_KEYS = ['datePublished', 'description', 'id', 'link', 'title', 'priority', 'imgUrl', 'isPersonalized', 'reason', 'audience']
 
 
 tips_pool = []
@@ -86,7 +86,9 @@ def fix_id(tip, source):
 
 
 def format_tip(tip):
-    """ Make sure the tip has all the required fields. """
+    """ Make sure the tip has all the required fields.
+        No reason or audience
+     """
     if "link" in tip:
         link_data = tip["link"]
         link = {
@@ -133,7 +135,7 @@ def enrich_tip(tip):
             break  # only one enrichment per tip allowed
 
 
-def tips_generator(request_data=None, tips=None):
+def tips_generator(request_data=None, tips=None, audience: [str] = None):
     """ Generate tips. """
     if request_data is None:
         request_data = {}
@@ -150,6 +152,8 @@ def tips_generator(request_data=None, tips=None):
     else:
         user_data_prepared = UserDataTree({})
 
+    if audience:
+        tips = [tip for tip in tips if set(tip.get('audience', [])).intersection(set(audience))]
     tips = [tip for tip in tips if tip_filter(tip, user_data_prepared)]
     tips = [clean_tip(tip) for tip in tips]
     for tip in tips:
