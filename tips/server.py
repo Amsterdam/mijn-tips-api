@@ -44,8 +44,12 @@ def get_tips_request_data(request_data):
 def get_tips():
     # This is a POST because the user data gets sent in the body.
     # This data is too large and inappropriate for a GET, also because of privacy reasons
+    audience = request.args.get('audience', None)
+    if audience:
+        audience = audience.split(',')
+
     request_data = get_tips_request_data(request_data=request.get_json())
-    tips_data = tips_generator(request_data)
+    tips_data = tips_generator(request_data, audience=audience)
     return tips_data
 
 
