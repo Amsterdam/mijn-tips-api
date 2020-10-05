@@ -207,7 +207,7 @@
     "isPersonalized": false,
     "link": {
       "title": "Kijk hoe u energie kunt besparen",
-      "to": " https://www.amsterdam.nl/wonen-leefomgeving/duurzaam-amsterdam/vve-advies/"
+      "to": "https://www.amsterdam.nl/wonen-leefomgeving/duurzaam-amsterdam/vve-advies/"
     },
     "imgUrl": "/api/tips/static/tip_images/energieadvies.jpg"
   },
