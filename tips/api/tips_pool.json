@@ -202,12 +202,12 @@
     "datePublished": "2020-06-15",
     "title": "Gratis energieadvies",
     "audience": ["persoonlijk"],
-    "description": "Werkt u thuis? Dan neemt uw energieverbruik toe. Wij geven gratis energieadvies aan woningeigenaren.",
+    "description": "Werkt u thuis? Dan neemt uw energieverbruik toe. Wij geven gratis energieadvies aan Verenigingen van Eigenaren.",
     "rules": [],
     "isPersonalized": false,
     "link": {
       "title": "Kijk hoe u energie kunt besparen",
-      "to": "https://www.amsterdam.nl/wonen-leefomgeving/duurzaam-amsterdam/nieuws/gratis-energieadvies-afstand-!/"
+      "to": " https://www.amsterdam.nl/wonen-leefomgeving/duurzaam-amsterdam/vve-advies/"
     },
     "imgUrl": "/api/tips/static/tip_images/energieadvies.jpg"
   },
