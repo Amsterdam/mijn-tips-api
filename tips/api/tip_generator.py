@@ -110,8 +110,11 @@ def format_tip(tip):
     }
 
 
-def format_source_tips(source_tips=[]):
+def format_source_tips(source_tips=None):
     """ If the data from the client has source tips, return them as a list """
+    if source_tips is None:
+        source_tips = []
+
     # make sure they follow the format
     source_tips = [format_tip(tip) for tip in source_tips]
 

@@ -254,7 +254,7 @@
     "owner": "",
     "dateActiveStart": null,
     "dateActiveEnd": null,
-    "active": false,
+    "active": true,
     "priority": 70,
     "datePublished": "2020-07-03",
     "title": "Welkom in Amsterdam",
@@ -264,6 +264,10 @@
       {
         "type": "rule",
         "rule": "dateTime($.BRP.adres.begindatumVerblijf) + timeDelta(0, 6, 0, 0, 0, 0) >= now()"
+      },
+      {
+        "type": "rule",
+        "rule": "$.BRP.adresHistorisch[0].woonplaatsNaam is not 'Amsterdam'"
       }
     ],
     "reason": "U ziet deze tip omdat u net naar Amsterdam bent verhuisd",
