@@ -377,5 +377,31 @@
       "to": "https://www.amsterdam.nl/ondernemen/bedrijfsruimte/stadsloods/"
     },
     "imgUrl": "/api/tips/static/tip_images/bedrijfsruimte.jpg"
+  },
+  {
+    "id": "mijn-22",
+    "owner": "Alex Willems",
+    "dateActiveStart": null,
+    "dateActiveEnd": "2021-07-01",
+    "active": true,
+    "priority": 71,
+    "xxpriority": 18,
+    "datePublished": "2020-11-12",
+    "title": "Laat geen geld liggen",
+    "audience": ["persoonlijk"],
+    "description": "Had u als ondernemer in 2019 moeite om rond te komen? Of had u geldproblemen? Misschien zijn deze regelingen dan interessant voor u.",
+    "rules": [
+      {
+        "type": "rule",
+        "rule": "$.FOCUS_COMBINED.tozodocumenten"
+      }
+    ],
+    "reason": "U ziet deze tip omdat u een TOZO aanvraag heeft gedaan",
+    "isPersonalized": true,
+    "link": {
+      "title": "Kijk of u recht hebt",
+      "to": "http://www.amsterdam.nl/pakjekans"
+    },
+    "imgUrl": "/api/tips/static/tip_images/bedrijfsruimte.jpg"
   }
 ]

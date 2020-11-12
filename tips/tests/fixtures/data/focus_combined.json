@@ -1,0 +1,433 @@
+{
+  "jaaropgaven": [
+    {
+      "datePublished": "2012-01-27T00:00:00+01:00",
+      "id": "96643462",
+      "title": "Jaaropgave",
+      "type": "",
+      "url": "focus/document?id=96643462&isBulk=false&isDms=false"
+    },
+    {
+      "datePublished": "2018-01-13T00:00:00+01:00",
+      "id": "27898591",
+      "title": "Jaaropgave",
+      "type": "",
+      "url": "focus/document?id=27898591&isBulk=false&isDms=false"
+    }
+  ],
+  "stadspassaldo": {
+    "isPartnerpas": true,
+    "stadspassen": [
+      {
+        "budgets": [
+          {
+            "title": "SPORT-EN-SPEL",
+            "assigned": 220,
+            "balance": 80,
+            "urlTransactions": "/api/focus/stadspastransacties/gAAAAABfmojHaIr3lIb5ATsZ98is4S8x3HqxdbVACw8562VCtv3ygKtkD5h7rGCUZhoebm0jFAvLjzibxcgKqpbWELopLBT5Ywf1FzDjzvNVQOij_3hYLks="
+          }
+        ],
+        "datumAfloop": "2021-08-31T21:59:59.000Z",
+        "id": 200769,
+        "naam": "G Braber",
+        "pasnummer": 6011012604273
+      },
+      {
+        "budgets": [
+        ],
+        "datumAfloop": "2021-08-31T21:59:59.000Z",
+        "id": 123123,
+        "naam": "J.K Braber",
+        "pasnummer": 798798912998
+      }
+    ]
+  },
+  "tozodocumenten": [
+    {
+      "documentCodeId": "785",
+      "description": "TOZO 3 (vervolgregeling tegemoetkoming Ondernemers en Zelfstandigen)",
+      "datePublished": "2020-02-05T00:00:00+01:00",
+      "id": "2180622340381",
+      "type": "",
+      "url": "focus/document?id=2180622340381"
+    },
+    {
+      "documentCodeId": "756",
+      "description": "Verkorte Aanvraag BBZ",
+      "datePublished": "2020-03-17T00:00:00+01:00",
+      "id": "2180620381",
+      "type": "",
+      "url": "focus/document?id=218062038"
+    },
+    {
+      "documentCodeId": "770",
+      "description": "Tegemoetkoming Ondernemers en Zelfstandigen",
+      "datePublished": "2020-03-17T00:00:00+01:00",
+      "id": "2180620382",
+      "type": "",
+      "url": "focus/document?id=218062038"
+    },
+    {
+      "documentCodeId": "777",
+      "description": "TOZO 2 (vervolgregeling tegemoetkoming Ondernemers en Zelfstandigen)",
+      "datePublished": "2020-03-17T00:00:00+01:00",
+      "id": "2180620383",
+      "type": "",
+      "url": "focus/document?id=218062038"
+    },
+    {
+      "documentCodeId": "175296",
+      "description": "Toekennen voorschot Tozo",
+      "datePublished": "2020-03-17T00:00:00+01:00",
+      "id": "2180620384",
+      "type": "",
+      "url": "focus/document?id=218062038"
+    },
+    {
+      "documentCodeId": "175299",
+      "description": "Bbz Toekennen voorschot Tozo via batch",
+      "datePublished": "2020-03-17T00:00:00+01:00",
+      "id": "2180620385",
+      "type": "",
+      "url": "focus/document?id=218062038"
+    },
+    {
+      "documentCodeId": "175303",
+      "description": "Tozo Toekennen",
+      "datePublished": "2020-03-17T00:00:00+01:00",
+      "id": "2180620386",
+      "type": "",
+      "url": "focus/document?id=218062038"
+    },
+    {
+      "documentCodeId": "175304",
+      "description": "Tozo Afwijzen",
+      "datePublished": "2020-03-17T00:00:00+01:00",
+      "id": "2180620387",
+      "type": "",
+      "url": "focus/document?id=218062038"
+    },
+    {
+      "documentCodeId": "175359",
+      "description": "Tozo2 Afwijzen via batch",
+      "datePublished": "2020-09-28T00:00:00+01:00",
+      "id": "218062037878787",
+      "type": "",
+      "url": "focus/document?id=218062037878787"
+    },
+    {
+      "documentCodeId": "175305",
+      "description": "Tozo Buiten behandeling laten",
+      "datePublished": "2020-03-17T00:00:00+01:00",
+      "id": "2180620388",
+      "type": "",
+      "url": "focus/document?id=218062038"
+    },
+    {
+      "documentCodeId": "175306",
+      "description": "Tozo Hersteltermijn",
+      "datePublished": "2020-03-17T00:00:00+01:00",
+      "id": "2180620389",
+      "type": "",
+      "url": "focus/document?id=218062038"
+    },
+    {
+      "documentCodeId": "175308",
+      "description": "Tozo Terugvordering voorschot",
+      "datePublished": "2020-03-17T00:00:00+01:00",
+      "id": "21806203810",
+      "type": "",
+      "url": "focus/document?id=218062038"
+    },
+    {
+      "documentCodeId": "175311",
+      "description": "Tozo Toekennen bedrijfskapitaal",
+      "datePublished": "2020-03-17T00:00:00+01:00",
+      "id": "21806203811",
+      "type": "",
+      "url": "focus/document?id=218062038"
+    },
+    {
+      "documentCodeId": "175314",
+      "description": "Tozo Toekennen via batch",
+      "datePublished": "2020-03-17T00:00:00+01:00",
+      "id": "21806203812",
+      "type": "",
+      "url": "focus/document?id=218062038"
+    },
+    {
+      "documentCodeId": "175317",
+      "description": "Tozo Intrekken met terugvordering voorschot",
+      "datePublished": "2020-03-17T00:00:00+01:00",
+      "id": "21806203813",
+      "type": "",
+      "url": "focus/document?id=218062038"
+    },
+    {
+      "documentCodeId": "175331",
+      "description": "Tozo Intrekken",
+      "datePublished": "2020-03-17T00:00:00+01:00",
+      "id": "21806203814",
+      "type": "",
+      "url": "focus/document?id=218062038"
+    },
+    {
+      "documentCodeId": "175334",
+      "description": "Tozo Vrije beschikking",
+      "datePublished": "2020-03-17T00:00:00+01:00",
+      "id": "21806203815",
+      "type": "",
+      "url": "focus/document?id=218062038"
+    },
+    {
+      "documentCodeId": "175335",
+      "description": "Tozo Afwijzen via batch",
+      "datePublished": "2020-03-17T00:00:00+01:00",
+      "id": "21806203816",
+      "type": "",
+      "url": "focus/document?id=218062038"
+    },
+    {
+      "documentCodeId": "175336",
+      "description": "Tozo2 Toekennen",
+      "datePublished": "2020-03-17T00:00:00+01:00",
+      "id": "21806203817",
+      "type": "",
+      "url": "focus/document?id=218062038"
+    },
+    {
+      "documentCodeId": "175337",
+      "description": "Tozo2 Afwijzen",
+      "datePublished": "2020-03-17T00:00:00+01:00",
+      "id": "21806203818",
+      "type": "",
+      "url": "focus/document?id=218062038"
+    },
+    {
+      "documentCodeId": "175338",
+      "description": "Tozo2 Toekennen bedrijfskapitaal",
+      "datePublished": "2020-03-17T00:00:00+01:00",
+      "id": "21806203819",
+      "type": "",
+      "url": "focus/document?id=218062038"
+    },
+    {
+      "documentCodeId": "175340",
+      "description": "Tozo2 Hersteltermijn",
+      "datePublished": "2020-03-17T00:00:00+01:00",
+      "id": "21806203820",
+      "type": "",
+      "url": "focus/document?id=218062038"
+    },
+    {
+      "documentCodeId": "175341",
+      "description": "Tozo2 Intrekken",
+      "datePublished": "2020-03-17T00:00:00+01:00",
+      "id": "21806203821",
+      "type": "",
+      "url": "focus/document?id=218062038"
+    },
+    {
+      "documentCodeId": "175342",
+      "description": "Tozo2 Buiten behandeling laten",
+      "datePublished": "2020-03-17T00:00:00+01:00",
+      "id": "21806203822",
+      "type": "",
+      "url": "focus/document?id=218062038"
+    },
+    {
+      "documentCodeId": "175343",
+      "description": "Tozo2 Terugvordering voorschot",
+      "datePublished": "2020-03-17T00:00:00+01:00",
+      "id": "21806203823",
+      "type": "",
+      "url": "focus/document?id=218062038"
+    },
+    {
+      "documentCodeId": "175344",
+      "description": "Tozo2 Intrekken met terugvordering voorschot",
+      "datePublished": "2020-03-17T00:00:00+01:00",
+      "id": "21806203824",
+      "type": "",
+      "url": "focus/document?id=218062038"
+    },
+    {
+      "documentCodeId": "175345",
+      "description": "Tozo2 Toekennen voorschot via batch",
+      "datePublished": "2020-03-17T00:00:00+01:00",
+      "id": "21806203825",
+      "type": "",
+      "url": "focus/document?id=218062038"
+    },
+    {
+      "documentCodeId": "175346",
+      "description": "Tozo2 Toekennen voorschot",
+      "datePublished": "2020-03-17T00:00:00+01:00",
+      "id": "21806203826",
+      "type": "",
+      "url": "focus/document?id=218062038"
+    },
+    {
+      "documentCodeId": "175347",
+      "description": "Tozo2 Toekennen via batch",
+      "datePublished": "2020-03-17T00:00:00+01:00",
+      "id": "21806203827",
+      "type": "",
+      "url": "focus/document?id=218062038"
+    },
+    {
+      "documentCodeId": "175309",
+      "description": "Tozo3 Toekennen",
+      "type": "",
+      "id": "",
+      "datePublished": "2020-10-01",
+      "url": "focus/document?id="
+    },
+    {
+      "documentCodeId": "175307",
+      "description": "Tozo3 Toekennen voorschot",
+      "type": "",
+      "id": "",
+      "datePublished": "2020-10-01",
+      "url": "focus/document?id="
+    },
+    {
+      "documentCodeId": "175310",
+      "description": "Tozo3 Hersteltermijn",
+      "type": "",
+      "id": "",
+      "datePublished": "2020-10-01",
+      "url": "focus/document?id="
+    },
+    {
+      "documentCodeId": "175357",
+      "description": "Tozo3 Toekennen via batch",
+      "type": "",
+      "id": "",
+      "datePublished": "2020-10-01",
+      "url": "focus/document?id="
+    },
+    {
+      "documentCodeId": "175358",
+      "description": "Tozo3 Buiten behandeling laten",
+      "type": "",
+      "id": "",
+      "datePublished": "2020-10-01",
+      "url": "focus/document?id="
+    },
+    {
+      "documentCodeId": "175364",
+      "description": "Tozo3 Afwijzen",
+      "type": "",
+      "id": "",
+      "datePublished": "2020-10-01",
+      "url": "focus/document?id="
+    },
+    {
+      "documentCodeId": "175367",
+      "description": "Tozo3 Intrekken met terugvordering voorschot",
+      "type": "",
+      "id": "",
+      "datePublished": "2020-10-01",
+      "url": "focus/document?id="
+    },
+    {
+      "documentCodeId": "175368",
+      "description": "Tozo3 Terugvordering voorschot",
+      "type": "",
+      "id": "",
+      "datePublished": "2020-10-01",
+      "url": "focus/document?id="
+    },
+    {
+      "documentCodeId": "175369",
+      "description": "Tozo3 Toekennen bedrijfskapitaal",
+      "type": "",
+      "id": "",
+      "datePublished": "2020-10-01",
+      "url": "focus/document?id="
+    },
+    {
+      "documentCodeId": "175370",
+      "description": "Tozo3 Intrekken",
+      "type": "",
+      "id": "",
+      "datePublished": "2020-10-01",
+      "url": "focus/document?id="
+    },
+    {
+      "documentCodeId": "175371",
+      "description": "Tozo3 Afwijzen via batch",
+      "type": "",
+      "id": "",
+      "datePublished": "2020-10-01",
+      "url": "focus/document?id="
+    },
+    {
+      "documentCodeId": "175372",
+      "description": "Tozo3 Toekennen voorschot via batch",
+      "type": "",
+      "id": "",
+      "datePublished": "2020-10-01",
+      "url": "focus/document?id="
+    }
+  ],
+  "uitkeringsspecificaties": [
+    {
+      "datePublished": "2018-12-15T00:00:00+01:00",
+      "id": "22091571",
+      "title": "Uitkeringsspecificatie",
+      "type": "Participatiewet",
+      "url": "focus/document?id=22091571&isBulk=false&isDms=false"
+    },
+    {
+      "datePublished": "2020-03-17T00:00:00+01:00",
+      "id": "22035411",
+      "title": "Uitkeringsspecificatie",
+      "type": "Participatiewet",
+      "url": "focus/document?id=22035411&isBulk=false&isDms=false"
+    },
+    {
+      "datePublished": "2019-01-19T00:00:00+01:00",
+      "id": "23345801",
+      "title": "Uitkeringsspecificatie",
+      "type": "Participatiewet",
+      "url": "focus/document?id=23345801&isBulk=false&isDms=false"
+    },
+    {
+      "datePublished": "2019-02-23T00:00:00+01:00",
+      "id": "23747861",
+      "title": "Uitkeringsspecificatie",
+      "type": "STIMREG",
+      "url": "focus/document?id=23747861&isBulk=false&isDms=false"
+    },
+    {
+      "datePublished": "2019-04-19T00:00:00+02:00",
+      "id": "24233351",
+      "title": "Uitkeringsspecificatie",
+      "type": "STIMREG",
+      "url": "focus/document?id=24233351&isBulk=false&isDms=false"
+    },
+    {
+      "datePublished": "2019-03-23T00:00:00+01:00",
+      "id": "24078091",
+      "title": "Uitkeringsspecificatie",
+      "type": "BIBI",
+      "url": "focus/document?id=24078091&isBulk=false&isDms=false"
+    },
+    {
+      "datePublished": "2014-01-24T00:00:00+01:00",
+      "id": "30364921",
+      "title": "Uitkeringsspecificatie",
+      "type": "BIBI",
+      "url": "focus/document?id=30364921&isBulk=false&isDms=false"
+    },
+    {
+      "datePublished": "2019-05-18T00:00:00+02:00",
+      "id": "31569281",
+      "title": "Uitkeringsspecificatie",
+      "type": "Participatiewet",
+      "url": "focus/document?id=31569281&isBulk=false&isDms=false"
+    }
+  ]
+}

@@ -46,3 +46,29 @@ class ApiTests(TestCase):
             client_data['userData']['BRP']['adresHistorisch'][0]['woonplaatsNaam'] = 'Utrecht'
             response = self.client.post('/tips/gettips', json=client_data)
             self.assertEqual(len(response.get_json()), 0)
+
+    def test_laat_geen_geld_liggen(self):
+        new_pool = [tip for tip in tips_pool if tip['id'] == "mijn-22"]
+
+        self.assertEqual(len(new_pool), 1)
+        self.assertEqual(new_pool[0]["title"], "Laat geen geld liggen")
+
+        client_data = self._get_client_data()
+
+        with patch('tips.api.tip_generator.tips_pool', new_pool):
+            response = self.client.post('/tips/gettips', json=client_data)
+            json = response.get_json()
+            self.assertEqual(len(json), 1)
+            self.assertEqual(json[0]['title'], 'Laat geen geld liggen')
+
+            # remove tozo docs
+            client_data['userData']['FOCUS_COMBINED']['tozodocumenten'] = []
+            response = self.client.post('/tips/gettips', json=client_data)
+            json = response.get_json()
+            self.assertEqual(len(json), 0)
+
+            client_data_no_optin = get_fixture(optin=False)
+            response = self.client.post('/tips/gettips', json=client_data_no_optin)
+            json = response.get_json()
+            self.assertEqual(len(json), 1)  # belasting tip
+            self.assertEqual(json[0]['title'], 'Automatische incasso')
