@@ -69,7 +69,7 @@ def tip_filter(tip, userdata_tree):
         return False
     if tip.get('dateActiveStart'):
         date_active_start = datetime.strptime(tip['dateActiveStart'], '%Y-%m-%d')
-        if tip['dateActiveStart'] < today:
+        if date_active_start < today:
             return False
     if tip.get('dateActiveEnd'):
         date_active_end = datetime.strptime(tip['dateActiveEnd'], '%Y-%m-%d')
