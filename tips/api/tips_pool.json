@@ -2,6 +2,8 @@
   {
     "id": "mijn-1",
     "active": false,
+    "dateActiveStart": null,
+    "dateActiveEnd": null,
     "priority": 50,
     "datePublished": "2019-07-24",
     "title": "Geen telefoon op de fiets",
@@ -16,6 +18,8 @@
   {
     "id": "mijn-2",
     "active": true,
+    "dateActiveStart": null,
+    "dateActiveEnd": null,
     "priority": 20,
     "datePublished": "2019-07-24",
     "title": "Vrijwilliger worden?",
@@ -30,6 +34,8 @@
   {
     "id": "mijn-3",
     "active": true,
+    "dateActiveStart": null,
+    "dateActiveEnd": null,
     "priority": 25,
     "datePublished": "2019-07-24",
     "title": "Grofvuil",
@@ -44,6 +50,8 @@
   {
     "id": "mijn-4",
     "active": true,
+    "dateActiveStart": null,
+    "dateActiveEnd": null,
     "priority": 20,
     "datePublished": "2019-07-24",
     "title": "Geveltuin",
@@ -58,6 +66,8 @@
   {
     "id": "mijn-5",
     "active": false,
+    "dateActiveStart": null,
+    "dateActiveEnd": null,
     "priority": 20,
     "datePublished": "2019-07-24",
     "title": "Vaccinaties",
@@ -72,6 +82,8 @@
   {
     "id": "mijn-6",
     "active": false,
+    "dateActiveStart": null,
+    "dateActiveEnd": null,
     "priority": 40,
     "datePublished": "2019-07-24",
     "title": "Nieuw in Mijn Amsterdam",
@@ -89,6 +101,8 @@
   {
     "id": "mijn-7",
     "active": false,
+    "dateActiveStart": null,
+    "dateActiveEnd": null,
     "priority": 20,
     "datePublished": "2019-07-24",
     "title": "Kom snel terug",
@@ -103,6 +117,8 @@
   {
     "id": "mijn-8",
     "active": false,
+    "dateActiveStart": null,
+    "dateActiveEnd": null,
     "priority": 70,
     "datePublished": "2019-07-24",
     "title": "Eeuwigdurende erfpacht",
@@ -123,6 +139,8 @@
   {
     "id": "mijn-9",
     "active": false,
+    "dateActiveStart": null,
+    "dateActiveEnd": null,
     "priority": 40,
     "datePublished": "2019-08-18",
     "title": "Mijn buurt",
@@ -138,6 +156,8 @@
   {
     "id": "mijn-10",
     "active": true,
+    "dateActiveStart": null,
+    "dateActiveEnd": null,
     "priority": 70,
     "datePublished": "2019-08-18",
     "title": "Bekijk de afvalpunten in de buurt",
@@ -160,6 +180,8 @@
   {
     "id": "mijn-11",
     "active": true,
+    "dateActiveStart": null,
+    "dateActiveEnd": null,
     "priority": 70,
     "datePublished": "2019-10-22",
     "title": "Op stap met uw Stadspas",
@@ -392,15 +414,15 @@
     "description": "Had u als ondernemer in 2019 moeite om rond te komen? Of had u geldproblemen? Misschien zijn deze regelingen dan interessant voor u.",
     "rules": [
       {
-        "type": "rule",
-        "rule": "$.FOCUS_COMBINED.tozodocumenten"
+        "type": "ref",
+        "ref_id": "9"
       }
     ],
     "reason": "U ziet deze tip omdat u een TOZO aanvraag heeft gedaan",
     "isPersonalized": true,
     "link": {
       "title": "Kijk of u recht hebt",
-      "to": "http://www.amsterdam.nl/pakjekans"
+      "to": "https://www.amsterdam.nl/pakjekans"
     },
     "imgUrl": "/api/tips/static/tip_images/bedrijfsruimte.jpg"
   }
