@@ -18,9 +18,8 @@ def _apply_rule(userdata, rule, compound_rules):
             return result
         except ExecutionError:
             return False
-        except TypeError as e:
+        except TypeError:
             logging.error(f"Rule failed: {rule['rule']}")
-            # print(e)
             return False
 
     if rule['type'] == "ref":
