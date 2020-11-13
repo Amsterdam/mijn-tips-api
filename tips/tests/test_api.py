@@ -40,13 +40,16 @@ class ApiTests(TestCase):
 
         tips = response.get_json()
 
-        self.assertEqual(2, len(tips))
+        self.assertEqual(3, len(tips))
 
-        self.assertEqual(tips[0]['title'], 'Bekijk de afvalpunten in de buurt')
-        self.assertEqual(tips[0]['reason'], ['U ziet deze tip omdat u net bent verhuisd'])
+        self.assertEqual(tips[0]['title'], 'Laat geen geld liggen')
+        self.assertEqual(tips[0]['reason'], ['U ziet deze tip omdat u een TOZO aanvraag heeft gedaan'])
 
-        self.assertEqual(tips[1]['title'], 'Op stap met uw Stadspas')
-        self.assertEqual(tips[1]['reason'], ['U ziet deze tip omdat u een Stadspas hebt'])
+        self.assertEqual(tips[1]['title'], 'Bekijk de afvalpunten in de buurt')
+        self.assertEqual(tips[1]['reason'], ['U ziet deze tip omdat u net bent verhuisd'])
+
+        self.assertEqual(tips[2]['title'], 'Op stap met uw Stadspas')
+        self.assertEqual(tips[2]['reason'], ['U ziet deze tip omdat u een Stadspas hebt'])
 
     def test_tips_audience(self):
         response = self.client.post('/tips/gettips?audience=zakelijk', json=get_fixture(optin=False))
@@ -55,11 +58,11 @@ class ApiTests(TestCase):
 
         response = self.client.post('/tips/gettips?audience=persoonlijk', json=get_fixture(optin=False))
         tips = response.get_json()
-        self.assertEqual(len(tips), 6)
+        self.assertEqual(len(tips), 5)
 
         response = self.client.post('/tips/gettips?audience=zakelijk,persoonlijk', json=get_fixture(optin=False))
         tips = response.get_json()
-        self.assertEqual(len(tips), 11)
+        self.assertEqual(len(tips), 10)
 
     def test_income_tips(self):
         response = self.client.post('/tips/getincometips', json=self._get_client_data())

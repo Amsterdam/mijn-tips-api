@@ -1,5 +1,6 @@
 import json
 import os
+from datetime import date, datetime
 
 from tips.api.user_data_tree import UserDataTree
 from tips.config import PROJECT_PATH
@@ -62,8 +63,19 @@ def tip_filter(tip, userdata_tree):
     If tip has a field "rules", the result must be true for it to be included.
     If tip does not have "rules, it is included.
     """
+    today = date.today()
+
     if not tip['active']:
         return False
+    if tip.get('dateActiveStart'):
+        date_active_start = datetime.strptime(tip['dateActiveStart'], '%Y-%m-%d').date()
+        if date_active_start > today:
+            return False
+    if tip.get('dateActiveEnd'):
+        date_active_end = datetime.strptime(tip['dateActiveEnd'], '%Y-%m-%d').date()
+        if date_active_end < today:
+            return False
+
     if 'rules' not in tip:
         return tip
 

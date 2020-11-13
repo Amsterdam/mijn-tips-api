@@ -2,6 +2,8 @@
   {
     "id": "pio-2",
     "active": true,
+    "dateActiveStart": null,
+    "dateActiveEnd": null,
     "priority": 70,
     "datePublished": "2019-08-18",
     "title": "Tegemoetkoming aanvullend OV",
@@ -22,6 +24,8 @@
   {
     "id": "pio-3",
     "active": true,
+    "dateActiveStart": null,
+    "dateActiveEnd": null,
     "priority": 70,
     "datePublished": "2019-08-18",
     "title": "Gratis OV voor ouderen",
@@ -42,6 +46,8 @@
   {
     "id": "pio-4",
     "active": true,
+    "dateActiveStart": null,
+    "dateActiveEnd": null,
     "priority": 70,
     "datePublished": "2019-08-18",
     "title": "Gratis laptop of tablet voor middelbare school",
@@ -62,6 +68,8 @@
   {
     "id": "pio-5",
     "active": true,
+    "dateActiveStart": null,
+    "dateActiveEnd": null,
     "priority": 70,
     "datePublished": "2019-08-18",
     "title": "Gratis laptop of tablet basisschool",
@@ -86,6 +94,8 @@
   {
     "id": "pio-6",
     "active": true,
+    "dateActiveStart": null,
+    "dateActiveEnd": null,
     "priority": 70,
     "datePublished": "2019-08-18",
     "title": "OV-vergoeding voor mantelzorgers",
@@ -110,6 +120,8 @@
   {
     "id": "pio-7",
     "active": true,
+    "dateActiveStart": null,
+    "dateActiveEnd": null,
     "priority": 70,
     "datePublished": "2019-08-18",
     "title": "Reiskostenvergoeding voor scholieren",
@@ -130,6 +142,8 @@
   {
     "id": "pio-8",
     "active": true,
+    "dateActiveStart": null,
+    "dateActiveEnd": null,
     "priority": 70,
     "datePublished": "2019-08-18",
     "title": "Regeling tegemoetkoming meerkosten",
@@ -154,6 +168,8 @@
   {
     "id": "pio-9",
     "active": true,
+    "dateActiveStart": null,
+    "dateActiveEnd": null,
     "priority": 70,
     "datePublished": "2019-08-18",
     "title": "Scholierenvergoeding",
@@ -182,6 +198,8 @@
   {
     "id": "pio-10",
     "active": true,
+    "dateActiveStart": null,
+    "dateActiveEnd": null,
     "priority": 70,
     "datePublished": "2019-08-18",
     "title": "Stadspas met groene stip",
@@ -206,6 +224,8 @@
   {
     "id": "pio-11",
     "active": true,
+    "dateActiveStart": null,
+    "dateActiveEnd": null,
     "priority": 70,
     "datePublished": "2019-08-18",
     "title": "Aanvullende inkomensvoorziening ouderen",
@@ -226,6 +246,8 @@
   {
     "id": "pio-12",
     "active": true,
+    "dateActiveStart": null,
+    "dateActiveEnd": null,
     "priority": 70,
     "datePublished": "2019-08-18",
     "title": "Vergoeding eigen bijdrage kinderopvang",
@@ -241,6 +263,8 @@
   {
     "id": "pio-13",
     "active": true,
+    "dateActiveStart": null,
+    "dateActiveEnd": null,
     "priority": 70,
     "datePublished": "2019-08-18",
     "title": "Bijzondere bijstand",
@@ -256,6 +280,8 @@
   {
     "id": "pio-14",
     "active": true,
+    "dateActiveStart": null,
+    "dateActiveEnd": null,
     "priority": 70,
     "datePublished": "2019-08-18",
     "title": "Collectieve zorgverzekering",
@@ -280,6 +306,8 @@
   {
     "id": "pio-15",
     "active": true,
+    "dateActiveStart": null,
+    "dateActiveEnd": null,
     "priority": 70,
     "datePublished": "2019-08-18",
     "title": "Gratis bezoek dierenarts (ADAM-regeling)",
@@ -308,6 +336,8 @@
   {
     "id": "pio-16",
     "active": true,
+    "dateActiveStart": null,
+    "dateActiveEnd": null,
     "priority": 70,
     "datePublished": "2019-08-18",
     "title": "Financieel spreekuur",
@@ -323,6 +353,8 @@
   {
     "id": "pio-17",
     "active": true,
+    "dateActiveStart": null,
+    "dateActiveEnd": null,
     "priority": 70,
     "datePublished": "2019-08-18",
     "title": "Gratis identiteitskaart",
@@ -351,6 +383,8 @@
   {
     "id": "pio-18",
     "active": true,
+    "dateActiveStart": null,
+    "dateActiveEnd": null,
     "priority": 70,
     "datePublished": "2019-08-18",
     "title": "Sportvergoeding jeugd",
@@ -371,6 +405,8 @@
   {
     "id": "pio-19",
     "active": true,
+    "dateActiveStart": null,
+    "dateActiveEnd": null,
     "priority": 70,
     "datePublished": "2019-08-18",
     "title": "Jongerencultuurfonds",
@@ -391,6 +427,8 @@
   {
     "id": "pio-20",
     "active": true,
+    "dateActiveStart": null,
+    "dateActiveEnd": null,
     "priority": 70,
     "datePublished": "2019-08-18",
     "title": "Kindbonnen",
@@ -406,6 +444,8 @@
   {
     "id": "pio-21",
     "active": true,
+    "dateActiveStart": null,
+    "dateActiveEnd": null,
     "priority": 70,
     "datePublished": "2019-08-18",
     "title": "Geld lenen bij de Kredietbank",
@@ -430,6 +470,8 @@
   {
     "id": "pio-22",
     "active": true,
+    "dateActiveStart": null,
+    "dateActiveEnd": null,
     "priority": 70,
     "datePublished": "2019-08-18",
     "title": "Kwijtschelding gemeentebelastingen",
@@ -445,6 +487,8 @@
   {
     "id": "pio-23",
     "active": true,
+    "dateActiveStart": null,
+    "dateActiveEnd": null,
     "priority": 70,
     "datePublished": "2019-08-18",
     "title": "Ondersteuning voor ondernemers",
@@ -460,6 +504,8 @@
   {
     "id": "pio-24",
     "active": true,
+    "dateActiveStart": null,
+    "dateActiveEnd": null,
     "priority": 70,
     "datePublished": "2019-08-18",
     "title": "Vrijwillige ouderbijdrage betalen met Stadspas",
@@ -475,6 +521,8 @@
   {
     "id": "pio-26",
     "active": true,
+    "dateActiveStart": null,
+    "dateActiveEnd": null,
     "priority": 70,
     "datePublished": "2019-08-18",
     "title": "Hulp voor huiseigenaren",
@@ -495,6 +543,8 @@
   {
     "id": "pio-27",
     "active": true,
+    "dateActiveStart": null,
+    "dateActiveEnd": null,
     "priority": 70,
     "datePublished": "2019-08-18",
     "title": "Scholingslening",
@@ -515,6 +565,8 @@
   {
     "id": "pio-28",
     "active": true,
+    "dateActiveStart": null,
+    "dateActiveEnd": null,
     "priority": 70,
     "datePublished": "2019-08-18",
     "title": "Stadsbank van Lening",
@@ -535,6 +587,8 @@
   {
     "id": "pio-29",
     "active": true,
+    "dateActiveStart": null,
+    "dateActiveEnd": null,
     "priority": 70,
     "datePublished": "2019-08-18",
     "title": "Voedselbank",
@@ -550,6 +604,8 @@
   {
     "id": "pio-30",
     "active": true,
+    "dateActiveStart": null,
+    "dateActiveEnd": null,
     "priority": 70,
     "datePublished": "2019-08-18",
     "title": "Witgoed bij nood",
@@ -565,6 +621,8 @@
   {
     "id": "pio-31",
     "active": true,
+    "dateActiveStart": null,
+    "dateActiveEnd": null,
     "priority": 70,
     "datePublished": "2019-08-18",
     "title": "Woonkostentoeslag",
@@ -580,6 +638,8 @@
   {
     "id": "pio-32",
     "active": true,
+    "dateActiveStart": null,
+    "dateActiveEnd": null,
     "priority": 70,
     "datePublished": "2019-08-18",
     "title": "Individuele inkomenstoeslag",
