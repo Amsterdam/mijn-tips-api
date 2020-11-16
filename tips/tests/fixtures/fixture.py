@@ -6,7 +6,7 @@ _FIXTURE_PATH = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'data')
 # these fixtures are copied from the frontend
 BRP = os.path.join(_FIXTURE_PATH, "brp.json")
 FOCUS_AANVRAGEN = os.path.join(_FIXTURE_PATH, "focus_aanvragen.json")
-FOCUS_COMBINED = os.path.join(_FIXTURE_PATH, "focus_combined.json")
+FOCUS_TOZO = os.path.join(_FIXTURE_PATH, "focus_tozo.json")
 WMO = os.path.join(_FIXTURE_PATH, "wmo.json")
 BELASTING = os.path.join(_FIXTURE_PATH, "belasting.json")
 ERFPACHT = os.path.join(_FIXTURE_PATH, "erfpacht.json")
@@ -19,8 +19,8 @@ def get_fixture(optin=False):
     with open(FOCUS_AANVRAGEN) as focus_file:
         focus_aanvragen = json.load(focus_file)
 
-    with open(FOCUS_COMBINED) as focus_combined_file:
-        focus_combined = json.load(focus_combined_file)
+    with open(FOCUS_TOZO) as focus_tozo_file:
+        focus_tozo = json.load(focus_tozo_file)
 
     with open(WMO) as wmo_file:
         wmo = json.load(wmo_file)
@@ -37,7 +37,7 @@ def get_fixture(optin=False):
         "userData": {
             "BRP": brp,
             "FOCUS_AANVRAGEN": focus_aanvragen,
-            "FOCUS_COMBINED": focus_combined,
+            "FOCUS_TOZO": focus_tozo,
             "WMO": wmo,
             "BELASTING": belasting,
             "ERFPACHT": erfpacht
