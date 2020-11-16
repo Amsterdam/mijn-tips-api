@@ -78,7 +78,7 @@
     "rules": [
       {
         "type": "rule",
-        "rule": "$.FOCUS_COMBINED.tozodocumenten"
+        "rule": "len($.FOCUS_TOZO)"
       }
     ]
   },
