@@ -85,12 +85,10 @@ class ApiTests(TestCase):
             json = response.get_json()
             self.assertEqual(len(json), 1)
             self.assertEqual(json[0]['title'], 'Download de 020werkt-app')
-            from pprint import pprint
-
-            pprint(client_data['userData'])
 
             # remove tozo
-            # client_data['userData']['FOCUS_COMBINED']['tozodocumenten'] = []
+            old_tozo = client_data['userData']['FOCUS_TOZO']
+            client_data['userData']['FOCUS_TOZO'] = []
             response = self.client.post('/tips/gettips', json=client_data)
             json = response.get_json()
             self.assertEqual(len(json), 1)
@@ -108,3 +106,9 @@ class ApiTests(TestCase):
             response = self.client.post('/tips/gettips', json=client_data)
             json = response.get_json()
             self.assertEqual(len(json), 0)
+
+            # add back tozo
+            client_data['userData']['FOCUS_TOZO'] = old_tozo
+            response = self.client.post('/tips/gettips', json=client_data)
+            json = response.get_json()
+            self.assertEqual(len(json), 1)
