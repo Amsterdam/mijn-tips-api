@@ -425,5 +425,32 @@
       "to": "https://www.amsterdam.nl/pakjekans"
     },
     "imgUrl": "/api/tips/static/tip_images/laat_geen_geld_liggen.jpg"
+  },
+  {
+    "id": "mijn-23",
+    "owner": "",
+    "dateActiveStart": "2020-11-16",
+    "dateActiveEnd": "2021-11-16",
+    "active": true,
+    "priority": 71,
+    "xxpriority": 11,
+    "datePublished": "2020-11-25",
+    "title": "Download de 020werkt-app",
+    "audience": ["persoonlijk", "zakelijk"],
+    "description": "Via de 020werkt-app krijgt u informatie  over werk, inkomen en meedoen in de wijk. De app is gratis, anoniem en makkelijk in gebruik.",
+    "rules": [
+      {
+        "type": "rule",
+        "rule": "($.FOCUS_AANVRAGEN.*[@.productTitle is 'Stadspas' and len(@.steps.*[@.decision is 'toekenning' and yearsAgo(@.datePublished) <= 1]) >= 1]) or ($.FOCUS_AANVRAGEN.*[@.productTitle is 'Bijstandsuitkering' and len(@.steps.*[@.decision is 'toekenning' and yearsAgo(@.datePublished) <= 1]) >= 1]) or (len($.FOCUS_TOZO))"
+      }
+
+    ],
+    "reason": "U ziet deze tip omdat u TOZO, stadspas of bijstandsuitkering heeft",
+    "isPersonalized": true,
+    "link": {
+      "title": "Bekijk het filmpje",
+      "to": "https://vimeo.com/436735156"
+    },
+    "imgUrl": "/api/tips/static/tip_images/020werkt.png"
   }
 ]
