@@ -62,7 +62,7 @@ class ApiTests(TestCase):
             self.assertEqual(json[0]['title'], 'Laat geen geld liggen')
 
             # remove tozo docs
-            client_data['userData']['FOCUS_COMBINED']['tozodocumenten'] = []
+            client_data['userData']['FOCUS_TOZO'] = []
             response = self.client.post('/tips/gettips', json=client_data)
             json = response.get_json()
             self.assertEqual(len(json), 0)
