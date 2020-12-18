@@ -411,7 +411,7 @@
     "datePublished": "2020-11-12",
     "title": "Laat geen geld liggen",
     "audience": ["persoonlijk"],
-    "description": "Had u als ondernemer in 2019 moeite om rond te komen? Of had u geldproblemen? Misschien zijn deze regelingen dan interessant voor u.",
+    "description": "Had u als ondernemer in 2019/2020 moeite om rond te komen? Of had u geldproblemen? Misschien zijn deze regelingen dan interessant voor u.",
     "rules": [
       {
         "type": "ref",
@@ -451,6 +451,33 @@
       "title": "Bekijk het filmpje",
       "to": "https://vimeo.com/436735156"
     },
-    "imgUrl": "/api/tips/static/tip_images/020werkt.png"
+    "imgUrl": "/api/tips/static/tip_images/020werkt.jpg"
+  },
+  {
+    "id": "mijn-24",
+    "owner": "",
+    "dateActiveStart": "2020-11-16",
+    "dateActiveEnd": null,
+    "active": true,
+    "priority": 71,
+    "xxpriority": 14,
+    "datePublished": "2020-11-26",
+    "title": "Draag uw mondkapje",
+    "audience": ["persoonlijk"],
+    "description": "Tijdens corona moet u een mondkapje op als u reist met het aanvullend openbaar vervoer. Hiermee beschermt u uzelf en anderen.",
+    "rules": [
+      {
+        "type": "rule",
+        "rule": ""
+      }
+
+    ],
+    "reason": "",
+    "isPersonalized": true,
+    "link": {
+      "title": "Bekijk de coronamaatregelen van RMC en Transvision",
+      "to": "https://www.amsterdam.nl/veelgevraagd/?productid=%7BAC803D4E-BAB4-4865-91EA-88BD00EBD9F2%7D#case_%7B549B25AF-B9C1-47E3-8106-6DE7F5551AB2%7D"
+    },
+    "imgUrl": "/api/tips/static/tip_images/mondkapje.jpg"
   }
 ]
