@@ -411,7 +411,7 @@
     "datePublished": "2020-11-12",
     "title": "Laat geen geld liggen",
     "audience": ["persoonlijk"],
-    "description": "Had u als ondernemer in 2019 moeite om rond te komen? Of had u geldproblemen? Misschien zijn deze regelingen dan interessant voor u.",
+    "description": "Had u als ondernemer in 2019/2020 moeite om rond te komen? Of had u geldproblemen? Misschien zijn deze regelingen dan interessant voor u.",
     "rules": [
       {
         "type": "ref",
@@ -425,5 +425,109 @@
       "to": "https://www.amsterdam.nl/pakjekans"
     },
     "imgUrl": "/api/tips/static/tip_images/laat_geen_geld_liggen.jpg"
+  },
+  {
+    "id": "mijn-23",
+    "owner": "",
+    "dateActiveStart": "2020-11-16",
+    "dateActiveEnd": "2021-11-16",
+    "active": true,
+    "priority": 71,
+    "xxpriority": 11,
+    "datePublished": "2020-11-25",
+    "title": "Download de 020werkt-app",
+    "audience": ["persoonlijk", "zakelijk"],
+    "description": "Via de 020werkt-app krijgt u informatie  over werk, inkomen en meedoen in de wijk. De app is gratis, anoniem en makkelijk in gebruik.",
+    "rules": [
+      {
+        "type": "rule",
+        "rule": "($.FOCUS_AANVRAGEN.*[@.productTitle is 'Stadspas' and len(@.steps.*[@.decision is 'toekenning' and yearsAgo(@.datePublished) <= 1]) >= 1]) or ($.FOCUS_AANVRAGEN.*[@.productTitle is 'Bijstandsuitkering' and len(@.steps.*[@.decision is 'toekenning' and yearsAgo(@.datePublished) <= 1]) >= 1]) or (len($.FOCUS_TOZO))"
+      }
+
+    ],
+    "reason": "U ziet deze tip omdat u TOZO, stadspas of bijstandsuitkering heeft",
+    "isPersonalized": true,
+    "link": {
+      "title": "Bekijk het filmpje",
+      "to": "https://vimeo.com/436735156"
+    },
+    "imgUrl": "/api/tips/static/tip_images/020werkt.jpg"
+  },
+  {
+    "id": "mijn-24",
+    "owner": "",
+    "dateActiveStart": "2020-11-16",
+    "dateActiveEnd": null,
+    "active": false,
+    "priority": 71,
+    "xxpriority": 14,
+    "datePublished": "2020-11-26",
+    "title": "Draag uw mondkapje",
+    "audience": ["persoonlijk"],
+    "description": "Tijdens corona moet u een mondkapje op als u reist met het aanvullend openbaar vervoer. Hiermee beschermt u uzelf en anderen.",
+    "rules": [
+      {
+        "type": "rule",
+        "rule": "TODO"
+      }
+
+    ],
+    "reason": "U ziet deze tip omdat u een aanvullend openbaar vervoer heeft",
+    "isPersonalized": true,
+    "link": {
+      "title": "Bekijk de coronamaatregelen van RMC en Transvision",
+      "to": "https://www.amsterdam.nl/veelgevraagd/?productid=%7BAC803D4E-BAB4-4865-91EA-88BD00EBD9F2%7D#case_%7B549B25AF-B9C1-47E3-8106-6DE7F5551AB2%7D"
+    },
+    "imgUrl": "/api/tips/static/tip_images/mondkapje.jpg"
+  },
+  {
+    "id": "mijn-25",
+    "owner": "",
+    "dateActiveStart": "2021-01-01",
+    "dateActiveEnd": "2021-12-31",
+    "active": true,
+    "priority": 71,
+    "xxpriority": 13,
+    "datePublished": "2020-11-26",
+    "title": "Sporten met korting",
+    "audience": ["persoonlijk"],
+    "description": "Met de Stadspas krijgt u maximaal € 300 korting op een sportabonnement voor uw kind.",
+    "rules": [
+      {
+        "type": "ref",
+        "ref_id": "1"
+      }
+    ],
+    "isPersonalized": true,
+    "link": {
+      "title": "Kies een sportvereniging",
+      "to": "www.amsterdam.nl/svjeugd"
+    },
+    "imgUrl": "/api/tips/static/tip_images/sporten_met_korting.jpg"
+  },
+  {
+    "id": "mijn-26",
+    "owner": "",
+    "dateActiveStart": "2021-01-01",
+    "dateActiveEnd": "2021-12-31",
+    "active": true,
+    "priority": 71,
+    "xxpriority": 13,
+    "datePublished": "2020-11-26",
+    "title": "Hulp bij geldproblemen",
+    "audience": ["persoonlijk"],
+    "description": "Is uw inkomen te laag om alle rekeningen te betalen of  hebt u schulden? Meld u aan voor gratis hulp",
+    "rules": [
+      {
+        "type": "ref",
+        "ref_id": "1"
+      }
+    ],
+    "isPersonalized": true,
+    "link": {
+      "title": "Vind hulp bij u in de buurt",
+      "to": "https://www.amsterdam.nl/werk-inkomen/pak-je-kans/hulp-bij-geldproblemen/tips-bij-geldproblemen/"
+    },
+    "imgUrl": "/api/tips/static/tip_images/schuldhulpverlening.jpg"
   }
 ]

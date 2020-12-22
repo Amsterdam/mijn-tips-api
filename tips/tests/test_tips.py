@@ -72,3 +72,43 @@ class ApiTests(TestCase):
             json = response.get_json()
             self.assertEqual(len(json), 1)  # belasting tip
             self.assertEqual(json[0]['title'], 'Automatische incasso')
+
+    def test_020werkt(self):
+        new_pool = [tip for tip in tips_pool if tip['id'] == "mijn-23"]
+
+        self.assertEqual(len(new_pool), 1)
+        self.assertEqual(new_pool[0]["title"], "Download de 020werkt-app")
+
+        client_data = self._get_client_data()
+        with patch('tips.api.tip_generator.tips_pool', new_pool):
+            response = self.client.post('/tips/gettips', json=client_data)
+            json = response.get_json()
+            self.assertEqual(len(json), 1)
+            self.assertEqual(json[0]['title'], 'Download de 020werkt-app')
+
+            # remove tozo
+            old_tozo = client_data['userData']['FOCUS_TOZO']
+            client_data['userData']['FOCUS_TOZO'] = []
+            response = self.client.post('/tips/gettips', json=client_data)
+            json = response.get_json()
+            self.assertEqual(len(json), 1)
+
+            # also remove bijstandsuitkering
+            aanvragen = [i for i in client_data['userData']['FOCUS_AANVRAGEN'] if i['productTitle'] != 'Bijstandsuitkering']
+            client_data['userData']['FOCUS_AANVRAGEN'] = aanvragen
+            response = self.client.post('/tips/gettips', json=client_data)
+            json = response.get_json()
+            self.assertEqual(len(json), 1)
+
+            # also remove stadspas
+            aanvragen = [i for i in client_data['userData']['FOCUS_AANVRAGEN'] if i['productTitle'] != 'Stadspas']
+            client_data['userData']['FOCUS_AANVRAGEN'] = aanvragen
+            response = self.client.post('/tips/gettips', json=client_data)
+            json = response.get_json()
+            self.assertEqual(len(json), 0)
+
+            # add back tozo
+            client_data['userData']['FOCUS_TOZO'] = old_tozo
+            response = self.client.post('/tips/gettips', json=client_data)
+            json = response.get_json()
+            self.assertEqual(len(json), 1)
