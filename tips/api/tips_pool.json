@@ -458,7 +458,7 @@
     "owner": "",
     "dateActiveStart": "2020-11-16",
     "dateActiveEnd": null,
-    "active": true,
+    "active": false,
     "priority": 71,
     "xxpriority": 14,
     "datePublished": "2020-11-26",
@@ -468,16 +468,66 @@
     "rules": [
       {
         "type": "rule",
-        "rule": ""
+        "rule": "TODO"
       }
 
     ],
-    "reason": "",
+    "reason": "U ziet deze tip omdat u een aanvullend openbaar vervoer heeft",
     "isPersonalized": true,
     "link": {
       "title": "Bekijk de coronamaatregelen van RMC en Transvision",
       "to": "https://www.amsterdam.nl/veelgevraagd/?productid=%7BAC803D4E-BAB4-4865-91EA-88BD00EBD9F2%7D#case_%7B549B25AF-B9C1-47E3-8106-6DE7F5551AB2%7D"
     },
     "imgUrl": "/api/tips/static/tip_images/mondkapje.jpg"
+  },
+  {
+    "id": "mijn-25",
+    "owner": "",
+    "dateActiveStart": "2021-01-01",
+    "dateActiveEnd": "2021-12-31",
+    "active": true,
+    "priority": 71,
+    "xxpriority": 13,
+    "datePublished": "2020-11-26",
+    "title": "Sporten met korting",
+    "audience": ["persoonlijk"],
+    "description": "Met de Stadspas krijgt u maximaal € 300 korting op een sportabonnement voor uw kind.",
+    "rules": [
+      {
+        "type": "ref",
+        "ref_id": "1"
+      }
+    ],
+    "isPersonalized": true,
+    "link": {
+      "title": "Kies een sportvereniging",
+      "to": "www.amsterdam.nl/svjeugd"
+    },
+    "imgUrl": "/api/tips/static/tip_images/sporten_met_korting.jpg"
+  },
+  {
+    "id": "mijn-26",
+    "owner": "",
+    "dateActiveStart": "2021-01-01",
+    "dateActiveEnd": "2021-12-31",
+    "active": true,
+    "priority": 71,
+    "xxpriority": 13,
+    "datePublished": "2020-11-26",
+    "title": "Hulp bij geldproblemen",
+    "audience": ["persoonlijk"],
+    "description": "Is uw inkomen te laag om alle rekeningen te betalen of  hebt u schulden? Meld u aan voor gratis hulp",
+    "rules": [
+      {
+        "type": "ref",
+        "ref_id": "1"
+      }
+    ],
+    "isPersonalized": true,
+    "link": {
+      "title": "Vind hulp bij u in de buurt",
+      "to": "https://www.amsterdam.nl/werk-inkomen/pak-je-kans/hulp-bij-geldproblemen/tips-bij-geldproblemen/"
+    },
+    "imgUrl": "/api/tips/static/tip_images/schuldhulpverlening.jpg"
   }
 ]
