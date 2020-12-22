@@ -458,7 +458,7 @@
     "owner": "",
     "dateActiveStart": "2020-11-16",
     "dateActiveEnd": null,
-    "active": false,
+    "active": true,
     "priority": 71,
     "xxpriority": 14,
     "datePublished": "2020-11-26",
@@ -468,7 +468,7 @@
     "rules": [
       {
         "type": "rule",
-        "rule": "TODO"
+        "rule": "$.WMO.*[@.voorzieningsoortcode is 'AOV' and @.isActual is true]"
       }
 
     ],
