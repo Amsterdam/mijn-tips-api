@@ -112,3 +112,25 @@ class ApiTests(TestCase):
             response = self.client.post('/tips/gettips', json=client_data)
             json = response.get_json()
             self.assertEqual(len(json), 1)
+
+    def test_draag_uw_mondkapje(self):
+        new_pool = [tip for tip in tips_pool if tip['id'] == "mijn-24"]
+
+        self.assertEqual(len(new_pool), 1)
+        self.assertEqual(new_pool[0]["title"], "Draag uw mondkapje")
+
+        client_data = self._get_client_data()
+        with patch('tips.api.tip_generator.tips_pool', new_pool):
+            response = self.client.post('/tips/gettips', json=client_data)
+            json = response.get_json()
+            self.assertEqual(len(json), 1)
+            self.assertEqual(json[0]['title'], 'Draag uw mondkapje')
+
+            wmodata = client_data['userData']['WMO']
+            for i in wmodata:
+                if i.get('voorzieningsoortcode') == "AOV":
+                    i['isActual'] = False
+
+            response = self.client.post('/tips/gettips', json=client_data)
+            json = response.get_json()
+            self.assertEqual(len(json), 0)

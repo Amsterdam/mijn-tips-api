@@ -11,11 +11,10 @@
       "title": "Meer informatie",
       "to": "/zorg-en-ondersteuning/voorzieningen/vervoerskostenvergoeding-rolstoeltaxi-of-vervoer-derden-0"
     },
-    "process": [
+    "steps": [
       {
         "id": "status-step-0",
         "status": "Besluit",
-        "description": "\n            <p>\n              U hebt recht op een vervoerskostenvergoeding rolstoeltaxi of vervoer derden per 25 september 2019.\n            </p>\n            <p>\n              In de brief leest u ook hoe u bezwaar kunt maken of een klacht kan\n              indienen.\n            </p>\n          ",
         "datePublished": "2019-09-25T00:00:00",
         "isActive": true,
         "isChecked": true,
@@ -24,7 +23,6 @@
       {
         "id": "status-step-1",
         "status": "Einde recht",
-        "description": "\n            <p>\n              Op het moment dat uw recht stopt, ontvangt u hiervan bericht.\n            </p>\n            \n          ",
         "datePublished": "",
         "isActive": false,
         "isChecked": false,
@@ -44,11 +42,10 @@
       "title": "Meer informatie",
       "to": "/zorg-en-ondersteuning/voorzieningen/hulp-bij-het-huishouden-1"
     },
-    "process": [
+    "steps": [
       {
         "id": "status-step-0",
         "status": "Besluit",
-        "description": "\n              <p>\n                U hebt recht op hulp bij het huishouden per 14 april 2019.\n              </p>\n              <p>\n                \n                    In de brief leest u ook hoe u bezwaar kunt maken, een klacht\n                    kan indienen of <u>hoe u van aanbieder kunt wisselen.</u>\n                  \n              </p>\n            ",
         "datePublished": "2019-04-15T00:00:00",
         "isActive": false,
         "isChecked": true,
@@ -57,7 +54,6 @@
       {
         "id": "status-step-1",
         "status": "Levering gestart",
-        "description": "<p>\n            Emile Thuiszorg is gestart met het leveren van hulp bij het huishouden.\n          </p>",
         "datePublished": "",
         "isActive": false,
         "isChecked": true,
@@ -66,7 +62,6 @@
       {
         "id": "status-step-2",
         "status": "Levering gestopt",
-        "description": "<p>\n            Niet van toepassing.\n          </p>",
         "datePublished": "",
         "isActive": false,
         "isChecked": true,
@@ -75,7 +70,6 @@
       {
         "id": "status-step-3",
         "status": "Einde recht",
-        "description": "<p>\n            Uw recht op hulp bij het huishouden is beëindigd per 08 maart 2020\n          </p>",
         "datePublished": "2020-03-08T00:00:00",
         "isActive": true,
         "isChecked": false,
@@ -95,11 +89,10 @@
       "title": "Meer informatie",
       "to": "/zorg-en-ondersteuning/voorzieningen/dagbesteding-2"
     },
-    "process": [
+    "steps": [
       {
         "id": "status-step-0",
         "status": "Besluit",
-        "description": "\n              <p>\n                U hebt recht op dagbesteding per 13 maart 2019.\n              </p>\n              <p>\n                \n                    In de brief leest u ook hoe u bezwaar kunt maken, een klacht\n                    kan indienen of <u>hoe u van aanbieder kunt wisselen.</u>\n                  \n              </p>\n            ",
         "datePublished": "2019-03-14T00:00:00",
         "isActive": false,
         "isChecked": true,
@@ -108,7 +101,6 @@
       {
         "id": "status-step-1",
         "status": "Levering gestart",
-        "description": "<p>\n            Amstelring is gestart met het leveren van dagbesteding.\n          </p>",
         "datePublished": "",
         "isActive": false,
         "isChecked": true,
@@ -117,7 +109,6 @@
       {
         "id": "status-step-2",
         "status": "Levering gestopt",
-        "description": "<p>\n            Niet van toepassing.\n          </p>",
         "datePublished": "",
         "isActive": false,
         "isChecked": true,
@@ -126,7 +117,6 @@
       {
         "id": "status-step-3",
         "status": "Einde recht",
-        "description": "<p>\n            Uw recht op dagbesteding is beëindigd per 12 maart 2020\n          </p>",
         "datePublished": "2020-03-12T00:00:00",
         "isActive": true,
         "isChecked": false,
@@ -146,11 +136,10 @@
       "title": "Meer informatie",
       "to": "/zorg-en-ondersteuning/voorzieningen/ambulante-ondersteuning-3"
     },
-    "process": [
+    "steps": [
       {
         "id": "status-step-0",
         "status": "Besluit",
-        "description": "\n              <p>\n                U hebt recht op ambulante ondersteuning per 09 maart 2019.\n              </p>\n              <p>\n                \n                    In de brief leest u ook hoe u bezwaar kunt maken, een klacht\n                    kan indienen of <u>hoe u van aanbieder kunt wisselen.</u>\n                  \n              </p>\n            ",
         "datePublished": "2019-03-11T00:00:00",
         "isActive": false,
         "isChecked": true,
@@ -159,7 +148,6 @@
       {
         "id": "status-step-1",
         "status": "Levering gestart",
-        "description": "<p>\n            Amstelring is gestart met het leveren van ambulante ondersteuning.\n          </p>",
         "datePublished": "",
         "isActive": false,
         "isChecked": true,
@@ -168,7 +156,6 @@
       {
         "id": "status-step-2",
         "status": "Levering gestopt",
-        "description": "<p>\n            Niet van toepassing.\n          </p>",
         "datePublished": "",
         "isActive": false,
         "isChecked": true,
@@ -177,7 +164,6 @@
       {
         "id": "status-step-3",
         "status": "Einde recht",
-        "description": "<p>\n            Uw recht op ambulante ondersteuning is beëindigd per 08 maart 2020\n          </p>",
         "datePublished": "2020-03-08T00:00:00",
         "isActive": true,
         "isChecked": false,
@@ -197,11 +183,10 @@
       "title": "Meer informatie",
       "to": "/zorg-en-ondersteuning/voorzieningen/dagbesteding-2019-2-4"
     },
-    "process": [
+    "steps": [
       {
         "id": "status-step-0",
         "status": "Besluit",
-        "description": "\n              <p>\n                U hebt recht op dagbesteding 2019! 2 per 09 maart 2019.\n              </p>\n              <p>\n                \n                    In de brief leest u ook hoe u bezwaar kunt maken, een klacht\n                    kan indienen of <u>hoe u van aanbieder kunt wisselen.</u>\n                  \n              </p>\n            ",
         "datePublished": "2019-03-11T00:00:00",
         "isActive": false,
         "isChecked": true,
@@ -210,7 +195,6 @@
       {
         "id": "status-step-1",
         "status": "Levering gestart",
-        "description": "<p>\n            Amstelring is gestart met het leveren van dagbesteding 2019! 2.\n          </p>",
         "datePublished": "",
         "isActive": false,
         "isChecked": true,
@@ -219,7 +203,6 @@
       {
         "id": "status-step-2",
         "status": "Levering gestopt",
-        "description": "<p>\n            Niet van toepassing.\n          </p>",
         "datePublished": "",
         "isActive": false,
         "isChecked": true,
@@ -228,7 +211,6 @@
       {
         "id": "status-step-3",
         "status": "Einde recht",
-        "description": "<p>\n            Uw recht op dagbesteding 2019! 2 is beëindigd per 08 maart 2020\n          </p>",
         "datePublished": "2020-03-08T00:00:00",
         "isActive": true,
         "isChecked": false,
@@ -248,11 +230,10 @@
       "title": "Meer informatie",
       "to": "/zorg-en-ondersteuning/voorzieningen/ambulante-ondersteuning-5"
     },
-    "process": [
+    "steps": [
       {
         "id": "status-step-0",
         "status": "Besluit",
-        "description": "\n              <p>\n                U hebt recht op ambulante ondersteuning per 01 januari 2019.\n              </p>\n              <p>\n                \n                    In de brief leest u ook hoe u bezwaar kunt maken, een klacht\n                    kan indienen of <u>hoe u van aanbieder kunt wisselen.</u>\n                  \n              </p>\n            ",
         "datePublished": "2019-01-31T00:00:00",
         "isActive": false,
         "isChecked": true,
@@ -261,7 +242,6 @@
       {
         "id": "status-step-1",
         "status": "Levering gestart",
-        "description": "<p>\n            Familysupporters/Forsa is gestart met het leveren van ambulante ondersteuning.\n          </p>",
         "datePublished": "",
         "isActive": false,
         "isChecked": true,
@@ -270,7 +250,6 @@
       {
         "id": "status-step-2",
         "status": "Levering gestopt",
-        "description": "<p>\n            Niet van toepassing.\n          </p>",
         "datePublished": "",
         "isActive": false,
         "isChecked": true,
@@ -279,7 +258,6 @@
       {
         "id": "status-step-3",
         "status": "Einde recht",
-        "description": "<p>\n            Uw recht op ambulante ondersteuning is beëindigd per 31 december 2019\n          </p>",
         "datePublished": "2019-12-31T00:00:00",
         "isActive": true,
         "isChecked": false,
@@ -299,11 +277,10 @@
       "title": "Meer informatie",
       "to": "/zorg-en-ondersteuning/voorzieningen/ambulante-ondersteuning-6"
     },
-    "process": [
+    "steps": [
       {
         "id": "status-step-0",
         "status": "Besluit",
-        "description": "\n              <p>\n                U hebt recht op ambulante ondersteuning per 31 december 2018.\n              </p>\n              <p>\n                In de brief leest u ook hoe u bezwaar kunt maken of een klacht kan\n              indienen.\n              </p>\n            ",
         "datePublished": "2019-01-31T00:00:00",
         "isActive": false,
         "isChecked": true,
@@ -312,7 +289,6 @@
       {
         "id": "status-step-1",
         "status": "Levering gestart",
-        "description": "<p>\n            Familysupporters/Forsa is gestart met het leveren van ambulante ondersteuning.\n          </p>",
         "datePublished": "",
         "isActive": false,
         "isChecked": true,
@@ -321,7 +297,6 @@
       {
         "id": "status-step-2",
         "status": "Levering gestopt",
-        "description": "<p>\n            Familysupporters/Forsa heeft aan ons doorgegeven dat u geen ambulante ondersteuning\n            meer krijgt.\n          </p>",
         "datePublished": "",
         "isActive": false,
         "isChecked": true,
@@ -330,7 +305,6 @@
       {
         "id": "status-step-3",
         "status": "Einde recht",
-        "description": "<p>\n            Uw recht op ambulante ondersteuning is beëindigd per 31 december 2018\n          </p>",
         "datePublished": "2018-12-31T00:00:00",
         "isActive": true,
         "isChecked": false,
@@ -350,11 +324,10 @@
       "title": "Meer informatie",
       "to": "/zorg-en-ondersteuning/voorzieningen/ambulante-ondersteuning-7"
     },
-    "process": [
+    "steps": [
       {
         "id": "status-step-0",
         "status": "Besluit",
-        "description": "\n              <p>\n                U hebt recht op ambulante ondersteuning per 28 november 2018.\n              </p>\n              <p>\n                In de brief leest u ook hoe u bezwaar kunt maken of een klacht kan\n              indienen.\n              </p>\n            ",
         "datePublished": "2018-11-29T00:00:00",
         "isActive": false,
         "isChecked": true,
@@ -363,7 +336,6 @@
       {
         "id": "status-step-1",
         "status": "Levering gestart",
-        "description": "<p>\n            Amstelring is gestart met het leveren van ambulante ondersteuning.\n          </p>",
         "datePublished": "",
         "isActive": false,
         "isChecked": true,
@@ -372,7 +344,6 @@
       {
         "id": "status-step-2",
         "status": "Levering gestopt",
-        "description": "<p>\n            Amstelring heeft aan ons doorgegeven dat u geen ambulante ondersteuning\n            meer krijgt.\n          </p>",
         "datePublished": "",
         "isActive": false,
         "isChecked": true,
@@ -381,7 +352,6 @@
       {
         "id": "status-step-3",
         "status": "Einde recht",
-        "description": "<p>\n            Uw recht op ambulante ondersteuning is beëindigd per 08 maart 2019\n          </p>",
         "datePublished": "2019-03-08T00:00:00",
         "isActive": true,
         "isChecked": false,
@@ -401,11 +371,10 @@
       "title": "Meer informatie",
       "to": "/zorg-en-ondersteuning/voorzieningen/ambulante-ondersteuning-8"
     },
-    "process": [
+    "steps": [
       {
         "id": "status-step-0",
         "status": "Besluit",
-        "description": "\n              <p>\n                U hebt recht op ambulante ondersteuning per 20 november 2018.\n              </p>\n              <p>\n                \n                    In de brief leest u ook hoe u bezwaar kunt maken, een klacht\n                    kan indienen of <u>hoe u van aanbieder kunt wisselen.</u>\n                  \n              </p>\n            ",
         "datePublished": "2018-11-22T00:00:00",
         "isActive": false,
         "isChecked": true,
@@ -414,7 +383,6 @@
       {
         "id": "status-step-1",
         "status": "Levering gestart",
-        "description": "<p>\n            Leger des Heils is gestart met het leveren van ambulante ondersteuning.\n          </p>",
         "datePublished": "",
         "isActive": false,
         "isChecked": true,
@@ -423,7 +391,6 @@
       {
         "id": "status-step-2",
         "status": "Levering gestopt",
-        "description": "<p>\n            Niet van toepassing.\n          </p>",
         "datePublished": "",
         "isActive": false,
         "isChecked": true,
@@ -432,7 +399,6 @@
       {
         "id": "status-step-3",
         "status": "Einde recht",
-        "description": "<p>\n            Uw recht op ambulante ondersteuning is beëindigd per 20 november 2019\n          </p>",
         "datePublished": "2019-11-20T00:00:00",
         "isActive": true,
         "isChecked": false,
@@ -452,11 +418,10 @@
       "title": "Meer informatie",
       "to": "/zorg-en-ondersteuning/voorzieningen/woonruimteaanpassing-9"
     },
-    "process": [
+    "steps": [
       {
         "id": "status-step-0",
         "status": "Besluit",
-        "description": "\n            <p>\n              U hebt recht op een woonruimteaanpassing per 24 oktober 2018.\n            </p>\n            <p>\n              In de brief leest u ook hoe u bezwaar kunt maken of een klacht kan\n              indienen.\n            </p>\n          ",
         "datePublished": "2018-12-27T00:00:00",
         "isActive": false,
         "isChecked": true,
@@ -465,7 +430,6 @@
       {
         "id": "status-step-1",
         "status": "Opdracht gegeven",
-        "description": "<p>\n            De gemeente heeft opdracht gegeven aan Welzorg om de aanpassingen aan uw woning uit\n            te voeren.\n          </p>",
         "datePublished": "",
         "isActive": false,
         "isChecked": true,
@@ -474,7 +438,6 @@
       {
         "id": "status-step-2",
         "status": "Aanpassing uitgevoerd",
-        "description": "<p>\n            Welzorg heeft aan ons doorgegeven dat de\n            aanpassing aan uw woning is uitgevoerd.\n          </p>",
         "datePublished": "",
         "isActive": true,
         "isChecked": true,
@@ -483,7 +446,6 @@
       {
         "id": "status-step-3",
         "status": "Einde recht",
-        "description": "<p>\n            Op het moment dat uw recht stopt, ontvangt u hiervan bericht.\n          </p>",
         "datePublished": "",
         "isActive": false,
         "isChecked": false,
@@ -503,11 +465,10 @@
       "title": "Meer informatie",
       "to": "/zorg-en-ondersteuning/voorzieningen/handbewogen-rolstoel-voor-semi-permanent-gebruik-10"
     },
-    "process": [
+    "steps": [
       {
         "id": "status-step-0",
         "status": "Besluit",
-        "description": "\n            <p>\n              U hebt recht op een handbewogen rolstoel voor semi-permanent gebruik per 07 september 2018.\n            </p>\n            <p>\n              In de brief leest u ook hoe u bezwaar kunt maken of een klacht kan\n              indienen.\n            </p>\n          ",
         "datePublished": "2018-09-17T00:00:00",
         "isActive": false,
         "isChecked": true,
@@ -516,7 +477,6 @@
       {
         "id": "status-step-1",
         "status": "Opdracht gegeven",
-        "description": "<p>\n            De gemeente heeft opdracht gegeven aan Medipoint B.V. om een handbewogen rolstoel voor semi-permanent gebruik aan u te leveren.\n          </p>",
         "datePublished": "",
         "isActive": false,
         "isChecked": true,
@@ -525,7 +485,6 @@
       {
         "id": "status-step-2",
         "status": "Product geleverd",
-        "description": "<p>\n            Medipoint B.V. heeft aan ons doorgegeven dat een handbewogen rolstoel voor semi-permanent gebruik bij u is afgeleverd.\n          </p>",
         "datePublished": "",
         "isActive": true,
         "isChecked": true,
@@ -534,7 +493,6 @@
       {
         "id": "status-step-3",
         "status": "Einde recht",
-        "description": "<p>\n            Op het moment dat uw recht stopt, ontvangt u hiervan bericht.\n          </p>",
         "datePublished": "",
         "isActive": false,
         "isChecked": false,
@@ -554,11 +512,10 @@
       "title": "Meer informatie",
       "to": "/zorg-en-ondersteuning/voorzieningen/woonruimteaanpassing-11"
     },
-    "process": [
+    "steps": [
       {
         "id": "status-step-0",
         "status": "Besluit",
-        "description": "\n            <p>\n              U hebt recht op een woonruimteaanpassing per 17 juli 2018.\n            </p>\n            <p>\n              In de brief leest u ook hoe u bezwaar kunt maken of een klacht kan\n              indienen.\n            </p>\n          ",
         "datePublished": "2018-07-20T00:00:00",
         "isActive": false,
         "isChecked": true,
@@ -567,7 +524,6 @@
       {
         "id": "status-step-1",
         "status": "Opdracht gegeven",
-        "description": "<p>\n            De gemeente heeft opdracht gegeven aan Welzorg om de aanpassingen aan uw woning uit\n            te voeren.\n          </p>",
         "datePublished": "",
         "isActive": false,
         "isChecked": true,
@@ -576,7 +532,6 @@
       {
         "id": "status-step-2",
         "status": "Aanpassing uitgevoerd",
-        "description": "<p>\n            Welzorg heeft aan ons doorgegeven dat de\n            aanpassing aan uw woning is uitgevoerd.\n          </p>",
         "datePublished": "",
         "isActive": true,
         "isChecked": true,
@@ -585,7 +540,6 @@
       {
         "id": "status-step-3",
         "status": "Einde recht",
-        "description": "<p>\n            Op het moment dat uw recht stopt, ontvangt u hiervan bericht.\n          </p>",
         "datePublished": "",
         "isActive": false,
         "isChecked": false,
@@ -605,11 +559,10 @@
       "title": "Meer informatie",
       "to": "/zorg-en-ondersteuning/voorzieningen/dagbesteding-12"
     },
-    "process": [
+    "steps": [
       {
         "id": "status-step-0",
         "status": "Besluit",
-        "description": "\n              <p>\n                U hebt recht op dagbesteding per 06 juli 2018.\n              </p>\n              <p>\n                In de brief leest u ook hoe u bezwaar kunt maken of een klacht kan\n              indienen.\n              </p>\n            ",
         "datePublished": "2018-08-20T00:00:00",
         "isActive": false,
         "isChecked": true,
@@ -618,7 +571,6 @@
       {
         "id": "status-step-1",
         "status": "Levering gestart",
-        "description": "<p>\n            Vivium Zorggroep is gestart met het leveren van dagbesteding.\n          </p>",
         "datePublished": "",
         "isActive": false,
         "isChecked": true,
@@ -627,7 +579,6 @@
       {
         "id": "status-step-2",
         "status": "Levering gestopt",
-        "description": "<p>\n            Vivium Zorggroep heeft aan ons doorgegeven dat u geen dagbesteding\n            meer krijgt.\n          </p>",
         "datePublished": "",
         "isActive": false,
         "isChecked": true,
@@ -636,7 +587,6 @@
       {
         "id": "status-step-3",
         "status": "Einde recht",
-        "description": "<p>\n            Uw recht op dagbesteding is beëindigd per 01 januari 2019\n          </p>",
         "datePublished": "2019-01-01T00:00:00",
         "isActive": true,
         "isChecked": false,
@@ -656,11 +606,10 @@
       "title": "Meer informatie",
       "to": "/zorg-en-ondersteuning/voorzieningen/woonruimteaanpassing-13"
     },
-    "process": [
+    "steps": [
       {
         "id": "status-step-0",
         "status": "Besluit",
-        "description": "\n            <p>\n              U hebt recht op een woonruimteaanpassing per 20 april 2018.\n            </p>\n            <p>\n              In de brief leest u ook hoe u bezwaar kunt maken of een klacht kan\n              indienen.\n            </p>\n          ",
         "datePublished": "2018-05-09T00:00:00",
         "isActive": false,
         "isChecked": true,
@@ -669,7 +618,6 @@
       {
         "id": "status-step-1",
         "status": "Opdracht gegeven",
-        "description": "<p>\n            De gemeente heeft opdracht gegeven aan Welzorg om de aanpassingen aan uw woning uit\n            te voeren.\n          </p>",
         "datePublished": "",
         "isActive": false,
         "isChecked": true,
@@ -678,7 +626,6 @@
       {
         "id": "status-step-2",
         "status": "Aanpassing uitgevoerd",
-        "description": "<p>\n            Welzorg heeft aan ons doorgegeven dat de\n            aanpassing aan uw woning is uitgevoerd.\n          </p>",
         "datePublished": "",
         "isActive": true,
         "isChecked": true,
@@ -687,7 +634,6 @@
       {
         "id": "status-step-3",
         "status": "Einde recht",
-        "description": "<p>\n            Op het moment dat uw recht stopt, ontvangt u hiervan bericht.\n          </p>",
         "datePublished": "",
         "isActive": false,
         "isChecked": false,
@@ -707,11 +653,10 @@
       "title": "Meer informatie",
       "to": "/zorg-en-ondersteuning/voorzieningen/hulp-bij-het-huishouden-14"
     },
-    "process": [
+    "steps": [
       {
         "id": "status-step-0",
         "status": "Besluit",
-        "description": "\n              <p>\n                U hebt recht op hulp bij het huishouden per 14 april 2018.\n              </p>\n              <p>\n                In de brief leest u ook hoe u bezwaar kunt maken of een klacht kan\n              indienen.\n              </p>\n            ",
         "datePublished": "2018-04-25T00:00:00",
         "isActive": false,
         "isChecked": true,
@@ -720,7 +665,6 @@
       {
         "id": "status-step-1",
         "status": "Levering gestart",
-        "description": "<p>\n            Emile Thuiszorg is gestart met het leveren van hulp bij het huishouden.\n          </p>",
         "datePublished": "",
         "isActive": false,
         "isChecked": true,
@@ -729,7 +673,6 @@
       {
         "id": "status-step-2",
         "status": "Levering gestopt",
-        "description": "<p>\n            Emile Thuiszorg heeft aan ons doorgegeven dat u geen hulp bij het huishouden\n            meer krijgt.\n          </p>",
         "datePublished": "",
         "isActive": false,
         "isChecked": true,
@@ -738,7 +681,6 @@
       {
         "id": "status-step-3",
         "status": "Einde recht",
-        "description": "<p>\n            Uw recht op hulp bij het huishouden is beëindigd per 13 april 2019\n          </p>",
         "datePublished": "2019-04-13T00:00:00",
         "isActive": true,
         "isChecked": false,
@@ -758,11 +700,10 @@
       "title": "Meer informatie",
       "to": "/zorg-en-ondersteuning/voorzieningen/dagbesteding-2019-15"
     },
-    "process": [
+    "steps": [
       {
         "id": "status-step-0",
         "status": "Besluit",
-        "description": "\n              <p>\n                U hebt recht op dagbesteding 2019! per 09 maart 2018.\n              </p>\n              <p>\n                In de brief leest u ook hoe u bezwaar kunt maken of een klacht kan\n              indienen.\n              </p>\n            ",
         "datePublished": "2018-04-19T00:00:00",
         "isActive": false,
         "isChecked": true,
@@ -771,7 +712,6 @@
       {
         "id": "status-step-1",
         "status": "Levering gestart",
-        "description": "<p>\n            Amstelring is gestart met het leveren van dagbesteding 2019!.\n          </p>",
         "datePublished": "",
         "isActive": false,
         "isChecked": true,
@@ -780,7 +720,6 @@
       {
         "id": "status-step-2",
         "status": "Levering gestopt",
-        "description": "<p>\n            Amstelring heeft aan ons doorgegeven dat u geen dagbesteding 2019!\n            meer krijgt.\n          </p>",
         "datePublished": "",
         "isActive": false,
         "isChecked": true,
@@ -789,7 +728,6 @@
       {
         "id": "status-step-3",
         "status": "Einde recht",
-        "description": "<p>\n            Uw recht op dagbesteding 2019! is beëindigd per 08 maart 2019\n          </p>",
         "datePublished": "2019-03-08T00:00:00",
         "isActive": true,
         "isChecked": false,
@@ -809,11 +747,10 @@
       "title": "Meer informatie",
       "to": "/zorg-en-ondersteuning/voorzieningen/deur-tot-deur-plus-vervoer-16"
     },
-    "process": [
+    "steps": [
       {
         "id": "status-step-0",
         "status": "Besluit",
-        "description": "\n            <p>\n              U hebt recht op een Deur tot deur Plus vervoer per 27 februari 2018. De vervoerspas ontvangt u per\n              post.\n            </p>\n            <p>\n              In de brief leest u ook hoe u bezwaar kunt maken of een klacht kan\n              indienen.\n            </p>\n          ",
         "datePublished": "2018-04-06T00:00:00",
         "isActive": true,
         "isChecked": true,
@@ -822,13 +759,13 @@
       {
         "id": "status-step-1",
         "status": "Einde recht",
-        "description": "<p>\n            Op het moment dat uw recht stopt, ontvangt u hiervan bericht.\n          </p>",
         "datePublished": "",
         "isActive": false,
         "isChecked": false,
         "documents": []
       }
-    ]
+    ],
+    "voorzieningsoortcode": "AOV"
   },
   {
     "id": "ambulante-ondersteuning-17",
@@ -842,11 +779,10 @@
       "title": "Meer informatie",
       "to": "/zorg-en-ondersteuning/voorzieningen/ambulante-ondersteuning-17"
     },
-    "process": [
+    "steps": [
       {
         "id": "status-step-0",
         "status": "Besluit",
-        "description": "\n              <p>\n                U hebt recht op ambulante ondersteuning per 21 februari 2018.\n              </p>\n              <p>\n                In de brief leest u ook hoe u bezwaar kunt maken of een klacht kan\n              indienen.\n              </p>\n            ",
         "datePublished": "2018-03-22T00:00:00",
         "isActive": false,
         "isChecked": true,
@@ -855,7 +791,6 @@
       {
         "id": "status-step-1",
         "status": "Levering gestart",
-        "description": "<p>\n            2Learn B.V. is gestart met het leveren van ambulante ondersteuning.\n          </p>",
         "datePublished": "",
         "isActive": false,
         "isChecked": true,
@@ -864,7 +799,6 @@
       {
         "id": "status-step-2",
         "status": "Levering gestopt",
-        "description": "<p>\n            2Learn B.V. heeft aan ons doorgegeven dat u geen ambulante ondersteuning\n            meer krijgt.\n          </p>",
         "datePublished": "",
         "isActive": false,
         "isChecked": true,
@@ -873,7 +807,6 @@
       {
         "id": "status-step-3",
         "status": "Einde recht",
-        "description": "<p>\n            Uw recht op ambulante ondersteuning is beëindigd per 21 februari 2019\n          </p>",
         "datePublished": "2019-02-21T00:00:00",
         "isActive": true,
         "isChecked": false,
@@ -893,11 +826,10 @@
       "title": "Meer informatie",
       "to": "/zorg-en-ondersteuning/voorzieningen/ambulante-ondersteuning-18"
     },
-    "process": [
+    "steps": [
       {
         "id": "status-step-0",
         "status": "Besluit",
-        "description": "\n              <p>\n                U hebt recht op ambulante ondersteuning per 01 januari 2018.\n              </p>\n              <p>\n                In de brief leest u ook hoe u bezwaar kunt maken of een klacht kan\n              indienen.\n              </p>\n            ",
         "datePublished": "2018-08-13T00:00:00",
         "isActive": false,
         "isChecked": true,
@@ -906,7 +838,6 @@
       {
         "id": "status-step-1",
         "status": "Levering gestart",
-        "description": "<p>\n            Stichting Forsa Amsterdam is gestart met het leveren van ambulante ondersteuning.\n          </p>",
         "datePublished": "",
         "isActive": false,
         "isChecked": true,
@@ -915,7 +846,6 @@
       {
         "id": "status-step-2",
         "status": "Levering gestopt",
-        "description": "<p>\n            Stichting Forsa Amsterdam heeft aan ons doorgegeven dat u geen ambulante ondersteuning\n            meer krijgt.\n          </p>",
         "datePublished": "",
         "isActive": false,
         "isChecked": true,
@@ -924,7 +854,6 @@
       {
         "id": "status-step-3",
         "status": "Einde recht",
-        "description": "<p>\n            Uw recht op ambulante ondersteuning is beëindigd per 30 december 2018\n          </p>",
         "datePublished": "2018-12-30T00:00:00",
         "isActive": true,
         "isChecked": false,
@@ -944,11 +873,10 @@
       "title": "Meer informatie",
       "to": "/zorg-en-ondersteuning/voorzieningen/ambulante-ondersteuning-19"
     },
-    "process": [
+    "steps": [
       {
         "id": "status-step-0",
         "status": "Besluit",
-        "description": "\n              <p>\n                U hebt recht op ambulante ondersteuning per 01 januari 2018.\n              </p>\n              <p>\n                In de brief leest u ook hoe u bezwaar kunt maken of een klacht kan\n              indienen.\n              </p>\n            ",
         "datePublished": "2018-01-01T00:00:00",
         "isActive": false,
         "isChecked": true,
@@ -957,7 +885,6 @@
       {
         "id": "status-step-1",
         "status": "Levering gestart",
-        "description": "<p>\n            Cordaan is gestart met het leveren van ambulante ondersteuning.\n          </p>",
         "datePublished": "",
         "isActive": false,
         "isChecked": true,
@@ -966,7 +893,6 @@
       {
         "id": "status-step-2",
         "status": "Levering gestopt",
-        "description": "<p>\n            Cordaan heeft aan ons doorgegeven dat u geen ambulante ondersteuning\n            meer krijgt.\n          </p>",
         "datePublished": "",
         "isActive": false,
         "isChecked": true,
@@ -975,7 +901,6 @@
       {
         "id": "status-step-3",
         "status": "Einde recht",
-        "description": "<p>\n            Uw recht op ambulante ondersteuning is beëindigd per 16 februari 2018\n          </p>",
         "datePublished": "2018-02-16T00:00:00",
         "isActive": true,
         "isChecked": false,
@@ -995,11 +920,10 @@
       "title": "Meer informatie",
       "to": "/zorg-en-ondersteuning/voorzieningen/hulp-bij-het-huishouden-pgb-20"
     },
-    "process": [
+    "steps": [
       {
         "id": "status-step-0",
         "status": "Besluit",
-        "description": "\n            <p>\n              U hebt recht op hulp bij het huishouden (Pgb) per 28 november 2017.\n            </p>\n            <p>\n              In de brief leest u ook hoe u bezwaar kunt maken of een klacht kan\n              indienen.\n            </p>\n          ",
         "datePublished": "2018-01-12T00:00:00",
         "isActive": false,
         "isChecked": false,
@@ -1008,7 +932,6 @@
       {
         "id": "status-step-1",
         "status": "Einde recht",
-        "description": "\n            <p>\n              Uw recht op hulp bij het huishouden (Pgb) is beëindigd per 27 november 2018\n            </p>\n\n            \n          ",
         "datePublished": "2018-11-27T00:00:00",
         "isActive": true,
         "isChecked": false,
@@ -1028,11 +951,10 @@
       "title": "Meer informatie",
       "to": "/zorg-en-ondersteuning/voorzieningen/ambulante-ondersteuning-21"
     },
-    "process": [
+    "steps": [
       {
         "id": "status-step-0",
         "status": "Besluit",
-        "description": "\n              <p>\n                U hebt recht op ambulante ondersteuning per 24 november 2017.\n              </p>\n              <p>\n                In de brief leest u ook hoe u bezwaar kunt maken of een klacht kan\n              indienen.\n              </p>\n            ",
         "datePublished": "2017-11-24T00:00:00",
         "isActive": false,
         "isChecked": true,
@@ -1041,7 +963,6 @@
       {
         "id": "status-step-1",
         "status": "Levering gestart",
-        "description": "<p>\n            Amstelring is gestart met het leveren van ambulante ondersteuning.\n          </p>",
         "datePublished": "",
         "isActive": false,
         "isChecked": true,
@@ -1050,7 +971,6 @@
       {
         "id": "status-step-2",
         "status": "Levering gestopt",
-        "description": "<p>\n            Amstelring heeft aan ons doorgegeven dat u geen ambulante ondersteuning\n            meer krijgt.\n          </p>",
         "datePublished": "",
         "isActive": false,
         "isChecked": true,
@@ -1059,7 +979,6 @@
       {
         "id": "status-step-3",
         "status": "Einde recht",
-        "description": "<p>\n            Uw recht op ambulante ondersteuning is beëindigd per 23 november 2018\n          </p>",
         "datePublished": "2018-11-23T00:00:00",
         "isActive": true,
         "isChecked": false,
@@ -1079,11 +998,10 @@
       "title": "Meer informatie",
       "to": "/zorg-en-ondersteuning/voorzieningen/deur-tot-deur-plus-vervoer-22"
     },
-    "process": [
+    "steps": [
       {
         "id": "status-step-0",
         "status": "Besluit",
-        "description": "\n            <p>\n              U hebt recht op een Deur tot deur Plus vervoer per 24 november 2017. De vervoerspas ontvangt u per\n              post.\n            </p>\n            <p>\n              In de brief leest u ook hoe u bezwaar kunt maken of een klacht kan\n              indienen.\n            </p>\n          ",
         "datePublished": "2017-11-25T00:00:00",
         "isActive": false,
         "isChecked": false,
@@ -1092,7 +1010,6 @@
       {
         "id": "status-step-1",
         "status": "Einde recht",
-        "description": "<p>\n            Uw recht op Deur tot deur Plus vervoer is beëindigd per 26 februari 2018\n          </p>",
         "datePublished": "2018-02-26T00:00:00",
         "isActive": true,
         "isChecked": false,
@@ -1112,11 +1029,10 @@
       "title": "Meer informatie",
       "to": "/zorg-en-ondersteuning/voorzieningen/dagbesteding-23"
     },
-    "process": [
+    "steps": [
       {
         "id": "status-step-0",
         "status": "Besluit",
-        "description": "\n              <p>\n                U hebt recht op dagbesteding per 01 juni 2017.\n              </p>\n              <p>\n                In de brief leest u ook hoe u bezwaar kunt maken of een klacht kan\n              indienen.\n              </p>\n            ",
         "datePublished": "2017-06-01T00:00:00",
         "isActive": false,
         "isChecked": true,
@@ -1125,7 +1041,6 @@
       {
         "id": "status-step-1",
         "status": "Levering gestart",
-        "description": "<p>\n            Amstelring is gestart met het leveren van dagbesteding.\n          </p>",
         "datePublished": "",
         "isActive": false,
         "isChecked": true,
@@ -1134,7 +1049,6 @@
       {
         "id": "status-step-2",
         "status": "Levering gestopt",
-        "description": "<p>\n            Amstelring heeft aan ons doorgegeven dat u geen dagbesteding\n            meer krijgt.\n          </p>",
         "datePublished": "",
         "isActive": false,
         "isChecked": true,
@@ -1143,7 +1057,6 @@
       {
         "id": "status-step-3",
         "status": "Einde recht",
-        "description": "<p>\n            Uw recht op dagbesteding is beëindigd per 08 maart 2018\n          </p>",
         "datePublished": "2018-03-08T00:00:00",
         "isActive": true,
         "isChecked": false,
@@ -1163,11 +1076,10 @@
       "title": "Meer informatie",
       "to": "/zorg-en-ondersteuning/voorzieningen/hulp-bij-het-huishouden-24"
     },
-    "process": [
+    "steps": [
       {
         "id": "status-step-0",
         "status": "Besluit",
-        "description": "\n              <p>\n                U hebt recht op hulp bij het huishouden per 01 juni 2017.\n              </p>\n              <p>\n                In de brief leest u ook hoe u bezwaar kunt maken of een klacht kan\n              indienen.\n              </p>\n            ",
         "datePublished": "2017-06-01T00:00:00",
         "isActive": false,
         "isChecked": true,
@@ -1176,7 +1088,6 @@
       {
         "id": "status-step-1",
         "status": "Levering gestart",
-        "description": "<p>\n            Emile Thuiszorg is gestart met het leveren van hulp bij het huishouden.\n          </p>",
         "datePublished": "",
         "isActive": false,
         "isChecked": true,
@@ -1185,7 +1096,6 @@
       {
         "id": "status-step-2",
         "status": "Levering gestopt",
-        "description": "<p>\n            Emile Thuiszorg heeft aan ons doorgegeven dat u geen hulp bij het huishouden\n            meer krijgt.\n          </p>",
         "datePublished": "",
         "isActive": false,
         "isChecked": true,
@@ -1194,7 +1104,6 @@
       {
         "id": "status-step-3",
         "status": "Einde recht",
-        "description": "<p>\n            Uw recht op hulp bij het huishouden is beëindigd per 13 april 2018\n          </p>",
         "datePublished": "2018-04-13T00:00:00",
         "isActive": true,
         "isChecked": false,
@@ -1214,11 +1123,10 @@
       "title": "Meer informatie",
       "to": "/zorg-en-ondersteuning/voorzieningen/dagbesteding-25"
     },
-    "process": [
+    "steps": [
       {
         "id": "status-step-0",
         "status": "Besluit",
-        "description": "\n              <p>\n                U hebt recht op dagbesteding per 01 juni 2017.\n              </p>\n              <p>\n                In de brief leest u ook hoe u bezwaar kunt maken of een klacht kan\n              indienen.\n              </p>\n            ",
         "datePublished": "2017-06-01T00:00:00",
         "isActive": false,
         "isChecked": true,
@@ -1227,7 +1135,6 @@
       {
         "id": "status-step-1",
         "status": "Levering gestart",
-        "description": "<p>\n            Cordaan is gestart met het leveren van dagbesteding.\n          </p>",
         "datePublished": "",
         "isActive": false,
         "isChecked": true,
@@ -1236,7 +1143,6 @@
       {
         "id": "status-step-2",
         "status": "Levering gestopt",
-        "description": "<p>\n            Cordaan heeft aan ons doorgegeven dat u geen dagbesteding\n            meer krijgt.\n          </p>",
         "datePublished": "",
         "isActive": false,
         "isChecked": true,
@@ -1245,7 +1151,6 @@
       {
         "id": "status-step-3",
         "status": "Einde recht",
-        "description": "<p>\n            Uw recht op dagbesteding is beëindigd per 01 mei 2018\n          </p>",
         "datePublished": "2018-05-01T00:00:00",
         "isActive": true,
         "isChecked": false,
@@ -1265,11 +1170,10 @@
       "title": "Meer informatie",
       "to": "/zorg-en-ondersteuning/voorzieningen/hulp-bij-het-huishouden-26"
     },
-    "process": [
+    "steps": [
       {
         "id": "status-step-0",
         "status": "Besluit",
-        "description": "\n              <p>\n                U hebt recht op hulp bij het huishouden per 01 juni 2017.\n              </p>\n              <p>\n                In de brief leest u ook hoe u bezwaar kunt maken of een klacht kan\n              indienen.\n              </p>\n            ",
         "datePublished": "2017-06-01T00:00:00",
         "isActive": false,
         "isChecked": true,
@@ -1278,7 +1182,6 @@
       {
         "id": "status-step-1",
         "status": "Levering gestart",
-        "description": "<p>\n            Cordaan is gestart met het leveren van hulp bij het huishouden.\n          </p>",
         "datePublished": "",
         "isActive": false,
         "isChecked": true,
@@ -1287,7 +1190,6 @@
       {
         "id": "status-step-2",
         "status": "Levering gestopt",
-        "description": "<p>\n            Cordaan heeft aan ons doorgegeven dat u geen hulp bij het huishouden\n            meer krijgt.\n          </p>",
         "datePublished": "",
         "isActive": false,
         "isChecked": true,
@@ -1296,7 +1198,6 @@
       {
         "id": "status-step-3",
         "status": "Einde recht",
-        "description": "<p>\n            Uw recht op hulp bij het huishouden is beëindigd per 16 februari 2018\n          </p>",
         "datePublished": "2018-02-16T00:00:00",
         "isActive": true,
         "isChecked": false,
@@ -1315,7 +1216,7 @@
       "title": "Meer informatie",
       "to": "/zorg-en-ondersteuning/voorzieningen/specialistische-jeugdhulp-27"
     },
-    "process": []
+    "steps": []
   },
   {
     "id": "deur-tot-deur-plus-vervoer-28",
@@ -1329,11 +1230,10 @@
       "title": "Meer informatie",
       "to": "/zorg-en-ondersteuning/voorzieningen/deur-tot-deur-plus-vervoer-28"
     },
-    "process": [
+    "steps": [
       {
         "id": "status-step-0",
         "status": "Besluit",
-        "description": "\n            <p>\n              U hebt recht op een Deur tot deur Plus vervoer per 14 april 2016. De vervoerspas ontvangt u per\n              post.\n            </p>\n            <p>\n              In de brief leest u ook hoe u bezwaar kunt maken of een klacht kan\n              indienen.\n            </p>\n          ",
         "datePublished": "2016-04-15T00:00:00",
         "isActive": true,
         "isChecked": true,
@@ -1342,7 +1242,6 @@
       {
         "id": "status-step-1",
         "status": "Einde recht",
-        "description": "<p>\n            Op het moment dat uw recht stopt, ontvangt u hiervan bericht.\n          </p>",
         "datePublished": "",
         "isActive": false,
         "isChecked": false,
@@ -1362,11 +1261,10 @@
       "title": "Meer informatie",
       "to": "/zorg-en-ondersteuning/voorzieningen/woonruimteaanpassing-29"
     },
-    "process": [
+    "steps": [
       {
         "id": "status-step-0",
         "status": "Besluit",
-        "description": "\n            <p>\n              U hebt recht op een woonruimteaanpassing per 19 februari 2015.\n            </p>\n            <p>\n              In de brief leest u ook hoe u bezwaar kunt maken of een klacht kan\n              indienen.\n            </p>\n          ",
         "datePublished": "2015-06-23T00:00:00",
         "isActive": false,
         "isChecked": true,
@@ -1375,7 +1273,6 @@
       {
         "id": "status-step-1",
         "status": "Opdracht gegeven",
-        "description": "<p>\n            De gemeente heeft opdracht gegeven aan Ergomedi Bouw B.V. om de aanpassingen aan uw woning uit\n            te voeren.\n          </p>",
         "datePublished": "",
         "isActive": false,
         "isChecked": true,
@@ -1384,7 +1281,6 @@
       {
         "id": "status-step-2",
         "status": "Aanpassing uitgevoerd",
-        "description": "<p>\n            Ergomedi Bouw B.V. heeft aan ons doorgegeven dat de\n            aanpassing aan uw woning is uitgevoerd.\n          </p>",
         "datePublished": "",
         "isActive": true,
         "isChecked": true,
@@ -1393,7 +1289,6 @@
       {
         "id": "status-step-3",
         "status": "Einde recht",
-        "description": "<p>\n            Op het moment dat uw recht stopt, ontvangt u hiervan bericht.\n          </p>",
         "datePublished": "",
         "isActive": false,
         "isChecked": false,
@@ -1413,11 +1308,10 @@
       "title": "Meer informatie",
       "to": "/zorg-en-ondersteuning/voorzieningen/scootmobiel-voor-buitengebruik-30"
     },
-    "process": [
+    "steps": [
       {
         "id": "status-step-0",
         "status": "Besluit",
-        "description": "\n            <p>\n              U hebt recht op een scootmobiel voor buitengebruik per 29 december 2014.\n            </p>\n            <p>\n              In de brief leest u ook hoe u bezwaar kunt maken of een klacht kan\n              indienen.\n            </p>\n          ",
         "datePublished": "2005-03-21T00:00:00",
         "isActive": false,
         "isChecked": true,
@@ -1426,7 +1320,6 @@
       {
         "id": "status-step-1",
         "status": "Opdracht gegeven",
-        "description": "<p>\n            De gemeente heeft opdracht gegeven aan Medipoint B.V. om een scootmobiel voor buitengebruik aan u te leveren.\n          </p>",
         "datePublished": "",
         "isActive": false,
         "isChecked": true,
@@ -1435,7 +1328,6 @@
       {
         "id": "status-step-2",
         "status": "Product geleverd",
-        "description": "<p>\n            Medipoint B.V. heeft aan ons doorgegeven dat een scootmobiel voor buitengebruik bij u is afgeleverd.\n          </p>",
         "datePublished": "",
         "isActive": true,
         "isChecked": true,
@@ -1444,7 +1336,6 @@
       {
         "id": "status-step-3",
         "status": "Einde recht",
-        "description": "<p>\n            Op het moment dat uw recht stopt, ontvangt u hiervan bericht.\n          </p>",
         "datePublished": "",
         "isActive": false,
         "isChecked": false,
@@ -1464,11 +1355,10 @@
       "title": "Meer informatie",
       "to": "/zorg-en-ondersteuning/voorzieningen/elektrische-hulpaandrijving-voor-rolstoel-31"
     },
-    "process": [
+    "steps": [
       {
         "id": "status-step-0",
         "status": "Besluit",
-        "description": "\n            <p>\n              U hebt recht op een elektrische hulpaandrijving voor rolstoel per 08 september 2014.\n            </p>\n            <p>\n              In de brief leest u ook hoe u bezwaar kunt maken of een klacht kan\n              indienen.\n            </p>\n          ",
         "datePublished": "2014-09-09T00:00:00",
         "isActive": false,
         "isChecked": true,
@@ -1477,7 +1367,6 @@
       {
         "id": "status-step-1",
         "status": "Opdracht gegeven",
-        "description": "<p>\n            De gemeente heeft opdracht gegeven aan Medipoint B.V. om een elektrische hulpaandrijving voor rolstoel aan u te leveren.\n          </p>",
         "datePublished": "",
         "isActive": false,
         "isChecked": true,
@@ -1486,7 +1375,6 @@
       {
         "id": "status-step-2",
         "status": "Product geleverd",
-        "description": "<p>\n            Medipoint B.V. heeft aan ons doorgegeven dat een elektrische hulpaandrijving voor rolstoel bij u is afgeleverd.\n          </p>",
         "datePublished": "",
         "isActive": true,
         "isChecked": true,
@@ -1495,7 +1383,6 @@
       {
         "id": "status-step-3",
         "status": "Einde recht",
-        "description": "<p>\n            Op het moment dat uw recht stopt, ontvangt u hiervan bericht.\n          </p>",
         "datePublished": "",
         "isActive": false,
         "isChecked": false,
@@ -1515,11 +1402,10 @@
       "title": "Meer informatie",
       "to": "/zorg-en-ondersteuning/voorzieningen/woonruimteaanpassing-32"
     },
-    "process": [
+    "steps": [
       {
         "id": "status-step-0",
         "status": "Besluit",
-        "description": "\n            <p>\n              U hebt recht op een woonruimteaanpassing per 08 september 2014.\n            </p>\n            <p>\n              In de brief leest u ook hoe u bezwaar kunt maken of een klacht kan\n              indienen.\n            </p>\n          ",
         "datePublished": "2014-09-11T00:00:00",
         "isActive": false,
         "isChecked": true,
@@ -1528,7 +1414,6 @@
       {
         "id": "status-step-1",
         "status": "Opdracht gegeven",
-        "description": "<p>\n            De gemeente heeft opdracht gegeven aan Gebr Koenen B.V. om de aanpassingen aan uw woning uit\n            te voeren.\n          </p>",
         "datePublished": "",
         "isActive": false,
         "isChecked": true,
@@ -1537,7 +1422,6 @@
       {
         "id": "status-step-2",
         "status": "Aanpassing uitgevoerd",
-        "description": "<p>\n            Gebr Koenen B.V. heeft aan ons doorgegeven dat de\n            aanpassing aan uw woning is uitgevoerd.\n          </p>",
         "datePublished": "",
         "isActive": true,
         "isChecked": true,
@@ -1546,7 +1430,6 @@
       {
         "id": "status-step-3",
         "status": "Einde recht",
-        "description": "<p>\n            Op het moment dat uw recht stopt, ontvangt u hiervan bericht.\n          </p>",
         "datePublished": "",
         "isActive": false,
         "isChecked": false,
@@ -1566,11 +1449,10 @@
       "title": "Meer informatie",
       "to": "/zorg-en-ondersteuning/voorzieningen/woonruimteaanpassing-33"
     },
-    "process": [
+    "steps": [
       {
         "id": "status-step-0",
         "status": "Besluit",
-        "description": "\n            <p>\n              U hebt recht op een woonruimteaanpassing per 05 december 2013.\n            </p>\n            <p>\n              In de brief leest u ook hoe u bezwaar kunt maken of een klacht kan\n              indienen.\n            </p>\n          ",
         "datePublished": "2013-12-09T00:00:00",
         "isActive": false,
         "isChecked": true,
@@ -1579,7 +1461,6 @@
       {
         "id": "status-step-1",
         "status": "Opdracht gegeven",
-        "description": "<p>\n            De gemeente heeft opdracht gegeven aan Gebr Koenen B.V. om de aanpassingen aan uw woning uit\n            te voeren.\n          </p>",
         "datePublished": "",
         "isActive": false,
         "isChecked": true,
@@ -1588,7 +1469,6 @@
       {
         "id": "status-step-2",
         "status": "Aanpassing uitgevoerd",
-        "description": "<p>\n            Gebr Koenen B.V. heeft aan ons doorgegeven dat de\n            aanpassing aan uw woning is uitgevoerd.\n          </p>",
         "datePublished": "",
         "isActive": true,
         "isChecked": true,
@@ -1597,7 +1477,6 @@
       {
         "id": "status-step-3",
         "status": "Einde recht",
-        "description": "<p>\n            Op het moment dat uw recht stopt, ontvangt u hiervan bericht.\n          </p>",
         "datePublished": "",
         "isActive": false,
         "isChecked": false,
@@ -1617,11 +1496,10 @@
       "title": "Meer informatie",
       "to": "/zorg-en-ondersteuning/voorzieningen/deur-tot-deur-samenreizend-vervoer-34"
     },
-    "process": [
+    "steps": [
       {
         "id": "status-step-0",
         "status": "Besluit",
-        "description": "\n            <p>\n              U hebt recht op een deur tot deur, samenreizend vervoer per 04 november 2013. De vervoerspas ontvangt u per\n              post.\n            </p>\n            <p>\n              In de brief leest u ook hoe u bezwaar kunt maken of een klacht kan\n              indienen.\n            </p>\n          ",
         "datePublished": "2013-11-05T00:00:00",
         "isActive": true,
         "isChecked": true,
@@ -1630,7 +1508,6 @@
       {
         "id": "status-step-1",
         "status": "Einde recht",
-        "description": "<p>\n            Op het moment dat uw recht stopt, ontvangt u hiervan bericht.\n          </p>",
         "datePublished": "",
         "isActive": false,
         "isChecked": false,
@@ -1650,11 +1527,10 @@
       "title": "Meer informatie",
       "to": "/zorg-en-ondersteuning/voorzieningen/woonruimteaanpassing-35"
     },
-    "process": [
+    "steps": [
       {
         "id": "status-step-0",
         "status": "Besluit",
-        "description": "\n            <p>\n              U hebt recht op een woonruimteaanpassing per 06 mei 2013.\n            </p>\n            <p>\n              In de brief leest u ook hoe u bezwaar kunt maken of een klacht kan\n              indienen.\n            </p>\n          ",
         "datePublished": "2013-05-17T00:00:00",
         "isActive": false,
         "isChecked": true,
@@ -1663,7 +1539,6 @@
       {
         "id": "status-step-1",
         "status": "Opdracht gegeven",
-        "description": "<p>\n            De gemeente heeft opdracht gegeven aan Gebr Koenen B.V. om de aanpassingen aan uw woning uit\n            te voeren.\n          </p>",
         "datePublished": "",
         "isActive": false,
         "isChecked": true,
@@ -1672,7 +1547,6 @@
       {
         "id": "status-step-2",
         "status": "Aanpassing uitgevoerd",
-        "description": "<p>\n            Gebr Koenen B.V. heeft aan ons doorgegeven dat de\n            aanpassing aan uw woning is uitgevoerd.\n          </p>",
         "datePublished": "",
         "isActive": true,
         "isChecked": true,
@@ -1681,7 +1555,6 @@
       {
         "id": "status-step-3",
         "status": "Einde recht",
-        "description": "<p>\n            Op het moment dat uw recht stopt, ontvangt u hiervan bericht.\n          </p>",
         "datePublished": "",
         "isActive": false,
         "isChecked": false,
@@ -1701,11 +1574,10 @@
       "title": "Meer informatie",
       "to": "/zorg-en-ondersteuning/voorzieningen/kinderspeelvoertuig-36"
     },
-    "process": [
+    "steps": [
       {
         "id": "status-step-0",
         "status": "Besluit",
-        "description": "\n            <p>\n              U hebt recht op een kinderspeelvoertuig per 14 maart 2013.\n            </p>\n            <p>\n              In de brief leest u ook hoe u bezwaar kunt maken of een klacht kan\n              indienen.\n            </p>\n          ",
         "datePublished": "2013-05-13T00:00:00",
         "isActive": false,
         "isChecked": true,
@@ -1714,7 +1586,6 @@
       {
         "id": "status-step-1",
         "status": "Opdracht gegeven",
-        "description": "<p>\n            De gemeente heeft opdracht gegeven aan Welzorg om een kinderspeelvoertuig aan u te leveren.\n          </p>",
         "datePublished": "",
         "isActive": false,
         "isChecked": true,
@@ -1723,7 +1594,6 @@
       {
         "id": "status-step-2",
         "status": "Product geleverd",
-        "description": "<p>\n            Welzorg heeft aan ons doorgegeven dat een kinderspeelvoertuig bij u is afgeleverd.\n          </p>",
         "datePublished": "",
         "isActive": true,
         "isChecked": true,
@@ -1732,7 +1602,6 @@
       {
         "id": "status-step-3",
         "status": "Einde recht",
-        "description": "<p>\n            Op het moment dat uw recht stopt, ontvangt u hiervan bericht.\n          </p>",
         "datePublished": "",
         "isActive": false,
         "isChecked": false,
@@ -1752,11 +1621,10 @@
       "title": "Meer informatie",
       "to": "/zorg-en-ondersteuning/voorzieningen/handbewogen-rolstoel-37"
     },
-    "process": [
+    "steps": [
       {
         "id": "status-step-0",
         "status": "Besluit",
-        "description": "\n            <p>\n              U hebt recht op een handbewogen rolstoel per 05 oktober 2012.\n            </p>\n            <p>\n              In de brief leest u ook hoe u bezwaar kunt maken of een klacht kan\n              indienen.\n            </p>\n          ",
         "datePublished": "2012-10-05T00:00:00",
         "isActive": false,
         "isChecked": true,
@@ -1765,7 +1633,6 @@
       {
         "id": "status-step-1",
         "status": "Opdracht gegeven",
-        "description": "<p>\n            De gemeente heeft opdracht gegeven aan Medipoint B.V. om een handbewogen rolstoel aan u te leveren.\n          </p>",
         "datePublished": "",
         "isActive": false,
         "isChecked": true,
@@ -1774,7 +1641,6 @@
       {
         "id": "status-step-2",
         "status": "Product geleverd",
-        "description": "<p>\n            Medipoint B.V. heeft aan ons doorgegeven dat een handbewogen rolstoel bij u is afgeleverd.\n          </p>",
         "datePublished": "",
         "isActive": true,
         "isChecked": true,
@@ -1783,7 +1649,6 @@
       {
         "id": "status-step-3",
         "status": "Einde recht",
-        "description": "<p>\n            Op het moment dat uw recht stopt, ontvangt u hiervan bericht.\n          </p>",
         "datePublished": "",
         "isActive": false,
         "isChecked": false,
@@ -1803,11 +1668,10 @@
       "title": "Meer informatie",
       "to": "/zorg-en-ondersteuning/voorzieningen/douche-toiletstoel-verrijdbaarkantelbaarindividueel-aangepast-38"
     },
-    "process": [
+    "steps": [
       {
         "id": "status-step-0",
         "status": "Besluit",
-        "description": "\n            <p>\n              U hebt recht op een douche-/toiletstoel (verrijdbaar/kantelbaar/individueel aangepast) per 05 oktober 2012.\n            </p>\n            <p>\n              In de brief leest u ook hoe u bezwaar kunt maken of een klacht kan\n              indienen.\n            </p>\n          ",
         "datePublished": "2012-10-05T00:00:00",
         "isActive": false,
         "isChecked": true,
@@ -1816,7 +1680,6 @@
       {
         "id": "status-step-1",
         "status": "Opdracht gegeven",
-        "description": "<p>\n            De gemeente heeft opdracht gegeven aan Medipoint B.V. om een douche-/toiletstoel (verrijdbaar/kantelbaar/individueel aangepast) aan u te leveren.\n          </p>",
         "datePublished": "",
         "isActive": false,
         "isChecked": true,
@@ -1825,7 +1688,6 @@
       {
         "id": "status-step-2",
         "status": "Product geleverd",
-        "description": "<p>\n            Medipoint B.V. heeft aan ons doorgegeven dat een douche-/toiletstoel (verrijdbaar/kantelbaar/individueel aangepast) bij u is afgeleverd.\n          </p>",
         "datePublished": "",
         "isActive": true,
         "isChecked": true,
@@ -1834,7 +1696,6 @@
       {
         "id": "status-step-3",
         "status": "Einde recht",
-        "description": "<p>\n            Op het moment dat uw recht stopt, ontvangt u hiervan bericht.\n          </p>",
         "datePublished": "",
         "isActive": false,
         "isChecked": false,
@@ -1854,11 +1715,10 @@
       "title": "Meer informatie",
       "to": "/zorg-en-ondersteuning/voorzieningen/kamer-tot-kamer-vervoer-1-39"
     },
-    "process": [
+    "steps": [
       {
         "id": "status-step-0",
         "status": "Besluit",
-        "description": "\n            <p>\n              U hebt recht op een Kamer tot kamer vervoer !!1!! per 07 augustus 2012. De vervoerspas ontvangt u per\n              post.\n            </p>\n            <p>\n              In de brief leest u ook hoe u bezwaar kunt maken of een klacht kan\n              indienen.\n            </p>\n          ",
         "datePublished": "2012-08-07T00:00:00",
         "isActive": true,
         "isChecked": true,
@@ -1867,7 +1727,6 @@
       {
         "id": "status-step-1",
         "status": "Einde recht",
-        "description": "<p>\n            Op het moment dat uw recht stopt, ontvangt u hiervan bericht.\n          </p>",
         "datePublished": "",
         "isActive": false,
         "isChecked": false,
