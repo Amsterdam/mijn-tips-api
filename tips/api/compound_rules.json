@@ -90,5 +90,14 @@
         "rule": "$.FOCUS_AANVRAGEN.*[@.productTitle is 'Bijstandsuitkering' and len(@.steps.*[@.decision is 'toekenning' and yearsAgo(@.datePublished) <= 1]) >= 1]"
       }
     ]
+  },
+  "11": {
+    "name": "Tozo en/of bijstandsuitkering en/of stadspas",
+    "rules": [
+      {
+        "type": "rule",
+        "rule": "($.FOCUS_AANVRAGEN.*[@.productTitle is 'Stadspas' and len(@.steps.*[@.decision is 'toekenning' and yearsAgo(@.datePublished) <= 1]) >= 1]) or ($.FOCUS_AANVRAGEN.*[@.productTitle is 'Bijstandsuitkering' and len(@.steps.*[@.decision is 'toekenning' and yearsAgo(@.datePublished) <= 1]) >= 1]) or (len($.FOCUS_TOZO))"
+      }
+    ]
   }
 }
