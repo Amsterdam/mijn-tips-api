@@ -10,7 +10,8 @@
       "link": {
         "title": "Vraag direct aan",
         "to": "https://example.com/automatische.incasso.aanvragen.php"
-      }
+      },
+      "reason": "reason"
     }
   ]
 }

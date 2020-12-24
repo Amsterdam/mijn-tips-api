@@ -110,6 +110,10 @@ def format_tip(tip):
     else:
         link = {"title": None, "to": None}
 
+    reason = []
+    if tip.get("reason"):
+        reason.append(tip['reason'])
+
     return {
         "id": tip.get('id'),
         "active": True,
@@ -119,7 +123,7 @@ def format_tip(tip):
         "description": tip.get('description'),
         "link": link,
         "imgUrl": tip.get("imgUrl"),
-        "reason": tip.get("reason")
+        "reason": reason
     }
 
 

@@ -16,6 +16,18 @@ class ApiTests(TestCase):
     def _get_client_data(self):
         return get_fixture(optin=True)
 
+    def test_belasting_tip(self):
+        client_data = get_fixture(optin=False)
+
+        response = self.client.post('/tips/gettips', json=client_data)
+
+        belasting_tip = None
+        for i in response.get_json():
+            if i['id'] == "belasting-5":
+                belasting_tip = i
+
+        self.assertEqual(belasting_tip['reason'], ['reason'])
+
     def test_moved_to_amsterdam(self):
         new_pool = [tip for tip in tips_pool if tip['id'] == "mijn-16"]
 
