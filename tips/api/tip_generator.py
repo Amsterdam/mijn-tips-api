@@ -118,7 +118,8 @@ def format_tip(tip):
         "title": tip.get('title'),
         "description": tip.get('description'),
         "link": link,
-        "imgUrl": tip.get("imgUrl")
+        "imgUrl": tip.get("imgUrl"),
+        "reason": tip.get("reason")
     }
 
 
