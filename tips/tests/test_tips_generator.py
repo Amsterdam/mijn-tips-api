@@ -61,7 +61,7 @@ class TipsGeneratorTest(TestCase):
         fields = sorted(tips[1].keys())
         self.assertEqual(extended_fields_list, fields)
 
-        # Source tips don't have a reason (yet) and audience
+        # Source tips don't have an audience
         fields = sorted(tips[2].keys())
         self.assertNotEqual(extended_fields_list, fields)
 
