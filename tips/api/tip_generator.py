@@ -54,6 +54,14 @@ refresh_tip_enrichments()
 refresh_compound_rules()
 
 for tip in tips_pool:
+    reason = tip.get('reason')
+
+    # if tip has a reason, only use that one.
+    if reason:
+        tip['reason'] = [reason]
+        continue
+
+    # recursively built reasons
     reasons = get_reasoning(tip)
     tip['reason'] = reasons
 
