@@ -131,7 +131,8 @@ def format_tip(tip):
         "description": tip.get('description'),
         "link": link,
         "imgUrl": tip.get("imgUrl"),
-        "reason": reason
+        "reason": reason,
+        "isPersonalized": True,
     }
 
 

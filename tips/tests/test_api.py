@@ -6,7 +6,7 @@ from flask_testing import TestCase
 from tips.api.tip_generator import tips_pool
 from tips.config import PROJECT_PATH
 from tips.server import application
-from tips.tests.fixtures.fixture import get_fixture
+from tips.tests.fixtures.fixture import get_fixture_without_source_tips
 
 
 class ApiTests(TestCase):
@@ -16,7 +16,7 @@ class ApiTests(TestCase):
         return app
 
     def _get_client_data(self):
-        return get_fixture(optin=True)
+        return get_fixture_without_source_tips(optin=True)
 
     def test_health(self):
         response = self.client.get('/status/health')
@@ -59,15 +59,15 @@ class ApiTests(TestCase):
         self.assertEqual(tips[6]['reason'], ['U ziet deze tip omdat u een Stadspas hebt'])
 
     def test_tips_audience(self):
-        response = self.client.post('/tips/gettips?audience=zakelijk', json=get_fixture(optin=False))
+        response = self.client.post('/tips/gettips?audience=zakelijk', json=get_fixture_without_source_tips(optin=False))
         tips = response.get_json()
         self.assertEqual(len(tips), 5)
 
-        response = self.client.post('/tips/gettips?audience=persoonlijk', json=get_fixture(optin=False))
+        response = self.client.post('/tips/gettips?audience=persoonlijk', json=get_fixture_without_source_tips(optin=False))
         tips = response.get_json()
         self.assertEqual(len(tips), 5)
 
-        response = self.client.post('/tips/gettips?audience=zakelijk,persoonlijk', json=get_fixture(optin=False))
+        response = self.client.post('/tips/gettips?audience=zakelijk,persoonlijk', json=get_fixture_without_source_tips(optin=False))
         tips = response.get_json()
         self.assertEqual(len(tips), 10)
 

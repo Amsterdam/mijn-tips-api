@@ -43,3 +43,9 @@ def get_fixture(optin=False):
             "ERFPACHT": erfpacht
         }
     }
+
+
+def get_fixture_without_source_tips(optin=False):
+    data = get_fixture(optin)
+    data['tips'] = [i for i in data['tips'] if i['id'] != 'belasting-5']
+    return data

@@ -4,7 +4,7 @@ from flask_testing import TestCase
 
 from tips.api.tip_generator import tips_pool
 from tips.server import application
-from tips.tests.fixtures.fixture import get_fixture
+from tips.tests.fixtures.fixture import get_fixture_without_source_tips, get_fixture
 
 
 class ApiTests(TestCase):
@@ -14,10 +14,10 @@ class ApiTests(TestCase):
         return app
 
     def _get_client_data(self):
-        return get_fixture(optin=True)
+        return get_fixture_without_source_tips(optin=True)
 
     def test_belasting_tip(self):
-        client_data = get_fixture(optin=False)
+        client_data = get_fixture(optin=True)
 
         response = self.client.post('/tips/gettips', json=client_data)
 
@@ -27,6 +27,7 @@ class ApiTests(TestCase):
                 belasting_tip = i
 
         self.assertEqual(belasting_tip['reason'], ['U krijgt deze tip omdat u nog niet via automatische incasso betaalt'])
+        self.assertEqual(belasting_tip['imgUrl'], 'api/tips/static/tip_images/belastingen.jpg')
 
     def test_moved_to_amsterdam(self):
         new_pool = [tip for tip in tips_pool if tip['id'] == "mijn-16"]

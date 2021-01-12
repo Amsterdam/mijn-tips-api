@@ -2,7 +2,7 @@ from unittest import TestCase
 
 from tips.api.tip_generator import tips_generator, fix_id, \
     format_tip, format_source_tips, FRONT_END_TIP_KEYS
-from tips.tests.fixtures.fixture import get_fixture
+from tips.tests.fixtures.fixture import get_fixture, get_fixture_without_source_tips
 from tips.server import get_tips_request_data
 
 _counter = 0
@@ -41,14 +41,16 @@ class TipsGeneratorTest(TestCase):
         pass
 
     def get_client_data(self):
-        return get_tips_request_data(get_fixture())
+        return get_tips_request_data(get_fixture_without_source_tips())
 
     def test_allow_listed_fields(self):
         tip1_mock = get_tip()
         tip2_mock = get_tip()
+        tip1_mock['isPersonalized'] = True
+        tip2_mock['isPersonalized'] = True
         tips_pool = [tip1_mock, tip2_mock]
 
-        tips = tips_generator(self.get_client_data(), tips_pool)
+        tips = tips_generator(get_tips_request_data(get_fixture(optin=True)), tips_pool)
 
         # only these fields are allowed
         extended_fields_list = sorted(FRONT_END_TIP_KEYS)
@@ -81,7 +83,7 @@ class TipsGeneratorTest(TestCase):
         tips_pool = [tip1, tip0, tip2, tip3, tip4]
         tips = tips_generator(self.get_client_data(), tips_pool)
 
-        self.assertEqual(len(tips), 5)
+        self.assertEqual(len(tips), 4)
 
         # check order
         self.assertEqual(tips[3]['id'], tip0['id'])
@@ -89,13 +91,10 @@ class TipsGeneratorTest(TestCase):
         self.assertEqual(tips[1]['id'], tip2['id'])
         self.assertEqual(tips[0]['id'], tip3['id'])
 
-        # check enrichment
-        self.assertEqual(tips[4]['imgUrl'], 'api/tips/static/tip_images/belastingen.jpg')
-
 
 class ConditionalTest(TestCase):
     def get_client_data(self, optin=False):
-        return get_tips_request_data(get_fixture(optin))
+        return get_tips_request_data(get_fixture_without_source_tips(optin))
 
     def test_active(self):
         """ Add one active and one inactive tip. """
@@ -107,11 +106,11 @@ class ConditionalTest(TestCase):
         tips_pool = [tip1_mock, tip2_mock]
 
         tips = tips_generator(self.get_client_data(), tips_pool)
-        self.assertEqual(len(tips), 2)
+        self.assertEqual(len(tips), 1)
 
         # Test if the correct ones are accepted
         ids = [tip['id'] for tip in tips]
-        self.assertEqual(ids, [tip2_mock['id'], 'belasting-5'])
+        self.assertEqual(ids, [tip2_mock['id']])
 
     def test_conditional(self):
         """ Test one passing conditional, one failing and one without (the default) """
@@ -123,11 +122,11 @@ class ConditionalTest(TestCase):
 
         tips_pool = [tip1_mock, tip2_mock, tip3_mock]
         tips = tips_generator(self.get_client_data(), tips_pool)
-        self.assertEqual(len(tips), 3)
+        self.assertEqual(len(tips), 2)
 
         # Test if the correct ones are accepted
         ids = [tip['id'] for tip in tips]
-        self.assertEqual(ids, [tip2_mock['id'], tip3_mock['id'], 'belasting-5'])
+        self.assertEqual(ids, [tip2_mock['id'], tip3_mock['id']])
 
     def test_conditional_exception(self):
         """ Test that invalid conditional is (silently) ignored. Probably not the best idea... """
@@ -139,7 +138,7 @@ class ConditionalTest(TestCase):
         tips = tips_generator(self.get_client_data(), tips_pool)
 
         # make sure the other is in there
-        self.assertEqual(len(tips), 2)
+        self.assertEqual(len(tips), 1)
         self.assertEqual(tips[0]['id'], tip2_mock['id'])
 
     def test_conditional_invalid(self):
@@ -215,7 +214,7 @@ class ConditionalTest(TestCase):
 
         tips = tips_generator(self.get_client_data(), tips_pool)
 
-        self.assertEqual(len(tips), 3)
+        self.assertEqual(len(tips), 2)
         self.assertEqual(tips[0]['isPersonalized'], True)
         self.assertEqual(tips[1]['isPersonalized'], False)
 
@@ -233,7 +232,7 @@ class ConditionalTest(TestCase):
 
         # should not take audience into account when its not passed in
         tips = tips_generator(self.get_client_data(), tips_pool)
-        self.assertEqual(len(tips), 2)
+        self.assertEqual(len(tips), 1)
 
 
 class SourceTipsTests(TestCase):
@@ -286,6 +285,7 @@ class SourceTipsTests(TestCase):
             },
             'imgUrl': None,
             'reason': [],
+            'isPersonalized': True,
         }
         self.assertEqual(expected, result)
 
