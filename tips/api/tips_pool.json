@@ -496,12 +496,16 @@
       {
         "type": "ref",
         "ref_id": "1"
+      },
+      {
+        "type": "ref",
+        "ref_id": "5"
       }
     ],
     "isPersonalized": true,
     "link": {
       "title": "Kies een sportvereniging",
-      "to": "www.amsterdam.nl/svjeugd"
+      "to": "https://www.amsterdam.nl/svjeugd"
     },
     "imgUrl": "/api/tips/static/tip_images/sporten_met_korting.jpg"
   },
