@@ -26,7 +26,7 @@ class ApiTests(TestCase):
             if i['id'] == "belasting-5":
                 belasting_tip = i
 
-        self.assertEqual(belasting_tip['reason'], ['reason'])
+        self.assertEqual(belasting_tip['reason'], ['U krijgt deze tip omdat u nog niet via automatische incasso betaalt'])
 
     def test_moved_to_amsterdam(self):
         new_pool = [tip for tip in tips_pool if tip['id'] == "mijn-16"]

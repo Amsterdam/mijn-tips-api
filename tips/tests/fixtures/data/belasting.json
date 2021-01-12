@@ -1,17 +1,29 @@
 {
   "isKnown": true,
+  "notifications": [
+    {
+      "chapter": "BELASTINGEN",
+      "datePublished": "2021-01-12T13:14:08Z",
+      "id": "belasting-4",
+      "link": {
+        "title": "Betaal direct",
+        "to": "https://belastingbalie-acc.amsterdam.nl/aanslagen.php"
+      },
+      "priority": 1,
+      "title": "Betaal uw aanslag"
+    }
+  ],
   "tips": [
     {
-      "datePublished": "2020-01-28T13:11:51Z",
-      "description": "Betaal gemakkelijk de gecombineerde belastingaanslag. Regel vandaag nog uw automatische incasso, dan hebt u er straks geen omkijken meer naar.",
+      "datePublished": "2021-01-12T13:14:08Z",
       "id": "belasting-5",
-      "priority": 10,
-      "title": "Automatische incasso",
       "link": {
         "title": "Vraag direct aan",
-        "to": "https://example.com/automatische.incasso.aanvragen.php"
+        "to": "https://belastingbalie-acc.amsterdam.nl/subject.gegevens.php"
       },
-      "reason": "reason"
+      "priority": 10,
+      "reason": "U krijgt deze tip omdat u nog niet via automatische incasso betaalt",
+      "title": "Automatische incasso"
     }
   ]
 }

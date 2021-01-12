@@ -39,7 +39,7 @@ def get_fixture(optin=False):
             "FOCUS_AANVRAGEN": focus_aanvragen,
             "FOCUS_TOZO": focus_tozo,
             "WMO": wmo,
-            "BELASTING": belasting,
+            "BELASTINGEN": belasting,
             "ERFPACHT": erfpacht
         }
     }
