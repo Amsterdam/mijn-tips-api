@@ -54,21 +54,12 @@ class TipsGeneratorTest(TestCase):
 
         # only these fields are allowed
         extended_fields_list = sorted(FRONT_END_TIP_KEYS)
-        # source tips have a more limited set.
-        source_fields_list = [a for a in extended_fields_list if a not in ['audience']]
 
         fields = sorted(tips[0].keys())
         self.assertEqual(extended_fields_list, fields)
 
         fields = sorted(tips[1].keys())
         self.assertEqual(extended_fields_list, fields)
-
-        # Source tips don't have an audience
-        fields = sorted(tips[2].keys())
-        self.assertNotEqual(extended_fields_list, fields)
-
-        fields = sorted(tips[2].keys())
-        self.assertEqual(source_fields_list, fields)
 
     def test_generator(self):
         tip0 = get_tip(10)

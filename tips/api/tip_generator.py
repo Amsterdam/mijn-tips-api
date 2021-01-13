@@ -107,7 +107,7 @@ def fix_id(tip, source):
 
 def format_tip(tip):
     """ Make sure the tip has all the required fields.
-        No reason or audience
+        no audience by default.
      """
     if "link" in tip:
         link_data = tip["link"]
@@ -181,12 +181,13 @@ def tips_generator(request_data=None, tips=None, audience: [str] = None):
     else:
         user_data_prepared = UserDataTree({})
 
+    for tip in tips:
+        enrich_tip(tip)
+
     if audience:
         tips = [tip for tip in tips if set(tip.get('audience', [])).intersection(set(audience))]
     tips = [tip for tip in tips if tip_filter(tip, user_data_prepared)]
     tips = [clean_tip(tip) for tip in tips]
-    for tip in tips:
-        enrich_tip(tip)
 
     tips.sort(key=lambda t: t['priority'], reverse=True)
 
