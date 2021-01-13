@@ -29,6 +29,18 @@ class ApiTests(TestCase):
         self.assertEqual(belasting_tip['reason'], ['U krijgt deze tip omdat u nog niet via automatische incasso betaalt'])
         self.assertEqual(belasting_tip['imgUrl'], 'api/tips/static/tip_images/belastingen.jpg')
 
+    def test_belasting_tip_no_optin(self):
+        client_data = get_fixture(optin=False)
+
+        response = self.client.post('/tips/gettips', json=client_data)
+
+        belasting_tip = None
+        for i in response.get_json():
+            if i['id'] == "belasting-5":
+                belasting_tip = i
+
+        self.assertIsNone(belasting_tip)
+
     def test_moved_to_amsterdam(self):
         new_pool = [tip for tip in tips_pool if tip['id'] == "mijn-16"]
 
@@ -79,12 +91,6 @@ class ApiTests(TestCase):
             response = self.client.post('/tips/gettips', json=client_data)
             json = response.get_json()
             self.assertEqual(len(json), 0)
-
-            client_data_no_optin = get_fixture(optin=False)
-            response = self.client.post('/tips/gettips', json=client_data_no_optin)
-            json = response.get_json()
-            self.assertEqual(len(json), 1)  # belasting tip
-            self.assertEqual(json[0]['title'], 'Automatische incasso')
 
     def test_020werkt(self):
         new_pool = [tip for tip in tips_pool if tip['id'] == "mijn-23"]

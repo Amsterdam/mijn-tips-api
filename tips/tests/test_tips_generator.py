@@ -202,7 +202,7 @@ class ConditionalTest(TestCase):
         self.assertEqual(tips[0]['id'], tip1_mock['id'])
         self.assertEqual(tips[0]['isPersonalized'], True)
 
-    def test_is_personalized(self):
+    def test_is_personalized_optin(self):
         tip1_mock = get_tip()
         tip1_mock['rules'] = [new_rule("True")]
         tip1_mock['isPersonalized'] = True
@@ -212,11 +212,23 @@ class ConditionalTest(TestCase):
         # do not add isPersonalized to tip 2. It should default to False
         tips_pool = [tip1_mock, tip2_mock]
 
+        tips = tips_generator(self.get_client_data(True), tips_pool)
+
+        self.assertEqual(len(tips), 1)
+        self.assertEqual(tips[0]['isPersonalized'], True)
+
+    def test_is_personalized_no_optin(self):
+        tip1_mock = get_tip()
+        tip1_mock['rules'] = [new_rule("True")]
+        tip1_mock['isPersonalized'] = True
+
+        tip2_mock = get_tip()
+        tips_pool = [tip1_mock, tip2_mock]
+
         tips = tips_generator(self.get_client_data(), tips_pool)
 
-        self.assertEqual(len(tips), 2)
-        self.assertEqual(tips[0]['isPersonalized'], True)
-        self.assertEqual(tips[1]['isPersonalized'], False)
+        self.assertEqual(len(tips), 1)
+        self.assertEqual(tips[0]['id'], tip2_mock['id'])
 
     def test_audience(self):
         tip1_mock = get_tip()
@@ -303,7 +315,7 @@ class SourceTipsTests(TestCase):
             'id': 1,
             'title': 'foo',
         }
-        fix_id(belasting_tip, 'BELASTING')
+        fix_id(belasting_tip, 'BELASTINGEN')
         self.assertEqual(belasting_tip['id'], 'belasting-1')
 
         other_tip = {
