@@ -40,23 +40,24 @@ class ApiTests(TestCase):
 
         tips = response.get_json()
 
-        self.assertEqual(7, len(tips))
+        self.assertEqual(8, len(tips))
 
-        self.assertEqual(tips[0]['title'], 'Laat geen geld liggen')
-        self.assertEqual(tips[0]['reason'], ['U ziet deze tip omdat u een TOZO aanvraag heeft gedaan'])
+        self.assertEqual(tips[0]['title'], 'Gratis ID-kaart om te stemmen')
+        self.assertEqual(tips[1]['title'], 'Laat geen geld liggen')
+        self.assertEqual(tips[1]['reason'], ['U ziet deze tip omdat u een TOZO aanvraag heeft gedaan'])
 
-        self.assertEqual(tips[1]['title'], 'Download de 020werkt-app')
-        self.assertEqual(tips[1]['reason'], ['U ziet deze tip omdat u TOZO, stadspas of bijstandsuitkering heeft'])
+        self.assertEqual(tips[2]['title'], 'Download de 020werkt-app')
+        self.assertEqual(tips[2]['reason'], ['U ziet deze tip omdat u TOZO, stadspas of bijstandsuitkering heeft'])
 
-        self.assertEqual(tips[2]['title'], 'Draag uw mondkapje')
-        self.assertEqual(tips[3]['title'], 'Sporten met korting')
-        self.assertEqual(tips[4]['title'], 'Hulp bij geldproblemen')
+        self.assertEqual(tips[3]['title'], 'Draag uw mondkapje')
+        self.assertEqual(tips[4]['title'], 'Sporten met korting')
+        self.assertEqual(tips[5]['title'], 'Hulp bij geldproblemen')
 
-        self.assertEqual(tips[5]['title'], 'Bekijk de afvalpunten in de buurt')
-        self.assertEqual(tips[5]['reason'], ['U ziet deze tip omdat u net bent verhuisd'])
+        self.assertEqual(tips[6]['title'], 'Bekijk de afvalpunten in de buurt')
+        self.assertEqual(tips[6]['reason'], ['U ziet deze tip omdat u net bent verhuisd'])
 
-        self.assertEqual(tips[6]['title'], 'Op stap met uw Stadspas')
-        self.assertEqual(tips[6]['reason'], ['U ziet deze tip omdat u een Stadspas hebt'])
+        self.assertEqual(tips[7]['title'], 'Op stap met uw Stadspas')
+        self.assertEqual(tips[7]['reason'], ['U ziet deze tip omdat u een Stadspas hebt'])
 
     def test_tips_audience(self):
         response = self.client.post('/tips/gettips?audience=zakelijk', json=get_fixture_without_source_tips(optin=False))

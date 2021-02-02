@@ -535,5 +535,34 @@
       "to": "https://www.amsterdam.nl/werk-inkomen/pak-je-kans/hulp-bij-geldproblemen/tips-bij-geldproblemen/"
     },
     "imgUrl": "/api/tips/static/tip_images/schuldhulpverlening.jpg"
+  },
+  {
+    "id": "mijn-27",
+    "owner": "",
+    "dateActiveStart": "2021-02-02",
+    "dateActiveEnd": "2021-03-10",
+    "active": true,
+    "priority": 80,
+    "datePublished": "2021-02-02",
+    "title": "Gratis ID-kaart om te stemmen",
+    "audience": ["persoonlijk"],
+    "description": "U hebt een geldige ID-kaart of geldig paspoort nodig om te stemmen. Hebt u een Stadspas met groene stip? Dan kunt u gratis een nieuwe ID-kaart krijgen.",
+    "rules": [
+      {
+        "type": "rule",
+        "rule": "len($.BRP.identiteitsbewijzen.*[@.documentType in ['paspoort', 'nederlandse identiteitskaart'] and dateTime(@.datumAfloop) > dateTime('2021-03-16T00:00:00Z') ]) is 0"
+      },
+      {
+        "type": "ref",
+        "ref_id": "1"
+      }
+    ],
+    "reason": "",
+    "isPersonalized": true,
+    "link": {
+      "title": "Bekijk de voorwaarden",
+      "to": "https://www.amsterdam.nl/veelgevraagd/?caseid=%7B0391171C-BA2E-40D2-8CBE-F013192D09A6%7D"
+    },
+    "imgUrl": "/api/tips/static/tip_images/stemmen2021.jpg"
   }
 ]
