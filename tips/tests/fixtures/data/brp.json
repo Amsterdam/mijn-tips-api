@@ -195,7 +195,7 @@
   ],
   "identiteitsbewijzen": [
     {
-      "datumAfloop": "2025-10-15T00:00:00Z",
+      "datumAfloop": "2021-3-15T00:00:00Z",
       "datumUitgifte": "2015-10-15T00:00:00Z",
       "documentNummer": "PP57XKG54",
       "documentType": "paspoort",
@@ -207,7 +207,7 @@
       }
     },
     {
-      "datumAfloop": "2021-01-17T00:00:00Z",
+      "datumAfloop": "2021-01-14T00:00:00Z",
       "datumUitgifte": "2010-09-11T00:00:00Z",
       "documentNummer": "IE9962819",
       "documentType": "nederlandse identiteitskaart",
