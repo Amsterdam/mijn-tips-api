@@ -153,3 +153,41 @@ class ApiTests(TestCase):
             response = self.client.post('/tips/gettips', json=client_data)
             json = response.get_json()
             self.assertEqual(len(json), 0)
+
+    def test_ID_voor_stemmen(self):
+        new_pool = [tip for tip in tips_pool if tip['id'] == "mijn-27"]
+        self.assertEqual(len(new_pool), 1)
+        self.assertEqual(new_pool[0]["title"], "Gratis ID-kaart om te stemmen")
+
+        # user must not have a valid id
+        # user must have stadspas groene met stip
+
+        with patch('tips.api.tip_generator.tips_pool', new_pool):
+            client_data = self._get_client_data()
+
+            # set both identiteitsbewijzen to be expired before election date
+            client_data['userData']['BRP']['identiteitsbewijzen'][0]['datumAfloop'] = "2021-03-16T00:00:00Z"
+            client_data['userData']['BRP']['identiteitsbewijzen'][1]['datumAfloop'] = "2021-03-16T00:00:00Z"
+            response = self.client.post('/tips/gettips', json=client_data)
+            json = response.get_json()
+            self.assertEqual(len(json), 1)
+            self.assertEqual(json[0]['title'], 'Gratis ID-kaart om te stemmen')
+
+            # set one ID to be valid on election
+            client_data['userData']['BRP']['identiteitsbewijzen'][1]['datumAfloop'] = "2021-03-18T00:00:00Z"
+            response = self.client.post('/tips/gettips', json=client_data)
+            json = response.get_json()
+            self.assertEqual(len(json), 0)
+
+            # remove stadspas and set id back to be expired
+            client_data['userData']['FOCUS_AANVRAGEN'] = []
+            client_data['userData']['BRP']['identiteitsbewijzen'][1]['datumAfloop'] = "2021-03-16T00:00:00Z"
+            response = self.client.post('/tips/gettips', json=client_data)
+            json = response.get_json()
+            self.assertEqual(len(json), 0)
+
+            # test with no ids
+            client_data['userData']['BRP']['identiteitsbewijzen'] = []
+            response = self.client.post('/tips/gettips', json=client_data)
+            json = response.get_json()
+            self.assertEqual(len(json), 0)
