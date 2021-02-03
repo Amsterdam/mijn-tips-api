@@ -1,6 +1,7 @@
 from unittest.mock import patch
 
 from flask_testing import TestCase
+from freezegun import freeze_time
 
 from tips.api.tip_generator import tips_pool
 from tips.server import application
@@ -188,6 +189,45 @@ class ApiTests(TestCase):
 
             # test with no ids
             client_data['userData']['BRP']['identiteitsbewijzen'] = []
+            response = self.client.post('/tips/gettips', json=client_data)
+            json = response.get_json()
+            self.assertEqual(len(json), 0)
+
+    @freeze_time("2018-06-15")
+    def test_pingping(self):
+        new_pool = [tip for tip in tips_pool if tip['id'] == "mijn-28"]
+        self.assertEqual(len(new_pool), 1)
+        self.assertEqual(new_pool[0]["title"], "Breng je basis op orde")
+
+        with patch('tips.api.tip_generator.tips_pool', new_pool):
+            client_data = self._get_client_data()
+
+            # exactly 18
+            client_data['userData']['BRP']['persoon']['geboortedatum'] = "2000-06-15T00:00:00Z"
+            response = self.client.post('/tips/gettips', json=client_data)
+            json = response.get_json()
+            self.assertEqual(len(json), 1)
+
+            # 1 day future
+            client_data['userData']['BRP']['persoon']['geboortedatum'] = "2000-06-16T00:00:00Z"
+            response = self.client.post('/tips/gettips', json=client_data)
+            json = response.get_json()
+            self.assertEqual(len(json), 1)
+
+            # 1 day past
+            client_data['userData']['BRP']['persoon']['geboortedatum'] = "2000-06-14T00:00:00Z"
+            response = self.client.post('/tips/gettips', json=client_data)
+            json = response.get_json()
+            self.assertEqual(len(json), 1)
+
+            # 3 months 1 day future
+            client_data['userData']['BRP']['persoon']['geboortedatum'] = "2000-09-18T00:00:00Z"
+            response = self.client.post('/tips/gettips', json=client_data)
+            json = response.get_json()
+            self.assertEqual(len(json), 0)
+
+            # 3 months 1 day past
+            client_data['userData']['BRP']['persoon']['geboortedatum'] = "2000-03-14T00:00:00Z"
             response = self.client.post('/tips/gettips', json=client_data)
             json = response.get_json()
             self.assertEqual(len(json), 0)
