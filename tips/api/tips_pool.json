@@ -564,5 +564,25 @@
       "to": "https://www.amsterdam.nl/veelgevraagd/?caseid=%7B0391171C-BA2E-40D2-8CBE-F013192D09A6%7D"
     },
     "imgUrl": "/api/tips/static/tip_images/stemmen2021.jpg"
+  },
+  {
+    "id": "mijn-29",
+    "owner": "",
+    "dateActiveStart": null,
+    "dateActiveEnd": "2021-02-15",
+    "active": true,
+    "priority": 80,
+    "datePublished": "2021-02-04",
+    "title": "Veilig stemmen voor de Tweede Kamer",
+    "audience": ["persoonlijk"],
+    "description": "We doen er veel aan om te zorgen dat u veilig kunt stemmen op 15, 16 of 17 maart. Vergeet uw mondkapje niet en doe vooraf de gezondheidscheck!",
+    "rules": [],
+    "reason": "",
+    "isPersonalized": false,
+    "link": {
+      "title": "Bekijk de coronamaatregelen",
+      "to": "https://www.amsterdam.nl/veelgevraagd/?productid=%7B43A9E379-2E1B-463F-BE4D-168BD48C0499%7D#case_%7BC2578879-6863-4240-BC62-296645E60625%7D"
+    },
+    "imgUrl": "/api/tips/static/tip_images/stemmen2021.jpg"
   }
 ]
