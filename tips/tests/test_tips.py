@@ -193,7 +193,7 @@ class ApiTests(TestCase):
             json = response.get_json()
             self.assertEqual(len(json), 0)
 
-    @freeze_time("2018-06-15")
+    @freeze_time("2018-07-15")
     def test_pingping(self):
         new_pool = [tip for tip in tips_pool if tip['id'] == "mijn-28"]
         self.assertEqual(len(new_pool), 1)
@@ -203,31 +203,31 @@ class ApiTests(TestCase):
             client_data = self._get_client_data()
 
             # exactly 18
-            client_data['userData']['BRP']['persoon']['geboortedatum'] = "2000-06-15T00:00:00Z"
+            client_data['userData']['BRP']['persoon']['geboortedatum'] = "2000-07-15T00:00:00Z"
             response = self.client.post('/tips/gettips', json=client_data)
             json = response.get_json()
             self.assertEqual(len(json), 1)
 
             # 1 day future
-            client_data['userData']['BRP']['persoon']['geboortedatum'] = "2000-06-16T00:00:00Z"
+            client_data['userData']['BRP']['persoon']['geboortedatum'] = "2000-07-16T00:00:00Z"
             response = self.client.post('/tips/gettips', json=client_data)
             json = response.get_json()
             self.assertEqual(len(json), 1)
 
             # 1 day past
-            client_data['userData']['BRP']['persoon']['geboortedatum'] = "2000-06-14T00:00:00Z"
+            client_data['userData']['BRP']['persoon']['geboortedatum'] = "2000-07-14T00:00:00Z"
             response = self.client.post('/tips/gettips', json=client_data)
             json = response.get_json()
             self.assertEqual(len(json), 1)
 
-            # 3 months 1 day future
-            client_data['userData']['BRP']['persoon']['geboortedatum'] = "2000-09-18T00:00:00Z"
+            # 17 years 9 months -1 day old
+            client_data['userData']['BRP']['persoon']['geboortedatum'] = "2000-10-18T00:00:00Z"
             response = self.client.post('/tips/gettips', json=client_data)
             json = response.get_json()
             self.assertEqual(len(json), 0)
 
-            # 3 months 1 day past
-            client_data['userData']['BRP']['persoon']['geboortedatum'] = "2000-03-14T00:00:00Z"
+            # 18 years 6 months 1 day
+            client_data['userData']['BRP']['persoon']['geboortedatum'] = "2000-01-14T00:00:00Z"
             response = self.client.post('/tips/gettips', json=client_data)
             json = response.get_json()
             self.assertEqual(len(json), 0)
