@@ -586,7 +586,7 @@
         "rule": "now() - timeDelta(18, 6, 0, 0, 0, 0) < dateTime($.BRP.persoon.geboortedatum)"
       }
     ],
-    "reason": "",
+    "reason": "Je ziet deze tip omdat je net 18 bent geworden of binnenkort 18 wordt",
     "isPersonalized": true,
     "link": {
       "title": "Download de app",
