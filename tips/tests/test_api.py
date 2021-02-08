@@ -66,11 +66,11 @@ class ApiTests(TestCase):
 
         response = self.client.post('/tips/gettips?audience=persoonlijk', json=get_fixture_without_source_tips(optin=False))
         tips = response.get_json()
-        self.assertEqual(len(tips), 5)
+        self.assertEqual(len(tips), 6)
 
         response = self.client.post('/tips/gettips?audience=zakelijk,persoonlijk', json=get_fixture_without_source_tips(optin=False))
         tips = response.get_json()
-        self.assertEqual(len(tips), 10)
+        self.assertEqual(len(tips), 11)
 
     def test_income_tips(self):
         response = self.client.post('/tips/getincometips', json=self._get_client_data())
