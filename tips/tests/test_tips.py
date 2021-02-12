@@ -181,17 +181,23 @@ class ApiTests(TestCase):
             self.assertEqual(len(json), 0)
 
             # remove stadspas and set id back to be expired
-            client_data['userData']['FOCUS_AANVRAGEN'] = []
             client_data['userData']['BRP']['identiteitsbewijzen'][1]['datumAfloop'] = "2021-03-16T00:00:00Z"
             response = self.client.post('/tips/gettips', json=client_data)
             json = response.get_json()
-            self.assertEqual(len(json), 0)
+            self.assertEqual(len(json), 1)
 
             # test with no ids
             client_data['userData']['BRP']['identiteitsbewijzen'] = []
             response = self.client.post('/tips/gettips', json=client_data)
             json = response.get_json()
+            self.assertEqual(len(json), 1)
+
+            # no stadspas
+            client_data['userData']['FOCUS_STADSPAS'] = None
+            response = self.client.post('/tips/gettips', json=client_data)
+            json = response.get_json()
             self.assertEqual(len(json), 0)
+
 
     @freeze_time("2018-07-15")
     def test_pingping(self):

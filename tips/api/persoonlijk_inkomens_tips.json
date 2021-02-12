@@ -365,8 +365,8 @@
         "ref_id": "1"
       },
       {
-        "type": "rule",
-        "rule": "$.BRP.persoon.nationaliteiten[@.omschrijving is Nederlandse]"
+        "type": "ref",
+        "ref_id": "13"
       },
       {
         "type": "ref",

@@ -1,6 +1,6 @@
 {
   "1": {
-    "name": "Heeft geldige stadspas",
+    "name": "Heeft geldige stadspas aanvraag",
     "rules": [
       {
         "type": "rule",
@@ -97,6 +97,24 @@
       {
         "type": "rule",
         "rule": "($.FOCUS_AANVRAGEN.*[@.productTitle is 'Stadspas' and len(@.steps.*[@.decision is 'toekenning' and yearsAgo(@.datePublished) <= 1]) >= 1]) or ($.FOCUS_AANVRAGEN.*[@.productTitle is 'Bijstandsuitkering' and len(@.steps.*[@.decision is 'toekenning' and yearsAgo(@.datePublished) <= 1]) >= 1]) or (len($.FOCUS_TOZO))"
+      }
+    ]
+  },
+  "12": {
+    "name": "Heeft een stadspasnummer",
+    "rules": [
+      {
+        "type": "rule",
+        "rule": "$.FOCUS_STADSPAS is not None"
+      }
+    ]
+  },
+  "13": {
+    "name": "Heeft de Nederlandse nationaliteit",
+    "rules": [
+      {
+        "type": "rule",
+        "rule": "$.BRP.persoon.nationaliteiten.*[@.omschrijving is 'Nederlandse']"
       }
     ]
   }
