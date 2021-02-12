@@ -105,4 +105,3 @@ class RuleEngineTest(TestCase):
         rules = [{"type": "ref", "ref_id": "1"}]
         with self.assertRaises(RecursionError):
             apply_rules(self.test_data, rules, compound_rules)
-

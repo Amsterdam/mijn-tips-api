@@ -12,10 +12,12 @@ from tips.server import get_tips_request_data
 from tips.tests.fixtures.fixture import get_fixture
 
 COMPOUND_RULES_FILE = os.path.join(PROJECT_PATH, 'api', 'compound_rules.json')
+
+
 def get_compound_rules():
     with open(COMPOUND_RULES_FILE) as compound_rules_file:
-        compound_rules = json.load(compound_rules_file)
-    return compound_rules
+        rules = json.load(compound_rules_file)
+    return rules
 
 
 compound_rules = get_compound_rules()

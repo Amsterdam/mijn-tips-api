@@ -198,7 +198,6 @@ class ApiTests(TestCase):
             json = response.get_json()
             self.assertEqual(len(json), 0)
 
-
     @freeze_time("2018-07-15")
     def test_pingping(self):
         new_pool = [tip for tip in tips_pool if tip['id'] == "mijn-28"]
