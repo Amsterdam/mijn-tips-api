@@ -7,6 +7,7 @@ _FIXTURE_PATH = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'data')
 BRP = os.path.join(_FIXTURE_PATH, "brp.json")
 FOCUS_AANVRAGEN = os.path.join(_FIXTURE_PATH, "focus_aanvragen.json")
 FOCUS_TOZO = os.path.join(_FIXTURE_PATH, "focus_tozo.json")
+FOCUS_STADSPAS = os.path.join(_FIXTURE_PATH, "focus_stadspas.json")
 WMO = os.path.join(_FIXTURE_PATH, "wmo.json")
 BELASTING = os.path.join(_FIXTURE_PATH, "belasting.json")
 ERFPACHT = os.path.join(_FIXTURE_PATH, "erfpacht.json")
@@ -21,6 +22,9 @@ def get_fixture(optin=False):
 
     with open(FOCUS_TOZO) as focus_tozo_file:
         focus_tozo = json.load(focus_tozo_file)
+
+    with open(FOCUS_STADSPAS) as focus_stadspas_file:
+        focus_stadspas = json.load(focus_stadspas_file)
 
     with open(WMO) as wmo_file:
         wmo = json.load(wmo_file)
@@ -38,6 +42,7 @@ def get_fixture(optin=False):
             "BRP": brp,
             "FOCUS_AANVRAGEN": focus_aanvragen,
             "FOCUS_TOZO": focus_tozo,
+            "FOCUS_STADSPAS": focus_stadspas,
             "WMO": wmo,
             "BELASTINGEN": belasting,
             "ERFPACHT": erfpacht
