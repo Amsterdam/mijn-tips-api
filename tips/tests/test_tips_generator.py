@@ -1,5 +1,7 @@
 from unittest import TestCase
 
+from freezegun import freeze_time
+
 from tips.api.tip_generator import tips_generator, fix_id, \
     format_tip, format_source_tips, FRONT_END_TIP_KEYS
 from tips.tests.fixtures.fixture import get_fixture, get_fixture_without_source_tips
@@ -236,6 +238,30 @@ class ConditionalTest(TestCase):
         # should not take audience into account when its not passed in
         tips = tips_generator(self.get_client_data(), tips_pool)
         self.assertEqual(len(tips), 1)
+
+    @freeze_time("2021-03-15")
+    def test_active_date(self):
+        tip1_mock = get_tip()
+
+        def test_start_end(start_date: str, end_date: str, expected: bool):
+            tip1_mock['dateActiveStart'] = start_date
+            tip1_mock['dateActiveEnd'] = end_date
+
+            tips_pool = [tip1_mock]
+
+            tips = tips_generator(self.get_client_data(), tips_pool)
+            if expected:
+                self.assertEqual(len(tips), 1)
+            else:
+                self.assertEqual(len(tips), 0)
+
+        # current time is between start and end
+        test_start_end("2021-03-14", "2021-03-16", True)  # between
+        test_start_end("2021-03-15", "2021-03-16", True)  # start is on today
+        test_start_end("2021-03-14", "2021-03-15", True)  # end is on today
+        test_start_end("2021-03-12", "2021-03-14", False)  # start and end before today
+        test_start_end("2021-03-16", "2021-03-17", False)  # start and end after today
+
 
 
 class SourceTipsTests(TestCase):
