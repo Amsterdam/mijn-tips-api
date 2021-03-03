@@ -627,7 +627,7 @@
     "id": "mijn-30",
     "owner": "",
     "dateActiveStart": "2021-02-25",
-    "dateActiveEnd": "2021-03-17",
+    "dateActiveEnd": "2021-03-10",
     "active": true,
     "priority": 80,
     "datePublished": "2021-02-04",
@@ -640,6 +640,26 @@
     "link": {
       "title": "Kijk hoe u iemand machtigt",
       "to": "https://www.amsterdam.nl/veelgevraagd/?productid=%7b6D786182-CBA3-4319-A794-F915E7DE37C2%7d"
+    },
+    "imgUrl": "/api/tips/static/tip_images/stem.jpg"
+  },
+  {
+    "id": "mijn-30",
+    "owner": "",
+    "dateActiveStart": "2021-03-3",
+    "dateActiveEnd": "2021-03-17",
+    "active": true,
+    "priority": 80,
+    "datePublished": "2021-03-04",
+    "title": "Kom stemmen op 15, 16 of 17 maart",
+    "audience": ["persoonlijk"],
+    "description": "Bent u ouder dan 60 of hebt u gezondheidsklachten? Kom dan alvast op 15 of 16 maart stemmen bij een van de 50 stembureaus. Op 17 maart zijn er meer dan 450 stembureaus open.",
+    "rules": [],
+    "reason": "",
+    "isPersonalized": false,
+    "link": {
+      "title": "Kijk voor een stembureau bij u in de buurt",
+      "to": "https://stembureaus.amsterdam.nl/map"
     },
     "imgUrl": "/api/tips/static/tip_images/stem.jpg"
   }
