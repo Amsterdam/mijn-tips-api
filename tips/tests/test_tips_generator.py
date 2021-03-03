@@ -263,7 +263,6 @@ class ConditionalTest(TestCase):
         test_start_end("2021-03-16", "2021-03-17", False)  # start and end after today
 
 
-
 class SourceTipsTests(TestCase):
     def setUp(self) -> None:
         pass
