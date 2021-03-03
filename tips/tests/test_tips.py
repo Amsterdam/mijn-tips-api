@@ -42,6 +42,7 @@ class ApiTests(TestCase):
 
         self.assertIsNone(belasting_tip)
 
+    @freeze_time("2021-01-01")
     def test_moved_to_amsterdam(self):
         new_pool = [tip for tip in tips_pool if tip['id'] == "mijn-16"]
 
