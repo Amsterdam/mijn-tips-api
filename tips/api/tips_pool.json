@@ -662,5 +662,25 @@
       "to": "https://stembureaus.amsterdam.nl/map"
     },
     "imgUrl": "/api/tips/static/tip_images/stem.jpg"
+  },
+  {
+    "id": "mijn-32",
+    "owner": "",
+    "dateActiveStart": "2021-03-10",
+    "dateActiveEnd": "2021-03-17",
+    "active": true,
+    "priority": 80,
+    "datePublished": "2021-03-04",
+    "title": "Met de auto stemmen",
+    "audience": ["persoonlijk"],
+    "description": "Misschien gaat u vanwege corona liever niet naar een stembureau. Ga dan stemmen met de auto. Dat kan in de stemstraat bij de RAI.",
+    "rules": [],
+    "reason": "",
+    "isPersonalized": false,
+    "link": {
+      "title": "Bekijk de flyer hoe de stemstraat werkt",
+      "to": "https://www.amsterdam.nl/veelgevraagd/?productid=%7B43A9E379-2E1B-463F-BE4D-168BD48C0499%7D#case_%7BC2578879-6863-4240-BC62-296645E60625%7D"
+    },
+    "imgUrl": "/api/tips/static/tip_images/stem.jpg"
   }
 ]
