@@ -156,6 +156,7 @@ class ApiTests(TestCase):
             json = response.get_json()
             self.assertEqual(len(json), 0)
 
+    @freeze_time("2021-03-09")
     def test_ID_voor_stemmen(self):
         new_pool = [tip for tip in tips_pool if tip['id'] == "mijn-27"]
         self.assertEqual(len(new_pool), 1)
