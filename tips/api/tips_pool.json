@@ -422,7 +422,7 @@
     "isPersonalized": true,
     "link": {
       "title": "Kijk of u recht hebt",
-      "to": "www.buurtteamamsterdam.nl"
+      "to": "https://www.buurtteamamsterdam.nl"
     },
     "imgUrl": "/api/tips/static/tip_images/laat_geen_geld_liggen.jpg"
   },
