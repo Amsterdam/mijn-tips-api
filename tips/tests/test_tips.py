@@ -253,22 +253,22 @@ class ApiTests(TestCase):
             self.assertEqual(len(json), 1)
 
             # Has Vakantieverhuurvergunnings aanvraag
-            client_data['userData']['VAKANTIE_VERHUUR'] = None
-            client_data['userData']['VERGUNNINGEN'][0]['caseType'] = 'Vakantieverhuur vergunningsaanvraag'
+            client_data['userData']['TOERISTISCHE_VERHUUR']['registraties'] = []
+            client_data['userData']['TOERISTISCHE_VERHUUR']['vergunningen'][0]['caseType'] = 'Vakantieverhuur vergunningsaanvraag'
             response = self.client.post('/tips/gettips', json=client_data)
             json = response.get_json()
             self.assertEqual(len(json), 1)
 
             # Has Vakantieverhuur
-            client_data['userData']['VAKANTIE_VERHUUR'] = None
-            client_data['userData']['VERGUNNINGEN'][0]['caseType'] = 'Vakantieverhuur'
+            client_data['userData']['TOERISTISCHE_VERHUUR']['registraties'] = []
+            client_data['userData']['TOERISTISCHE_VERHUUR']['vergunningen'][0]['caseType'] = 'Vakantieverhuur'
             response = self.client.post('/tips/gettips', json=client_data)
             json = response.get_json()
             self.assertEqual(len(json), 1)
 
             # No registratienummers en vergunningen
-            client_data['userData']['VAKANTIE_VERHUUR'] = None
-            client_data['userData']['VERGUNNINGEN'] = None
+            client_data['userData']['TOERISTISCHE_VERHUUR']['registraties'] = []
+            client_data['userData']['TOERISTISCHE_VERHUUR']['vergunningen'] = []
             response = self.client.post('/tips/gettips', json=client_data)
             json = response.get_json()
             self.assertEqual(len(json), 0)
@@ -287,19 +287,19 @@ class ApiTests(TestCase):
             self.assertEqual(len(json), 0)
 
             # Result is Verleend met overgangsrecht
-            client_data['userData']['VERGUNNINGEN'][1]['decision'] = 'Verleend met overgangsrecht'
+            client_data['userData']['TOERISTISCHE_VERHUUR']['vergunningen'][1]['decision'] = 'Verleend met overgangsrecht'
             response = self.client.post('/tips/gettips', json=client_data)
             json = response.get_json()
             self.assertEqual(len(json), 1)
 
             # No case type BB - vergunning
-            client_data['userData']['VERGUNNINGEN'][1]['caseType'] = 'Vakantieverhuur'
+            client_data['userData']['TOERISTISCHE_VERHUUR']['vergunningen'][1]['caseType'] = 'Vakantieverhuur'
             response = self.client.post('/tips/gettips', json=client_data)
             json = response.get_json()
             self.assertEqual(len(json), 0)
 
             # No vergunningen at all
-            client_data['userData']['VERGUNNINGEN'] = None
+            client_data['userData']['TOERISTISCHE_VERHUUR']['vergunningen'] = []
             response = self.client.post('/tips/gettips', json=client_data)
             json = response.get_json()
             self.assertEqual(len(json), 0)

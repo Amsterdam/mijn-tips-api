@@ -12,7 +12,7 @@ WMO = os.path.join(_FIXTURE_PATH, "wmo.json")
 BELASTING = os.path.join(_FIXTURE_PATH, "belasting.json")
 ERFPACHT = os.path.join(_FIXTURE_PATH, "erfpacht.json")
 VERGUNNINGEN = os.path.join(_FIXTURE_PATH, "vergunningen.json")
-VAKANTIE_VERHUUR = os.path.join(_FIXTURE_PATH, "vakantie_verhuur_registraties.json")
+TOERISTISCHE_VERHUUR = os.path.join(_FIXTURE_PATH, "toeristische_verhuur.json")
 
 
 def get_fixture(optin=False):
@@ -37,11 +37,8 @@ def get_fixture(optin=False):
     with open(ERFPACHT) as erfpacht_file:
         erfpacht = json.load(erfpacht_file)
 
-    with open(VERGUNNINGEN) as vergunningen_file:
-        vergunningen = json.load(vergunningen_file)
-
-    with open(VAKANTIE_VERHUUR) as vakantie_verhuur_file:
-        vakantie_verhuur = json.load(vakantie_verhuur_file)
+    with open(TOERISTISCHE_VERHUUR) as toeristische_verhuur_file:
+        toeristische_verhuur = json.load(toeristische_verhuur_file)
 
     return {
         "optin": optin,
@@ -54,8 +51,7 @@ def get_fixture(optin=False):
             "WMO": wmo,
             "BELASTINGEN": belasting,
             "ERFPACHT": erfpacht,
-            "VERGUNNINGEN": vergunningen,
-            "VAKANTIE_VERHUUR": vakantie_verhuur
+            "TOERISTISCHE_VERHUUR": toeristische_verhuur
         }
     }
 

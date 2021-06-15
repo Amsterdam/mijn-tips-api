@@ -777,7 +777,7 @@
     "rules": [
       {
         "type": "rule",
-        "rule": "$.VAKANTIE_VERHUUR or $.VERGUNNINGEN.*[@.caseType is 'Vakantieverhuur vergunningsaanvraag' or @.caseType is 'Vakantieverhuur']"
+        "rule": "$.TOERISTISCHE_VERHUUR.registraties or $.TOERISTISCHE_VERHUUR.vergunningen.*[@.caseType is 'Vakantieverhuur vergunningsaanvraag' or @.caseType is 'Vakantieverhuur']"
       }
     ],
     "reason": "",
@@ -804,7 +804,7 @@
     "rules": [
       {
         "type": "rule",
-        "rule": "$.VERGUNNINGEN.*[@.caseType is 'B&B - vergunning'] and $.VERGUNNINGEN.*[@.decision is 'Verleend met overgangsrecht']"
+        "rule": "$.TOERISTISCHE_VERHUUR.vergunningen.*[@.caseType is 'B&B - vergunning' and '@.decision is 'Verleend met overgangsrecht']"
       }
     ],
     "reason": "",
