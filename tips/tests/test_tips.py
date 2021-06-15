@@ -238,6 +238,7 @@ class ApiTests(TestCase):
             response = self.client.post('/tips/gettips', json=client_data)
             json = response.get_json()
             self.assertEqual(len(json), 0)
+
     def test_vakantie_verhuur(self):
         new_pool = [tip for tip in tips_pool if tip['id'] == "mijn-33"]
         self.assertEqual(len(new_pool), 1)
@@ -246,7 +247,7 @@ class ApiTests(TestCase):
         with patch('tips.api.tip_generator.tips_pool', new_pool):
             client_data = self._get_client_data()
 
-            #Initial state has vakantieverhuurvergunnings aanvrag and registratienummer
+            # Initial state has vakantieverhuurvergunnings aanvrag and registratienummer
             response = self.client.post('/tips/gettips', json=client_data)
             json = response.get_json()
             self.assertEqual(len(json), 1)
@@ -271,5 +272,3 @@ class ApiTests(TestCase):
             response = self.client.post('/tips/gettips', json=client_data)
             json = response.get_json()
             self.assertEqual(len(json), 0)
-
-       
