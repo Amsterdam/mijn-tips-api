@@ -11,6 +11,8 @@ FOCUS_STADSPAS = os.path.join(_FIXTURE_PATH, "focus_stadspas.json")
 WMO = os.path.join(_FIXTURE_PATH, "wmo.json")
 BELASTING = os.path.join(_FIXTURE_PATH, "belasting.json")
 ERFPACHT = os.path.join(_FIXTURE_PATH, "erfpacht.json")
+VERGUNNINGEN = os.path.join(_FIXTURE_PATH, "vergunningen.json")
+VAKANTIE_VERHUUR = os.path.join(_FIXTURE_PATH, "vakantie_verhuur_registraties.json")
 
 
 def get_fixture(optin=False):
@@ -35,6 +37,12 @@ def get_fixture(optin=False):
     with open(ERFPACHT) as erfpacht_file:
         erfpacht = json.load(erfpacht_file)
 
+    with open(VERGUNNINGEN) as vergunningen_file:
+        vergunningen = json.load(vergunningen_file)
+
+    with open(VAKANTIE_VERHUUR) as vakantie_verhuur_file:
+        vakantie_verhuur = json.load(vakantie_verhuur_file)
+
     return {
         "optin": optin,
         "tips": belasting['tips'],
@@ -45,7 +53,9 @@ def get_fixture(optin=False):
             "FOCUS_STADSPAS": focus_stadspas,
             "WMO": wmo,
             "BELASTINGEN": belasting,
-            "ERFPACHT": erfpacht
+            "ERFPACHT": erfpacht,
+            "VERGUNNINGEN": vergunningen,
+            "VAKANTIE_VERHUUR": vakantie_verhuur
         }
     }
 

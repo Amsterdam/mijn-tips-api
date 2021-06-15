@@ -238,3 +238,38 @@ class ApiTests(TestCase):
             response = self.client.post('/tips/gettips', json=client_data)
             json = response.get_json()
             self.assertEqual(len(json), 0)
+    def test_vakantie_verhuur(self):
+        new_pool = [tip for tip in tips_pool if tip['id'] == "mijn-33"]
+        self.assertEqual(len(new_pool), 1)
+        self.assertEqual(new_pool[0]["title"], "Particuliere vakantieverhuur")
+
+        with patch('tips.api.tip_generator.tips_pool', new_pool):
+            client_data = self._get_client_data()
+
+            #Initial state has vakantieverhuurvergunnings aanvrag and registratienummer
+            response = self.client.post('/tips/gettips', json=client_data)
+            json = response.get_json()
+            self.assertEqual(len(json), 1)
+
+            # Has Vakantieverhuurvergunnings aanvraag
+            client_data['userData']['VAKANTIE_VERHUUR'] = None
+            client_data['userData']['VERGUNNINGEN'][0]['caseType'] = 'Vakantieverhuur vergunningsaanvraag'
+            response = self.client.post('/tips/gettips', json=client_data)
+            json = response.get_json()
+            self.assertEqual(len(json), 1)
+
+            # Has Vakantieverhuur
+            client_data['userData']['VAKANTIE_VERHUUR'] = None
+            client_data['userData']['VERGUNNINGEN'][0]['caseType'] = 'Vakantieverhuur'
+            response = self.client.post('/tips/gettips', json=client_data)
+            json = response.get_json()
+            self.assertEqual(len(json), 1)
+
+            # No registratienummers en vergunningen
+            client_data['userData']['VAKANTIE_VERHUUR'] = None
+            client_data['userData']['VERGUNNINGEN'] = None
+            response = self.client.post('/tips/gettips', json=client_data)
+            json = response.get_json()
+            self.assertEqual(len(json), 0)
+
+       
