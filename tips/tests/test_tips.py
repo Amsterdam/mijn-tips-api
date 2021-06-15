@@ -272,3 +272,34 @@ class ApiTests(TestCase):
             response = self.client.post('/tips/gettips', json=client_data)
             json = response.get_json()
             self.assertEqual(len(json), 0)
+
+    def test_bb_vergunning(self):
+        new_pool = [tip for tip in tips_pool if tip['id'] == "mijn-34"]
+        self.assertEqual(len(new_pool), 1)
+        self.assertEqual(new_pool[0]["title"], "Overgangsrecht bij Bed and breakfast")
+
+        with patch('tips.api.tip_generator.tips_pool', new_pool):
+            client_data = self._get_client_data()
+
+            # Initial state BB result is 'geweigerd'
+            response = self.client.post('/tips/gettips', json=client_data)
+            json = response.get_json()
+            self.assertEqual(len(json), 0)
+
+            # Result is Verleend met overgangsrecht
+            client_data['userData']['VERGUNNINGEN'][1]['decision'] = 'Verleend met overgangsrecht'
+            response = self.client.post('/tips/gettips', json=client_data)
+            json = response.get_json()
+            self.assertEqual(len(json), 1)
+
+            # No case type BB - vergunning
+            client_data['userData']['VERGUNNINGEN'][1]['caseType'] = 'Vakantieverhuur'
+            response = self.client.post('/tips/gettips', json=client_data)
+            json = response.get_json()
+            self.assertEqual(len(json), 0)
+
+            # No vergunningen at all
+            client_data['userData']['VERGUNNINGEN'] = None
+            response = self.client.post('/tips/gettips', json=client_data)
+            json = response.get_json()
+            self.assertEqual(len(json), 0)

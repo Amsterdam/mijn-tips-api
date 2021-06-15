@@ -787,5 +787,32 @@
       "to": "https://www.amsterdam.nl/wonen-leefomgeving/wonen/vakantieverhuur/?utm_source=amsterdam.nl&utm_medium=internet&utm_campaign=vakantieverhuur&utm_content=redirect"
     },
     "imgUrl": "/api/tips/static/tip_images/stem.jpg"
+  },
+  {
+    "id": "mijn-34",
+    "owner": "",
+    "dateActiveStart": null,
+    "dateActiveEnd": "2026-01-07",
+    "active": true,
+    "priority": 11,
+    "datePublished": "2021-06-15",
+    "title": "Overgangsrecht bij Bed and breakfast",
+    "audience": [
+      "persoonlijk"
+    ],
+    "description": "Hebt u uw B&B voor 1 januari 2019 aangemeld? Dan mag u tot 1 juli 2026 verhuren volgens deze regels.",
+    "rules": [
+      {
+        "type": "rule",
+        "rule": "$.VERGUNNINGEN.*[@.caseType is 'B&B - vergunning'] and $.VERGUNNINGEN.*[@.decision is 'Verleend met overgangsrecht']"
+      }
+    ],
+    "reason": "",
+    "isPersonalized": true,
+    "link": {
+      "title": "Lees hier de voorwaarde",
+      "to": "https://www.amsterdam.nl/wonen-leefomgeving/wonen/bedandbreakfast/oude-regels/"
+    },
+    "imgUrl": "/api/tips/static/tip_images/stem.jpg"
   }
 ]
