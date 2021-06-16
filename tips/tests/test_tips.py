@@ -251,6 +251,7 @@ class ApiTests(TestCase):
             response = self.client.post('/tips/gettips', json=client_data)
             json = response.get_json()
             self.assertEqual(len(json), 1)
+            self.assertEqual(json[0]["title"], "Particuliere vakantieverhuur")
 
             # Has Vakantieverhuurvergunnings aanvraag
             client_data['userData']['TOERISTISCHE_VERHUUR']['registraties'] = []
@@ -258,6 +259,7 @@ class ApiTests(TestCase):
             response = self.client.post('/tips/gettips', json=client_data)
             json = response.get_json()
             self.assertEqual(len(json), 1)
+            self.assertEqual(json[0]["title"], "Particuliere vakantieverhuur")
 
             # Has Vakantieverhuur
             client_data['userData']['TOERISTISCHE_VERHUUR']['registraties'] = []
@@ -265,6 +267,7 @@ class ApiTests(TestCase):
             response = self.client.post('/tips/gettips', json=client_data)
             json = response.get_json()
             self.assertEqual(len(json), 1)
+            self.assertEqual(json[0]["title"], "Particuliere vakantieverhuur")
 
             # No registratienummers en vergunningen
             client_data['userData']['TOERISTISCHE_VERHUUR']['registraties'] = []
@@ -291,7 +294,7 @@ class ApiTests(TestCase):
             response = self.client.post('/tips/gettips', json=client_data)
             json = response.get_json()
             self.assertEqual(len(json), 1)
-
+            self.assertEqual(json[0]["title"], "Overgangsrecht bij Bed and breakfast")
             # No case type BB - vergunning
             client_data['userData']['TOERISTISCHE_VERHUUR']['vergunningen'][1]['caseType'] = 'Vakantieverhuur'
             response = self.client.post('/tips/gettips', json=client_data)
