@@ -4,12 +4,12 @@
             "agreementDate": "2021-04-16T12:39:45.0906184",
             "city": "Amsterdam",
             "houseLetter": null,
-            "houseNumber": "16",
+            "houseNumber": "1",
             "houseNumberExtension": null,
-            "postalCode": "1014AW",
-            "registrationNumber": "0363 E7B8 B042 8A92 37E5",
-            "shortName": "Schakelstraat",
-            "street": "Schakelstraat"
+            "postalCode": "1012AK",
+            "registrationNumber": "1101 1111 1011 1111 1111",
+            "shortName": "Amstel",
+            "street": "Amstel"
         }
     ],
     "vergunningen": [
@@ -18,7 +18,7 @@
             "dateProcessed": null,
             "dateRequest": "2021-05-19",
             "decision": null,
-            "identifier": "Z/21/1896669",
+            "identifier": "Z/00/000000",
             "location": "amstel 1 1012AK",
             "processed": null,
             "status": "Ontvangen"
@@ -30,13 +30,13 @@
             "dateRequest": "2021-05-19",
             "dateStart": "2021-05-19",
             "decision": "Geweigerd op basis van Quotum",
-            "identifier": "Z/21/1896664",
+            "identifier": "Z/00/000000",
             "location": "amstel 1 1012AK",
             "owner": "John Doe",
             "processed": null,
             "requester": "Haarlem",
             "status": "Ontvangen",
-            "title": "B&B vergunning aanvragen - Dam 1"
+            "title": "B&B vergunning aanvragen"
         }
     ]
 }
