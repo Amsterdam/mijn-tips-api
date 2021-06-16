@@ -773,7 +773,7 @@
     "audience": [
       "persoonlijk"
     ],
-    "description": "Bij vakantieverhuur moet u naast het eenmalige registratienummer ook jaarlijks een vergunning aanvragen. Ook moet u iedere keer dat u de woning verhuurt dit bij ons melden.",
+    "description": "Bij vakantieverhuur moet u naast het eenmalige registratienummer ook jaarlijks een vergunning bij de gemeente aanvragen. Ook moet u iedere keer dat u de woning verhuurt dit bij ons melden.",
     "rules": [
       {
         "type": "rule",
@@ -786,7 +786,7 @@
       "title": "U leest hier wat de voorwaarde zijn",
       "to": "https://www.amsterdam.nl/wonen-leefomgeving/wonen/vakantieverhuur/?utm_source=amsterdam.nl&utm_medium=internet&utm_campaign=vakantieverhuur&utm_content=redirect"
     },
-    "imgUrl": "/api/tips/static/tip_images/stem.jpg"
+    "imgUrl": "/api/tips/static/tip_images/vakantieverhuur.jpg"
   },
   {
     "id": "mijn-34",
@@ -800,7 +800,7 @@
     "audience": [
       "persoonlijk"
     ],
-    "description": "Hebt u uw B&B voor 1 januari 2019 aangemeld? Dan mag u tot 1 juli 2026 verhuren volgens deze regels.",
+    "description": "Hebt u uw B&B voor 1 januari 2019 aangevraagd? Dan mag u tot 1 juli 2026 verhuren volgens deze regels.",
     "rules": [
       {
         "type": "rule",
@@ -813,6 +813,6 @@
       "title": "Lees hier de voorwaarde",
       "to": "https://www.amsterdam.nl/wonen-leefomgeving/wonen/bedandbreakfast/oude-regels/"
     },
-    "imgUrl": "/api/tips/static/tip_images/stem.jpg"
+    "imgUrl": "/api/tips/static/tip_images/vakantieverhuur.jpg"
   }
 ]
