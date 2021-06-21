@@ -250,8 +250,7 @@ class ApiTests(TestCase):
             # Initial state has vakantieverhuurvergunnings aanvrag and registratienummer
             response = self.client.post('/tips/gettips', json=client_data)
             json = response.get_json()
-            self.assertEqual(len(json), 1)
-            self.assertEqual(json[0]["title"], "Particuliere vakantieverhuur")
+            self.assertEqual(len(json), 0)
 
             # Has Vakantieverhuurvergunnings aanvraag
             client_data['userData']['TOERISTISCHE_VERHUUR']['registraties'] = []
