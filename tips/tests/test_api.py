@@ -41,7 +41,6 @@ class ApiTests(TestCase):
         tips = response.get_json()
 
         self.assertEqual(7, len(tips))
-
         self.assertEqual(tips[0]['title'], 'Laat geen geld liggen')
         self.assertEqual(tips[0]['reason'], ['U ziet deze tip omdat u een TOZO aanvraag heeft gedaan'])
 

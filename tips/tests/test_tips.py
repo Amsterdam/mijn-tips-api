@@ -238,3 +238,70 @@ class ApiTests(TestCase):
             response = self.client.post('/tips/gettips', json=client_data)
             json = response.get_json()
             self.assertEqual(len(json), 0)
+
+    def test_vakantie_verhuur(self):
+        new_pool = [tip for tip in tips_pool if tip['id'] == "mijn-33"]
+        self.assertEqual(len(new_pool), 1)
+        self.assertEqual(new_pool[0]["title"], "Particuliere vakantieverhuur")
+
+        with patch('tips.api.tip_generator.tips_pool', new_pool):
+            client_data = self._get_client_data()
+
+            # Initial state has vakantieverhuurvergunnings aanvrag and registratienummer
+            response = self.client.post('/tips/gettips', json=client_data)
+            json = response.get_json()
+            self.assertEqual(len(json), 0)
+
+            # Has Vakantieverhuurvergunnings aanvraag
+            client_data['userData']['TOERISTISCHE_VERHUUR']['registraties'] = []
+            client_data['userData']['TOERISTISCHE_VERHUUR']['vergunningen'][0]['caseType'] = 'Vakantieverhuur vergunningsaanvraag'
+            response = self.client.post('/tips/gettips', json=client_data)
+            json = response.get_json()
+            self.assertEqual(len(json), 1)
+            self.assertEqual(json[0]["title"], "Particuliere vakantieverhuur")
+
+            # Has Vakantieverhuur
+            client_data['userData']['TOERISTISCHE_VERHUUR']['registraties'] = []
+            client_data['userData']['TOERISTISCHE_VERHUUR']['vergunningen'][0]['caseType'] = 'Vakantieverhuur'
+            response = self.client.post('/tips/gettips', json=client_data)
+            json = response.get_json()
+            self.assertEqual(len(json), 1)
+            self.assertEqual(json[0]["title"], "Particuliere vakantieverhuur")
+
+            # No registratienummers en vergunningen
+            client_data['userData']['TOERISTISCHE_VERHUUR']['registraties'] = []
+            client_data['userData']['TOERISTISCHE_VERHUUR']['vergunningen'] = []
+            response = self.client.post('/tips/gettips', json=client_data)
+            json = response.get_json()
+            self.assertEqual(len(json), 0)
+
+    def test_bb_vergunning(self):
+        new_pool = [tip for tip in tips_pool if tip['id'] == "mijn-34"]
+        self.assertEqual(len(new_pool), 1)
+        self.assertEqual(new_pool[0]["title"], "Overgangsrecht bij Bed and breakfast")
+
+        with patch('tips.api.tip_generator.tips_pool', new_pool):
+            client_data = self._get_client_data()
+
+            # Initial state BB result is 'geweigerd'
+            response = self.client.post('/tips/gettips', json=client_data)
+            json = response.get_json()
+            self.assertEqual(len(json), 0)
+
+            # Result is Verleend met overgangsrecht
+            client_data['userData']['TOERISTISCHE_VERHUUR']['vergunningen'][1]['decision'] = 'Verleend met overgangsrecht'
+            response = self.client.post('/tips/gettips', json=client_data)
+            json = response.get_json()
+            self.assertEqual(len(json), 1)
+            self.assertEqual(json[0]["title"], "Overgangsrecht bij Bed and breakfast")
+            # No case type BB - vergunning
+            client_data['userData']['TOERISTISCHE_VERHUUR']['vergunningen'][1]['caseType'] = 'Vakantieverhuur'
+            response = self.client.post('/tips/gettips', json=client_data)
+            json = response.get_json()
+            self.assertEqual(len(json), 0)
+
+            # No vergunningen at all
+            client_data['userData']['TOERISTISCHE_VERHUUR']['vergunningen'] = []
+            response = self.client.post('/tips/gettips', json=client_data)
+            json = response.get_json()
+            self.assertEqual(len(json), 0)
