@@ -808,7 +808,7 @@
     "rules": [
       {
         "type": "rule",
-        "rule": "$.TOERISTISCHE_VERHUUR.vergunningen.*[@.caseType is 'B&B - vergunning' and @.decision is 'Verleend met overgangsrecht']"
+        "rule": "$.TOERISTISCHE_VERHUUR.vergunningen.*[@.caseType is 'B&B - vergunning' and @.hasTransitionAgreement is true]"
       }
     ],
     "reason": "U ziet deze tip omdat u een B&B vergunning aangevraagd heeft voor 2019",
@@ -816,6 +816,41 @@
     "link": {
       "title": "Lees hier de voorwaarde",
       "to": "https://www.amsterdam.nl/wonen-leefomgeving/wonen/bedandbreakfast/oude-regels/"
+    },
+    "imgUrl": "/api/tips/static/tip_images/vakantieverhuur.jpg"
+  },
+  {
+    "id": "mijn-35",
+    "owner": "",
+    "dateActiveStart": null,
+    "dateActiveEnd": "2022-12-31",
+    "active": true,
+    "priority": 11,
+    "datePublished": "2021-06-15",
+    "title": "Bed & breakfast",
+    "audience": [
+      "persoonlijk"
+    ],
+    "description": "Vanaf 1 april 2021 moet u naast een vergunning ook een registratienummer aanvragen voor een bed & breakfast.",
+    "rules": [
+      {
+        "type": "rule",
+        "rule": "$.TOERISTISCHE_VERHUUR.vergunningen.*[@.caseType is 'B&B - vergunning']"
+      },
+      {
+        "type": "rule",
+        "rule": "len($.TOERISTISCHE_VERHUUR.registraties) is 0"
+      },
+      {
+        "type": "ref",
+        "ref_id": "3"
+      }
+    ],
+    "reason": "U ziet deze tip omdat u een vergunning bed & breakfast hebt",
+    "isPersonalized": true,
+    "link": {
+      "title": "U leest hier wat de voorwaarden zijn",
+      "to": "https://www.amsterdam.nl/bedandbreakfast "
     },
     "imgUrl": "/api/tips/static/tip_images/vakantieverhuur.jpg"
   }

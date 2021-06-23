@@ -36,7 +36,8 @@
             "processed": null,
             "requester": "Haarlem",
             "status": "Ontvangen",
-            "title": "B&B vergunning aanvragen"
+            "title": "B&B vergunning aanvragen",
+            "hasTransitionAgreement": false
         }
     ]
 }
