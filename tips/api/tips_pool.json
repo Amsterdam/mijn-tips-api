@@ -784,7 +784,7 @@
         "rule": "not $.TOERISTISCHE_VERHUUR.registraties"
       }
     ],
-    "reason": "U ziet deze tip omdat u een vergunning tijdelijke vakantie verhuur hebt",
+    "reason": "U ziet deze tip omdat u een vergunning vakantieverhuur hebt",
     "isPersonalized": true,
     "link": {
       "title": "U leest hier wat de voorwaarde zijn",
