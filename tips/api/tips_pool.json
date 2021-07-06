@@ -787,7 +787,7 @@
     "reason": "U ziet deze tip omdat u een vergunning vakantieverhuur hebt",
     "isPersonalized": true,
     "link": {
-      "title": "U leest hier wat de voorwaarde zijn",
+      "title": "U leest hier wat de voorwaarden zijn",
       "to": "https://www.amsterdam.nl/wonen-leefomgeving/wonen/vakantieverhuur/?utm_source=amsterdam.nl&utm_medium=internet&utm_campaign=vakantieverhuur&utm_content=redirect"
     },
     "imgUrl": "/api/tips/static/tip_images/vakantieverhuur.jpg"
