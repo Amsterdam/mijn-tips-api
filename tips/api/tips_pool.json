@@ -505,7 +505,7 @@
         "ref_id": "11"
       }
     ],
-    "reason": "U ziet deze tip omdat u TOZO, stadspas of bijstandsuitkering heeft",
+    "reason": "U ziet deze tip omdat u TOZO, stadspas of bijstandsuitkering hebt",
     "isPersonalized": true,
     "link": {
       "title": "Bekijk het filmpje",
@@ -533,7 +533,7 @@
         "rule": "$.WMO.*[@.voorzieningsoortcode is 'AOV' and @.isActual is true]"
       }
     ],
-    "reason": "U ziet deze tip omdat u een aanvullend openbaar vervoer heeft",
+    "reason": "U ziet deze tip omdat u een aanvullend openbaar vervoer hebt",
     "isPersonalized": true,
     "link": {
       "title": "Bekijk de coronamaatregelen van RMC en Transvision",
@@ -594,7 +594,7 @@
         "ref_id": "11"
       }
     ],
-    "reason": "U ziet deze tip omdat u TOZO, stadspas of bijstandsuitkering heeft",
+    "reason": "U ziet deze tip omdat u TOZO, stadspas of bijstandsuitkering hebt",
     "isPersonalized": true,
     "link": {
       "title": "Vind hulp bij u in de buurt",
