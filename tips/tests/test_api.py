@@ -45,7 +45,7 @@ class ApiTests(TestCase):
         self.assertEqual(tips[0]['reason'], ['U ziet deze tip omdat u een TOZO aanvraag heeft gedaan'])
 
         self.assertEqual(tips[1]['title'], 'Download de 020werkt-app')
-        self.assertEqual(tips[1]['reason'], ['U ziet deze tip omdat u TOZO, stadspas of bijstandsuitkering heeft'])
+        self.assertEqual(tips[1]['reason'], ['U ziet deze tip omdat u TOZO, stadspas of bijstandsuitkering hebt'])
 
         self.assertEqual(tips[2]['title'], 'Draag uw mondkapje')
         self.assertEqual(tips[3]['title'], 'Sporten met korting')
