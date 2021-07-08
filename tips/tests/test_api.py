@@ -2,6 +2,7 @@ import os
 import datetime
 
 from flask_testing import TestCase
+from freezegun.api import freeze_time
 
 from tips.api.tip_generator import tips_pool
 from tips.config import PROJECT_PATH
@@ -70,6 +71,7 @@ class ApiTests(TestCase):
         tips = response.get_json()
         self.assertEqual(len(tips), 10)
 
+    @freeze_time("2021-06-15")
     def test_income_tips(self):
         response = self.client.post('/tips/getincometips', json=self._get_client_data())
 
@@ -84,6 +86,7 @@ class ApiTests(TestCase):
             url = url.lstrip('/api')  # api is from the load balancer, not this api
             response = self.client.get(url)
             self.assert200(response)
+            response.close()
 
 
 class ApiStaticFiles(TestCase):
@@ -98,6 +101,8 @@ class ApiStaticFiles(TestCase):
             response = self.client.get('/tips/static/tip_images/afvalpunt.jpg')
             self.assertEqual(response.data, img.read())
             self.assert200(response)
+            img.close()
+            response.close()
 
     def test_get_invalid(self):
         response = self.client.get('/tips/static/tip_images/nope.jpg')
@@ -108,3 +113,4 @@ class ApiStaticFiles(TestCase):
             response = self.client.get('/tips/static/tip_images/../../config.py')
             self.assert404(response)
             self.assertNotEqual(response.data, fh.read())
+            fh.close()

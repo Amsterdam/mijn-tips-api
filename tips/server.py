@@ -58,6 +58,7 @@ def get_income_tips():
     # This data is too large and inappropriate for a GET, also because of privacy reasons
     with open(PERSOONLIJK_INKOMENS_TIPS_FILE) as fp:
         persoonlijk_inkomens_tips = json.load(fp)
+        fp.close()
     request_data = get_tips_request_data(request_data=request.get_json())
     tips_data = tips_generator(request_data, persoonlijk_inkomens_tips)
     return tips_data

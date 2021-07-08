@@ -94,6 +94,7 @@ class ApiTests(TestCase):
             json = response.get_json()
             self.assertEqual(len(json), 0)
 
+    @freeze_time("2021-03-09")
     def test_020werkt(self):
         new_pool = [tip for tip in tips_pool if tip['id'] == "mijn-23"]
 
@@ -101,6 +102,7 @@ class ApiTests(TestCase):
         self.assertEqual(new_pool[0]["title"], "Download de 020werkt-app")
 
         client_data = self._get_client_data()
+
         with patch('tips.api.tip_generator.tips_pool', new_pool):
             response = self.client.post('/tips/gettips', json=client_data)
             json = response.get_json()
