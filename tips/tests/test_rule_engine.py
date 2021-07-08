@@ -129,6 +129,46 @@ class RuleEngineTest(TestCase):
 
         self.assertEqual(apply_rules(UserDataTree(data), rules, {}), False)
 
+        data = {
+            "BRP": {
+                "kinderen": ['kind1']
+            }
+        }
+
+        self.assertEqual(apply_rules(UserDataTree(data), rules, {}), True)
+
+        data = {
+            "BRP": {
+                "kinderen": ""
+            }
+        }
+
+        self.assertEqual(apply_rules(UserDataTree(data), rules, {}), False)
+
+        data = {
+            "BRP": {
+                "kinderen": "ja"
+            }
+        }
+
+        self.assertEqual(apply_rules(UserDataTree(data), rules, {}), True)
+
+        data = {
+            "BRP": {
+                "kinderen": 0
+            }
+        }
+
+        self.assertEqual(apply_rules(UserDataTree(data), rules, {}), False)
+
+        data = {
+            "BRP": {
+                "kinderen": 1
+            }
+        }
+
+        self.assertEqual(apply_rules(UserDataTree(data), rules, {}), True)
+
         rules = [{
             "type": "rule",
             "rule": "len($.BRP.kinderen) is 0"
