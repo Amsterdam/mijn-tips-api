@@ -32,7 +32,7 @@
     "rules": [
       {
         "type": "rule",
-        "rule": "len($.BRP.kinderen) >= 1"
+        "rule": "$.BRP.kinderen"
       }
     ]
   },
@@ -41,7 +41,7 @@
     "rules": [
       {
         "type": "rule",
-        "rule": "len($.BRP.kinderen[yearsAgo(@.geboortedatum) >= 2 and yearsAgo(@.geboortedatum) <= 18]) >= 1"
+        "rule": "$.BRP.kinderen[yearsAgo(@.geboortedatum) >= 2 and yearsAgo(@.geboortedatum) <= 18]"
       }
     ]
   },
@@ -68,7 +68,7 @@
     "rules": [
       {
         "type": "rule",
-        "rule": "len($.BRP.kinderen.*[yearsAgo(@.geboortedatum) >= 10 and yearsAgo(@.geboortedatum) <= 12]) >= 1"
+        "rule": "$.BRP.kinderen.*[yearsAgo(@.geboortedatum) >= 10 and yearsAgo(@.geboortedatum) <= 12]"
       }
     ],
     "reason": "U ziet deze tip omdat uw kind op 30 september 2020 jonger dan 18 jaar is/was"
@@ -78,7 +78,7 @@
     "rules": [
       {
         "type": "rule",
-        "rule": "len($.FOCUS_TOZO)"
+        "rule": "$.FOCUS_TOZO"
       }
     ]
   },
@@ -96,7 +96,7 @@
     "rules": [
       {
         "type": "rule",
-        "rule": "($.FOCUS_AANVRAGEN.*[@.productTitle is 'Stadspas' and len(@.steps.*[@.decision is 'toekenning' and yearsAgo(@.datePublished) <= 1]) >= 1]) or ($.FOCUS_AANVRAGEN.*[@.productTitle is 'Bijstandsuitkering' and len(@.steps.*[@.decision is 'toekenning' and yearsAgo(@.datePublished) <= 1]) >= 1]) or (len($.FOCUS_TOZO))"
+        "rule": "($.FOCUS_AANVRAGEN.*[@.productTitle is 'Stadspas' and len(@.steps.*[@.decision is 'toekenning' and yearsAgo(@.datePublished) <= 1]) >= 1]) or ($.FOCUS_AANVRAGEN.*[@.productTitle is 'Bijstandsuitkering' and len(@.steps.*[@.decision is 'toekenning' and yearsAgo(@.datePublished) <= 1]) >= 1]) or ($.FOCUS_TOZO)"
       }
     ]
   },

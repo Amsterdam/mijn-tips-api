@@ -28,12 +28,14 @@ def refresh_tip_enrichments():
     global tip_enrichments
     with open(TIP_ENRICHMENT_FILE) as fp:
         tip_enrichments = json.load(fp)
+        fp.close()
 
 
 def refresh_compound_rules():
     global compound_rules
     with open(COMPOUND_RULES_FILE) as fp:
         compound_rules = json.load(fp)
+        fp.close()
 
 
 def get_reasoning(tip):

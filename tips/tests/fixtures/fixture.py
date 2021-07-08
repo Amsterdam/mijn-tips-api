@@ -18,27 +18,35 @@ TOERISTISCHE_VERHUUR = os.path.join(_FIXTURE_PATH, "toeristische_verhuur.json")
 def get_fixture(optin=False):
     with open(BRP) as brp_file:
         brp = json.load(brp_file)
+        brp_file.close()
 
     with open(FOCUS_AANVRAGEN) as focus_file:
         focus_aanvragen = json.load(focus_file)
+        focus_file.close()
 
     with open(FOCUS_TOZO) as focus_tozo_file:
         focus_tozo = json.load(focus_tozo_file)
+        focus_tozo_file.close()
 
     with open(FOCUS_STADSPAS) as focus_stadspas_file:
         focus_stadspas = json.load(focus_stadspas_file)
+        focus_stadspas_file.close()
 
     with open(WMO) as wmo_file:
         wmo = json.load(wmo_file)
+        wmo_file.close()
 
     with open(BELASTING) as belasting_file:
         belasting = json.load(belasting_file)
+        belasting_file.close()
 
     with open(ERFPACHT) as erfpacht_file:
         erfpacht = json.load(erfpacht_file)
+        erfpacht_file.close()
 
     with open(TOERISTISCHE_VERHUUR) as toeristische_verhuur_file:
         toeristische_verhuur = json.load(toeristische_verhuur_file)
+        toeristische_verhuur_file.close()
 
     return {
         "optin": optin,

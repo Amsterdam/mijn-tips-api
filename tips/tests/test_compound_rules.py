@@ -17,6 +17,7 @@ COMPOUND_RULES_FILE = os.path.join(PROJECT_PATH, 'api', 'compound_rules.json')
 def get_compound_rules():
     with open(COMPOUND_RULES_FILE) as compound_rules_file:
         rules = json.load(compound_rules_file)
+        compound_rules_file.close()
     return rules
 
 

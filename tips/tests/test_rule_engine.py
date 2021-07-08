@@ -13,6 +13,7 @@ COMPOUND_RULES_FILE = os.path.join(PROJECT_PATH, 'api', 'compound_rules.json')
 def get_compound_rules():
     with open(COMPOUND_RULES_FILE) as compound_rules_file:
         compound_rules = json.load(compound_rules_file)
+        compound_rules_file.close()
     return compound_rules
 
 
@@ -105,3 +106,78 @@ class RuleEngineTest(TestCase):
         rules = [{"type": "ref", "ref_id": "1"}]
         with self.assertRaises(RecursionError):
             apply_rules(self.test_data, rules, compound_rules)
+
+    def test_objectpath_assertions(self):
+        rules = [{
+            "type": "rule",
+            "rule": "$.BRP.kinderen"
+        }]
+
+        data = {
+            "BRP": {
+                "kinderen": []
+            }
+        }
+
+        self.assertEqual(apply_rules(UserDataTree(data), rules, {}), False)
+
+        data = {
+            "BRP": {
+                "kinderen": None
+            }
+        }
+
+        self.assertEqual(apply_rules(UserDataTree(data), rules, {}), False)
+
+        data = {
+            "BRP": {
+                "kinderen": ['kind1']
+            }
+        }
+
+        self.assertEqual(apply_rules(UserDataTree(data), rules, {}), True)
+
+        data = {
+            "BRP": {
+                "kinderen": ""
+            }
+        }
+
+        self.assertEqual(apply_rules(UserDataTree(data), rules, {}), False)
+
+        data = {
+            "BRP": {
+                "kinderen": "ja"
+            }
+        }
+
+        self.assertEqual(apply_rules(UserDataTree(data), rules, {}), True)
+
+        data = {
+            "BRP": {
+                "kinderen": 0
+            }
+        }
+
+        self.assertEqual(apply_rules(UserDataTree(data), rules, {}), False)
+
+        data = {
+            "BRP": {
+                "kinderen": 1
+            }
+        }
+
+        self.assertEqual(apply_rules(UserDataTree(data), rules, {}), True)
+
+        rules = [{
+            "type": "rule",
+            "rule": "len($.BRP.kinderen) is 0"
+        }]
+
+        data = {
+            "BRP": {
+                "kinderen": []
+            }
+        }
+
+        self.assertEqual(apply_rules(UserDataTree(data), rules, {}), True)
