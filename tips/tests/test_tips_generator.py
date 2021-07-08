@@ -1,8 +1,9 @@
+from tips.api.user_data_tree import UserDataTree
 from unittest import TestCase
 
 from freezegun import freeze_time
 
-from tips.api.tip_generator import tips_generator, fix_id, \
+from tips.api.tip_generator import tip_filter, tips_generator, fix_id, \
     format_tip, format_source_tips, FRONT_END_TIP_KEYS
 from tips.tests.fixtures.fixture import get_fixture, get_fixture_without_source_tips
 from tips.server import get_tips_request_data
@@ -340,3 +341,42 @@ class SourceTipsTests(TestCase):
         }
         fix_id(other_tip, 'something else')
         self.assertEqual(other_tip['id'], '1')
+
+    def test_tip_filter(self):
+        tip1 = {
+            "isPersonalized": True
+        }
+        optin = False
+
+        showTip = tip_filter(tip1, UserDataTree({}), optin)
+
+        self.assertEqual(showTip, False)
+
+        tip1 = {
+            "isPersonalized": False,
+            "active": True
+        }
+
+        showTip = tip_filter(tip1, UserDataTree({}), False)
+
+        self.assertEqual(showTip, True)
+
+        optin = True
+        tip1 = {
+            "isPersonalized": True,
+            "active": False
+        }
+
+        showTip = tip_filter(tip1, UserDataTree({}), optin)
+
+        self.assertEqual(showTip, False)
+
+        optin = True
+        tip1 = {
+            "isPersonalized": True,
+            "active": True
+        }
+
+        showTip = tip_filter(tip1, UserDataTree({}), optin)
+
+        self.assertEqual(showTip, True)

@@ -1,6 +1,7 @@
 import json
 import os
 from datetime import date, datetime
+from typing import List
 
 from tips.api.user_data_tree import UserDataTree
 from tips.config import PROJECT_PATH
@@ -22,6 +23,7 @@ def refresh_tips_pool():
     global tips_pool
     with open(TIPS_POOL_FILE) as fp:
         tips_pool = json.load(fp)
+        fp.close()
 
 
 def refresh_tip_enrichments():
@@ -68,37 +70,51 @@ for tip in tips_pool:
     tip['reason'] = reasons
 
 
-def tip_filter(tip, userdata_tree):
+def tip_filter(tip, userdata_tree, optin: bool = False):
     """
     If tip has a field "rules", the result must be true for it to be included.
     If tip does not have "rules, it is included.
     """
+
+    # Return early if basic conditions are not met
+    # Don't process personalized tips if optin doesn't match the personalization key of the tip
+    if optin != tip['isPersonalized']:
+        return False
+
     today = date.today()
 
     if not tip['active']:
         return False
+
     if tip.get('dateActiveStart'):
         date_active_start = datetime.strptime(tip['dateActiveStart'], '%Y-%m-%d').date()
         if date_active_start > today:
             return False
+
     if tip.get('dateActiveEnd'):
         date_active_end = datetime.strptime(tip['dateActiveEnd'], '%Y-%m-%d').date()
         if date_active_end < today:
             return False
 
     if 'rules' not in tip:
-        return tip
+        return True
 
     passed = apply_rules(userdata_tree, tip["rules"], compound_rules)
+
     return passed
 
 
-def clean_tip(tip):
-    """ Only select the relevant frontend fields and default isPersonalized to False. """
-    if not tip.get('isPersonalized', False):
-        tip['isPersonalized'] = False
+def normalize_tip_output(tip):
+    """ Only select the relevant frontend fields. """
+
     # Only add fields which are allowed to go to the frontend
     return {k: v for (k, v) in tip.items() if k in FRONT_END_TIP_KEYS}
+
+
+def normalize_tip_personalization(tip):
+    if not tip.get('isPersonalized', False):
+        tip['isPersonalized'] = False
+    return tip
 
 
 def fix_id(tip, source):
@@ -166,7 +182,7 @@ def enrich_tip(tip):
             break  # only one enrichment per tip allowed
 
 
-def tips_generator(request_data=None, tips=None, audience: [str] = None):
+def tips_generator(request_data=None, tips=None, audience: List[str] = None):
     """ Generate tips. """
     if request_data is None:
         request_data = {}
@@ -178,6 +194,8 @@ def tips_generator(request_data=None, tips=None, audience: [str] = None):
     if request_data['source_tips']:
         tips = tips + format_source_tips(request_data['source_tips'])
 
+    tips = [normalize_tip_personalization(tip) for tip in tips]
+
     if request_data['optin']:
         user_data_prepared = UserDataTree(request_data['user_data'])
     else:
@@ -188,16 +206,11 @@ def tips_generator(request_data=None, tips=None, audience: [str] = None):
 
     if audience:
         tips = [tip for tip in tips if set(tip.get('audience', [])).intersection(set(audience))]
-    tips = [tip for tip in tips if tip_filter(tip, user_data_prepared)]
-    tips = [clean_tip(tip) for tip in tips]
+
+    tips = [tip for tip in tips if tip_filter(tip, user_data_prepared, request_data['optin'])]
+
+    tips = [normalize_tip_output(tip) for tip in tips]
 
     tips.sort(key=lambda t: t['priority'], reverse=True)
-
-    # if optin is on, only show personalised tips
-    if request_data['optin']:
-        tips = [t for t in tips if t['isPersonalized']]
-    else:
-        # else remove them
-        tips = [t for t in tips if not t['isPersonalized']]
 
     return tips
