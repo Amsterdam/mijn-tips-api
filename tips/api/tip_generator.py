@@ -81,10 +81,10 @@ def tip_filter(tip, userdata_tree, optin: bool = False):
     if optin != tip['isPersonalized']:
         return False
 
-    today = date.today()
-
     if not tip['active']:
         return False
+
+    today = date.today()
 
     if tip.get('dateActiveStart'):
         date_active_start = datetime.strptime(tip['dateActiveStart'], '%Y-%m-%d').date()
@@ -96,6 +96,7 @@ def tip_filter(tip, userdata_tree, optin: bool = False):
         if date_active_end < today:
             return False
 
+    # No need to process tips that don't have rules, we can safely show them
     if 'rules' not in tip:
         return True
 
