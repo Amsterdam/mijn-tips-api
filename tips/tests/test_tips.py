@@ -361,10 +361,9 @@ class ApiTests(TestCase):
             # Initial state has Tozo and Tonk and bijstands and stadspas
             response = self.client.post('/tips/gettips', json=client_data)
             json = response.get_json()
-            self.assertEqual(len(json), 1)  
+            self.assertEqual(len(json), 1)
 
             # No tozo but tonk and bijstands and stadspas
-            old_tozo = client_data['userData']['FOCUS_TOZO']
             client_data['userData']['FOCUS_TOZO'] = []
             response = self.client.post('/tips/gettips', json=client_data)
             json = response.get_json()
@@ -380,7 +379,7 @@ class ApiTests(TestCase):
             client_data['userData']['FOCUS_STADSPAS'] = []
             response = self.client.post('/tips/gettips', json=client_data)
             json = response.get_json()
-            self.assertEqual(len(json), 1) 
+            self.assertEqual(len(json), 1)
 
             # No tozo and tonk and no stadspas and no bijstands
             aanvragen = [i for i in client_data['userData']['FOCUS_AANVRAGEN'] if i['productTitle'] != 'Bijstandsuitkering']
@@ -388,7 +387,3 @@ class ApiTests(TestCase):
             response = self.client.post('/tips/gettips', json=client_data)
             json = response.get_json()
             self.assertEqual(len(json), 0)
-
-          
-
-
