@@ -358,25 +358,29 @@ class ApiTests(TestCase):
         with patch('tips.api.tip_generator.tips_pool', new_pool):
             client_data = self._get_client_data()
 
-            # Initial state has Tozo and Tonk and bijstands and stadspas
-            response = self.client.post('/tips/gettips', json=client_data)
-            json = response.get_json()
-            self.assertEqual(len(json), 1)
-
-            # No tozo but tonk and bijstands and stadspas
-            client_data['userData']['FOCUS_TOZO'] = []
-            response = self.client.post('/tips/gettips', json=client_data)
-            json = response.get_json()
-            self.assertEqual(len(json), 1)
-
-            # No tozo and tonk but bijstands and stadspas
-            client_data['userData']['FOCUS_TONK'] = []
+            # Initial state has Tozo and Tonk with intrekking and bijstands and stadspas
             response = self.client.post('/tips/gettips', json=client_data)
             json = response.get_json()
             self.assertEqual(len(json), 0)
 
+            # Tozo with toekenning
+            client_data['userData']['FOCUS_TOZO'][0]['steps'][3]['decision'] = 'toekenning'
+            response = self.client.post('/tips/gettips', json=client_data)
+            json = response.get_json()
+            print(client_data['userData']['FOCUS_TOZO'][0]['steps'])
+            self.assertEqual(len(json), 1)
+
+            # No tozo but tonk with 'toekenning' and no 'terugtrekking'
+            client_data['userData']['FOCUS_TOZO'] = []
+            client_data['userData']['FOCUS_TONK'][0]['steps'][3]['decision'] = 'toekenning'
+            response = self.client.post('/tips/gettips', json=client_data)
+            json = response.get_json()
+            self.assertEqual(len(json), 1)
+    
+
             # No tozo and tonk and no stadspas but bijstands
             client_data['userData']['FOCUS_STADSPAS'] = []
+            client_data['userData']['FOCUS_TONK'] = []
             response = self.client.post('/tips/gettips', json=client_data)
             json = response.get_json()
             self.assertEqual(len(json), 1)
