@@ -363,7 +363,7 @@ class ApiTests(TestCase):
             json = response.get_json()
             self.assertEqual(len(json), 0)
 
-            #Remove stadspas
+            # Remove stadspas
             client_data['userData']['FOCUS_STADSPAS'] = []
             response = self.client.post('/tips/gettips', json=client_data)
             json = response.get_json()
