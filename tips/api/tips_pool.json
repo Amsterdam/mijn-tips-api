@@ -870,7 +870,11 @@
     "rules": [
       {
         "type": "rule",
-        "rule": "$.FOCUS_TOZO.*[@.decision is 'toekenning' and yearsAgo(@.datePublished) <= 1] or $.FOCUS_TONK.*[@.decision is 'toekenning' and yearsAgo(@.datePublished) <= 1] or ((not $.FOCUS_STADSPAS) and ($.FOCUS_AANVRAGEN.*[@.productTitle is 'Bijstandsuitkering' and len(@.steps.*[@.decision is 'toekenning' and yearsAgo(@.datePublished) <= 1]) >= 1]))"
+        "rule": "$.FOCUS_TOZO.*[@.decision is 'toekenning' and yearsAgo(@.datePublished) <= 1] or $.FOCUS_TONK.*[@.decision is 'toekenning' and yearsAgo(@.datePublished) <= 1] or $.FOCUS_AANVRAGEN.*[@.productTitle is 'Bijstandsuitkering' and len(@.steps.*[@.decision is 'toekenning' and yearsAgo(@.datePublished) <= 1]) >= 1]"
+      },
+      {
+        "type": "rule",
+        "rule": "not $.FOCUS_STADSPAS"
       }
     ],
     "reason": "Vraag direct vergoeding aan",

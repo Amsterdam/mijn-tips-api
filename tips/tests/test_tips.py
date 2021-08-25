@@ -363,6 +363,12 @@ class ApiTests(TestCase):
             json = response.get_json()
             self.assertEqual(len(json), 0)
 
+            #Remove stadspas
+            client_data['userData']['FOCUS_STADSPAS'] = []
+            response = self.client.post('/tips/gettips', json=client_data)
+            json = response.get_json()
+            self.assertEqual(len(json), 0)
+
             # Tozo with toekenning
             client_data['userData']['FOCUS_TOZO'][0]['decision'] = 'toekenning'
             response = self.client.post('/tips/gettips', json=client_data)
@@ -377,7 +383,6 @@ class ApiTests(TestCase):
             self.assertEqual(len(json), 1)
 
             # No tozo and tonk and no stadspas but bijstands
-            client_data['userData']['FOCUS_STADSPAS'] = []
             client_data['userData']['FOCUS_TONK'] = []
             response = self.client.post('/tips/gettips', json=client_data)
             json = response.get_json()
