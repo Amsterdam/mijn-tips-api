@@ -877,7 +877,7 @@
         "rule": "not $.FOCUS_STADSPAS"
       }
     ],
-    "reason": "Vraag direct vergoeding aan",
+    "reason": "u heeft een bijstand, TOZO of TONK en geen Stadspas Groene Stip",
     "isPersonalized": true,
     "link": {
       "title": "Vraag direct vergoeding aan",
