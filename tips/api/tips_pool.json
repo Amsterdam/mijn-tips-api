@@ -853,5 +853,36 @@
       "to": "https://www.amsterdam.nl/bedandbreakfast "
     },
     "imgUrl": "/api/tips/static/tip_images/vakantieverhuur.jpg"
+  },
+  {
+    "id": "mijn-36",
+    "owner": "",
+    "dateActiveStart": "2021-08-01",
+    "dateActiveEnd": "2021-12-31",
+    "active": true,
+    "priority": 11,
+    "datePublished": "2021-08-01",
+    "title": "Sportvergoeding voor kinderen",
+    "audience": [
+      "persoonlijk"
+    ],
+    "description": "Hebt u moeite om sportactiviteiten voor uw kind te betalen? Regel de vergoeding via Stichting SINA (Samen is niet alleen).",
+    "rules": [
+      {
+        "type": "rule",
+        "rule": "$.FOCUS_TOZO.*[@.decision is 'toekenning' and yearsAgo(@.datePublished) <= 1] or $.FOCUS_TONK.*[@.decision is 'toekenning' and yearsAgo(@.datePublished) <= 1] or $.FOCUS_AANVRAGEN.*[@.productTitle is 'Bijstandsuitkering' and @.decision is 'toekenning' and yearsAgo(@.datePublished) <= 1]"
+      },
+      {
+        "type": "rule",
+        "rule": "not $.FOCUS_STADSPAS"
+      }
+    ],
+    "reason": "u heeft een bijstand, TOZO of TONK en geen Stadspas Groene Stip",
+    "isPersonalized": true,
+    "link": {
+      "title": "Vraag direct vergoeding aan",
+      "to": "https://www.stichtingsina.nl/sport/"
+    },
+    "imgUrl": "/api/tips/static/tip_images/sporten_met_korting.jpg"
   }
 ]
