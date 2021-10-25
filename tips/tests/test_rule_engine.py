@@ -1,10 +1,8 @@
-import datetime
 import json
 import os
 from unittest import TestCase
-from objectpath.utils import timeutils
 
-from tips.api.user_data_tree import UserDataTree, strToUtcDateTime
+from tips.api.user_data_tree import UserDataTree
 from tips.config import PROJECT_PATH
 from tips.generator.rule_engine import apply_rules
 
