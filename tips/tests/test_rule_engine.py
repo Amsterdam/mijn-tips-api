@@ -1,11 +1,12 @@
-from unittest import TestCase
-
+import datetime
 import json
 import os
+from unittest import TestCase
+from objectpath.utils import timeutils
 
-from tips.api.user_data_tree import UserDataTree
-from tips.generator.rule_engine import apply_rules
+from tips.api.user_data_tree import UserDataTree, strToUtcDateTime
 from tips.config import PROJECT_PATH
+from tips.generator.rule_engine import apply_rules
 
 COMPOUND_RULES_FILE = os.path.join(PROJECT_PATH, "api", "compound_rules.json")
 

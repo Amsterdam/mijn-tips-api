@@ -87,6 +87,7 @@ class ApiTests(TestCase):
             response = self.client.post("/tips/gettips", json=client_data)
             self.assertEqual(len(response.get_json()), 0)
 
+    @freeze_time("2021-03-09")
     def test_laat_geen_geld_liggen(self):
         new_pool = [tip for tip in tips_pool if tip["id"] == "mijn-22"]
 
