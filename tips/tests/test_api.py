@@ -24,6 +24,7 @@ class ApiTests(TestCase):
         self.assert200(response)
         self.assertEqual(response.data, b"OK")
 
+    @freeze_time("2021-05-09")
     def test_tips(self):
 
         client_data = self._get_client_data()
