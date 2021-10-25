@@ -1,29 +1,29 @@
 {
-  "isKnown": true,
-  "notifications": [
-    {
-      "chapter": "BELASTINGEN",
-      "datePublished": "2021-01-12T13:14:08Z",
-      "id": "belasting-4",
-      "link": {
-        "title": "Betaal direct",
-        "to": "https://belastingbalie-acc.amsterdam.nl/aanslagen.php"
-      },
-      "priority": 1,
-      "title": "Betaal uw aanslag"
-    }
-  ],
-  "tips": [
-    {
-      "datePublished": "2021-01-12T13:14:08Z",
-      "id": "belasting-5",
-      "link": {
-        "title": "Vraag direct aan",
-        "to": "https://belastingbalie-acc.amsterdam.nl/subject.gegevens.php"
-      },
-      "priority": 10,
-      "reason": "U krijgt deze tip omdat u nog niet via automatische incasso betaalt",
-      "title": "Automatische incasso"
-    }
-  ]
+    "isKnown": true,
+    "notifications": [
+        {
+            "chapter": "BELASTINGEN",
+            "datePublished": "2021-01-12T13:14:08Z",
+            "id": "belasting-4",
+            "link": {
+                "title": "Betaal direct",
+                "to": "https://belastingbalie-acc.amsterdam.nl/aanslagen.php",
+            },
+            "priority": 1,
+            "title": "Betaal uw aanslag",
+        }
+    ],
+    "tips": [
+        {
+            "datePublished": "2021-01-12T13:14:08Z",
+            "id": "belasting-5",
+            "link": {
+                "title": "Vraag direct aan",
+                "to": "https://belastingbalie-acc.amsterdam.nl/subject.gegevens.php",
+            },
+            "priority": 10,
+            "reason": "U krijgt deze tip omdat u nog niet via automatische incasso betaalt",
+            "title": "Automatische incasso",
+        }
+    ],
 }

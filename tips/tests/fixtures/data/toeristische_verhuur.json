@@ -9,7 +9,7 @@
             "postalCode": "1012AK",
             "registrationNumber": "1101 1111 1011 1111 1111",
             "shortName": "Amstel",
-            "street": "Amstel"
+            "street": "Amstel",
         }
     ],
     "vergunningen": [
@@ -21,7 +21,7 @@
             "identifier": "Z/00/000000",
             "location": "amstel 1 1012AK",
             "processed": null,
-            "status": "Ontvangen"
+            "status": "Ontvangen",
         },
         {
             "caseType": "B&B - vergunning",
@@ -37,7 +37,7 @@
             "requester": "Haarlem",
             "status": "Ontvangen",
             "title": "B&B vergunning aanvragen",
-            "hasTransitionAgreement": false
-        }
-    ]
+            "hasTransitionAgreement": false,
+        },
+    ],
 }

@@ -1,121 +1,89 @@
 {
-  "1": {
-    "name": "Heeft geldige stadspas aanvraag",
-    "rules": [
-      {
-        "type": "rule",
-        "rule": "$.FOCUS_AANVRAGEN.*[@.productTitle is 'Stadspas' and len(@.steps.*[@.decision is 'toekenning' and yearsAgo(@.datePublished) <= 1]) >= 1]"
-      }
-    ],
-    "reason": "U ziet deze tip omdat u een Stadspas hebt"
-  },
-  "2": {
-    "name": "Is 18 of ouder",
-    "rules": [
-      {
-        "type": "rule",
-        "rule": "yearsAgo($.BRP.persoon.geboortedatum) >= 18"
-      }
-    ]
-  },
-  "3": {
-    "name": "Woont in gemeente Amsterdam",
-    "rules": [
-      {
-        "type": "rule",
-        "rule": "$.BRP.persoon.mokum is true"
-      }
-    ]
-  },
-  "4": {
-    "name": "Heeft kinderen",
-    "rules": [
-      {
-        "type": "rule",
-        "rule": "$.BRP.kinderen"
-      }
-    ]
-  },
-  "5": {
-    "name": "Kind is tussen 2 en 18 jaar",
-    "rules": [
-      {
-        "type": "rule",
-        "rule": "$.BRP.kinderen[yearsAgo(@.geboortedatum) >= 2 and yearsAgo(@.geboortedatum) <= 18]"
-      }
-    ]
-  },
-  "6": {
-    "name": "Persoon is 66 of ouder",
-    "rules": [
-      {
-        "type": "rule",
-        "rule": "yearsAgo($.BRP.persoon.geboortedatum) >= 66"
-      }
-    ]
-  },
-  "7": {
-    "name": "Persoon is 21 of ouder",
-    "rules": [
-      {
-        "type": "rule",
-        "rule": "yearsAgo($.BRP.persoon.geboortedatum) >= 21"
-      }
-    ]
-  },
-  "8": {
-    "name": "Kind is 10,11 of 12",
-    "rules": [
-      {
-        "type": "rule",
-        "rule": "$.BRP.kinderen.*[yearsAgo(@.geboortedatum) >= 10 and yearsAgo(@.geboortedatum) <= 12]"
-      }
-    ],
-    "reason": "U ziet deze tip omdat uw kind op 30 september 2020 jonger dan 18 jaar is/was"
-  },
-  "9": {
-    "name": "Heeft tozo",
-    "rules": [
-      {
-        "type": "rule",
-        "rule": "$.FOCUS_TOZO"
-      }
-    ]
-  },
-  "10": {
-    "name": "Bezit Bijstandsuitkering",
-    "rules": [
-      {
-        "type": "rule",
-        "rule": "$.FOCUS_AANVRAGEN.*[@.productTitle is 'Bijstandsuitkering' and len(@.steps.*[@.decision is 'toekenning' and yearsAgo(@.datePublished) <= 1]) >= 1]"
-      }
-    ]
-  },
-  "11": {
-    "name": "Tozo en/of bijstandsuitkering en/of stadspas",
-    "rules": [
-      {
-        "type": "rule",
-        "rule": "($.FOCUS_AANVRAGEN.*[@.productTitle is 'Stadspas' and len(@.steps.*[@.decision is 'toekenning' and yearsAgo(@.datePublished) <= 1]) >= 1]) or ($.FOCUS_AANVRAGEN.*[@.productTitle is 'Bijstandsuitkering' and len(@.steps.*[@.decision is 'toekenning' and yearsAgo(@.datePublished) <= 1]) >= 1]) or ($.FOCUS_TOZO)"
-      }
-    ]
-  },
-  "12": {
-    "name": "Heeft een stadspasnummer",
-    "rules": [
-      {
-        "type": "rule",
-        "rule": "$.FOCUS_STADSPAS is not None"
-      }
-    ]
-  },
-  "13": {
-    "name": "Heeft de Nederlandse nationaliteit",
-    "rules": [
-      {
-        "type": "rule",
-        "rule": "$.BRP.persoon.nationaliteiten.*[@.omschrijving is 'Nederlandse']"
-      }
-    ]
-  }
+    "1": {
+        "name": "Heeft geldige stadspas aanvraag",
+        "rules": [
+            {
+                "type": "rule",
+                "rule": "$.FOCUS_AANVRAGEN.*[@.productTitle is 'Stadspas' and len(@.steps.*[@.decision is 'toekenning' and yearsAgo(@.datePublished) <= 1]) >= 1]",
+            }
+        ],
+        "reason": "U ziet deze tip omdat u een Stadspas hebt",
+    },
+    "2": {
+        "name": "Is 18 of ouder",
+        "rules": [
+            {"type": "rule", "rule": "yearsAgo($.BRP.persoon.geboortedatum) >= 18"}
+        ],
+    },
+    "3": {
+        "name": "Woont in gemeente Amsterdam",
+        "rules": [{"type": "rule", "rule": "$.BRP.persoon.mokum is true"}],
+    },
+    "4": {
+        "name": "Heeft kinderen",
+        "rules": [{"type": "rule", "rule": "$.BRP.kinderen"}],
+    },
+    "5": {
+        "name": "Kind is tussen 2 en 18 jaar",
+        "rules": [
+            {
+                "type": "rule",
+                "rule": "$.BRP.kinderen[yearsAgo(@.geboortedatum) >= 2 and yearsAgo(@.geboortedatum) <= 18]",
+            }
+        ],
+    },
+    "6": {
+        "name": "Persoon is 66 of ouder",
+        "rules": [
+            {"type": "rule", "rule": "yearsAgo($.BRP.persoon.geboortedatum) >= 66"}
+        ],
+    },
+    "7": {
+        "name": "Persoon is 21 of ouder",
+        "rules": [
+            {"type": "rule", "rule": "yearsAgo($.BRP.persoon.geboortedatum) >= 21"}
+        ],
+    },
+    "8": {
+        "name": "Kind is 10,11 of 12",
+        "rules": [
+            {
+                "type": "rule",
+                "rule": "$.BRP.kinderen.*[yearsAgo(@.geboortedatum) >= 10 and yearsAgo(@.geboortedatum) <= 12]",
+            }
+        ],
+        "reason": "U ziet deze tip omdat uw kind op 30 september 2020 jonger dan 18 jaar is/was",
+    },
+    "9": {"name": "Heeft tozo", "rules": [{"type": "rule", "rule": "$.FOCUS_TOZO"}]},
+    "10": {
+        "name": "Bezit Bijstandsuitkering",
+        "rules": [
+            {
+                "type": "rule",
+                "rule": "$.FOCUS_AANVRAGEN.*[@.productTitle is 'Bijstandsuitkering' and len(@.steps.*[@.decision is 'toekenning' and yearsAgo(@.datePublished) <= 1]) >= 1]",
+            }
+        ],
+    },
+    "11": {
+        "name": "Tozo en/of bijstandsuitkering en/of stadspas",
+        "rules": [
+            {
+                "type": "rule",
+                "rule": "($.FOCUS_AANVRAGEN.*[@.productTitle is 'Stadspas' and len(@.steps.*[@.decision is 'toekenning' and yearsAgo(@.datePublished) <= 1]) >= 1]) or ($.FOCUS_AANVRAGEN.*[@.productTitle is 'Bijstandsuitkering' and len(@.steps.*[@.decision is 'toekenning' and yearsAgo(@.datePublished) <= 1]) >= 1]) or ($.FOCUS_TOZO)",
+            }
+        ],
+    },
+    "12": {
+        "name": "Heeft een stadspasnummer",
+        "rules": [{"type": "rule", "rule": "$.FOCUS_STADSPAS is not None"}],
+    },
+    "13": {
+        "name": "Heeft de Nederlandse nationaliteit",
+        "rules": [
+            {
+                "type": "rule",
+                "rule": "$.BRP.persoon.nationaliteiten.*[@.omschrijving is 'Nederlandse']",
+            }
+        ],
+    },
 }

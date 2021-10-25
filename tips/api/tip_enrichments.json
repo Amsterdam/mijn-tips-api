@@ -1,10 +1,10 @@
 [
-  {
-    "id": "2",
-    "for_ids": ["belasting-5"],
-    "fields": {
-      "imgUrl": "api/tips/static/tip_images/belastingen.jpg",
-      "audience": ["persoonlijk"]
+    {
+        "id": "2",
+        "for_ids": ["belasting-5"],
+        "fields": {
+            "imgUrl": "api/tips/static/tip_images/belastingen.jpg",
+            "audience": ["persoonlijk"],
+        },
     }
-  }
 ]

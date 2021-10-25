@@ -11,7 +11,7 @@
         "type": "Tozo",
         "link": {
             "to": "/inkomen/tonk/1/1436407767",
-            "title": "Bekijk hoe het met uw aanvraag staat"
+            "title": "Bekijk hoe het met uw aanvraag staat",
         },
         "steps": [
             {
@@ -22,7 +22,7 @@
                         "title": "Aanvraag TONK\n05 januari om 17.20 uur",
                         "url": "/api/focus/document?id=4400000095&isBulk=true&isDms=false",
                         "datePublished": "2021-01-05T17:20:04+01:00",
-                        "type": "pdf"
+                        "type": "pdf",
                     }
                 ],
                 "product": "TONK",
@@ -33,7 +33,7 @@
                 "isChecked": true,
                 "isActive": true,
                 "notificationTitle": "Wij hebben uw aanvraag TONK ontvangen",
-                "notificationDescription": "Wij hebben uw aanvraag TONK ontvangen op 05 januari om 17.20 uur"
+                "notificationDescription": "Wij hebben uw aanvraag TONK ontvangen op 05 januari om 17.20 uur",
             },
             {
                 "id": "770529772",
@@ -43,7 +43,7 @@
                         "title": "Brief meer informatie",
                         "url": "/api/focus/document?id=660000000000500&isBulk=false&isDms=false",
                         "datePublished": "2021-01-06T17:20:04+01:00",
-                        "type": "pdf"
+                        "type": "pdf",
                     }
                 ],
                 "product": "TONK",
@@ -54,7 +54,7 @@
                 "isChecked": true,
                 "isActive": true,
                 "notificationTitle": "TONK: Meer informatie nodig",
-                "notificationDescription": "Wij hebben meer informatie en tijd nodig om uw aanvraag te behandelen."
+                "notificationDescription": "Wij hebben meer informatie en tijd nodig om uw aanvraag te behandelen.",
             },
             {
                 "id": "295851720",
@@ -64,19 +64,19 @@
                         "title": "Besluit over verlenging",
                         "url": "/api/focus/document?id=660000000010184&isBulk=false&isDms=false",
                         "datePublished": "2021-08-10T17:20:04+02:00",
-                        "type": "pdf"
+                        "type": "pdf",
                     }
                 ],
                 "product": "TONK",
                 "title": "besluit",
-                "description": "<p>Wij hebben een besluit genomen over het wel of niet verlengen van uw TONK uitkering. Bekijk de brief voor meer details.</p><p><a rel=\"external noopener noreferrer\" href=\"https://www.amsterdam.nl/werk-inkomen/pak-je-kans/\">Meer regelingen van de gemeente Amsterdam</a></p>",
+                "description": '<p>Wij hebben een besluit genomen over het wel of niet verlengen van uw TONK uitkering. Bekijk de brief voor meer details.</p><p><a rel="external noopener noreferrer" href="https://www.amsterdam.nl/werk-inkomen/pak-je-kans/">Meer regelingen van de gemeente Amsterdam</a></p>',
                 "datePublished": "2020-06-10T17:20:04+02:00",
                 "status": "Besluit",
                 "isChecked": true,
                 "isActive": true,
                 "decision": "toekenning",
                 "notificationTitle": "TONK: Er is een besluit over het wel of niet verlengen",
-                "notificationDescription": "Er is een besluit over het wel of niet verlengen van uw TONK uitkering."
+                "notificationDescription": "Er is een besluit over het wel of niet verlengen van uw TONK uitkering.",
             },
             {
                 "id": "295851721",
@@ -86,20 +86,20 @@
                         "title": "Besluit over verlenging",
                         "url": "/api/focus/document?id=660000000010184&isBulk=false&isDms=false",
                         "datePublished": "2021-08-10T17:20:04+02:00",
-                        "type": "pdf"
+                        "type": "pdf",
                     }
                 ],
                 "product": "TONK",
                 "title": "besluit",
-                "description": "<p>Wij hebben een besluit genomen over het wel of niet verlengen van uw TONK uitkering. Bekijk de brief voor meer details.</p><p><a rel=\"external noopener noreferrer\" href=\"https://www.amsterdam.nl/werk-inkomen/pak-je-kans/\">Meer regelingen van de gemeente Amsterdam</a></p>",
+                "description": '<p>Wij hebben een besluit genomen over het wel of niet verlengen van uw TONK uitkering. Bekijk de brief voor meer details.</p><p><a rel="external noopener noreferrer" href="https://www.amsterdam.nl/werk-inkomen/pak-je-kans/">Meer regelingen van de gemeente Amsterdam</a></p>',
                 "datePublished": "2020-06-10T17:20:04+02:00",
                 "status": "Besluit",
                 "isChecked": true,
                 "isActive": true,
                 "decision": "intrekking",
                 "notificationTitle": "TONK: Er is een besluit over het wel of niet verlengen",
-                "notificationDescription": "Er is een besluit over het wel of niet verlengen van uw TONK uitkering."
-            }
-        ]
+                "notificationDescription": "Er is een besluit over het wel of niet verlengen van uw TONK uitkering.",
+            },
+        ],
     }
 ]
