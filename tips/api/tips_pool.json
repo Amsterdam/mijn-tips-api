@@ -874,7 +874,7 @@
             },
             {
                 "type": "rule",
-                "rule": "not $.FOCUS_STADSPAS.stadspassen"
+                "rule": "not $.FOCUS_STADSPAS"
             }
         ],
         "reason": "u heeft een bijstand, TOZO of TONK en geen Stadspas Groene Stip",
