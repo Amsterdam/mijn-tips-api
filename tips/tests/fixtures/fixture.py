@@ -1,7 +1,7 @@
 import json
 import os
 
-_FIXTURE_PATH = os.path.join(os.path.dirname(os.path.abspath(__file__)), "data")
+_FIXTURE_PATH = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'data')
 
 # these fixtures are copied from the frontend
 BRP = os.path.join(_FIXTURE_PATH, "brp.json")
@@ -55,7 +55,7 @@ def get_fixture(optin=False):
 
     return {
         "optin": optin,
-        "tips": belasting["tips"],
+        "tips": belasting['tips'],
         "userData": {
             "BRP": brp,
             "FOCUS_AANVRAGEN": focus_aanvragen,
@@ -65,12 +65,12 @@ def get_fixture(optin=False):
             "WMO": wmo,
             "BELASTINGEN": belasting,
             "ERFPACHT": erfpacht,
-            "TOERISTISCHE_VERHUUR": toeristische_verhuur,
-        },
+            "TOERISTISCHE_VERHUUR": toeristische_verhuur
+        }
     }
 
 
 def get_fixture_without_source_tips(optin=False):
     data = get_fixture(optin)
-    data["tips"] = []
+    data['tips'] = []
     return data

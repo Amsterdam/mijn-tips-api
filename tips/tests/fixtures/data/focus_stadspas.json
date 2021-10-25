@@ -1,49 +1,49 @@
 {
-    "type": "hoofdpashouder",
-    "stadspassen": [
+  "type": "hoofdpashouder",
+  "stadspassen": [
+    {
+      "budgets": [],
+      "datumAfloop": "2021-08-31T21:59:59.000Z",
+      "id": 200769,
+      "naam": "naam hoofdpashouder",
+      "pasnummer": 1111111111111
+    },
+    {
+      "budgets": [
         {
-            "budgets": [],
-            "datumAfloop": "2021-08-31T21:59:59.000Z",
-            "id": 200769,
-            "naam": "naam hoofdpashouder",
-            "pasnummer": 1111111111111,
-        },
+          "assigned": 25,
+          "balance": 5,
+          "code": "AMSTEST_0-9",
+          "description": "Kindbudget test Mijn Amsterdam",
+          "urlTransactions": "/api/focus/xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+        }
+      ],
+      "datumAfloop": "2021-08-31T21:59:59.000Z",
+      "id": 200770,
+      "naam": "pashouder 2",
+      "pasnummer": 2222222222222
+    },
+    {
+      "budgets": [],
+      "datumAfloop": "2021-08-31T21:59:59.000Z",
+      "id": 200772,
+      "naam": "pashouder 3",
+      "pasnummer": 3333333333333
+    },
+    {
+      "budgets": [
         {
-            "budgets": [
-                {
-                    "assigned": 25,
-                    "balance": 5,
-                    "code": "AMSTEST_0-9",
-                    "description": "Kindbudget test Mijn Amsterdam",
-                    "urlTransactions": "/api/focus/xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
-                }
-            ],
-            "datumAfloop": "2021-08-31T21:59:59.000Z",
-            "id": 200770,
-            "naam": "pashouder 2",
-            "pasnummer": 2222222222222,
-        },
-        {
-            "budgets": [],
-            "datumAfloop": "2021-08-31T21:59:59.000Z",
-            "id": 200772,
-            "naam": "pashouder 3",
-            "pasnummer": 3333333333333,
-        },
-        {
-            "budgets": [
-                {
-                    "assigned": 150,
-                    "balance": 150,
-                    "code": "AMSTEST_10-14",
-                    "description": "Kindbudget ",
-                    "urlTransactions": "/api/focus/stadspastransacties/xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
-                }
-            ],
-            "datumAfloop": "2021-08-31T21:59:59.000Z",
-            "id": 200781,
-            "naam": "pashouder 4",
-            "pasnummer": 4444444444444,
-        },
-    ],
+          "assigned": 150,
+          "balance": 150,
+          "code": "AMSTEST_10-14",
+          "description": "Kindbudget ",
+          "urlTransactions": "/api/focus/stadspastransacties/xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+        }
+      ],
+      "datumAfloop": "2021-08-31T21:59:59.000Z",
+      "id": 200781,
+      "naam": "pashouder 4",
+      "pasnummer": 4444444444444
+    }
+  ]
 }

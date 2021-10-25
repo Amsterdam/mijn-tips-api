@@ -1,593 +1,593 @@
 [
-    {
-        "id": "810805911",
-        "title": "Bijstandsuitkering",
-        "type": "Participatiewet",
-        "decision": "toekenning",
-        "datePublished": "2021-07-28T15:05:51+02:00",
-        "dateStart": "2021-07-24T15:05:51+02:00",
-        "dienstverleningstermijn": 21,
-        "inspanningsperiode": 28,
-        "productTitle": "Bijstandsuitkering",
-        "steps": [
-            {
-                "id": "aanvraag",
-                "title": "aanvraag",
-                "documents": [
-                    {
-                        "id": "660000000000004",
-                        "title": "Aanvraag WWB (GALO)",
-                        "url": "/test-api/focus/document?id=660000000000004&isBulk=false&isDms=false",
-                        "datePublished": "2019-07-24T15:05:51+02:00",
-                        "type": "PDF",
-                    }
-                ],
-                "datePublished": "2019-07-24T15:05:51+02:00",
-                "product": "Bijstandsuitkering",
-                "description": '\n          <p>U hebt op 24 juli 2019 een bijstandsuitkering aangevraagd.</p>\n          <p>\n            <a\n              href=https://www.amsterdam.nl/veelgevraagd/hoe-vraag-ik-een-bijstandsuitkering-aan/?productid=%7BEC85F0ED-0D9E-46F3-8B2E-E80403D3D5EA%7D#case_%7BB7EF73CD-8A99-4F60-AB6D-02CB9A6BAF6F%7D\n              rel="external noopener noreferrer"\n            >\n              Wat kunt u van ons verwachten?\n            </a>\n          </p>\n        ',
-                "status": "Aanvraag",
-                "isActive": false,
-                "isChecked": true,
-            },
-            {
-                "id": "inBehandeling",
-                "title": "inBehandeling",
-                "documents": [],
-                "datePublished": "2019-07-25T15:05:51+02:00",
-                "product": "Bijstandsuitkering",
-                "description": '\n          <p>\n            Wij gaan nu bekijken of u recht hebt op bijstand. Het kan zijn dat u\n            nog extra informatie moet opsturen. U ontvangt vóór 11 september 2019 ons besluit.\n          </p>\n          <p>\n            Lees meer over uw\n            <br />\n            <a\n              href=https://www.amsterdam.nl/veelgevraagd/hoe-vraag-ik-een-bijstandsuitkering-aan/?caseid=%7bF00E2134-0317-4981-BAE6-A4802403C2C5%7d\n              rel="external noopener noreferrer"\n            >\n              rechten\n            </a> en <a\n              href=https://www.amsterdam.nl/veelgevraagd/hoe-vraag-ik-een-bijstandsuitkering-aan/?productid=%7b42A997C5-4FCA-4BC2-BF8A-95DFF6BE7121%7d\n              rel="external noopener noreferrer"\n            >\n              plichten\n            </a>\n          </p>\n        ',
-                "status": "In behandeling",
-                "isActive": false,
-                "isChecked": true,
-            },
-            {
-                "id": "beslissing",
-                "title": "beslissing",
-                "documents": [
-                    {
-                        "id": "660000000000005",
-                        "title": "Afwijzen Levensonderhoud (BIJ)",
-                        "url": "/test-api/focus/document?id=660000000000005&isBulk=false&isDms=false",
-                        "datePublished": "2019-07-28T15:05:51+02:00",
-                        "type": "PDF",
-                    }
-                ],
-                "datePublished": "2019-07-28T15:05:51+02:00",
-                "product": "Bijstandsuitkering",
-                "description": '\n            <p>\n              U heeft recht op een bijstandsuitkering. Bekijk de brief voor meer\n              details.\n            </p>\n            <p>\n              <a\n                href=https://www.amsterdam.nl/veelgevraagd/?caseid=%7BEB3CC77D-89D3-40B9-8A28-779FE8E48ACE%7D\n                rel="external noopener noreferrer"\n              >\n                Bekijk hier de betaaldata van de uitkering\n              </a>\n            </p>\n          ',
-                "status": "Besluit",
-                "isActive": true,
-                "isChecked": true,
-                "decision": "toekenning",
-            },
+  {
+    "id": "810805911",
+    "title": "Bijstandsuitkering",
+    "type": "Participatiewet",
+    "decision": "toekenning",
+    "datePublished": "2021-07-28T15:05:51+02:00",
+    "dateStart": "2021-07-24T15:05:51+02:00",
+    "dienstverleningstermijn": 21,
+    "inspanningsperiode": 28,
+    "productTitle": "Bijstandsuitkering",
+    "steps": [
+      {
+        "id": "aanvraag",
+        "title": "aanvraag",
+        "documents": [
+          {
+            "id": "660000000000004",
+            "title": "Aanvraag WWB (GALO)",
+            "url": "/test-api/focus/document?id=660000000000004&isBulk=false&isDms=false",
+            "datePublished": "2019-07-24T15:05:51+02:00",
+            "type": "PDF"
+          }
         ],
-        "link": {
-            "title": "Meer",
-            "to": "/inkomen-en-stadspas/bijstandsuitkering/810805911",
-        },
-        "status": "Besluit",
-    },
-    {
-        "id": "3820824234",
-        "title": "Stadspas",
-        "type": "Minimafonds",
-        "datePublished": "2019-07-08T15:05:52+02:00",
-        "dateStart": "2019-07-08T15:05:52+02:00",
-        "dienstverleningstermijn": 56,
-        "productTitle": "Stadspas",
-        "steps": [
-            {
-                "id": "aanvraag",
-                "title": "aanvraag",
-                "documents": [
-                    {
-                        "id": "4400000004",
-                        "title": "Aanvraag Stadspas (papier)",
-                        "url": "/test-api/focus/document?id=4400000004&isBulk=true&isDms=false",
-                        "datePublished": "2019-07-08T15:05:52+02:00",
-                        "type": "PDF",
-                    },
-                    {
-                        "id": "4400000016",
-                        "title": "Aanvraag Stadspas (papier)",
-                        "url": "/test-api/focus/document?id=4400000016&isBulk=true&isDms=false",
-                        "datePublished": "2019-07-08T15:05:52+02:00",
-                        "type": "PDF",
-                    },
-                    {
-                        "id": "4400000005",
-                        "title": "Aanvraag Stadspas (balie)",
-                        "url": "/test-api/focus/document?id=4400000005&isBulk=true&isDms=false",
-                        "datePublished": "2019-07-08T15:05:52+02:00",
-                        "type": "PDF",
-                    },
-                    {
-                        "id": "4400000017",
-                        "title": "Aanvraag Stadspas (balie)",
-                        "url": "/test-api/focus/document?id=4400000017&isBulk=true&isDms=false",
-                        "datePublished": "2019-07-08T15:05:52+02:00",
-                        "type": "PDF",
-                    },
-                    {
-                        "id": "4400000006",
-                        "title": "Aanvraag Stadspas (digitaal)",
-                        "url": "/test-api/focus/document?id=4400000006&isBulk=true&isDms=false",
-                        "datePublished": "2019-07-08T15:05:52+02:00",
-                        "type": "PDF",
-                    },
-                ],
-                "datePublished": "2019-07-08T15:05:52+02:00",
-                "product": "Stadspas",
-                "description": "U hebt op 08 juli 2019 een Stadspas aangevraagd.",
-                "status": "Aanvraag",
-                "isActive": true,
-                "isChecked": true,
-            }
-        ],
-        "link": {
-            "title": "Meer informatie",
-            "to": "/inkomen-en-stadspas/stadspas/3820824234",
-        },
+        "datePublished": "2019-07-24T15:05:51+02:00",
+        "product": "Bijstandsuitkering",
+        "description": "\n          <p>U hebt op 24 juli 2019 een bijstandsuitkering aangevraagd.</p>\n          <p>\n            <a\n              href=https://www.amsterdam.nl/veelgevraagd/hoe-vraag-ik-een-bijstandsuitkering-aan/?productid=%7BEC85F0ED-0D9E-46F3-8B2E-E80403D3D5EA%7D#case_%7BB7EF73CD-8A99-4F60-AB6D-02CB9A6BAF6F%7D\n              rel=\"external noopener noreferrer\"\n            >\n              Wat kunt u van ons verwachten?\n            </a>\n          </p>\n        ",
         "status": "Aanvraag",
+        "isActive": false,
+        "isChecked": true
+      },
+      {
+        "id": "inBehandeling",
+        "title": "inBehandeling",
+        "documents": [],
+        "datePublished": "2019-07-25T15:05:51+02:00",
+        "product": "Bijstandsuitkering",
+        "description": "\n          <p>\n            Wij gaan nu bekijken of u recht hebt op bijstand. Het kan zijn dat u\n            nog extra informatie moet opsturen. U ontvangt vóór 11 september 2019 ons besluit.\n          </p>\n          <p>\n            Lees meer over uw\n            <br />\n            <a\n              href=https://www.amsterdam.nl/veelgevraagd/hoe-vraag-ik-een-bijstandsuitkering-aan/?caseid=%7bF00E2134-0317-4981-BAE6-A4802403C2C5%7d\n              rel=\"external noopener noreferrer\"\n            >\n              rechten\n            </a> en <a\n              href=https://www.amsterdam.nl/veelgevraagd/hoe-vraag-ik-een-bijstandsuitkering-aan/?productid=%7b42A997C5-4FCA-4BC2-BF8A-95DFF6BE7121%7d\n              rel=\"external noopener noreferrer\"\n            >\n              plichten\n            </a>\n          </p>\n        ",
+        "status": "In behandeling",
+        "isActive": false,
+        "isChecked": true
+      },
+      {
+        "id": "beslissing",
+        "title": "beslissing",
+        "documents": [
+          {
+            "id": "660000000000005",
+            "title": "Afwijzen Levensonderhoud (BIJ)",
+            "url": "/test-api/focus/document?id=660000000000005&isBulk=false&isDms=false",
+            "datePublished": "2019-07-28T15:05:51+02:00",
+            "type": "PDF"
+          }
+        ],
+        "datePublished": "2019-07-28T15:05:51+02:00",
+        "product": "Bijstandsuitkering",
+        "description": "\n            <p>\n              U heeft recht op een bijstandsuitkering. Bekijk de brief voor meer\n              details.\n            </p>\n            <p>\n              <a\n                href=https://www.amsterdam.nl/veelgevraagd/?caseid=%7BEB3CC77D-89D3-40B9-8A28-779FE8E48ACE%7D\n                rel=\"external noopener noreferrer\"\n              >\n                Bekijk hier de betaaldata van de uitkering\n              </a>\n            </p>\n          ",
+        "status": "Besluit",
+        "isActive": true,
+        "isChecked": true,
+        "decision": "toekenning"
+      }
+    ],
+    "link": {
+      "title": "Meer",
+      "to": "/inkomen-en-stadspas/bijstandsuitkering/810805911"
     },
-    {
-        "id": "test-stadspas-validity",
-        "title": "Stadspas",
-        "type": "Minimafonds",
-        "decision": "toekenning",
+    "status": "Besluit"
+  },
+  {
+    "id": "3820824234",
+    "title": "Stadspas",
+    "type": "Minimafonds",
+    "datePublished": "2019-07-08T15:05:52+02:00",
+    "dateStart": "2019-07-08T15:05:52+02:00",
+    "dienstverleningstermijn": 56,
+    "productTitle": "Stadspas",
+    "steps": [
+      {
+        "id": "aanvraag",
+        "title": "aanvraag",
+        "documents": [
+          {
+            "id": "4400000004",
+            "title": "Aanvraag Stadspas (papier)",
+            "url": "/test-api/focus/document?id=4400000004&isBulk=true&isDms=false",
+            "datePublished": "2019-07-08T15:05:52+02:00",
+            "type": "PDF"
+          },
+          {
+            "id": "4400000016",
+            "title": "Aanvraag Stadspas (papier)",
+            "url": "/test-api/focus/document?id=4400000016&isBulk=true&isDms=false",
+            "datePublished": "2019-07-08T15:05:52+02:00",
+            "type": "PDF"
+          },
+          {
+            "id": "4400000005",
+            "title": "Aanvraag Stadspas (balie)",
+            "url": "/test-api/focus/document?id=4400000005&isBulk=true&isDms=false",
+            "datePublished": "2019-07-08T15:05:52+02:00",
+            "type": "PDF"
+          },
+          {
+            "id": "4400000017",
+            "title": "Aanvraag Stadspas (balie)",
+            "url": "/test-api/focus/document?id=4400000017&isBulk=true&isDms=false",
+            "datePublished": "2019-07-08T15:05:52+02:00",
+            "type": "PDF"
+          },
+          {
+            "id": "4400000006",
+            "title": "Aanvraag Stadspas (digitaal)",
+            "url": "/test-api/focus/document?id=4400000006&isBulk=true&isDms=false",
+            "datePublished": "2019-07-08T15:05:52+02:00",
+            "type": "PDF"
+          }
+        ],
         "datePublished": "2019-07-08T15:05:52+02:00",
-        "dateStart": "2019-07-07T15:05:52+02:00",
-        "dienstverleningstermijn": 56,
-        "productTitle": "Stadspas",
-        "steps": [
-            {
-                "id": "aanvraag",
-                "title": "aanvraag",
-                "documents": [
-                    {
-                        "id": "4400000004",
-                        "title": "Aanvraag Stadspas (papier)",
-                        "url": "/test-api/focus/document?id=4400000004&isBulk=true&isDms=false",
-                        "datePublished": "2019-07-07T15:05:52+02:00",
-                        "type": "PDF",
-                    },
-                    {
-                        "id": "4400000016",
-                        "title": "Aanvraag Stadspas (papier)",
-                        "url": "/test-api/focus/document?id=4400000016&isBulk=true&isDms=false",
-                        "datePublished": "2019-07-07T15:05:52+02:00",
-                        "type": "PDF",
-                    },
-                    {
-                        "id": "4400000005",
-                        "title": "Aanvraag Stadspas (balie)",
-                        "url": "/test-api/focus/document?id=4400000005&isBulk=true&isDms=false",
-                        "datePublished": "2019-07-07T15:05:52+02:00",
-                        "type": "PDF",
-                    },
-                    {
-                        "id": "4400000017",
-                        "title": "Aanvraag Stadspas (balie)",
-                        "url": "/test-api/focus/document?id=4400000017&isBulk=true&isDms=false",
-                        "datePublished": "2019-07-07T15:05:52+02:00",
-                        "type": "PDF",
-                    },
-                    {
-                        "id": "4400000006",
-                        "title": "Aanvraag Stadspas (digitaal)",
-                        "url": "/test-api/focus/document?id=4400000006&isBulk=true&isDms=false",
-                        "datePublished": "2019-07-07T15:05:52+02:00",
-                        "type": "PDF",
-                    },
-                ],
-                "datePublished": "2019-07-07T15:05:52+02:00",
-                "product": "Stadspas",
-                "description": "U hebt op 08 juli 2019 een Stadspas aangevraagd.",
-                "status": "Aanvraag",
-                "isActive": false,
-                "isChecked": true,
-            },
-            {
-                "id": "inBehandeling",
-                "title": "inBehandeling",
-                "documents": [],
-                "datePublished": "2019-07-08T15:05:52+02:00",
-                "product": "Stadspas",
-                "description": "\n          <p>\n            Het kan zijn dat u nog extra informatie moet opsturen. U ontvangt\n            vóór 29 september 2019 ons besluit.\n          </p>\n          <p>\n            <strong>\n              Let op: Deze statusinformatie betreft alleen uw aanvraag voor een\n              Stadspas.\n            </strong>\n            <br />\n            Uw eventuele andere Hulp bij Laag Inkomen producten worden via post\n            en/of telefoon afgehandeld.\n          </p>\n        ",
-                "status": "In behandeling",
-                "isActive": false,
-                "isChecked": true,
-            },
-            {
-                "id": "herstelTermijn",
-                "title": "herstelTermijn",
-                "documents": [
-                    {
-                        "id": "660000000000020",
-                        "title": "Verzoek om informatie, hersteltermijn",
-                        "url": "/test-api/focus/document?id=660000000000020&isBulk=false&isDms=false",
-                        "datePublished": "2019-07-18T15:05:52+02:00",
-                        "type": "PDF",
-                    }
-                ],
-                "datePublished": "2019-07-18T15:05:52+02:00",
-                "aantalDagenHerstelTermijn": 20,
-                "product": "Stadspas",
-                "description": "\n          <p>\n            Wij hebben meer informatie en tijd nodig om uw aanvraag te\n            verwerken. Bekijk de brief voor meer details. U moet de extra\n            informatie vóór 07 augustus 2019 opsturen. Dan ontvangt u\n            vóór 19 oktober 2019 ons besluit.\n          </p>\n          <p>\n            Tip: Lever de informatie die wij gevraagd hebben zo spoedig mogelijk\n            in. Hoe eerder u ons de noodzakelijke informatie geeft, hoe eerder\n            wij verder kunnen met de behandeling van uw aanvraag.\n          </p>\n        ",
-                "status": "Informatie nodig",
-                "isActive": false,
-                "isChecked": true,
-            },
-            {
-                "id": "beslissing",
-                "title": "beslissing",
-                "documents": [
-                    {
-                        "id": "660000000000021",
-                        "title": "Stadspas Besluit [afwijzing of toekenning]",
-                        "url": "/test-api/focus/document?id=660000000000021&isBulk=false&isDms=false",
-                        "datePublished": "2019-07-08T15:05:52+02:00",
-                        "type": "PDF",
-                    }
-                ],
-                "datePublished": "2019-07-08T15:05:52+02:00",
-                "product": "Stadspas",
-                "description": "\n            <p>\n              U heeft recht op een Stadspas. Bekijk de brief voor meer details.\n            </p>\n            <p>\n              <a href=https://www.amsterdam.nl/stadspas external={true}>\n                Meer informatie over de stadspas\n              </a>\n            </p>\n          ",
-                "status": "Besluit",
-                "isActive": true,
-                "isChecked": true,
-                "decision": "toekenning",
-            },
-        ],
-        "link": {
-            "title": "Meer informatie",
-            "to": "/inkomen-en-stadspas/stadspas/810800599",
-        },
-        "status": "Besluit",
+        "product": "Stadspas",
+        "description": "U hebt op 08 juli 2019 een Stadspas aangevraagd.",
+        "status": "Aanvraag",
+        "isActive": true,
+        "isChecked": true
+      }
+    ],
+    "link": {
+      "title": "Meer informatie",
+      "to": "/inkomen-en-stadspas/stadspas/3820824234"
     },
-    {
-        "id": "1936415159",
-        "title": "Stadspas",
-        "type": "Minimafonds",
-        "datePublished": "2019-07-06T15:05:52+02:00",
-        "dateStart": "2019-07-03T15:05:52+02:00",
-        "dienstverleningstermijn": 56,
-        "productTitle": "Stadspas",
-        "steps": [
-            {
-                "id": "aanvraag",
-                "title": "aanvraag",
-                "documents": [
-                    {
-                        "id": "4400000004",
-                        "title": "Aanvraag Stadspas (papier)",
-                        "url": "/test-api/focus/document?id=4400000004&isBulk=true&isDms=false",
-                        "datePublished": "2019-07-03T15:05:52+02:00",
-                        "type": "PDF",
-                    },
-                    {
-                        "id": "4400000016",
-                        "title": "Aanvraag Stadspas (papier)",
-                        "url": "/test-api/focus/document?id=4400000016&isBulk=true&isDms=false",
-                        "datePublished": "2019-07-03T15:05:52+02:00",
-                        "type": "PDF",
-                    },
-                    {
-                        "id": "4400000005",
-                        "title": "Aanvraag Stadspas (balie)",
-                        "url": "/test-api/focus/document?id=4400000005&isBulk=true&isDms=false",
-                        "datePublished": "2019-07-03T15:05:52+02:00",
-                        "type": "PDF",
-                    },
-                    {
-                        "id": "4400000017",
-                        "title": "Aanvraag Stadspas (balie)",
-                        "url": "/test-api/focus/document?id=4400000017&isBulk=true&isDms=false",
-                        "datePublished": "2019-07-03T15:05:52+02:00",
-                        "type": "PDF",
-                    },
-                    {
-                        "id": "4400000006",
-                        "title": "Aanvraag Stadspas (digitaal)",
-                        "url": "/test-api/focus/document?id=4400000006&isBulk=true&isDms=false",
-                        "datePublished": "2019-07-03T15:05:52+02:00",
-                        "type": "PDF",
-                    },
-                ],
-                "datePublished": "2019-07-03T15:05:52+02:00",
-                "product": "Stadspas",
-                "description": "U hebt op 06 juli 2019 een Stadspas aangevraagd.",
-                "status": "Aanvraag",
-                "isActive": false,
-                "isChecked": true,
-            },
-            {
-                "id": "inBehandeling",
-                "title": "inBehandeling",
-                "documents": [],
-                "datePublished": "2019-07-04T15:05:52+02:00",
-                "product": "Stadspas",
-                "description": "\n          <p>\n            Het kan zijn dat u nog extra informatie moet opsturen. U ontvangt\n            vóór 25 september 2019 ons besluit.\n          </p>\n          <p>\n            <strong>\n              Let op: Deze statusinformatie betreft alleen uw aanvraag voor een\n              Stadspas.\n            </strong>\n            <br />\n            Uw eventuele andere Hulp bij Laag Inkomen producten worden via post\n            en/of telefoon afgehandeld.\n          </p>\n        ",
-                "status": "In behandeling",
-                "isActive": false,
-                "isChecked": true,
-            },
-            {
-                "id": "herstelTermijn",
-                "title": "herstelTermijn",
-                "documents": [
-                    {
-                        "id": "660000000000020",
-                        "title": "Verzoek om informatie, hersteltermijn",
-                        "url": "/test-api/focus/document?id=660000000000020&isBulk=false&isDms=false",
-                        "datePublished": "2019-07-06T15:05:52+02:00",
-                        "type": "PDF",
-                    }
-                ],
-                "datePublished": "2019-07-06T15:05:52+02:00",
-                "aantalDagenHerstelTermijn": 10,
-                "product": "Stadspas",
-                "description": "\n          <p>\n            Wij hebben meer informatie en tijd nodig om uw aanvraag te\n            verwerken. Bekijk de brief voor meer details. U moet de extra\n            informatie vóór 16 juli 2019 opsturen. Dan ontvangt u\n            vóór 05 oktober 2019 ons besluit.\n          </p>\n          <p>\n            Tip: Lever de informatie die wij gevraagd hebben zo spoedig mogelijk\n            in. Hoe eerder u ons de noodzakelijke informatie geeft, hoe eerder\n            wij verder kunnen met de behandeling van uw aanvraag.\n          </p>\n        ",
-                "status": "Informatie nodig",
-                "isActive": true,
-                "isChecked": true,
-            },
+    "status": "Aanvraag"
+  },
+  {
+    "id": "test-stadspas-validity",
+    "title": "Stadspas",
+    "type": "Minimafonds",
+    "decision": "toekenning",
+    "datePublished": "2019-07-08T15:05:52+02:00",
+    "dateStart": "2019-07-07T15:05:52+02:00",
+    "dienstverleningstermijn": 56,
+    "productTitle": "Stadspas",
+    "steps": [
+      {
+        "id": "aanvraag",
+        "title": "aanvraag",
+        "documents": [
+          {
+            "id": "4400000004",
+            "title": "Aanvraag Stadspas (papier)",
+            "url": "/test-api/focus/document?id=4400000004&isBulk=true&isDms=false",
+            "datePublished": "2019-07-07T15:05:52+02:00",
+            "type": "PDF"
+          },
+          {
+            "id": "4400000016",
+            "title": "Aanvraag Stadspas (papier)",
+            "url": "/test-api/focus/document?id=4400000016&isBulk=true&isDms=false",
+            "datePublished": "2019-07-07T15:05:52+02:00",
+            "type": "PDF"
+          },
+          {
+            "id": "4400000005",
+            "title": "Aanvraag Stadspas (balie)",
+            "url": "/test-api/focus/document?id=4400000005&isBulk=true&isDms=false",
+            "datePublished": "2019-07-07T15:05:52+02:00",
+            "type": "PDF"
+          },
+          {
+            "id": "4400000017",
+            "title": "Aanvraag Stadspas (balie)",
+            "url": "/test-api/focus/document?id=4400000017&isBulk=true&isDms=false",
+            "datePublished": "2019-07-07T15:05:52+02:00",
+            "type": "PDF"
+          },
+          {
+            "id": "4400000006",
+            "title": "Aanvraag Stadspas (digitaal)",
+            "url": "/test-api/focus/document?id=4400000006&isBulk=true&isDms=false",
+            "datePublished": "2019-07-07T15:05:52+02:00",
+            "type": "PDF"
+          }
         ],
-        "link": {
-            "title": "Meer informatie",
-            "to": "/inkomen-en-stadspas/stadspas/1936415159",
-        },
+        "datePublished": "2019-07-07T15:05:52+02:00",
+        "product": "Stadspas",
+        "description": "U hebt op 08 juli 2019 een Stadspas aangevraagd.",
+        "status": "Aanvraag",
+        "isActive": false,
+        "isChecked": true
+      },
+      {
+        "id": "inBehandeling",
+        "title": "inBehandeling",
+        "documents": [],
+        "datePublished": "2019-07-08T15:05:52+02:00",
+        "product": "Stadspas",
+        "description": "\n          <p>\n            Het kan zijn dat u nog extra informatie moet opsturen. U ontvangt\n            vóór 29 september 2019 ons besluit.\n          </p>\n          <p>\n            <strong>\n              Let op: Deze statusinformatie betreft alleen uw aanvraag voor een\n              Stadspas.\n            </strong>\n            <br />\n            Uw eventuele andere Hulp bij Laag Inkomen producten worden via post\n            en/of telefoon afgehandeld.\n          </p>\n        ",
+        "status": "In behandeling",
+        "isActive": false,
+        "isChecked": true
+      },
+      {
+        "id": "herstelTermijn",
+        "title": "herstelTermijn",
+        "documents": [
+          {
+            "id": "660000000000020",
+            "title": "Verzoek om informatie, hersteltermijn",
+            "url": "/test-api/focus/document?id=660000000000020&isBulk=false&isDms=false",
+            "datePublished": "2019-07-18T15:05:52+02:00",
+            "type": "PDF"
+          }
+        ],
+        "datePublished": "2019-07-18T15:05:52+02:00",
+        "aantalDagenHerstelTermijn": 20,
+        "product": "Stadspas",
+        "description": "\n          <p>\n            Wij hebben meer informatie en tijd nodig om uw aanvraag te\n            verwerken. Bekijk de brief voor meer details. U moet de extra\n            informatie vóór 07 augustus 2019 opsturen. Dan ontvangt u\n            vóór 19 oktober 2019 ons besluit.\n          </p>\n          <p>\n            Tip: Lever de informatie die wij gevraagd hebben zo spoedig mogelijk\n            in. Hoe eerder u ons de noodzakelijke informatie geeft, hoe eerder\n            wij verder kunnen met de behandeling van uw aanvraag.\n          </p>\n        ",
         "status": "Informatie nodig",
+        "isActive": false,
+        "isChecked": true
+      },
+      {
+        "id": "beslissing",
+        "title": "beslissing",
+        "documents": [
+          {
+            "id": "660000000000021",
+            "title": "Stadspas Besluit [afwijzing of toekenning]",
+            "url": "/test-api/focus/document?id=660000000000021&isBulk=false&isDms=false",
+            "datePublished": "2019-07-08T15:05:52+02:00",
+            "type": "PDF"
+          }
+        ],
+        "datePublished": "2019-07-08T15:05:52+02:00",
+        "product": "Stadspas",
+        "description": "\n            <p>\n              U heeft recht op een Stadspas. Bekijk de brief voor meer details.\n            </p>\n            <p>\n              <a href=https://www.amsterdam.nl/stadspas external={true}>\n                Meer informatie over de stadspas\n              </a>\n            </p>\n          ",
+        "status": "Besluit",
+        "isActive": true,
+        "isChecked": true,
+        "decision": "toekenning"
+      }
+    ],
+    "link": {
+      "title": "Meer informatie",
+      "to": "/inkomen-en-stadspas/stadspas/810800599"
     },
-    {
-        "id": "810804688",
-        "title": "Bijstandsuitkering",
-        "type": "Participatiewet",
-        "decision": "buitenbehandeling",
+    "status": "Besluit"
+  },
+  {
+    "id": "1936415159",
+    "title": "Stadspas",
+    "type": "Minimafonds",
+    "datePublished": "2019-07-06T15:05:52+02:00",
+    "dateStart": "2019-07-03T15:05:52+02:00",
+    "dienstverleningstermijn": 56,
+    "productTitle": "Stadspas",
+    "steps": [
+      {
+        "id": "aanvraag",
+        "title": "aanvraag",
+        "documents": [
+          {
+            "id": "4400000004",
+            "title": "Aanvraag Stadspas (papier)",
+            "url": "/test-api/focus/document?id=4400000004&isBulk=true&isDms=false",
+            "datePublished": "2019-07-03T15:05:52+02:00",
+            "type": "PDF"
+          },
+          {
+            "id": "4400000016",
+            "title": "Aanvraag Stadspas (papier)",
+            "url": "/test-api/focus/document?id=4400000016&isBulk=true&isDms=false",
+            "datePublished": "2019-07-03T15:05:52+02:00",
+            "type": "PDF"
+          },
+          {
+            "id": "4400000005",
+            "title": "Aanvraag Stadspas (balie)",
+            "url": "/test-api/focus/document?id=4400000005&isBulk=true&isDms=false",
+            "datePublished": "2019-07-03T15:05:52+02:00",
+            "type": "PDF"
+          },
+          {
+            "id": "4400000017",
+            "title": "Aanvraag Stadspas (balie)",
+            "url": "/test-api/focus/document?id=4400000017&isBulk=true&isDms=false",
+            "datePublished": "2019-07-03T15:05:52+02:00",
+            "type": "PDF"
+          },
+          {
+            "id": "4400000006",
+            "title": "Aanvraag Stadspas (digitaal)",
+            "url": "/test-api/focus/document?id=4400000006&isBulk=true&isDms=false",
+            "datePublished": "2019-07-03T15:05:52+02:00",
+            "type": "PDF"
+          }
+        ],
         "datePublished": "2019-07-03T15:05:52+02:00",
-        "dateStart": "2019-06-08T15:05:52+02:00",
-        "dienstverleningstermijn": 21,
-        "inspanningsperiode": 28,
-        "productTitle": "Bijstandsuitkering",
-        "steps": [
-            {
-                "id": "aanvraag",
-                "title": "aanvraag",
-                "documents": [
-                    {
-                        "id": "660000000000010",
-                        "title": "Aanvraag WWB (GALO)",
-                        "url": "/test-api/focus/document?id=660000000000010&isBulk=false&isDms=false",
-                        "datePublished": "2019-06-08T15:05:52+02:00",
-                        "type": "PDF",
-                    },
-                    {
-                        "id": "660000000000019",
-                        "title": "Aanvraag WWB (GALO)",
-                        "url": "/test-api/focus/document?id=660000000000019&isBulk=false&isDms=false",
-                        "datePublished": "2019-06-08T15:05:52+02:00",
-                        "type": "PDF",
-                    },
-                ],
-                "datePublished": "2019-06-08T15:05:52+02:00",
-                "product": "Bijstandsuitkering",
-                "description": '\n          <p>U hebt op 08 juni 2019 een bijstandsuitkering aangevraagd.</p>\n          <p>\n            <a\n              href=https://www.amsterdam.nl/veelgevraagd/hoe-vraag-ik-een-bijstandsuitkering-aan/?productid=%7BEC85F0ED-0D9E-46F3-8B2E-E80403D3D5EA%7D#case_%7BB7EF73CD-8A99-4F60-AB6D-02CB9A6BAF6F%7D\n              rel="external noopener noreferrer"\n            >\n              Wat kunt u van ons verwachten?\n            </a>\n          </p>\n        ',
-                "status": "Aanvraag",
-                "isActive": false,
-                "isChecked": true,
-            },
-            {
-                "id": "inBehandeling",
-                "title": "inBehandeling",
-                "documents": [],
-                "datePublished": "2019-06-11T15:05:52+02:00",
-                "product": "Bijstandsuitkering",
-                "description": '\n          <p>\n            Wij gaan nu bekijken of u recht hebt op bijstand. Het kan zijn dat u\n            nog extra informatie moet opsturen. U ontvangt vóór 27 juli 2019 ons besluit.\n          </p>\n          <p>\n            Lees meer over uw\n            <br />\n            <a\n              href=https://www.amsterdam.nl/veelgevraagd/hoe-vraag-ik-een-bijstandsuitkering-aan/?caseid=%7bF00E2134-0317-4981-BAE6-A4802403C2C5%7d\n              rel="external noopener noreferrer"\n            >\n              rechten\n            </a> en <a\n              href=https://www.amsterdam.nl/veelgevraagd/hoe-vraag-ik-een-bijstandsuitkering-aan/?productid=%7b42A997C5-4FCA-4BC2-BF8A-95DFF6BE7121%7d\n              rel="external noopener noreferrer"\n            >\n              plichten\n            </a>\n          </p>\n        ',
-                "status": "In behandeling",
-                "isActive": false,
-                "isChecked": true,
-            },
-            {
-                "id": "herstelTermijn",
-                "title": "herstelTermijn",
-                "documents": [
-                    {
-                        "id": "4400000003",
-                        "title": "Aanvraagformulier WWB (kort)",
-                        "url": "/test-api/focus/document?id=4400000003&isBulk=true&isDms=false",
-                        "datePublished": "2019-06-13T15:05:52+02:00",
-                        "type": "PDF",
-                    }
-                ],
-                "datePublished": "2019-06-13T15:05:52+02:00",
-                "aantalDagenHerstelTermijn": 15,
-                "product": "Bijstandsuitkering",
-                "description": "\n          <p>\n            Wij hebben meer informatie en tijd nodig om uw aanvraag te\n            verwerken. Bekijk de brief voor meer details. U moet de extra\n            informatie vóór 28 juni 2019 opsturen. Dan ontvangt u\n            vóór 11 augustus 2019 ons besluit.\n          </p>\n          <p>\n            Tip: Lever de informatie die wij gevraagd hebben zo spoedig mogelijk\n            in. Hoe eerder u ons de noodzakelijke informatie geeft, hoe eerder\n            wij verder kunnen met de behandeling van uw aanvraag.\n          </p>\n        ",
-                "status": "Informatie nodig",
-                "isActive": false,
-                "isChecked": true,
-            },
-            {
-                "id": "beslissing",
-                "title": "beslissing",
-                "documents": [
-                    {
-                        "id": "660000000000011",
-                        "title": "Niet in behandeling nemen",
-                        "url": "/test-api/focus/document?id=660000000000011&isBulk=false&isDms=false",
-                        "datePublished": "2019-07-03T15:05:52+02:00",
-                        "type": "PDF",
-                    }
-                ],
-                "datePublished": "2019-07-03T15:05:52+02:00",
-                "product": "Bijstandsuitkering",
-                "description": "Uw aanvraag is buiten behandeling gesteld. Bekijk de brief voor meer details.",
-                "status": "Besluit",
-                "isActive": true,
-                "isChecked": true,
-                "decision": "buitenbehandeling",
-            },
+        "product": "Stadspas",
+        "description": "U hebt op 06 juli 2019 een Stadspas aangevraagd.",
+        "status": "Aanvraag",
+        "isActive": false,
+        "isChecked": true
+      },
+      {
+        "id": "inBehandeling",
+        "title": "inBehandeling",
+        "documents": [],
+        "datePublished": "2019-07-04T15:05:52+02:00",
+        "product": "Stadspas",
+        "description": "\n          <p>\n            Het kan zijn dat u nog extra informatie moet opsturen. U ontvangt\n            vóór 25 september 2019 ons besluit.\n          </p>\n          <p>\n            <strong>\n              Let op: Deze statusinformatie betreft alleen uw aanvraag voor een\n              Stadspas.\n            </strong>\n            <br />\n            Uw eventuele andere Hulp bij Laag Inkomen producten worden via post\n            en/of telefoon afgehandeld.\n          </p>\n        ",
+        "status": "In behandeling",
+        "isActive": false,
+        "isChecked": true
+      },
+      {
+        "id": "herstelTermijn",
+        "title": "herstelTermijn",
+        "documents": [
+          {
+            "id": "660000000000020",
+            "title": "Verzoek om informatie, hersteltermijn",
+            "url": "/test-api/focus/document?id=660000000000020&isBulk=false&isDms=false",
+            "datePublished": "2019-07-06T15:05:52+02:00",
+            "type": "PDF"
+          }
         ],
-        "link": {
-            "title": "Meer",
-            "to": "/inkomen-en-stadspas/bijstandsuitkering/810804688",
-        },
-        "status": "Besluit",
+        "datePublished": "2019-07-06T15:05:52+02:00",
+        "aantalDagenHerstelTermijn": 10,
+        "product": "Stadspas",
+        "description": "\n          <p>\n            Wij hebben meer informatie en tijd nodig om uw aanvraag te\n            verwerken. Bekijk de brief voor meer details. U moet de extra\n            informatie vóór 16 juli 2019 opsturen. Dan ontvangt u\n            vóór 05 oktober 2019 ons besluit.\n          </p>\n          <p>\n            Tip: Lever de informatie die wij gevraagd hebben zo spoedig mogelijk\n            in. Hoe eerder u ons de noodzakelijke informatie geeft, hoe eerder\n            wij verder kunnen met de behandeling van uw aanvraag.\n          </p>\n        ",
+        "status": "Informatie nodig",
+        "isActive": true,
+        "isChecked": true
+      }
+    ],
+    "link": {
+      "title": "Meer informatie",
+      "to": "/inkomen-en-stadspas/stadspas/1936415159"
     },
-    {
-        "id": "810807825",
-        "title": "Bijstandsuitkering",
-        "type": "Participatiewet",
-        "decision": "toekenning",
-        "datePublished": "2019-06-08T15:05:51+02:00",
-        "dateStart": "2019-05-09T15:05:51+02:00",
-        "dienstverleningstermijn": 21,
-        "inspanningsperiode": 28,
-        "productTitle": "Bijstandsuitkering",
-        "steps": [
-            {
-                "id": "aanvraag",
-                "title": "aanvraag",
-                "documents": [
-                    {
-                        "id": "660000000000008",
-                        "title": "Aanvraag WWB (GALO)",
-                        "url": "/test-api/focus/document?id=660000000000008&isBulk=false&isDms=false",
-                        "datePublished": "2019-05-09T15:05:51+02:00",
-                        "type": "PDF",
-                    }
-                ],
-                "datePublished": "2019-05-09T15:05:51+02:00",
-                "product": "Bijstandsuitkering",
-                "description": '\n          <p>U hebt op 09 mei 2019 een bijstandsuitkering aangevraagd.</p>\n          <p>\n            <a\n              href=https://www.amsterdam.nl/veelgevraagd/hoe-vraag-ik-een-bijstandsuitkering-aan/?productid=%7BEC85F0ED-0D9E-46F3-8B2E-E80403D3D5EA%7D#case_%7BB7EF73CD-8A99-4F60-AB6D-02CB9A6BAF6F%7D\n              rel="external noopener noreferrer"\n            >\n              Wat kunt u van ons verwachten?\n            </a>\n          </p>\n        ',
-                "status": "Aanvraag",
-                "isActive": false,
-                "isChecked": true,
-            },
-            {
-                "id": "inBehandeling",
-                "title": "inBehandeling",
-                "documents": [],
-                "datePublished": "2019-05-11T15:05:51+02:00",
-                "product": "Bijstandsuitkering",
-                "description": '\n          <p>\n            Wij gaan nu bekijken of u recht hebt op bijstand. Het kan zijn dat u\n            nog extra informatie moet opsturen. U ontvangt vóór 27 juni 2019 ons besluit.\n          </p>\n          <p>\n            Lees meer over uw\n            <br />\n            <a\n              href=https://www.amsterdam.nl/veelgevraagd/hoe-vraag-ik-een-bijstandsuitkering-aan/?caseid=%7bF00E2134-0317-4981-BAE6-A4802403C2C5%7d\n              rel="external noopener noreferrer"\n            >\n              rechten\n            </a> en <a\n              href=https://www.amsterdam.nl/veelgevraagd/hoe-vraag-ik-een-bijstandsuitkering-aan/?productid=%7b42A997C5-4FCA-4BC2-BF8A-95DFF6BE7121%7d\n              rel="external noopener noreferrer"\n            >\n              plichten\n            </a>\n          </p>\n        ',
-                "status": "In behandeling",
-                "isActive": false,
-                "isChecked": true,
-            },
-            {
-                "id": "herstelTermijn",
-                "title": "herstelTermijn",
-                "documents": [
-                    {
-                        "id": "4400000002",
-                        "title": "Formulier Inlichtingen partner",
-                        "url": "/test-api/focus/document?id=4400000002&isBulk=true&isDms=false",
-                        "datePublished": "2019-05-19T15:05:51+02:00",
-                        "type": "PDF",
-                    }
-                ],
-                "datePublished": "2019-05-19T15:05:51+02:00",
-                "aantalDagenHerstelTermijn": 20,
-                "product": "Bijstandsuitkering",
-                "description": "\n          <p>\n            Wij hebben meer informatie en tijd nodig om uw aanvraag te\n            verwerken. Bekijk de brief voor meer details. U moet de extra\n            informatie vóór 08 juni 2019 opsturen. Dan ontvangt u\n            vóór 17 juli 2019 ons besluit.\n          </p>\n          <p>\n            Tip: Lever de informatie die wij gevraagd hebben zo spoedig mogelijk\n            in. Hoe eerder u ons de noodzakelijke informatie geeft, hoe eerder\n            wij verder kunnen met de behandeling van uw aanvraag.\n          </p>\n        ",
-                "status": "Informatie nodig",
-                "isActive": false,
-                "isChecked": true,
-            },
-            {
-                "id": "beslissing",
-                "title": "beslissing",
-                "documents": [
-                    {
-                        "id": "660000000000009",
-                        "title": "Toekennen Levensonderhoud (BIJ)",
-                        "url": "/test-api/focus/document?id=660000000000009&isBulk=false&isDms=false",
-                        "datePublished": "2021-06-08T15:05:51+02:00",
-                        "type": "PDF",
-                    }
-                ],
-                "datePublished": "2021-06-08T15:05:51+02:00",
-                "product": "Bijstandsuitkering",
-                "description": '\n            <p>\n              U heeft recht op een bijstandsuitkering. Bekijk de brief voor meer\n              details.\n            </p>\n            <p>\n              <a\n                href=https://www.amsterdam.nl/veelgevraagd/?caseid=%7BEB3CC77D-89D3-40B9-8A28-779FE8E48ACE%7D\n                rel="external noopener noreferrer"\n              >\n                Bekijk hier de betaaldata van de uitkering\n              </a>\n            </p>\n          ',
-                "status": "Besluit",
-                "isActive": true,
-                "isChecked": true,
-                "decision": "toekenning",
-            },
+    "status": "Informatie nodig"
+  },
+  {
+    "id": "810804688",
+    "title": "Bijstandsuitkering",
+    "type": "Participatiewet",
+    "decision": "buitenbehandeling",
+    "datePublished": "2019-07-03T15:05:52+02:00",
+    "dateStart": "2019-06-08T15:05:52+02:00",
+    "dienstverleningstermijn": 21,
+    "inspanningsperiode": 28,
+    "productTitle": "Bijstandsuitkering",
+    "steps": [
+      {
+        "id": "aanvraag",
+        "title": "aanvraag",
+        "documents": [
+          {
+            "id": "660000000000010",
+            "title": "Aanvraag WWB (GALO)",
+            "url": "/test-api/focus/document?id=660000000000010&isBulk=false&isDms=false",
+            "datePublished": "2019-06-08T15:05:52+02:00",
+            "type": "PDF"
+          },
+          {
+            "id": "660000000000019",
+            "title": "Aanvraag WWB (GALO)",
+            "url": "/test-api/focus/document?id=660000000000019&isBulk=false&isDms=false",
+            "datePublished": "2019-06-08T15:05:52+02:00",
+            "type": "PDF"
+          }
         ],
-        "link": {
-            "title": "Meer",
-            "to": "/inkomen-en-stadspas/bijstandsuitkering/810807825",
-        },
+        "datePublished": "2019-06-08T15:05:52+02:00",
+        "product": "Bijstandsuitkering",
+        "description": "\n          <p>U hebt op 08 juni 2019 een bijstandsuitkering aangevraagd.</p>\n          <p>\n            <a\n              href=https://www.amsterdam.nl/veelgevraagd/hoe-vraag-ik-een-bijstandsuitkering-aan/?productid=%7BEC85F0ED-0D9E-46F3-8B2E-E80403D3D5EA%7D#case_%7BB7EF73CD-8A99-4F60-AB6D-02CB9A6BAF6F%7D\n              rel=\"external noopener noreferrer\"\n            >\n              Wat kunt u van ons verwachten?\n            </a>\n          </p>\n        ",
+        "status": "Aanvraag",
+        "isActive": false,
+        "isChecked": true
+      },
+      {
+        "id": "inBehandeling",
+        "title": "inBehandeling",
+        "documents": [],
+        "datePublished": "2019-06-11T15:05:52+02:00",
+        "product": "Bijstandsuitkering",
+        "description": "\n          <p>\n            Wij gaan nu bekijken of u recht hebt op bijstand. Het kan zijn dat u\n            nog extra informatie moet opsturen. U ontvangt vóór 27 juli 2019 ons besluit.\n          </p>\n          <p>\n            Lees meer over uw\n            <br />\n            <a\n              href=https://www.amsterdam.nl/veelgevraagd/hoe-vraag-ik-een-bijstandsuitkering-aan/?caseid=%7bF00E2134-0317-4981-BAE6-A4802403C2C5%7d\n              rel=\"external noopener noreferrer\"\n            >\n              rechten\n            </a> en <a\n              href=https://www.amsterdam.nl/veelgevraagd/hoe-vraag-ik-een-bijstandsuitkering-aan/?productid=%7b42A997C5-4FCA-4BC2-BF8A-95DFF6BE7121%7d\n              rel=\"external noopener noreferrer\"\n            >\n              plichten\n            </a>\n          </p>\n        ",
+        "status": "In behandeling",
+        "isActive": false,
+        "isChecked": true
+      },
+      {
+        "id": "herstelTermijn",
+        "title": "herstelTermijn",
+        "documents": [
+          {
+            "id": "4400000003",
+            "title": "Aanvraagformulier WWB (kort)",
+            "url": "/test-api/focus/document?id=4400000003&isBulk=true&isDms=false",
+            "datePublished": "2019-06-13T15:05:52+02:00",
+            "type": "PDF"
+          }
+        ],
+        "datePublished": "2019-06-13T15:05:52+02:00",
+        "aantalDagenHerstelTermijn": 15,
+        "product": "Bijstandsuitkering",
+        "description": "\n          <p>\n            Wij hebben meer informatie en tijd nodig om uw aanvraag te\n            verwerken. Bekijk de brief voor meer details. U moet de extra\n            informatie vóór 28 juni 2019 opsturen. Dan ontvangt u\n            vóór 11 augustus 2019 ons besluit.\n          </p>\n          <p>\n            Tip: Lever de informatie die wij gevraagd hebben zo spoedig mogelijk\n            in. Hoe eerder u ons de noodzakelijke informatie geeft, hoe eerder\n            wij verder kunnen met de behandeling van uw aanvraag.\n          </p>\n        ",
+        "status": "Informatie nodig",
+        "isActive": false,
+        "isChecked": true
+      },
+      {
+        "id": "beslissing",
+        "title": "beslissing",
+        "documents": [
+          {
+            "id": "660000000000011",
+            "title": "Niet in behandeling nemen",
+            "url": "/test-api/focus/document?id=660000000000011&isBulk=false&isDms=false",
+            "datePublished": "2019-07-03T15:05:52+02:00",
+            "type": "PDF"
+          }
+        ],
+        "datePublished": "2019-07-03T15:05:52+02:00",
+        "product": "Bijstandsuitkering",
+        "description": "Uw aanvraag is buiten behandeling gesteld. Bekijk de brief voor meer details.",
         "status": "Besluit",
+        "isActive": true,
+        "isChecked": true,
+        "decision": "buitenbehandeling"
+      }
+    ],
+    "link": {
+      "title": "Meer",
+      "to": "/inkomen-en-stadspas/bijstandsuitkering/810804688"
     },
-    {
-        "id": "810802774",
-        "title": "Bijstandsuitkering",
-        "type": "Participatiewet",
-        "decision": "afwijzing",
+    "status": "Besluit"
+  },
+  {
+    "id": "810807825",
+    "title": "Bijstandsuitkering",
+    "type": "Participatiewet",
+    "decision": "toekenning",
+    "datePublished": "2019-06-08T15:05:51+02:00",
+    "dateStart": "2019-05-09T15:05:51+02:00",
+    "dienstverleningstermijn": 21,
+    "inspanningsperiode": 28,
+    "productTitle": "Bijstandsuitkering",
+    "steps": [
+      {
+        "id": "aanvraag",
+        "title": "aanvraag",
+        "documents": [
+          {
+            "id": "660000000000008",
+            "title": "Aanvraag WWB (GALO)",
+            "url": "/test-api/focus/document?id=660000000000008&isBulk=false&isDms=false",
+            "datePublished": "2019-05-09T15:05:51+02:00",
+            "type": "PDF"
+          }
+        ],
+        "datePublished": "2019-05-09T15:05:51+02:00",
+        "product": "Bijstandsuitkering",
+        "description": "\n          <p>U hebt op 09 mei 2019 een bijstandsuitkering aangevraagd.</p>\n          <p>\n            <a\n              href=https://www.amsterdam.nl/veelgevraagd/hoe-vraag-ik-een-bijstandsuitkering-aan/?productid=%7BEC85F0ED-0D9E-46F3-8B2E-E80403D3D5EA%7D#case_%7BB7EF73CD-8A99-4F60-AB6D-02CB9A6BAF6F%7D\n              rel=\"external noopener noreferrer\"\n            >\n              Wat kunt u van ons verwachten?\n            </a>\n          </p>\n        ",
+        "status": "Aanvraag",
+        "isActive": false,
+        "isChecked": true
+      },
+      {
+        "id": "inBehandeling",
+        "title": "inBehandeling",
+        "documents": [],
+        "datePublished": "2019-05-11T15:05:51+02:00",
+        "product": "Bijstandsuitkering",
+        "description": "\n          <p>\n            Wij gaan nu bekijken of u recht hebt op bijstand. Het kan zijn dat u\n            nog extra informatie moet opsturen. U ontvangt vóór 27 juni 2019 ons besluit.\n          </p>\n          <p>\n            Lees meer over uw\n            <br />\n            <a\n              href=https://www.amsterdam.nl/veelgevraagd/hoe-vraag-ik-een-bijstandsuitkering-aan/?caseid=%7bF00E2134-0317-4981-BAE6-A4802403C2C5%7d\n              rel=\"external noopener noreferrer\"\n            >\n              rechten\n            </a> en <a\n              href=https://www.amsterdam.nl/veelgevraagd/hoe-vraag-ik-een-bijstandsuitkering-aan/?productid=%7b42A997C5-4FCA-4BC2-BF8A-95DFF6BE7121%7d\n              rel=\"external noopener noreferrer\"\n            >\n              plichten\n            </a>\n          </p>\n        ",
+        "status": "In behandeling",
+        "isActive": false,
+        "isChecked": true
+      },
+      {
+        "id": "herstelTermijn",
+        "title": "herstelTermijn",
+        "documents": [
+          {
+            "id": "4400000002",
+            "title": "Formulier Inlichtingen partner",
+            "url": "/test-api/focus/document?id=4400000002&isBulk=true&isDms=false",
+            "datePublished": "2019-05-19T15:05:51+02:00",
+            "type": "PDF"
+          }
+        ],
+        "datePublished": "2019-05-19T15:05:51+02:00",
+        "aantalDagenHerstelTermijn": 20,
+        "product": "Bijstandsuitkering",
+        "description": "\n          <p>\n            Wij hebben meer informatie en tijd nodig om uw aanvraag te\n            verwerken. Bekijk de brief voor meer details. U moet de extra\n            informatie vóór 08 juni 2019 opsturen. Dan ontvangt u\n            vóór 17 juli 2019 ons besluit.\n          </p>\n          <p>\n            Tip: Lever de informatie die wij gevraagd hebben zo spoedig mogelijk\n            in. Hoe eerder u ons de noodzakelijke informatie geeft, hoe eerder\n            wij verder kunnen met de behandeling van uw aanvraag.\n          </p>\n        ",
+        "status": "Informatie nodig",
+        "isActive": false,
+        "isChecked": true
+      },
+      {
+        "id": "beslissing",
+        "title": "beslissing",
+        "documents": [
+          {
+            "id": "660000000000009",
+            "title": "Toekennen Levensonderhoud (BIJ)",
+            "url": "/test-api/focus/document?id=660000000000009&isBulk=false&isDms=false",
+            "datePublished": "2021-06-08T15:05:51+02:00",
+            "type": "PDF"
+          }
+        ],
+        "datePublished": "2021-06-08T15:05:51+02:00",
+        "product": "Bijstandsuitkering",
+        "description": "\n            <p>\n              U heeft recht op een bijstandsuitkering. Bekijk de brief voor meer\n              details.\n            </p>\n            <p>\n              <a\n                href=https://www.amsterdam.nl/veelgevraagd/?caseid=%7BEB3CC77D-89D3-40B9-8A28-779FE8E48ACE%7D\n                rel=\"external noopener noreferrer\"\n              >\n                Bekijk hier de betaaldata van de uitkering\n              </a>\n            </p>\n          ",
+        "status": "Besluit",
+        "isActive": true,
+        "isChecked": true,
+        "decision": "toekenning"
+      }
+    ],
+    "link": {
+      "title": "Meer",
+      "to": "/inkomen-en-stadspas/bijstandsuitkering/810807825"
+    },
+    "status": "Besluit"
+  },
+  {
+    "id": "810802774",
+    "title": "Bijstandsuitkering",
+    "type": "Participatiewet",
+    "decision": "afwijzing",
+    "datePublished": "2019-05-07T15:05:51+02:00",
+    "dateStart": "2019-04-09T15:05:51+02:00",
+    "dienstverleningstermijn": 21,
+    "inspanningsperiode": 28,
+    "productTitle": "Bijstandsuitkering",
+    "steps": [
+      {
+        "id": "aanvraag",
+        "title": "aanvraag",
+        "documents": [
+          {
+            "id": "660000000000006",
+            "title": "Aanvraag WWB (GALO)",
+            "url": "/test-api/focus/document?id=660000000000006&isBulk=false&isDms=false",
+            "datePublished": "2019-04-09T15:05:51+02:00",
+            "type": "PDF"
+          }
+        ],
+        "datePublished": "2019-04-09T15:05:51+02:00",
+        "product": "Bijstandsuitkering",
+        "description": "\n          <p>U hebt op 09 april 2019 een bijstandsuitkering aangevraagd.</p>\n          <p>\n            <a\n              href=https://www.amsterdam.nl/veelgevraagd/hoe-vraag-ik-een-bijstandsuitkering-aan/?productid=%7BEC85F0ED-0D9E-46F3-8B2E-E80403D3D5EA%7D#case_%7BB7EF73CD-8A99-4F60-AB6D-02CB9A6BAF6F%7D\n              rel=\"external noopener noreferrer\"\n            >\n              Wat kunt u van ons verwachten?\n            </a>\n          </p>\n        ",
+        "status": "Aanvraag",
+        "isActive": false,
+        "isChecked": true
+      },
+      {
+        "id": "inBehandeling",
+        "title": "inBehandeling",
+        "documents": [],
+        "datePublished": "2019-04-11T15:05:51+02:00",
+        "product": "Bijstandsuitkering",
+        "description": "\n          <p>\n            Wij gaan nu bekijken of u recht hebt op bijstand. Het kan zijn dat u\n            nog extra informatie moet opsturen. U ontvangt vóór 28 mei 2019 ons besluit.\n          </p>\n          <p>\n            Lees meer over uw\n            <br />\n            <a\n              href=https://www.amsterdam.nl/veelgevraagd/hoe-vraag-ik-een-bijstandsuitkering-aan/?caseid=%7bF00E2134-0317-4981-BAE6-A4802403C2C5%7d\n              rel=\"external noopener noreferrer\"\n            >\n              rechten\n            </a> en <a\n              href=https://www.amsterdam.nl/veelgevraagd/hoe-vraag-ik-een-bijstandsuitkering-aan/?productid=%7b42A997C5-4FCA-4BC2-BF8A-95DFF6BE7121%7d\n              rel=\"external noopener noreferrer\"\n            >\n              plichten\n            </a>\n          </p>\n        ",
+        "status": "In behandeling",
+        "isActive": false,
+        "isChecked": true
+      },
+      {
+        "id": "beslissing",
+        "title": "beslissing",
+        "documents": [
+          {
+            "id": "660000000000007",
+            "title": "Afwijzen Levensonderhoud",
+            "url": "/test-api/focus/document?id=660000000000007&isBulk=false&isDms=false",
+            "datePublished": "2019-05-07T15:05:51+02:00",
+            "type": "PDF"
+          }
+        ],
         "datePublished": "2019-05-07T15:05:51+02:00",
-        "dateStart": "2019-04-09T15:05:51+02:00",
-        "dienstverleningstermijn": 21,
-        "inspanningsperiode": 28,
-        "productTitle": "Bijstandsuitkering",
-        "steps": [
-            {
-                "id": "aanvraag",
-                "title": "aanvraag",
-                "documents": [
-                    {
-                        "id": "660000000000006",
-                        "title": "Aanvraag WWB (GALO)",
-                        "url": "/test-api/focus/document?id=660000000000006&isBulk=false&isDms=false",
-                        "datePublished": "2019-04-09T15:05:51+02:00",
-                        "type": "PDF",
-                    }
-                ],
-                "datePublished": "2019-04-09T15:05:51+02:00",
-                "product": "Bijstandsuitkering",
-                "description": '\n          <p>U hebt op 09 april 2019 een bijstandsuitkering aangevraagd.</p>\n          <p>\n            <a\n              href=https://www.amsterdam.nl/veelgevraagd/hoe-vraag-ik-een-bijstandsuitkering-aan/?productid=%7BEC85F0ED-0D9E-46F3-8B2E-E80403D3D5EA%7D#case_%7BB7EF73CD-8A99-4F60-AB6D-02CB9A6BAF6F%7D\n              rel="external noopener noreferrer"\n            >\n              Wat kunt u van ons verwachten?\n            </a>\n          </p>\n        ',
-                "status": "Aanvraag",
-                "isActive": false,
-                "isChecked": true,
-            },
-            {
-                "id": "inBehandeling",
-                "title": "inBehandeling",
-                "documents": [],
-                "datePublished": "2019-04-11T15:05:51+02:00",
-                "product": "Bijstandsuitkering",
-                "description": '\n          <p>\n            Wij gaan nu bekijken of u recht hebt op bijstand. Het kan zijn dat u\n            nog extra informatie moet opsturen. U ontvangt vóór 28 mei 2019 ons besluit.\n          </p>\n          <p>\n            Lees meer over uw\n            <br />\n            <a\n              href=https://www.amsterdam.nl/veelgevraagd/hoe-vraag-ik-een-bijstandsuitkering-aan/?caseid=%7bF00E2134-0317-4981-BAE6-A4802403C2C5%7d\n              rel="external noopener noreferrer"\n            >\n              rechten\n            </a> en <a\n              href=https://www.amsterdam.nl/veelgevraagd/hoe-vraag-ik-een-bijstandsuitkering-aan/?productid=%7b42A997C5-4FCA-4BC2-BF8A-95DFF6BE7121%7d\n              rel="external noopener noreferrer"\n            >\n              plichten\n            </a>\n          </p>\n        ',
-                "status": "In behandeling",
-                "isActive": false,
-                "isChecked": true,
-            },
-            {
-                "id": "beslissing",
-                "title": "beslissing",
-                "documents": [
-                    {
-                        "id": "660000000000007",
-                        "title": "Afwijzen Levensonderhoud",
-                        "url": "/test-api/focus/document?id=660000000000007&isBulk=false&isDms=false",
-                        "datePublished": "2019-05-07T15:05:51+02:00",
-                        "type": "PDF",
-                    }
-                ],
-                "datePublished": "2019-05-07T15:05:51+02:00",
-                "product": "Bijstandsuitkering",
-                "description": "U heeft geen recht op een bijstandsuitkering. Bekijk de brief voor meer details.",
-                "status": "Besluit",
-                "isActive": true,
-                "isChecked": true,
-                "decision": "afwijzing",
-            },
-        ],
-        "link": {
-            "title": "Meer",
-            "to": "/inkomen-en-stadspas/bijstandsuitkering/810802774",
-        },
+        "product": "Bijstandsuitkering",
+        "description": "U heeft geen recht op een bijstandsuitkering. Bekijk de brief voor meer details.",
         "status": "Besluit",
+        "isActive": true,
+        "isChecked": true,
+        "decision": "afwijzing"
+      }
+    ],
+    "link": {
+      "title": "Meer",
+      "to": "/inkomen-en-stadspas/bijstandsuitkering/810802774"
     },
+    "status": "Besluit"
+  }
 ]

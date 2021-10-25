@@ -1,119 +1,119 @@
 [
-    {
-        "id": "249601458",
-        "dateStart": "2020-03-27T17:20:04+01:00",
-        "datePublished": "2020-04-08T17:20:04+02:00",
-        "title": "Tozo 1 (aangevraagd voor 1 juni 2020)",
-        "status": "Besluit",
-        "decision": "intrekking",
-        "productTitle": "Tozo 1",
-        "dateEnd": "2020-04-08T17:20:04+02:00",
-        "type": "Tozo",
-        "link": {
-            "to": "/inkomen/tozo/1/249601458",
-            "title": "Bekijk hoe het met uw aanvraag staat",
-        },
-        "steps": [
-            {
-                "id": "3827165629",
-                "documents": [
-                    {
-                        "id": "4400000027",
-                        "title": "Ontvangst- bevestiging Aanvraag\n27 maart om 17.20 uur",
-                        "url": "/api/focus/document?id=4400000027&isBulk=true&isDms=false",
-                        "datePublished": "2020-03-27T17:20:04+01:00",
-                        "type": "pdf",
-                    },
-                    {
-                        "id": "4400000034",
-                        "title": "Ontvangst- bevestiging Aanvraag\n01 april om 17.20 uur",
-                        "url": "/api/focus/document?id=4400000034&isBulk=true&isDms=false",
-                        "datePublished": "2020-04-01T17:20:04+02:00",
-                        "type": "pdf",
-                    },
-                    {
-                        "id": "4400000033",
-                        "title": "Ontvangst- bevestiging Aanvraag\n02 april om 17.20 uur",
-                        "url": "/api/focus/document?id=4400000033&isBulk=true&isDms=false",
-                        "datePublished": "2020-04-02T17:20:04+02:00",
-                        "type": "pdf",
-                    },
-                ],
-                "product": "Tozo 1",
-                "title": "aanvraag",
-                "description": "<p>\n        Wij hebben uw aanvraag Tozo 1 ontvangen.\n      </p>",
-                "datePublished": "2020-03-27T17:20:04+01:00",
-                "status": "Aanvraag",
-                "isChecked": true,
-                "isActive": true,
-                "notificationTitle": "Wij hebben uw aanvraag Tozo 1 ontvangen",
-                "notificationDescription": "Wij hebben uw aanvraag Tozo 1 ontvangen op 27 maart om 17.20 uur",
-            },
-            {
-                "id": "2696123559",
-                "documents": [
-                    {
-                        "id": "660000000000058",
-                        "title": "Brief betaling voorschot",
-                        "url": "/api/focus/document?id=660000000000058&isBulk=false&isDms=false",
-                        "datePublished": "2020-04-03T17:20:04+02:00",
-                        "type": "pdf",
-                    }
-                ],
-                "product": "Tozo 1",
-                "title": "voorschot",
-                "description": "<p>\n          Wij hebben een voorschot naar uw rekening overgemaakt. Kijk voor de\n          voorwaarden in de brief.\n        </p>",
-                "datePublished": "2020-04-03T17:20:04+02:00",
-                "status": "Voorschot",
-                "isChecked": true,
-                "isActive": true,
-                "notificationTitle": "Tozo 1: Wij hebben een voorschot betaald",
-                "notificationDescription": "Wij hebben een voorschot naar uw rekening overgemaakt.",
-            },
-            {
-                "id": "1104574157",
-                "documents": [
-                    {
-                        "id": "660000000000059",
-                        "title": "Besluit toekenning uitkering",
-                        "url": "/api/focus/document?id=660000000000059&isBulk=false&isDms=false",
-                        "datePublished": "2020-04-08T17:20:04+02:00",
-                        "type": "pdf",
-                    }
-                ],
-                "product": "Tozo 1",
-                "title": "besluit",
-                "description": "<p>\n        U hebt recht op de Tozo 1 uitkering. Bekijk de brief\n        voor meer details.\n      </p>\n      ",
-                "datePublished": "2020-04-08T17:20:04+02:00",
-                "status": "Besluit",
-                "isChecked": true,
-                "isActive": true,
-                "decision": "toekenning",
-                "notificationTitle": "Tozo 1: Uw aanvraag is toegekend",
-                "notificationDescription": "U hebt recht op de Tozo 1 uitkering (besluit: 08 april 2020).",
-            },
-            {
-                "id": "1104574158",
-                "documents": [
-                    {
-                        "id": "660000000000059",
-                        "title": "Besluit toekenning uitkering",
-                        "url": "/api/focus/document?id=660000000000059&isBulk=false&isDms=false",
-                        "datePublished": "2020-04-08T17:20:04+02:00",
-                        "type": "pdf",
-                    }
-                ],
-                "product": "Tozo 1",
-                "title": "besluit",
-                "description": "<p>\n        U hebt recht op de Tozo 1 uitkering. Bekijk de brief\n        voor meer details.\n      </p>\n      ",
-                "datePublished": "2020-04-08",
-                "status": "Besluit",
-                "isChecked": true,
-                "isActive": true,
-                "decision": "intrekking",
-                "notificationTitle": "Tozo 1: Uw aanvraag is toegekend",
-                "notificationDescription": "U hebt recht op de Tozo 1 uitkering (besluit: 08 april 2020).",
-            },
+  {
+    "id": "249601458",
+    "dateStart": "2020-03-27T17:20:04+01:00",
+    "datePublished": "2020-04-08T17:20:04+02:00",
+    "title": "Tozo 1 (aangevraagd voor 1 juni 2020)",
+    "status": "Besluit",
+    "decision": "intrekking",
+    "productTitle": "Tozo 1",
+    "dateEnd": "2020-04-08T17:20:04+02:00",
+    "type": "Tozo",
+    "link": {
+      "to": "/inkomen/tozo/1/249601458",
+      "title": "Bekijk hoe het met uw aanvraag staat"
+    },
+    "steps": [
+      {
+        "id": "3827165629",
+        "documents": [
+          {
+            "id": "4400000027",
+            "title": "Ontvangst- bevestiging Aanvraag\n27 maart om 17.20 uur",
+            "url": "/api/focus/document?id=4400000027&isBulk=true&isDms=false",
+            "datePublished": "2020-03-27T17:20:04+01:00",
+            "type": "pdf"
+          },
+          {
+            "id": "4400000034",
+            "title": "Ontvangst- bevestiging Aanvraag\n01 april om 17.20 uur",
+            "url": "/api/focus/document?id=4400000034&isBulk=true&isDms=false",
+            "datePublished": "2020-04-01T17:20:04+02:00",
+            "type": "pdf"
+          },
+          {
+            "id": "4400000033",
+            "title": "Ontvangst- bevestiging Aanvraag\n02 april om 17.20 uur",
+            "url": "/api/focus/document?id=4400000033&isBulk=true&isDms=false",
+            "datePublished": "2020-04-02T17:20:04+02:00",
+            "type": "pdf"
+          }
         ],
-    }
+        "product": "Tozo 1",
+        "title": "aanvraag",
+        "description": "<p>\n        Wij hebben uw aanvraag Tozo 1 ontvangen.\n      </p>",
+        "datePublished": "2020-03-27T17:20:04+01:00",
+        "status": "Aanvraag",
+        "isChecked": true,
+        "isActive": true,
+        "notificationTitle": "Wij hebben uw aanvraag Tozo 1 ontvangen",
+        "notificationDescription": "Wij hebben uw aanvraag Tozo 1 ontvangen op 27 maart om 17.20 uur"
+      },
+      {
+        "id": "2696123559",
+        "documents": [
+          {
+            "id": "660000000000058",
+            "title": "Brief betaling voorschot",
+            "url": "/api/focus/document?id=660000000000058&isBulk=false&isDms=false",
+            "datePublished": "2020-04-03T17:20:04+02:00",
+            "type": "pdf"
+          }
+        ],
+        "product": "Tozo 1",
+        "title": "voorschot",
+        "description": "<p>\n          Wij hebben een voorschot naar uw rekening overgemaakt. Kijk voor de\n          voorwaarden in de brief.\n        </p>",
+        "datePublished": "2020-04-03T17:20:04+02:00",
+        "status": "Voorschot",
+        "isChecked": true,
+        "isActive": true,
+        "notificationTitle": "Tozo 1: Wij hebben een voorschot betaald",
+        "notificationDescription": "Wij hebben een voorschot naar uw rekening overgemaakt."
+      },
+      {
+        "id": "1104574157",
+        "documents": [
+          {
+            "id": "660000000000059",
+            "title": "Besluit toekenning uitkering",
+            "url": "/api/focus/document?id=660000000000059&isBulk=false&isDms=false",
+            "datePublished": "2020-04-08T17:20:04+02:00",
+            "type": "pdf"
+          }
+        ],
+        "product": "Tozo 1",
+        "title": "besluit",
+        "description": "<p>\n        U hebt recht op de Tozo 1 uitkering. Bekijk de brief\n        voor meer details.\n      </p>\n      ",
+        "datePublished": "2020-04-08T17:20:04+02:00",
+        "status": "Besluit",
+        "isChecked": true,
+        "isActive": true,
+        "decision": "toekenning",
+        "notificationTitle": "Tozo 1: Uw aanvraag is toegekend",
+        "notificationDescription": "U hebt recht op de Tozo 1 uitkering (besluit: 08 april 2020)."
+      },
+      {
+        "id": "1104574158",
+        "documents": [
+          {
+            "id": "660000000000059",
+            "title": "Besluit toekenning uitkering",
+            "url": "/api/focus/document?id=660000000000059&isBulk=false&isDms=false",
+            "datePublished": "2020-04-08T17:20:04+02:00",
+            "type": "pdf"
+          }
+        ],
+        "product": "Tozo 1",
+        "title": "besluit",
+        "description": "<p>\n        U hebt recht op de Tozo 1 uitkering. Bekijk de brief\n        voor meer details.\n      </p>\n      ",
+        "datePublished": "2020-04-08",
+        "status": "Besluit",
+        "isChecked": true,
+        "isActive": true,
+        "decision": "intrekking",
+        "notificationTitle": "Tozo 1: Uw aanvraag is toegekend",
+        "notificationDescription": "U hebt recht op de Tozo 1 uitkering (besluit: 08 april 2020)."
+      }
+    ]
+  }
 ]
