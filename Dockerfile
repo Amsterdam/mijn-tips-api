@@ -22,5 +22,6 @@ RUN pip install --no-cache-dir -r requirements.txt
 COPY .flake8 /app/
 
 COPY tips /app/tips
+COPY tests /app/tests
 USER datapunt
 CMD uwsgi --ini /app/uwsgi.ini
