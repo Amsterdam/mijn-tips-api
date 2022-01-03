@@ -15,7 +15,7 @@ PERSOONLIJK_INKOMENS_TIPS_FILE = os.path.join(
 )
 
 
-app = connexion.FlaskApp(__name__, specification_dir="openapi/")
+app = connexion.FlaskApp(__name__, specification_dir="api/")
 
 if get_sentry_dsn():  # pragma: no cover
     sentry_sdk.init(
@@ -43,7 +43,7 @@ def get_tips_request_data(request_data):
     return {"optin": optin, "user_data": user_data, "source_tips": source_tips}
 
 
-# Route is defined in swagger/tips.yaml
+# Route is defined in openapi.yaml
 def get_tips():
     # This is a POST because the user data gets sent in the body.
     # This data is too large and inappropriate for a GET, also because of privacy reasons
@@ -77,7 +77,7 @@ def health_check():
     return "OK"
 
 
-app.add_api("tips.yaml")
+app.add_api("openapi.yaml")
 
 # set the WSGI application callable to allow using uWSGI:
 application = app.app

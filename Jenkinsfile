@@ -1,103 +1,87 @@
 #!groovy
 
-def tryStep(String message, Closure block, Closure tearDown = null) {
-    try {
-        block()
-    }
-    catch (Throwable t) {
-        slackSend message: "${env.JOB_NAME}: ${message} failure ${env.BUILD_URL}", channel: '#ci-channel', color: 'danger'
-
-        throw t
-    }
-    finally {
-        if (tearDown) {
-            tearDown()
-        }
-    }
+def retagAndPush(String imageName, String currentTag, String newTag)
+{
+    def regex = ~"^https?://"
+    def dockerReg = DOCKER_REGISTRY_HOST - regex
+    sh "docker tag ${dockerReg}/${imageName}:${currentTag} ${dockerReg}/${imageName}:${newTag}"
+    sh "docker push ${dockerReg}/${imageName}:${newTag}"
 }
 
+String BRANCH = "${env.BRANCH_NAME}"
+String IMAGE_NAME = "mijnams/mijn-tips"
+String IMAGE_TAG = "${IMAGE_NAME}:${env.BUILD_NUMBER}"
+String CMDB_ID = "app_mijn-tips"
 
 node {
     stage("Checkout") {
         checkout scm
     }
 
-    stage('Test') {
-        tryStep "test", {
-            docker.withRegistry("${DOCKER_REGISTRY_HOST}",'docker_registry_auth') {
-                docker.build("mijnams/mijn-tips:${env.BUILD_NUMBER}")
-                sh "docker run --rm mijnams/mijn-tips:${env.BUILD_NUMBER} /app/test.sh"
-            }
+    stage("Build image") {
+        docker.withRegistry(DOCKER_REGISTRY_HOST, "docker_registry_auth") {
+            def image = docker.build(IMAGE_TAG)
+            image.push()
         }
     }
+}
 
-    stage("Build image") {
-        tryStep "build", {
-            docker.withRegistry("${DOCKER_REGISTRY_HOST}",'docker_registry_auth') {
-                def image = docker.build("mijnams/mijn-tips:${env.BUILD_NUMBER}", ".")
-                image.push()
+// Skipping tests for the test branch
+if (BRANCH != "test-acc") {
+    node {
+        stage("Test") {
+            docker.withRegistry(DOCKER_REGISTRY_HOST, "docker_registry_auth") {
+                docker.image(IMAGE_TAG).pull()
+                sh "docker run --rm ${IMAGE_TAG} /app/test.sh"
             }
         }
     }
 }
 
-String BRANCH = "${env.BRANCH_NAME}"
-
-if (BRANCH == "master") {
-
+if (BRANCH == "test-acc" || BRANCH == "main") {
     node {
-        stage('Push acceptance image') {
-            tryStep "image tagging", {
-                docker.withRegistry("${DOCKER_REGISTRY_HOST}",'docker_registry_auth') {
-                    def image = docker.image("mijnams/mijn-tips:${env.BUILD_NUMBER}")
-                    image.pull()
-                    image.push("acceptance")
-                }
+        stage("Push acceptance image") {
+            docker.withRegistry(DOCKER_REGISTRY_HOST, "docker_registry_auth") {
+                docker.image(IMAGE_TAG).pull()
+                retagAndPush(IMAGE_NAME, env.BUILD_NUMBER, "acceptance")
             }
         }
     }
 
     node {
         stage("Deploy to ACC") {
-            tryStep "deployment", {
-                build job: 'Subtask_Openstack_Playbook',
-                    parameters: [
-                        [$class: 'StringParameterValue', name: 'INVENTORY', value: 'acceptance'],
-                        [$class: 'StringParameterValue', name: 'PLAYBOOK', value: 'deploy.yml'],
-                        [$class: 'StringParameterValue', name: 'PLAYBOOKPARAMS', value: "-e cmdb_id=app_mijn-tips"],
-                    ]
-            }
+            build job: "Subtask_Openstack_Playbook",
+                parameters: [
+                    [$class: "StringParameterValue", name: "INVENTORY", value: "acceptance"],
+                    [$class: "StringParameterValue", name: "PLAYBOOK", value: "deploy.yml"],
+                    [$class: "StringParameterValue", name: "PLAYBOOKPARAMS", value: "-e cmdb_id=${CMDB_ID}"]
+                ]
         }
     }
+}
 
-    stage('Waiting for approval') {
-        slackSend channel: '#ci-channel', color: 'warning', message: 'mijn tips API is waiting for Production Release - please confirm'
+if (BRANCH == "production-release") {
+    stage("Waiting for approval") {
         input "Deploy to Production?"
     }
 
     node {
-        stage('Push production image') {
-            tryStep "image tagging", {
-                docker.withRegistry("${DOCKER_REGISTRY_HOST}",'docker_registry_auth') {
-                    def image = docker.image("mijnams/mijn-tips:${env.BUILD_NUMBER}")
-                    image.pull()
-                    image.push("production")
-                    image.push("latest")
-                }
+        stage("Push production image") {
+            docker.withRegistry(DOCKER_REGISTRY_HOST, "docker_registry_auth") {
+                docker.image(IMAGE_TAG).pull()
+                retagAndPush(IMAGE_NAME, env.BUILD_NUMBER, "production")
             }
         }
     }
 
     node {
         stage("Deploy") {
-            tryStep "deployment", {
-                build job: 'Subtask_Openstack_Playbook',
-                    parameters: [
-                        [$class: 'StringParameterValue', name: 'INVENTORY', value: 'production'],
-                        [$class: 'StringParameterValue', name: 'PLAYBOOK', value: 'deploy.yml'],
-                        [$class: 'StringParameterValue', name: 'PLAYBOOKPARAMS', value: "-e cmdb_id=app_mijn-tips"],
-                    ]
-            }
+            build job: "Subtask_Openstack_Playbook",
+            parameters: [
+                [$class: "StringParameterValue", name: "INVENTORY", value: "production"],
+                [$class: "StringParameterValue", name: "PLAYBOOK", value: "deploy.yml"],
+                [$class: "StringParameterValue", name: "PLAYBOOKPARAMS", value: "-e cmdb_id=${CMDB_ID}"]
+            ]
         }
     }
 }

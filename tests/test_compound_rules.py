@@ -9,7 +9,7 @@ from tips.api.user_data_tree import UserDataTree
 from tips.config import PROJECT_PATH
 from tips.generator.rule_engine import apply_rules
 from tips.server import get_tips_request_data
-from tips.tests.fixtures.fixture import get_fixture
+from tests.fixtures.fixture import get_fixture
 
 COMPOUND_RULES_FILE = os.path.join(PROJECT_PATH, "api", "compound_rules.json")
 

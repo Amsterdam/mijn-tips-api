@@ -11,7 +11,7 @@ from tips.api.tip_generator import (
     format_source_tips,
     FRONT_END_TIP_KEYS,
 )
-from tips.tests.fixtures.fixture import get_fixture, get_fixture_without_source_tips
+from tests.fixtures.fixture import get_fixture, get_fixture_without_source_tips
 from tips.server import get_tips_request_data
 
 _counter = 0

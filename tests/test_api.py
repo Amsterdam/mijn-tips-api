@@ -7,7 +7,7 @@ from freezegun.api import freeze_time
 from tips.api.tip_generator import tips_pool
 from tips.config import PROJECT_PATH
 from tips.server import application
-from tips.tests.fixtures.fixture import get_fixture_without_source_tips
+from tests.fixtures.fixture import get_fixture_without_source_tips
 
 
 class ApiTests(TestCase):

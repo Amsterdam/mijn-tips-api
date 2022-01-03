@@ -5,7 +5,7 @@ from freezegun import freeze_time
 
 from tips.api.tip_generator import tips_pool
 from tips.server import application
-from tips.tests.fixtures.fixture import get_fixture_without_source_tips, get_fixture
+from tests.fixtures.fixture import get_fixture_without_source_tips, get_fixture
 
 
 class ApiTests(TestCase):
@@ -281,6 +281,7 @@ class ApiTests(TestCase):
             json = response.get_json()
             self.assertEqual(len(json), 0)
 
+    @freeze_time("2021-08-15")
     def test_vakantie_verhuur(self):
         new_pool = [tip for tip in tips_pool if tip["id"] == "mijn-33"]
         self.assertEqual(len(new_pool), 1)
@@ -400,6 +401,7 @@ class ApiTests(TestCase):
             json = response.get_json()
             self.assertEqual(len(json), 0)
 
+    @freeze_time("2021-08-15")
     def test_sportvergoeding_kinderen_personal(self):
         new_pool = [tip for tip in tips_pool if tip["id"] == "mijn-36"]
         self.assertEqual(len(new_pool), 1)
