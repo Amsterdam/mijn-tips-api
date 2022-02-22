@@ -819,15 +819,15 @@
     "active": true,
     "priority": 81,
     "datePublished": "2022-02-22",
-    "title": "Iemand anders voor u laten stemmen",
+    "title": "Kom stemmen op 14, 15 of 16 maart",
     "audience": ["persoonlijk"],
-    "description": "Misschien kunt u zelf niet stemmen. Maak dan toch van uw stemrecht gebruik door een andere kiezer te machtigen. Een gemachtigde mag per verkiezing voor maximaal 2 andere mensen stemmen en voor de stadsdeelcommissie moet de gemachtigde in hetzelfde stadsdeel als u wonen.",
+    "description": "Woensdag 16 maart 2022 kiezen we een nieuwe gemeenteraad. Op dezelfde dag zijn ook de verkiezingen voor de stadsdeelcommissies. Om drukte bij de stembureaus te voorkomen mag u ook op maandag 14 en dinsdag 15 maart stemmen.",
     "rules": [],
     "reason": "",
     "isPersonalized": false,
     "link": {
-      "title": "Kijk hoe u iemand machtigt",
-      "to": "https://www.amsterdam.nl/veelgevraagd/?productid=%7BA991E320-B926-4DD8-845D-65E51519D304%7D"
+      "title": "Kijk voor een stembureau bij u in de buurt",
+      "to": "http://www.amsterdam.nl/verkiezingen"
     },
     "imgUrl": "/api/tips/static/tip_images/stemmen.jpg"
   },
@@ -859,15 +859,15 @@
     "active": true,
     "priority": 81,
     "datePublished": "2022-02-22",
-    "title": "Kom stemmen op 14, 15 of 16 maart",
+    "title": "Iemand anders voor u laten stemmen",
     "audience": ["persoonlijk"],
-    "description": "Woensdag 16 maart 2022 kiezen we een nieuwe gemeenteraad. Op dezelfde dag zijn ook de verkiezingen voor de stadsdeelcommissies. Om drukte bij de stembureaus te voorkomen mag u ook op maandag 14 en dinsdag 15 maart stemmen.",
+    "description": "Misschien kunt u zelf niet stemmen. Maak dan toch van uw stemrecht gebruik door een andere kiezer te machtigen. Een gemachtigde mag per verkiezing voor maximaal 2 andere mensen stemmen en voor de stadsdeelcommissie moet de gemachtigde in hetzelfde stadsdeel als u wonen.",
     "rules": [],
     "reason": "",
     "isPersonalized": false,
     "link": {
-      "title": "Kijk voor een stembureau bij u in de buurt",
-      "to": "http://www.amsterdam.nl/verkiezingen"
+      "title": "Kijk hoe u iemand machtigt",
+      "to": "https://www.amsterdam.nl/veelgevraagd/?productid=%7BA991E320-B926-4DD8-845D-65E51519D304%7D"
     },
     "imgUrl": "/api/tips/static/tip_images/stemmen.jpg"
   }
