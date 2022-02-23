@@ -89,8 +89,9 @@ def tip_filter(tip, userdata_tree, optin: bool = False):
 
     # Return early if basic conditions are not met
     # Don't process personalized tips if optin doesn't match the personalization key of the tip
-    if optin != tip["isPersonalized"]:
-        return False
+    if not tip.get("alwaysVisible", False):
+        if optin != tip["isPersonalized"]:
+            return False
 
     if not tip["active"]:
         return False

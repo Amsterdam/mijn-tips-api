@@ -162,6 +162,24 @@ class ConditionalTest(TestCase):
         # make sure the other is in there
         self.assertEqual(len(tips), 1)
 
+    def test_always_visible(self):
+        tip1_mock = get_tip()
+        tip1_mock["rule"] = [new_rule("$.ERFPACHT.isKnown is true")]
+        tip1_mock["isPersonalized"] = True
+
+        tip2_mock = get_tip()
+        tip2_mock["isPersonalized"] = False
+        tip2_mock["alwaysVisible"] = True
+
+        tips_pool = [tip1_mock, tip2_mock]
+
+        client_data = self.get_client_data(optin=True)
+
+        tips = tips_generator(client_data, tips_pool)
+
+        # make sure the other is in there
+        self.assertEqual(len(tips), 2)
+
     def test_data_based_tip_path(self):
         tip1_mock = get_tip()
         tip1_mock["rules"] = [new_rule("$.ERFPACHT.isKnown is true")]
