@@ -906,7 +906,7 @@
       "title": "Kijk voor een stembureau bij u in de buurt",
       "to": "http://www.amsterdam.nl/verkiezingen"
     },
-    "imgUrl": "/api/tips/static/tip_images/stemmen.jpg"
+    "imgUrl": "/api/tips/static/tip_images/stem.jpg"
   },
   {
     "id": "mijn-38",
@@ -921,15 +921,27 @@
       "persoonlijk"
     ],
     "description": "U hebt een geldige ID-kaart of geldig paspoort nodig om te stemmen. Hebt u een Stadspas met groene stip? Dan kunt u gratis een nieuwe ID-kaart krijgen.",
-    "rules": [],
-    "reason": "",
-    "isPersonalized": false,
-    "alwaysVisible": true,
+    "rules": [
+      {
+        "type": "rule",
+        "rule": "(not $.BRP.identiteitsbewijzen) or (len($.BRP.identiteitsbewijzen.*[@.documentType in ['paspoort', 'nederlandse identiteitskaart', 'europese identiteitskaart'] and dateTime(@.datumAfloop) > dateTime('2022-03-16T00:00:00Z') ]) is 0)"
+      },
+      {
+        "type": "ref",
+        "ref_id": "13"
+      },
+      {
+        "type": "ref",
+        "ref_id": "12"
+      }
+    ],
+    "reason": "U ziet deze tip omdat u een Stadspas met groene stip hebt en geen geldige ID-kaart of paspoort",
+    "isPersonalized": true,
     "link": {
       "title": "Bekijk de voorwaarden",
       "to": "https://www.amsterdam.nl/burgerzaken/paspoort-en-idkaart/id-kaart-aanvragen/"
     },
-    "imgUrl": "/api/tips/static/tip_images/stemmen.jpg"
+    "imgUrl": "/api/tips/static/tip_images/stemmen2021.jpg"
   },
   {
     "id": "mijn-39",
