@@ -86,14 +86,14 @@ class ApiTests(TestCase):
             json=get_fixture_without_source_tips(optin=False),
         )
         tips = response.get_json()
-        self.assertEqual(len(tips), 7)
+        self.assertEqual(len(tips), 9)
 
         response = self.client.post(
             "/tips/gettips?audience=zakelijk,persoonlijk",
             json=get_fixture_without_source_tips(optin=False),
         )
         tips = response.get_json()
-        self.assertEqual(len(tips), 12)
+        self.assertEqual(len(tips), 14)
 
     @freeze_time("2021-06-15")
     def test_income_tips(self):
