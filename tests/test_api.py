@@ -73,6 +73,7 @@ class ApiTests(TestCase):
             tips[6]["reason"], ["U ziet deze tip omdat u een Stadspas hebt"]
         )
 
+    @freeze_time("2022-03-03")
     def test_tips_audience(self):
         response = self.client.post(
             "/tips/gettips?audience=zakelijk",
