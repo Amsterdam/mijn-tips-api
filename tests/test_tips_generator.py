@@ -205,7 +205,7 @@ class ConditionalTest(TestCase):
         tip1_mock = get_tip()
         tip1_mock["rules"] = [
             new_rule(
-                "$.FOCUS_AANVRAGEN[@.id is '810805911' and @.steps.*[@.id is 'aanvraag']]"
+                "$.WPI_AANVRAGEN[@.id is '810805911' and @.steps.*[@.id is 'aanvraag']]"
             )
         ]
         tip1_mock["isPersonalized"] = True

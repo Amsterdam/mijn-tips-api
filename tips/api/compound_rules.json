@@ -4,7 +4,7 @@
     "rules": [
       {
         "type": "rule",
-        "rule": "$.FOCUS_AANVRAGEN.*[@.productTitle is 'Stadspas' and len(@.steps.*[@.decision is 'toekenning' and yearsAgo(@.datePublished) <= 1]) >= 1]"
+        "rule": "$.WPI_STADSPAS.aanvragen.*[@.decision is 'toekenning' and yearsAgo(@.datePublished) <= 1]"
       }
     ],
     "reason": "U ziet deze tip omdat u een Stadspas hebt"
@@ -78,7 +78,7 @@
     "rules": [
       {
         "type": "rule",
-        "rule": "$.FOCUS_TOZO"
+        "rule": "$.WPI_TOZO"
       }
     ]
   },
@@ -87,7 +87,7 @@
     "rules": [
       {
         "type": "rule",
-        "rule": "$.FOCUS_AANVRAGEN.*[@.productTitle is 'Bijstandsuitkering' and len(@.steps.*[@.decision is 'toekenning' and yearsAgo(@.datePublished) <= 1]) >= 1]"
+        "rule": "$.WPI_AANVRAGEN.*[@.decision is 'toekenning' and yearsAgo(@.datePublished) <= 1]"
       }
     ]
   },
@@ -96,7 +96,7 @@
     "rules": [
       {
         "type": "rule",
-        "rule": "($.FOCUS_AANVRAGEN.*[@.productTitle is 'Stadspas' and len(@.steps.*[@.decision is 'toekenning' and yearsAgo(@.datePublished) <= 1]) >= 1]) or ($.FOCUS_AANVRAGEN.*[@.productTitle is 'Bijstandsuitkering' and len(@.steps.*[@.decision is 'toekenning' and yearsAgo(@.datePublished) <= 1]) >= 1]) or ($.FOCUS_TOZO)"
+        "rule": "($.WPI_STADSPAS.aanvragen.*[@.decision is 'toekenning' and yearsAgo(@.datePublished) <= 1]) or ($.WPI_AANVRAGEN.*[@.decision is 'toekenning' and yearsAgo(@.datePublished) <= 1]) or ($.WPI_TOZO)"
       }
     ]
   },
@@ -105,7 +105,7 @@
     "rules": [
       {
         "type": "rule",
-        "rule": "$.FOCUS_STADSPAS is not None"
+        "rule": "$.WPI_STADSPAS.adminNumber is not None"
       }
     ]
   },

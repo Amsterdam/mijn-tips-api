@@ -870,11 +870,11 @@
     "rules": [
       {
         "type": "rule",
-        "rule": "$.FOCUS_TOZO.*[@.decision is 'toekenning' and yearsAgo(@.datePublished) <= 1] or $.FOCUS_TONK.*[@.decision is 'toekenning' and yearsAgo(@.datePublished) <= 1] or $.FOCUS_AANVRAGEN.*[@.productTitle is 'Bijstandsuitkering' and @.decision is 'toekenning' and yearsAgo(@.datePublished) <= 1]"
+        "rule": "$.WPI_TOZO.*[@.decision is 'toekenning' and yearsAgo(@.datePublished) <= 1] or $.WPI_TONK.*[@.decision is 'toekenning' and yearsAgo(@.datePublished) <= 1] or $.WPI_AANVRAGEN.*[@.about is 'Bijstandsuitkering' and @.decision is 'toekenning' and yearsAgo(@.datePublished) <= 1]"
       },
       {
         "type": "rule",
-        "rule": "not $.FOCUS_STADSPAS"
+        "rule": "not $.WPI_STADSPAS.adminNumber"
       }
     ],
     "reason": "u heeft een bijstand, TOZO of TONK en geen Stadspas Groene Stip",

@@ -39,15 +39,16 @@ class TestCompountRules(TestCase):
         rules = [{"type": "ref", "ref_id": "1"}]
 
         def is_valid(stadspas):
-            user_data = UserDataTree({"FOCUS_AANVRAGEN": [stadspas]})
+            user_data = UserDataTree({"WPI_STADSPAS": {"aanvragen": [stadspas]}})
             return apply_rules(user_data, rules, compound_rules)
 
         # Use invalid date
         invalid_date = get_date_years_ago(2)
 
         stadspas = {
-            "productTitle": "Stadspas",
-            "steps": [{"datePublished": invalid_date, "decision": "toekenning"}],
+            "about": "Stadspas",
+            "decision": "toekenning",
+            "datePublished": invalid_date,
         }
         self.assertFalse(is_valid(stadspas))
 
@@ -55,22 +56,17 @@ class TestCompountRules(TestCase):
         valid_date = get_date_years_ago(1)
 
         stadspas = {
-            "productTitle": "Stadspas",
-            "steps": [{"datePublished": valid_date, "decision": "toekenning"}],
+            "about": "Stadspas",
+            "datePublished": valid_date,
+            "decision": "toekenning",
         }
         self.assertTrue(is_valid(stadspas))
 
         # Use invalid decision
         stadspas = {
-            "productTitle": "Stadspas",
-            "steps": [{"datePublished": valid_date, "decision": "afwijzing"}],
-        }
-        self.assertFalse(is_valid(stadspas))
-
-        # Use invalid productTitle
-        stadspas = {
-            "productTitle": "Bijstandsuitkering",
-            "steps": [{"datePublished": valid_date, "decision": "toekenning"}],
+            "about": "Stadspas",
+            "datePublished": valid_date,
+            "decision": "afwijzing",
         }
         self.assertFalse(is_valid(stadspas))
 

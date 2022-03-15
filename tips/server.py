@@ -10,11 +10,6 @@ from sentry_sdk.integrations.flask import FlaskIntegration
 from tips.api.tip_generator import tips_generator
 from tips.config import get_sentry_dsn, get_photo_path
 
-PERSOONLIJK_INKOMENS_TIPS_FILE = os.path.join(
-    PROJECT_PATH, "api", "persoonlijk_inkomens_tips.json"
-)
-
-
 app = connexion.FlaskApp(__name__, specification_dir="api/")
 
 if get_sentry_dsn():  # pragma: no cover
@@ -53,17 +48,7 @@ def get_tips():
 
     request_data = get_tips_request_data(request_data=request.get_json())
     tips_data = tips_generator(request_data, audience=audience)
-    return tips_data
 
-
-def get_income_tips():
-    # This is a POST because the user data gets sent in the body.
-    # This data is too large and inappropriate for a GET, also because of privacy reasons
-    with open(PERSOONLIJK_INKOMENS_TIPS_FILE) as fp:
-        persoonlijk_inkomens_tips = json.load(fp)
-        fp.close()
-    request_data = get_tips_request_data(request_data=request.get_json())
-    tips_data = tips_generator(request_data, persoonlijk_inkomens_tips)
     return tips_data
 
 

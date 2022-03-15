@@ -103,7 +103,7 @@ class ApiTests(TestCase):
             self.assertEqual(json[0]["title"], "Laat geen geld liggen")
 
             # remove tozo docs
-            client_data["userData"]["FOCUS_TOZO"] = []
+            client_data["userData"]["WPI_TOZO"] = []
             response = self.client.post("/tips/gettips", json=client_data)
             json = response.get_json()
             self.assertEqual(len(json), 0)
@@ -124,8 +124,8 @@ class ApiTests(TestCase):
             self.assertEqual(json[0]["title"], "Download de 020werkt-app")
 
             # remove tozo
-            old_tozo = client_data["userData"]["FOCUS_TOZO"]
-            client_data["userData"]["FOCUS_TOZO"] = []
+            old_tozo = client_data["userData"]["WPI_TOZO"]
+            client_data["userData"]["WPI_TOZO"] = []
             response = self.client.post("/tips/gettips", json=client_data)
             json = response.get_json()
             self.assertEqual(len(json), 1)
@@ -133,27 +133,23 @@ class ApiTests(TestCase):
             # also remove bijstandsuitkering
             aanvragen = [
                 i
-                for i in client_data["userData"]["FOCUS_AANVRAGEN"]
-                if i["productTitle"] != "Bijstandsuitkering"
+                for i in client_data["userData"]["WPI_AANVRAGEN"]
+                if i["about"] != "Bijstandsuitkering"
             ]
-            client_data["userData"]["FOCUS_AANVRAGEN"] = aanvragen
+            client_data["userData"]["WPI_AANVRAGEN"] = aanvragen
             response = self.client.post("/tips/gettips", json=client_data)
             json = response.get_json()
             self.assertEqual(len(json), 1)
 
             # also remove stadspas
-            aanvragen = [
-                i
-                for i in client_data["userData"]["FOCUS_AANVRAGEN"]
-                if i["productTitle"] != "Stadspas"
-            ]
-            client_data["userData"]["FOCUS_AANVRAGEN"] = aanvragen
+            aanvragen = []
+            client_data["userData"]["WPI_STADSPAS"]["aanvragen"] = aanvragen
             response = self.client.post("/tips/gettips", json=client_data)
             json = response.get_json()
             self.assertEqual(len(json), 0)
 
             # add back tozo
-            client_data["userData"]["FOCUS_TOZO"] = old_tozo
+            client_data["userData"]["WPI_TOZO"] = old_tozo
             response = self.client.post("/tips/gettips", json=client_data)
             json = response.get_json()
             self.assertEqual(len(json), 1)
@@ -227,7 +223,7 @@ class ApiTests(TestCase):
             self.assertEqual(len(json), 1)
 
             # no stadspas
-            client_data["userData"]["FOCUS_STADSPAS"] = None
+            client_data["userData"]["WPI_STADSPAS"] = None
             response = self.client.post("/tips/gettips", json=client_data)
             json = response.get_json()
             self.assertEqual(len(json), 0)
@@ -416,26 +412,26 @@ class ApiTests(TestCase):
             self.assertEqual(len(json), 0)
 
             # Remove stadspas
-            client_data["userData"]["FOCUS_STADSPAS"] = None
+            client_data["userData"]["WPI_STADSPAS"] = None
             response = self.client.post("/tips/gettips", json=client_data)
             json = response.get_json()
             self.assertEqual(len(json), 0)
 
             # Tozo with toekenning
-            client_data["userData"]["FOCUS_TOZO"][0]["decision"] = "toekenning"
+            client_data["userData"]["WPI_TOZO"][0]["decision"] = "toekenning"
             response = self.client.post("/tips/gettips", json=client_data)
             json = response.get_json()
             self.assertEqual(len(json), 1)
 
             # No tozo but tonk with 'toekenning' and no 'terugtrekking'
-            client_data["userData"]["FOCUS_TOZO"] = []
-            client_data["userData"]["FOCUS_TONK"][0]["decision"] = "toekenning"
+            client_data["userData"]["WPI_TOZO"] = []
+            client_data["userData"]["WPI_TONK"][0]["decision"] = "toekenning"
             response = self.client.post("/tips/gettips", json=client_data)
             json = response.get_json()
             self.assertEqual(len(json), 1)
 
             # No tozo and tonk and no stadspas but bijstands
-            client_data["userData"]["FOCUS_TONK"] = []
+            client_data["userData"]["WPI_TONK"] = []
             response = self.client.post("/tips/gettips", json=client_data)
             json = response.get_json()
             self.assertEqual(len(json), 1)
@@ -443,10 +439,10 @@ class ApiTests(TestCase):
             # No tozo and tonk and no stadspas and no bijstands
             aanvragen = [
                 i
-                for i in client_data["userData"]["FOCUS_AANVRAGEN"]
-                if i["productTitle"] != "Bijstandsuitkering"
+                for i in client_data["userData"]["WPI_AANVRAGEN"]
+                if i["about"] != "Bijstandsuitkering"
             ]
-            client_data["userData"]["FOCUS_AANVRAGEN"] = aanvragen
+            client_data["userData"]["WPI_AANVRAGEN"] = aanvragen
             response = self.client.post("/tips/gettips", json=client_data)
             json = response.get_json()
             self.assertEqual(len(json), 0)

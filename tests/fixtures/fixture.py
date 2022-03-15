@@ -5,10 +5,10 @@ _FIXTURE_PATH = os.path.join(os.path.dirname(os.path.abspath(__file__)), "data")
 
 # these fixtures are copied from the frontend
 BRP = os.path.join(_FIXTURE_PATH, "brp.json")
-FOCUS_AANVRAGEN = os.path.join(_FIXTURE_PATH, "focus_aanvragen.json")
-FOCUS_TOZO = os.path.join(_FIXTURE_PATH, "focus_tozo.json")
-FOCUS_TONK = os.path.join(_FIXTURE_PATH, "focus_tonk.json")
-FOCUS_STADSPAS = os.path.join(_FIXTURE_PATH, "focus_stadspas.json")
+WPI_AANVRAGEN = os.path.join(_FIXTURE_PATH, "wpi_aanvragen.json")
+WPI_TOZO = os.path.join(_FIXTURE_PATH, "wpi_tozo.json")
+WPI_TONK = os.path.join(_FIXTURE_PATH, "wpi_tonk.json")
+WPI_STADSPAS = os.path.join(_FIXTURE_PATH, "wpi_stadspas.json")
 WMO = os.path.join(_FIXTURE_PATH, "wmo.json")
 BELASTING = os.path.join(_FIXTURE_PATH, "belasting.json")
 ERFPACHT = os.path.join(_FIXTURE_PATH, "erfpacht.json")
@@ -21,21 +21,21 @@ def get_fixture(optin=False):
         brp = json.load(brp_file)
         brp_file.close()
 
-    with open(FOCUS_AANVRAGEN) as focus_file:
-        focus_aanvragen = json.load(focus_file)
-        focus_file.close()
+    with open(WPI_AANVRAGEN) as wpi_file:
+        wpi_aanvragen = json.load(wpi_file)
+        wpi_file.close()
 
-    with open(FOCUS_TOZO) as focus_tozo_file:
-        focus_tozo = json.load(focus_tozo_file)
-        focus_tozo_file.close()
+    with open(WPI_TOZO) as wpi_tozo_file:
+        wpi_tozo = json.load(wpi_tozo_file)
+        wpi_tozo_file.close()
 
-    with open(FOCUS_TONK) as focus_tonk_file:
-        focus_tonk = json.load(focus_tonk_file)
-        focus_tonk_file.close()
+    with open(WPI_TONK) as wpi_tonk_file:
+        wpi_tonk = json.load(wpi_tonk_file)
+        wpi_tonk_file.close()
 
-    with open(FOCUS_STADSPAS) as focus_stadspas_file:
-        focus_stadspas = json.load(focus_stadspas_file)
-        focus_stadspas_file.close()
+    with open(WPI_STADSPAS) as wpi_stadspas_file:
+        wpi_stadspas = json.load(wpi_stadspas_file)
+        wpi_stadspas_file.close()
 
     with open(WMO) as wmo_file:
         wmo = json.load(wmo_file)
@@ -58,10 +58,10 @@ def get_fixture(optin=False):
         "tips": belasting["tips"],
         "userData": {
             "BRP": brp,
-            "FOCUS_AANVRAGEN": focus_aanvragen,
-            "FOCUS_TOZO": focus_tozo,
-            "FOCUS_TONK": focus_tonk,
-            "FOCUS_STADSPAS": focus_stadspas,
+            "WPI_AANVRAGEN": wpi_aanvragen,
+            "WPI_TOZO": wpi_tozo,
+            "WPI_TONK": wpi_tonk,
+            "WPI_STADSPAS": wpi_stadspas,
             "WMO": wmo,
             "BELASTINGEN": belasting,
             "ERFPACHT": erfpacht,

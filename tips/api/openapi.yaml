@@ -20,18 +20,6 @@ paths:
             'application/json':
               schema:
                 $ref: '#/components/schemas/tips'
-  /tips/getincometips:
-    post:
-      operationId: tips.server.get_income_tips
-      description: Endpoint for personal income tips. This is a post because the body may contain data to base the tips on.
-      responses:
-        200:
-          description: "list of tips"
-          content:
-            'application/json':
-              schema:
-                $ref: '#/components/schemas/tips'
-
 components:
   schemas:
     tips:

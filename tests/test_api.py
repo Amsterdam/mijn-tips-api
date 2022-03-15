@@ -35,11 +35,13 @@ class ApiTests(TestCase):
         # Change date which we compare to now() in our tests.
         client_data["userData"]["BRP"]["adres"]["begindatumVerblijf"] = recent_date
 
-        for index, item in enumerate(client_data["userData"]["FOCUS_AANVRAGEN"]):
+        for index, item in enumerate(
+            client_data["userData"]["WPI_STADSPAS"]["aanvragen"]
+        ):
             if item["id"] == "test-stadspas-validity":
-                client_data["userData"]["FOCUS_AANVRAGEN"][index]["steps"][-1][
-                    "datePublished"
-                ] = recent_date
+                client_data["userData"]["WPI_STADSPAS"]["aanvragen"][index]["steps"][
+                    -1
+                ]["datePublished"] = recent_date
                 break
 
         response = self.client.post("/tips/gettips", json=client_data)
@@ -94,23 +96,6 @@ class ApiTests(TestCase):
         )
         tips = response.get_json()
         self.assertEqual(len(tips), 12)
-
-    @freeze_time("2021-06-15")
-    def test_income_tips(self):
-        response = self.client.post("/tips/getincometips", json=self._get_client_data())
-
-        tips = response.get_json()
-
-        # Asserting the length of the response here would mean to fix all dates that compare to now() which is somewhat besides the point of this test.
-        self.assertEqual(29, len(tips))
-
-    def test_images(self):
-        for tip in tips_pool:
-            url = tip["imgUrl"]
-            url = url.lstrip("/api")  # api is from the load balancer, not this api
-            response = self.client.get(url)
-            self.assert200(response)
-            response.close()
 
 
 class ApiStaticFiles(TestCase):

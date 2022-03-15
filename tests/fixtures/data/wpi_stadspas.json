@@ -1,0 +1,306 @@
+{
+  "adminNumber": "123456789",
+  "ownerType": "hoofdpashouder",
+  "aanvragen": [
+    {
+      "id": "3820824234",
+      "title": "Stadspas",
+      "datePublished": "2019-07-08T15:05:52+02:00",
+      "dateStart": "2019-07-08T15:05:52+02:00",
+      "about": "Stadspas",
+      "steps": [
+        {
+          "id": "aanvraag",
+          "documents": [
+            {
+              "id": "4400000004",
+              "title": "Aanvraag Stadspas (papier)",
+              "url": "/test-api/focus/document?id=4400000004&isBulk=true&isDms=false",
+              "datePublished": "2019-07-08T15:05:52+02:00"
+            },
+            {
+              "id": "4400000016",
+              "title": "Aanvraag Stadspas (papier)",
+              "url": "/test-api/focus/document?id=4400000016&isBulk=true&isDms=false",
+              "datePublished": "2019-07-08T15:05:52+02:00"
+            },
+            {
+              "id": "4400000005",
+              "title": "Aanvraag Stadspas (balie)",
+              "url": "/test-api/focus/document?id=4400000005&isBulk=true&isDms=false",
+              "datePublished": "2019-07-08T15:05:52+02:00"
+            },
+            {
+              "id": "4400000017",
+              "title": "Aanvraag Stadspas (balie)",
+              "url": "/test-api/focus/document?id=4400000017&isBulk=true&isDms=false",
+              "datePublished": "2019-07-08T15:05:52+02:00"
+            },
+            {
+              "id": "4400000006",
+              "title": "Aanvraag Stadspas (digitaal)",
+              "url": "/test-api/focus/document?id=4400000006&isBulk=true&isDms=false",
+              "datePublished": "2019-07-08T15:05:52+02:00"
+            }
+          ],
+          "datePublished": "2019-07-08T15:05:52+02:00",
+          "description": "U hebt op 08 juli 2019 een Stadspas aangevraagd.",
+          "status": "Aanvraag",
+          "isActive": true,
+          "isChecked": true
+        }
+      ],
+      "link": {
+        "title": "Meer informatie",
+        "to": "/inkomen-en-stadspas/stadspas/3820824234"
+      },
+      "status": "Aanvraag"
+    },
+    {
+      "id": "test-stadspas-validity",
+      "title": "Stadspas",
+      "decision": "toekenning",
+      "datePublished": "2019-07-08T15:05:52+02:00",
+      "dateStart": "2019-07-07T15:05:52+02:00",
+      "about": "Stadspas",
+      "steps": [
+        {
+          "id": "aanvraag",
+          "documents": [
+            {
+              "id": "4400000004",
+              "title": "Aanvraag Stadspas (papier)",
+              "url": "/test-api/focus/document?id=4400000004&isBulk=true&isDms=false",
+              "datePublished": "2019-07-07T15:05:52+02:00"
+            },
+            {
+              "id": "4400000016",
+              "title": "Aanvraag Stadspas (papier)",
+              "url": "/test-api/focus/document?id=4400000016&isBulk=true&isDms=false",
+              "datePublished": "2019-07-07T15:05:52+02:00"
+            },
+            {
+              "id": "4400000005",
+              "title": "Aanvraag Stadspas (balie)",
+              "url": "/test-api/focus/document?id=4400000005&isBulk=true&isDms=false",
+              "datePublished": "2019-07-07T15:05:52+02:00"
+            },
+            {
+              "id": "4400000017",
+              "title": "Aanvraag Stadspas (balie)",
+              "url": "/test-api/focus/document?id=4400000017&isBulk=true&isDms=false",
+              "datePublished": "2019-07-07T15:05:52+02:00"
+            },
+            {
+              "id": "4400000006",
+              "title": "Aanvraag Stadspas (digitaal)",
+              "url": "/test-api/focus/document?id=4400000006&isBulk=true&isDms=false",
+              "datePublished": "2019-07-07T15:05:52+02:00"
+            }
+          ],
+          "datePublished": "2019-07-07T15:05:52+02:00",
+          "description": "U hebt op 08 juli 2019 een Stadspas aangevraagd.",
+          "status": "Aanvraag",
+          "isActive": false,
+          "isChecked": true
+        },
+        {
+          "id": "inBehandeling",
+          "documents": [],
+          "datePublished": "2019-07-08T15:05:52+02:00",
+          "description": "\n          <p>\n            Het kan zijn dat u nog extra informatie moet opsturen. U ontvangt\n            vóór 29 september 2019 ons besluit.\n          </p>\n          <p>\n            <strong>\n              Let op: Deze statusinformatie betreft alleen uw aanvraag voor een\n              Stadspas.\n            </strong>\n            <br />\n            Uw eventuele andere Hulp bij Laag Inkomen producten worden via post\n            en/of telefoon afgehandeld.\n          </p>\n        ",
+          "status": "In behandeling",
+          "isActive": false,
+          "isChecked": true
+        },
+        {
+          "id": "herstelTermijn",
+          "documents": [
+            {
+              "id": "660000000000020",
+              "title": "Verzoek om informatie, hersteltermijn",
+              "url": "/test-api/focus/document?id=660000000000020&isBulk=false&isDms=false",
+              "datePublished": "2019-07-18T15:05:52+02:00"
+            }
+          ],
+          "datePublished": "2019-07-18T15:05:52+02:00",
+          "aantalDagenHerstelTermijn": 20,
+          "description": "\n          <p>\n            Wij hebben meer informatie en tijd nodig om uw aanvraag te\n            verwerken. Bekijk de brief voor meer details. U moet de extra\n            informatie vóór 07 augustus 2019 opsturen. Dan ontvangt u\n            vóór 19 oktober 2019 ons besluit.\n          </p>\n          <p>\n            Tip: Lever de informatie die wij gevraagd hebben zo spoedig mogelijk\n            in. Hoe eerder u ons de noodzakelijke informatie geeft, hoe eerder\n            wij verder kunnen met de behandeling van uw aanvraag.\n          </p>\n        ",
+          "status": "Informatie nodig",
+          "isActive": false,
+          "isChecked": true
+        },
+        {
+          "id": "besluit",
+          "documents": [
+            {
+              "id": "660000000000021",
+              "title": "Stadspas Besluit [afwijzing of toekenning]",
+              "url": "/test-api/focus/document?id=660000000000021&isBulk=false&isDms=false",
+              "datePublished": "2019-07-08T15:05:52+02:00"
+            }
+          ],
+          "datePublished": "2019-07-08T15:05:52+02:00",
+          "description": "\n            <p>\n              U heeft recht op een Stadspas. Bekijk de brief voor meer details.\n            </p>\n            <p>\n              <a href=https://www.amsterdam.nl/stadspas external={true}>\n                Meer informatie over de stadspas\n              </a>\n            </p>\n          ",
+          "status": "Besluit",
+          "isActive": true,
+          "isChecked": true,
+          "decision": "toekenning"
+        }
+      ],
+      "link": {
+        "title": "Meer informatie",
+        "to": "/inkomen-en-stadspas/stadspas/810800599"
+      },
+      "status": "Besluit"
+    },
+    {
+      "id": "1936415159",
+      "title": "Stadspas",
+      "datePublished": "2019-07-06T15:05:52+02:00",
+      "dateStart": "2019-07-03T15:05:52+02:00",
+      "about": "Stadspas",
+      "steps": [
+        {
+          "id": "aanvraag",
+          "documents": [
+            {
+              "id": "4400000004",
+              "title": "Aanvraag Stadspas (papier)",
+              "url": "/test-api/focus/document?id=4400000004&isBulk=true&isDms=false",
+              "datePublished": "2019-07-03T15:05:52+02:00"
+            },
+            {
+              "id": "4400000016",
+              "title": "Aanvraag Stadspas (papier)",
+              "url": "/test-api/focus/document?id=4400000016&isBulk=true&isDms=false",
+              "datePublished": "2019-07-03T15:05:52+02:00"
+            },
+            {
+              "id": "4400000005",
+              "title": "Aanvraag Stadspas (balie)",
+              "url": "/test-api/focus/document?id=4400000005&isBulk=true&isDms=false",
+              "datePublished": "2019-07-03T15:05:52+02:00"
+            },
+            {
+              "id": "4400000017",
+              "title": "Aanvraag Stadspas (balie)",
+              "url": "/test-api/focus/document?id=4400000017&isBulk=true&isDms=false",
+              "datePublished": "2019-07-03T15:05:52+02:00"
+            },
+            {
+              "id": "4400000006",
+              "title": "Aanvraag Stadspas (digitaal)",
+              "url": "/test-api/focus/document?id=4400000006&isBulk=true&isDms=false",
+              "datePublished": "2019-07-03T15:05:52+02:00"
+            }
+          ],
+          "datePublished": "2019-07-03T15:05:52+02:00",
+          "description": "U hebt op 06 juli 2019 een Stadspas aangevraagd.",
+          "status": "aanvraag",
+          "isActive": false,
+          "isChecked": true
+        },
+        {
+          "id": "inBehandeling",
+          "documents": [],
+          "datePublished": "2019-07-04T15:05:52+02:00",
+          "description": "\n          <p>\n            Het kan zijn dat u nog extra informatie moet opsturen. U ontvangt\n            vóór 25 september 2019 ons besluit.\n          </p>\n          <p>\n            <strong>\n              Let op: Deze statusinformatie betreft alleen uw aanvraag voor een\n              Stadspas.\n            </strong>\n            <br />\n            Uw eventuele andere Hulp bij Laag Inkomen producten worden via post\n            en/of telefoon afgehandeld.\n          </p>\n        ",
+          "status": "In behandeling",
+          "isActive": false,
+          "isChecked": true
+        },
+        {
+          "id": "herstelTermijn",
+          "documents": [
+            {
+              "id": "660000000000020",
+              "title": "Verzoek om informatie, hersteltermijn",
+              "url": "/test-api/focus/document?id=660000000000020&isBulk=false&isDms=false",
+              "datePublished": "2019-07-06T15:05:52+02:00"
+            }
+          ],
+          "datePublished": "2019-07-06T15:05:52+02:00",
+          "aantalDagenHerstelTermijn": 10,
+          "description": "\n          <p>\n            Wij hebben meer informatie en tijd nodig om uw aanvraag te\n            verwerken. Bekijk de brief voor meer details. U moet de extra\n            informatie vóór 16 juli 2019 opsturen. Dan ontvangt u\n            vóór 05 oktober 2019 ons besluit.\n          </p>\n          <p>\n            Tip: Lever de informatie die wij gevraagd hebben zo spoedig mogelijk\n            in. Hoe eerder u ons de noodzakelijke informatie geeft, hoe eerder\n            wij verder kunnen met de behandeling van uw aanvraag.\n          </p>\n        ",
+          "status": "Informatie nodig",
+          "isActive": true,
+          "isChecked": true
+        }
+      ],
+      "link": {
+        "title": "Meer informatie",
+        "to": "/inkomen-en-stadspas/stadspas/1936415159"
+      },
+      "status": "herstelTermijn"
+    }
+  ],
+  "stadspassen": [
+    {
+      "id": "200773",
+      "passNumber": "6064366011012608282",
+      "owner": "I Kumari",
+      "passType": "ouder",
+      "dateEnd": "2022-07-31T21:59:59.000Z",
+      "budgets": []
+    },
+    {
+      "id": "200767",
+      "passNumber": "6064366011012603622",
+      "owner": "Z Kumari",
+      "passType": "ouder",
+      "dateEnd": "2022-07-31T21:59:59.000Z",
+      "budgets": []
+    },
+    {
+      "id": "200771",
+      "passNumber": "6064366011012605999",
+      "owner": "A Kumari",
+      "passType": "kind",
+      "dateEnd": "2022-07-31T23:59:59.000Z",
+      "budgets": [
+        {
+          "description": "eenmalig extra kindtegoed",
+          "code": "AMS_test_extra0/3_21/22",
+          "budgetAssigned": 25,
+          "budgetBalance": 25,
+          "urlTransactions": "/wpi/stadspas/transacties/xxxxxxxxxxxxxxxxx1234",
+          "dateEnd": "2022-07-31T21:59:59.000Z"
+        },
+        {
+          "description": "kindtegoed",
+          "code": "AMS_test_21/22",
+          "budgetAssigned": 25,
+          "budgetBalance": 25,
+          "urlTransactions": "/wpi/stadspas/transacties/xxxxxxxxxxxxxxxxx1234",
+          "dateEnd": "2022-08-31T21:59:59.000Z"
+        }
+      ]
+    },
+    {
+      "id": "200774",
+      "passNumber": "6064366011012608795",
+      "owner": "H Grupstal",
+      "passType": "kind",
+      "dateEnd": "2022-07-31T23:59:59.000Z",
+      "budgets": [
+        {
+          "description": "kindtegoed",
+          "code": "AMS_test_21/22_12/14",
+          "budgetAssigned": 150,
+          "budgetBalance": 150,
+          "urlTransactions": "/wpi/stadspas/transacties/xxxxxxxxxxxxxxxxx1234",
+          "dateEnd": "2022-07-31T21:59:59.000Z"
+        },
+        {
+          "description": "eenmalig extra kindtegoed",
+          "code": "AMS_test_extra4/14_21/22",
+          "budgetAssigned": 35,
+          "budgetBalance": 35,
+          "urlTransactions": "/wpi/stadspas/transacties/xxxxxxxxxxxxxxxxx1234",
+          "dateEnd": "2022-07-31T21:59:59.000Z"
+        }
+      ]
+    }
+  ]
+}
