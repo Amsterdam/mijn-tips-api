@@ -169,7 +169,7 @@ class ApiTests(TestCase):
 
             wmodata = client_data["userData"]["WMO"]
             for i in wmodata:
-                if i.get("voorzieningsoortcode") == "AOV":
+                if i.get("itemTypeCode") == "AOV":
                     i["isActual"] = False
 
             response = self.client.post("/tips/gettips", json=client_data)

@@ -765,7 +765,7 @@
         "documents": []
       }
     ],
-    "voorzieningsoortcode": "AOV"
+    "itemTypeCode": "AOV"
   },
   {
     "id": "ambulante-ondersteuning-17",

@@ -54,7 +54,7 @@
         "title": "Meer informatie",
         "to": "/inkomen-en-stadspas/stadspas/3820824234"
       },
-      "status": "Aanvraag"
+      "statusId": "aanvraag"
     },
     {
       "id": "test-stadspas-validity",
@@ -152,7 +152,7 @@
         "title": "Meer informatie",
         "to": "/inkomen-en-stadspas/stadspas/810800599"
       },
-      "status": "Besluit"
+      "statusId": "besluit"
     },
     {
       "id": "1936415159",
@@ -232,7 +232,7 @@
         "title": "Meer informatie",
         "to": "/inkomen-en-stadspas/stadspas/1936415159"
       },
-      "status": "herstelTermijn"
+      "statusId": "herstelTermijn"
     }
   ],
   "stadspassen": [

@@ -12,6 +12,7 @@
             "to": "/inkomen/tonk/1/1436407767",
             "title": "Bekijk hoe het met uw aanvraag staat"
         },
+        "statusId": "besluit",
         "steps": [
             {
                 "documents": [

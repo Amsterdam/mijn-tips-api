@@ -54,7 +54,7 @@
       "title": "Meer",
       "to": "/inkomen-en-stadspas/bijstandsuitkering/810805911"
     },
-    "status": "besluit"
+    "statusId": "besluit"
   },
   {
     "id": "810804688",
@@ -62,8 +62,6 @@
     "decision": "buitenbehandeling",
     "datePublished": "2019-07-03T15:05:52+02:00",
     "dateStart": "2019-06-08T15:05:52+02:00",
-    "dienstverleningstermijn": 21,
-    "inspanningsperiode": 28,
     "about": "Bijstandsuitkering",
     "steps": [
       {
@@ -136,7 +134,7 @@
       "title": "Meer",
       "to": "/inkomen-en-stadspas/bijstandsuitkering/810804688"
     },
-    "status": "besluit"
+    "statusId": "besluit"
   },
   {
     "id": "810807825",
@@ -144,8 +142,6 @@
     "decision": "toekenning",
     "datePublished": "2019-06-08T15:05:51+02:00",
     "dateStart": "2019-05-09T15:05:51+02:00",
-    "dienstverleningstermijn": 21,
-    "inspanningsperiode": 28,
     "about": "Bijstandsuitkering",
     "steps": [
       {
@@ -212,7 +208,7 @@
       "title": "Meer",
       "to": "/inkomen-en-stadspas/bijstandsuitkering/810807825"
     },
-    "status": "besluit"
+    "statusId": "besluit"
   },
   {
     "id": "810802774",
@@ -271,6 +267,6 @@
       "title": "Meer",
       "to": "/inkomen-en-stadspas/bijstandsuitkering/810802774"
     },
-    "status": "besluit"
+    "statusId": "besluit"
   }
 ]

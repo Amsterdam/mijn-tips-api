@@ -1,21 +1,5 @@
 [
   {
-    "id": "mijn-1",
-    "active": false,
-    "dateActiveStart": null,
-    "dateActiveEnd": null,
-    "priority": 50,
-    "datePublished": "2019-07-24",
-    "title": "Geen telefoon op de fiets",
-    "audience": ["persoonlijk"],
-    "description": "U mag geen telefoon meer vasthouden op de fiets.",
-    "link": {
-      "title": "Meer informatie",
-      "to": "https://www.rijksoverheid.nl/onderwerpen/fiets/vraag-en-antwoord/mag-ik-bellen-en-naar-muziek-luisteren-op-de-fiets"
-    },
-    "imgUrl": "api/tips/static/tip_images/bellenopfiets.jpg"
-  },
-  {
     "id": "mijn-2",
     "active": true,
     "dateActiveStart": null,
@@ -23,7 +7,9 @@
     "priority": 20,
     "datePublished": "2019-07-24",
     "title": "Vrijwilliger worden?",
-    "audience": ["persoonlijk"],
+    "audience": [
+      "persoonlijk"
+    ],
     "description": "Er is altijd vrijwilligerswerk dat bij u past. Bekijk de vacatures.",
     "link": {
       "title": "Vrijwilligerscentrale Amsterdam",
@@ -39,7 +25,9 @@
     "priority": 25,
     "datePublished": "2019-07-24",
     "title": "Grofvuil",
-    "audience": ["persoonlijk"],
+    "audience": [
+      "persoonlijk"
+    ],
     "description": "Op een Afvalpunt kunt u uw grofvuil, klein chemisch afval en tweedehands spullen inleveren.",
     "link": {
       "title": "Adressen Afvalpunten",
@@ -55,112 +43,15 @@
     "priority": 20,
     "datePublished": "2019-07-24",
     "title": "Geveltuin",
-    "audience": ["persoonlijk"],
+    "audience": [
+      "persoonlijk"
+    ],
     "description": "Bekijk hoe u gratis een geveltuin kunt aanvragen bij uw stadsdeel. Of hoe u de geveltuin kunt laten verwijderen.",
     "link": {
       "title": "Meer informatie",
       "to": "https://www.amsterdam.nl/wonen-leefomgeving/medebeheer/geveltuin-aanvragen/"
     },
     "imgUrl": "api/tips/static/tip_images/geveltuin.jpg"
-  },
-  {
-    "id": "mijn-5",
-    "active": false,
-    "dateActiveStart": null,
-    "dateActiveEnd": null,
-    "priority": 20,
-    "datePublished": "2019-07-24",
-    "title": "Vaccinaties",
-    "audience": ["persoonlijk"],
-    "description": "De GGD geeft advies en alle vaccinaties die u nodig hebt voor uw vakantie naar het buitenland.",
-    "link": {
-      "title": "Meer informatie",
-      "to": "https://www.ggd.amsterdam.nl/infectieziekten/reizigersvaccinatie/"
-    },
-    "imgUrl": "api/tips/static/tip_images/vaccinaties.jpg"
-  },
-  {
-    "id": "mijn-6",
-    "active": false,
-    "dateActiveStart": null,
-    "dateActiveEnd": null,
-    "priority": 40,
-    "datePublished": "2019-07-24",
-    "title": "Nieuw in Mijn Amsterdam",
-    "audience": ["persoonlijk"],
-    "description": "U vindt nu ook gemeentelijke belastinginformatie in Mijn Amsterdam.",
-    "rules": [
-      {
-        "type": "rule",
-        "rule": "now() < datetime(2019, 9, 1)"
-      }
-    ],
-    "link": {
-      "title": "Naar Mijn Belastingen",
-      "to": "/"
-    },
-    "imgUrl": "api/tips/static/tip_images/nieuweaansluiting.jpg"
-  },
-  {
-    "id": "mijn-7",
-    "active": false,
-    "dateActiveStart": null,
-    "dateActiveEnd": null,
-    "priority": 20,
-    "datePublished": "2019-07-24",
-    "title": "Kom snel terug",
-    "audience": ["persoonlijk"],
-    "description": "U vindt hier steeds weer nieuwe onderwerpen! Bekijk de nieuwe onderwerpen.",
-    "link": {
-      "title": "Bekijk de nieuwe onderwerpen",
-      "to": "/"
-    },
-    "imgUrl": "api/tips/static/tip_images/nieuweaansluiting.jpg"
-  },
-  {
-    "id": "mijn-8",
-    "active": false,
-    "dateActiveStart": null,
-    "dateActiveEnd": null,
-    "priority": 70,
-    "datePublished": "2019-07-24",
-    "title": "Eeuwigdurende erfpacht",
-    "audience": ["persoonlijk"],
-    "description": "Tot 1 januari 2020 kunt u gebruik maken van de gunstige voorwaarden.",
-    "rules": [
-      {
-        "type": "rule",
-        "rule": "datetime.now() < datetime(2020, 1, 1)"
-      },
-      {
-        "type": "rule",
-        "rule": "$.ERFPACHT.isKnown is true"
-      }
-    ],
-    "reason": "Heeft erfpacht",
-    "isPersonalized": true,
-    "link": {
-      "title": "Ga naar het overstapportaal",
-      "to": "https://www.amsterdam.nl/kenjeerfpacht/overstapportaal/"
-    },
-    "imgUrl": "api/tips/static/tip_images/erfpacht.jpg"
-  },
-  {
-    "id": "mijn-9",
-    "active": false,
-    "dateActiveStart": null,
-    "dateActiveEnd": null,
-    "priority": 40,
-    "datePublished": "2019-08-18",
-    "title": "Mijn buurt",
-    "audience": ["persoonlijk"],
-    "description": "Kijk waar het dichtstbijzijnde Afvalpunt is. En welke vergunningen de gemeente heeft uitgegeven in uw buurt.",
-    "rules": [],
-    "link": {
-      "title": "Kijk op de kaart",
-      "to": "/buurt"
-    },
-    "imgUrl": "/api/tips/static/tip_images/afvalpunt.jpg"
   },
   {
     "id": "mijn-10",
@@ -170,7 +61,9 @@
     "priority": 70,
     "datePublished": "2019-08-18",
     "title": "Bekijk de afvalpunten in de buurt",
-    "audience": ["persoonlijk"],
+    "audience": [
+      "persoonlijk"
+    ],
     "description": "Kijk waar het dichtstbijzijnde Afvalpunt is.",
     "rules": [
       {
@@ -194,7 +87,9 @@
     "priority": 70,
     "datePublished": "2019-10-22",
     "title": "Op stap met uw Stadspas",
-    "audience": ["persoonlijk"],
+    "audience": [
+      "persoonlijk"
+    ],
     "description": "Haalt u alles uit uw Stadspas?",
     "rules": [
       {
@@ -218,7 +113,9 @@
     "priority": 70,
     "datePublished": "2020-06-15",
     "title": "Amsterdammers helpen Amsterdammers",
-    "audience": ["persoonlijk"],
+    "audience": [
+      "persoonlijk"
+    ],
     "description": "Maakt u mondkapjes? Of zoekt u manieren om te blijven bewegen? Amsterdammers helpen elkaar tijdens de coronacrisis.",
     "rules": [],
     "isPersonalized": false,
@@ -237,7 +134,9 @@
     "priority": 70,
     "datePublished": "2020-06-15",
     "title": "Gratis energieadvies",
-    "audience": ["persoonlijk"],
+    "audience": [
+      "persoonlijk"
+    ],
     "description": "Werkt u thuis? Dan neemt uw energieverbruik toe. Wij geven gratis energieadvies aan Verenigingen van Eigenaren.",
     "rules": [],
     "isPersonalized": false,
@@ -256,7 +155,9 @@
     "priority": 70,
     "datePublished": "2020-06-15",
     "title": "Voor nieuwsgierige Amsterdammers",
-    "audience": ["persoonlijk"],
+    "audience": [
+      "persoonlijk"
+    ],
     "description": "Bent u op zoek naar gegevens of onderzoek over uw stad of buurt? U vindt al deze informatie nu op 1 website.",
     "rules": [],
     "isPersonalized": false,
@@ -275,7 +176,9 @@
     "priority": 70,
     "datePublished": "2020-06-15",
     "title": "Gratis uw fiets laten graveren",
-    "audience": ["persoonlijk"],
+    "audience": [
+      "persoonlijk"
+    ],
     "description": "Voorkom diefstal van uw fiets en laat een code in uw frame graveren.",
     "rules": [],
     "isPersonalized": false,
@@ -294,7 +197,9 @@
     "priority": 70,
     "datePublished": "2020-07-03",
     "title": "Welkom in Amsterdam",
-    "audience": ["persoonlijk"],
+    "audience": [
+      "persoonlijk"
+    ],
     "description": "U bent net in Amsterdam komen wonen, welkom! Blijf op de hoogte van het nieuws in uw stadsdeel.",
     "rules": [
       {
@@ -323,7 +228,9 @@
     "priority": 70,
     "datePublished": "2020-09-09",
     "title": "Gemeentelijke belastingen voor ondernemers",
-    "audience": ["zakelijk"],
+    "audience": [
+      "zakelijk"
+    ],
     "description": "Als ondernemer moet u belastingen en heffingen betalen. Welke belastingen? Dat hangt af van uw type bedrijf.",
     "rules": [],
     "reason": "",
@@ -343,7 +250,9 @@
     "priority": 70,
     "datePublished": "2020-09-09",
     "title": "Idee voor uw buurt of straat?",
-    "audience": ["zakelijk"],
+    "audience": [
+      "zakelijk"
+    ],
     "description": "Neem dan contact op met een gebiedsmakelaar. Benieuwd wie in uw buurt de gebiedsmakelaar is?",
     "rules": [],
     "reason": "",
@@ -363,7 +272,9 @@
     "priority": 70,
     "datePublished": "2020-09-09",
     "title": "Subsidie Bedrijveninvesteringszones (BIZ)",
-    "audience": ["zakelijk"],
+    "audience": [
+      "zakelijk"
+    ],
     "description": "Met dit geld kunt u uw winkelstraat, horecagebied of bedrijventerrein opknappen of veiliger maken.",
     "rules": [],
     "reason": "",
@@ -383,7 +294,9 @@
     "priority": 70,
     "datePublished": "2020-09-09",
     "title": "Bedrijfsafval laten ophalen",
-    "audience": ["zakelijk"],
+    "audience": [
+      "zakelijk"
+    ],
     "description": "Hebt u per week meer dan 9 vuilniszakken aan afval? Dan moet u een contract afsluiten met een erkende afvalinzamelaar of de gemeente.",
     "rules": [],
     "reason": "",
@@ -403,7 +316,9 @@
     "priority": 70,
     "datePublished": "2020-09-09",
     "title": "Op zoek naar bedrijfsruimte?",
-    "audience": ["zakelijk"],
+    "audience": [
+      "zakelijk"
+    ],
     "description": "De Stadsloods helpt u bij het vinden van een geschikte ruimte voor uw bedrijf.",
     "rules": [],
     "reason": "",
@@ -424,7 +339,9 @@
     "xxpriority": 18,
     "datePublished": "2020-11-12",
     "title": "Laat geen geld liggen",
-    "audience": ["persoonlijk"],
+    "audience": [
+      "persoonlijk"
+    ],
     "description": "Had u als ondernemer in 2020 moeite om rond te komen? Of had u geldproblemen? Misschien zijn deze regelingen dan interessant voor u.",
     "rules": [
       {
@@ -450,7 +367,10 @@
     "xxpriority": 11,
     "datePublished": "2020-11-25",
     "title": "Download de 020werkt-app",
-    "audience": ["persoonlijk", "zakelijk"],
+    "audience": [
+      "persoonlijk",
+      "zakelijk"
+    ],
     "description": "Via de 020werkt-app krijgt u informatie  over werk, inkomen en meedoen in de wijk. De app is gratis, anoniem en makkelijk in gebruik.",
     "rules": [
       {
@@ -476,12 +396,14 @@
     "xxpriority": 14,
     "datePublished": "2020-11-26",
     "title": "Draag uw mondkapje",
-    "audience": ["persoonlijk"],
+    "audience": [
+      "persoonlijk"
+    ],
     "description": "Tijdens corona moet u een mondkapje op als u reist met het aanvullend openbaar vervoer. Hiermee beschermt u uzelf en anderen.",
     "rules": [
       {
         "type": "rule",
-        "rule": "$.WMO.*[@.voorzieningsoortcode is 'AOV' and @.isActual is true]"
+        "rule": "$.WMO.*[@.itemTypeCode is 'AOV' and @.isActual is true]"
       }
     ],
     "reason": "U ziet deze tip omdat u een aanvullend openbaar vervoer hebt",
@@ -502,7 +424,9 @@
     "xxpriority": 13,
     "datePublished": "2020-11-26",
     "title": "Sporten met korting",
-    "audience": ["persoonlijk"],
+    "audience": [
+      "persoonlijk"
+    ],
     "description": "Met de Stadspas krijgt u maximaal € 300 korting op een sportabonnement voor uw kind.",
     "rules": [
       {
@@ -532,7 +456,10 @@
     "xxpriority": 15,
     "datePublished": "2020-12-20",
     "title": "Hulp bij geldproblemen",
-    "audience": ["persoonlijk", "zakelijk"],
+    "audience": [
+      "persoonlijk",
+      "zakelijk"
+    ],
     "description": "Is uw inkomen te laag om alle rekeningen te betalen of  hebt u schulden? Meld u aan voor gratis hulp",
     "rules": [
       {
@@ -557,7 +484,9 @@
     "priority": 80,
     "datePublished": "2021-02-02",
     "title": "Gratis ID-kaart om te stemmen",
-    "audience": ["persoonlijk"],
+    "audience": [
+      "persoonlijk"
+    ],
     "description": "U hebt een geldige ID-kaart of geldig paspoort nodig om te stemmen. Hebt u een Stadspas met groene stip? Dan kunt u gratis een nieuwe ID-kaart krijgen.",
     "rules": [
       {
@@ -595,7 +524,9 @@
     "xxpriority": 19,
     "datePublished": "2021-02-02",
     "title": "Breng je basis op orde",
-    "audience": ["persoonlijk"],
+    "audience": [
+      "persoonlijk"
+    ],
     "description": "Met Ping Ping weet je precies wat je moet regelen als je 18 wordt, gaat werken, gaat studeren of op jezelf gaat wonen.",
     "rules": [
       {
@@ -624,7 +555,9 @@
     "priority": 80,
     "datePublished": "2021-02-04",
     "title": "Veilig stemmen voor de Tweede Kamer",
-    "audience": ["persoonlijk"],
+    "audience": [
+      "persoonlijk"
+    ],
     "description": "We doen er veel aan om te zorgen dat u veilig kunt stemmen op 15, 16 of 17 maart. Vergeet uw mondkapje niet en doe vooraf de gezondheidscheck!",
     "rules": [],
     "reason": "",
@@ -644,7 +577,9 @@
     "priority": 80,
     "datePublished": "2021-02-04",
     "title": "Iemand anders voor u laten stemmen",
-    "audience": ["persoonlijk"],
+    "audience": [
+      "persoonlijk"
+    ],
     "description": "Misschien kunt u zelf niet stemmen. Maak dan toch van uw stemrecht gebruik door een andere kiezer te machtigen. De gemachtigde mag voor maximaal 3 andere kiezers stemmen.",
     "rules": [],
     "reason": "",
@@ -664,7 +599,9 @@
     "priority": 80,
     "datePublished": "2021-03-04",
     "title": "Kom stemmen op 15, 16 of 17 maart",
-    "audience": ["persoonlijk"],
+    "audience": [
+      "persoonlijk"
+    ],
     "description": "Bent u ouder dan 60 of hebt u gezondheidsklachten? Kom dan alvast op 15 of 16 maart stemmen bij een van de 50 stembureaus. Op 17 maart zijn er meer dan 450 stembureaus open.",
     "rules": [],
     "reason": "",
@@ -684,7 +621,9 @@
     "priority": 80,
     "datePublished": "2021-03-04",
     "title": "Met de auto stemmen",
-    "audience": ["persoonlijk"],
+    "audience": [
+      "persoonlijk"
+    ],
     "description": "Misschien gaat u vanwege corona liever niet naar een stembureau. Ga dan stemmen met de auto. Dat kan in de stemstraat bij de RAI.",
     "rules": [],
     "reason": "",
@@ -704,7 +643,9 @@
     "priority": 10,
     "datePublished": "2021-06-15",
     "title": "Particuliere vakantieverhuur",
-    "audience": ["persoonlijk"],
+    "audience": [
+      "persoonlijk"
+    ],
     "description": "Bij vakantieverhuur moet u naast het eenmalige registratienummer ook jaarlijks een vergunning bij de gemeente aanvragen. Ook moet u iedere keer dat u de woning verhuurt dit bij ons melden.",
     "rules": [
       {
@@ -733,7 +674,9 @@
     "priority": 11,
     "datePublished": "2021-06-15",
     "title": "Overgangsrecht bij Bed and breakfast",
-    "audience": ["persoonlijk"],
+    "audience": [
+      "persoonlijk"
+    ],
     "description": "Hebt u uw B&B voor 1 januari 2019 aangevraagd? Dan mag u tot 1 juli 2026 verhuren volgens deze regels.",
     "rules": [
       {
@@ -758,7 +701,9 @@
     "priority": 11,
     "datePublished": "2021-06-15",
     "title": "Bed & breakfast",
-    "audience": ["persoonlijk"],
+    "audience": [
+      "persoonlijk"
+    ],
     "description": "Vanaf 1 april 2021 moet u naast een vergunning ook een registratienummer aanvragen voor een bed & breakfast.",
     "rules": [
       {
@@ -791,7 +736,9 @@
     "priority": 11,
     "datePublished": "2021-08-01",
     "title": "Sportvergoeding voor kinderen",
-    "audience": ["persoonlijk"],
+    "audience": [
+      "persoonlijk"
+    ],
     "description": "Hebt u moeite om sportactiviteiten voor uw kind te betalen? Regel de vergoeding via Stichting SINA (Samen is niet alleen).",
     "rules": [
       {
@@ -820,7 +767,9 @@
     "priority": 81,
     "datePublished": "2022-03-10",
     "title": "Kom stemmen op 14, 15 of 16 maart",
-    "audience": ["persoonlijk"],
+    "audience": [
+      "persoonlijk"
+    ],
     "description": "Woensdag 16 maart 2022 kiezen we een nieuwe gemeenteraad. Op dezelfde dag zijn ook de verkiezingen voor de stadsdeelcommissies. Om drukte bij de stembureaus te voorkomen mag u ook op maandag 14 en dinsdag 15 maart stemmen.",
     "rules": [],
     "reason": "",
@@ -841,7 +790,9 @@
     "priority": 81,
     "datePublished": "2022-02-22",
     "title": "Gratis ID-kaart om te stemmen",
-    "audience": ["persoonlijk"],
+    "audience": [
+      "persoonlijk"
+    ],
     "description": "U hebt een geldige ID-kaart of geldig paspoort nodig om te stemmen. Hebt u een Stadspas met groene stip? Dan kunt u gratis een nieuwe ID-kaart krijgen.",
     "rules": [
       {
@@ -874,7 +825,9 @@
     "priority": 81,
     "datePublished": "2022-02-28",
     "title": "Iemand anders voor u laten stemmen",
-    "audience": ["persoonlijk"],
+    "audience": [
+      "persoonlijk"
+    ],
     "description": "Misschien kunt u zelf niet stemmen. Maak dan toch van uw stemrecht gebruik door een andere kiezer te machtigen. Een gemachtigde mag per verkiezing voor maximaal 2 andere mensen stemmen en voor de stadsdeelcommissie moet de gemachtigde in hetzelfde stadsdeel als u wonen.",
     "rules": [],
     "reason": "",
@@ -895,7 +848,9 @@
     "priority": 81,
     "datePublished": "2022-03-03",
     "title": "Verkiezingen komen eraan: op wie kunt u stemmen?",
-    "audience": ["persoonlijk"],
+    "audience": [
+      "persoonlijk"
+    ],
     "description": "Op amsterdam.nl/verkiezingen kunt u alle kandidatenlijsten inzien, zodat u weet op welke partijen en kandidaten u op 14, 15 of 16 maart kunt stemmen.",
     "rules": [],
     "reason": "",
@@ -916,7 +871,9 @@
     "priority": 81,
     "datePublished": "2022-03-07",
     "title": "Nog zwevend?",
-    "audience": ["persoonlijk"],
+    "audience": [
+      "persoonlijk"
+    ],
     "description": "Vul de stemwijzer in en ontdek met welke kandidaat jouw mening het meest overeenkomt.",
     "rules": [],
     "reason": "",
