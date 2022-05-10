@@ -30,7 +30,7 @@ def get_tip(priority=50):
         "description": "Tip description %i" % counter,
         "link": {"title": "Tip link title %i" % counter, "to": "https://amsterdam.nl/"},
         "title": "Tip title %i" % counter,
-        "imgUrl": "/api/tips/static/tip_images/erfpacht.jpg",
+        "imgUrl": "/tips/static/tip_images/erfpacht.jpg",
         "reason": ["The reason for this Tip to appear", "and more"],
     }
 

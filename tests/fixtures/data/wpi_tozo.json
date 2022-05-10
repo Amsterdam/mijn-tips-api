@@ -19,19 +19,19 @@
           {
             "id": "4400000027",
             "title": "Ontvangst- bevestiging Aanvraag\n27 maart om 17.20 uur",
-            "url": "/api/focus/document?id=4400000027&isBulk=true&isDms=false",
+            "url": "/focus/document?id=4400000027&isBulk=true&isDms=false",
             "datePublished": "2020-03-27T17:20:04+01:00"
           },
           {
             "id": "4400000034",
             "title": "Ontvangst- bevestiging Aanvraag\n01 april om 17.20 uur",
-            "url": "/api/focus/document?id=4400000034&isBulk=true&isDms=false",
+            "url": "/focus/document?id=4400000034&isBulk=true&isDms=false",
             "datePublished": "2020-04-01T17:20:04+02:00"
           },
           {
             "id": "4400000033",
             "title": "Ontvangst- bevestiging Aanvraag\n02 april om 17.20 uur",
-            "url": "/api/focus/document?id=4400000033&isBulk=true&isDms=false",
+            "url": "/focus/document?id=4400000033&isBulk=true&isDms=false",
             "datePublished": "2020-04-02T17:20:04+02:00"
           }
         ],
@@ -47,7 +47,7 @@
           {
             "id": "660000000000058",
             "title": "Brief betaling voorschot",
-            "url": "/api/focus/document?id=660000000000058&isBulk=false&isDms=false",
+            "url": "/focus/document?id=660000000000058&isBulk=false&isDms=false",
             "datePublished": "2020-04-03T17:20:04+02:00"
           }
         ],
@@ -63,7 +63,7 @@
           {
             "id": "660000000000059",
             "title": "Besluit toekenning uitkering",
-            "url": "/api/focus/document?id=660000000000059&isBulk=false&isDms=false",
+            "url": "/focus/document?id=660000000000059&isBulk=false&isDms=false",
             "datePublished": "2020-04-08T17:20:04+02:00"
           }
         ],
@@ -80,7 +80,7 @@
           {
             "id": "660000000000059",
             "title": "Besluit toekenning uitkering",
-            "url": "/api/focus/document?id=660000000000059&isBulk=false&isDms=false",
+            "url": "/focus/document?id=660000000000059&isBulk=false&isDms=false",
             "datePublished": "2020-04-08T17:20:04+02:00"
           }
         ],

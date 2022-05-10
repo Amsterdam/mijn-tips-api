@@ -13,7 +13,7 @@
           {
             "id": "660000000000004",
             "title": "Aanvraag WWB (GALO)",
-            "url": "/test-api/focus/document?id=660000000000004&isBulk=false&isDms=false",
+            "url": "/focus/document?id=660000000000004&isBulk=false&isDms=false",
             "datePublished": "2019-07-24T15:05:51+02:00"
           }
         ],
@@ -38,7 +38,7 @@
           {
             "id": "660000000000005",
             "title": "Afwijzen Levensonderhoud (BIJ)",
-            "url": "/test-api/focus/document?id=660000000000005&isBulk=false&isDms=false",
+            "url": "/focus/document?id=660000000000005&isBulk=false&isDms=false",
             "datePublished": "2019-07-28T15:05:51+02:00"
           }
         ],
@@ -70,13 +70,13 @@
           {
             "id": "660000000000010",
             "title": "Aanvraag WWB (GALO)",
-            "url": "/test-api/focus/document?id=660000000000010&isBulk=false&isDms=false",
+            "url": "/focus/document?id=660000000000010&isBulk=false&isDms=false",
             "datePublished": "2019-06-08T15:05:52+02:00"
           },
           {
             "id": "660000000000019",
             "title": "Aanvraag WWB (GALO)",
-            "url": "/test-api/focus/document?id=660000000000019&isBulk=false&isDms=false",
+            "url": "/focus/document?id=660000000000019&isBulk=false&isDms=false",
             "datePublished": "2019-06-08T15:05:52+02:00"
           }
         ],
@@ -101,7 +101,7 @@
           {
             "id": "4400000003",
             "title": "Aanvraagformulier WWB (kort)",
-            "url": "/test-api/focus/document?id=4400000003&isBulk=true&isDms=false",
+            "url": "/focus/document?id=4400000003&isBulk=true&isDms=false",
             "datePublished": "2019-06-13T15:05:52+02:00"
           }
         ],
@@ -118,7 +118,7 @@
           {
             "id": "660000000000011",
             "title": "Niet in behandeling nemen",
-            "url": "/test-api/focus/document?id=660000000000011&isBulk=false&isDms=false",
+            "url": "/focus/document?id=660000000000011&isBulk=false&isDms=false",
             "datePublished": "2019-07-03T15:05:52+02:00"
           }
         ],
@@ -150,7 +150,7 @@
           {
             "id": "660000000000008",
             "title": "Aanvraag WWB (GALO)",
-            "url": "/test-api/focus/document?id=660000000000008&isBulk=false&isDms=false",
+            "url": "/focus/document?id=660000000000008&isBulk=false&isDms=false",
             "datePublished": "2019-05-09T15:05:51+02:00"
           }
         ],
@@ -175,7 +175,7 @@
           {
             "id": "4400000002",
             "title": "Formulier Inlichtingen partner",
-            "url": "/test-api/focus/document?id=4400000002&isBulk=true&isDms=false",
+            "url": "/focus/document?id=4400000002&isBulk=true&isDms=false",
             "datePublished": "2019-05-19T15:05:51+02:00"
           }
         ],
@@ -192,7 +192,7 @@
           {
             "id": "660000000000009",
             "title": "Toekennen Levensonderhoud (BIJ)",
-            "url": "/test-api/focus/document?id=660000000000009&isBulk=false&isDms=false",
+            "url": "/focus/document?id=660000000000009&isBulk=false&isDms=false",
             "datePublished": "2021-06-08T15:05:51+02:00"
           }
         ],
@@ -226,7 +226,7 @@
           {
             "id": "660000000000006",
             "title": "Aanvraag WWB (GALO)",
-            "url": "/test-api/focus/document?id=660000000000006&isBulk=false&isDms=false",
+            "url": "/focus/document?id=660000000000006&isBulk=false&isDms=false",
             "datePublished": "2019-04-09T15:05:51+02:00"
           }
         ],
@@ -251,7 +251,7 @@
           {
             "id": "660000000000007",
             "title": "Afwijzen Levensonderhoud",
-            "url": "/test-api/focus/document?id=660000000000007&isBulk=false&isDms=false",
+            "url": "/focus/document?id=660000000000007&isBulk=false&isDms=false",
             "datePublished": "2019-05-07T15:05:51+02:00"
           }
         ],

@@ -15,31 +15,31 @@
             {
               "id": "4400000004",
               "title": "Aanvraag Stadspas (papier)",
-              "url": "/test-api/focus/document?id=4400000004&isBulk=true&isDms=false",
+              "url": "/focus/document?id=4400000004&isBulk=true&isDms=false",
               "datePublished": "2019-07-08T15:05:52+02:00"
             },
             {
               "id": "4400000016",
               "title": "Aanvraag Stadspas (papier)",
-              "url": "/test-api/focus/document?id=4400000016&isBulk=true&isDms=false",
+              "url": "/focus/document?id=4400000016&isBulk=true&isDms=false",
               "datePublished": "2019-07-08T15:05:52+02:00"
             },
             {
               "id": "4400000005",
               "title": "Aanvraag Stadspas (balie)",
-              "url": "/test-api/focus/document?id=4400000005&isBulk=true&isDms=false",
+              "url": "/focus/document?id=4400000005&isBulk=true&isDms=false",
               "datePublished": "2019-07-08T15:05:52+02:00"
             },
             {
               "id": "4400000017",
               "title": "Aanvraag Stadspas (balie)",
-              "url": "/test-api/focus/document?id=4400000017&isBulk=true&isDms=false",
+              "url": "/focus/document?id=4400000017&isBulk=true&isDms=false",
               "datePublished": "2019-07-08T15:05:52+02:00"
             },
             {
               "id": "4400000006",
               "title": "Aanvraag Stadspas (digitaal)",
-              "url": "/test-api/focus/document?id=4400000006&isBulk=true&isDms=false",
+              "url": "/focus/document?id=4400000006&isBulk=true&isDms=false",
               "datePublished": "2019-07-08T15:05:52+02:00"
             }
           ],
@@ -70,31 +70,31 @@
             {
               "id": "4400000004",
               "title": "Aanvraag Stadspas (papier)",
-              "url": "/test-api/focus/document?id=4400000004&isBulk=true&isDms=false",
+              "url": "/focus/document?id=4400000004&isBulk=true&isDms=false",
               "datePublished": "2019-07-07T15:05:52+02:00"
             },
             {
               "id": "4400000016",
               "title": "Aanvraag Stadspas (papier)",
-              "url": "/test-api/focus/document?id=4400000016&isBulk=true&isDms=false",
+              "url": "/focus/document?id=4400000016&isBulk=true&isDms=false",
               "datePublished": "2019-07-07T15:05:52+02:00"
             },
             {
               "id": "4400000005",
               "title": "Aanvraag Stadspas (balie)",
-              "url": "/test-api/focus/document?id=4400000005&isBulk=true&isDms=false",
+              "url": "/focus/document?id=4400000005&isBulk=true&isDms=false",
               "datePublished": "2019-07-07T15:05:52+02:00"
             },
             {
               "id": "4400000017",
               "title": "Aanvraag Stadspas (balie)",
-              "url": "/test-api/focus/document?id=4400000017&isBulk=true&isDms=false",
+              "url": "/focus/document?id=4400000017&isBulk=true&isDms=false",
               "datePublished": "2019-07-07T15:05:52+02:00"
             },
             {
               "id": "4400000006",
               "title": "Aanvraag Stadspas (digitaal)",
-              "url": "/test-api/focus/document?id=4400000006&isBulk=true&isDms=false",
+              "url": "/focus/document?id=4400000006&isBulk=true&isDms=false",
               "datePublished": "2019-07-07T15:05:52+02:00"
             }
           ],
@@ -119,7 +119,7 @@
             {
               "id": "660000000000020",
               "title": "Verzoek om informatie, hersteltermijn",
-              "url": "/test-api/focus/document?id=660000000000020&isBulk=false&isDms=false",
+              "url": "/focus/document?id=660000000000020&isBulk=false&isDms=false",
               "datePublished": "2019-07-18T15:05:52+02:00"
             }
           ],
@@ -136,7 +136,7 @@
             {
               "id": "660000000000021",
               "title": "Stadspas Besluit [afwijzing of toekenning]",
-              "url": "/test-api/focus/document?id=660000000000021&isBulk=false&isDms=false",
+              "url": "/focus/document?id=660000000000021&isBulk=false&isDms=false",
               "datePublished": "2019-07-08T15:05:52+02:00"
             }
           ],
@@ -167,31 +167,31 @@
             {
               "id": "4400000004",
               "title": "Aanvraag Stadspas (papier)",
-              "url": "/test-api/focus/document?id=4400000004&isBulk=true&isDms=false",
+              "url": "/focus/document?id=4400000004&isBulk=true&isDms=false",
               "datePublished": "2019-07-03T15:05:52+02:00"
             },
             {
               "id": "4400000016",
               "title": "Aanvraag Stadspas (papier)",
-              "url": "/test-api/focus/document?id=4400000016&isBulk=true&isDms=false",
+              "url": "/focus/document?id=4400000016&isBulk=true&isDms=false",
               "datePublished": "2019-07-03T15:05:52+02:00"
             },
             {
               "id": "4400000005",
               "title": "Aanvraag Stadspas (balie)",
-              "url": "/test-api/focus/document?id=4400000005&isBulk=true&isDms=false",
+              "url": "/focus/document?id=4400000005&isBulk=true&isDms=false",
               "datePublished": "2019-07-03T15:05:52+02:00"
             },
             {
               "id": "4400000017",
               "title": "Aanvraag Stadspas (balie)",
-              "url": "/test-api/focus/document?id=4400000017&isBulk=true&isDms=false",
+              "url": "/focus/document?id=4400000017&isBulk=true&isDms=false",
               "datePublished": "2019-07-03T15:05:52+02:00"
             },
             {
               "id": "4400000006",
               "title": "Aanvraag Stadspas (digitaal)",
-              "url": "/test-api/focus/document?id=4400000006&isBulk=true&isDms=false",
+              "url": "/focus/document?id=4400000006&isBulk=true&isDms=false",
               "datePublished": "2019-07-03T15:05:52+02:00"
             }
           ],
@@ -216,7 +216,7 @@
             {
               "id": "660000000000020",
               "title": "Verzoek om informatie, hersteltermijn",
-              "url": "/test-api/focus/document?id=660000000000020&isBulk=false&isDms=false",
+              "url": "/focus/document?id=660000000000020&isBulk=false&isDms=false",
               "datePublished": "2019-07-06T15:05:52+02:00"
             }
           ],

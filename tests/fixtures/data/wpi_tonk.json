@@ -19,7 +19,7 @@
                     {
                         "id": "4400000095",
                         "title": "Aanvraag TONK\n05 januari om 17.20 uur",
-                        "url": "/api/focus/document?id=4400000095&isBulk=true&isDms=false",
+                        "url": "/focus/document?id=4400000095&isBulk=true&isDms=false",
                         "datePublished": "2021-01-05T17:20:04+01:00"
                     }
                 ],
@@ -35,7 +35,7 @@
                     {
                         "id": "660000000000500",
                         "title": "Brief meer informatie",
-                        "url": "/api/focus/document?id=660000000000500&isBulk=false&isDms=false",
+                        "url": "/focus/document?id=660000000000500&isBulk=false&isDms=false",
                         "datePublished": "2021-01-06T17:20:04+01:00"
                     }
                 ],
@@ -51,7 +51,7 @@
                     {
                         "id": "660000000010184",
                         "title": "Besluit over verlenging",
-                        "url": "/api/focus/document?id=660000000010184&isBulk=false&isDms=false",
+                        "url": "/focus/document?id=660000000010184&isBulk=false&isDms=false",
                         "datePublished": "2021-08-10T17:20:04+02:00"
                     }
                 ],
@@ -68,7 +68,7 @@
                     {
                         "id": "660000000010184",
                         "title": "Besluit over verlenging",
-                        "url": "/api/focus/document?id=660000000010184&isBulk=false&isDms=false",
+                        "url": "/focus/document?id=660000000010184&isBulk=false&isDms=false",
                         "datePublished": "2021-08-10T17:20:04+02:00"
                     }
                 ],

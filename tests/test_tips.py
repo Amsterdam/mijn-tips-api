@@ -32,7 +32,7 @@ class ApiTests(TestCase):
             ["U krijgt deze tip omdat u nog niet via automatische incasso betaalt"],
         )
         self.assertEqual(
-            belasting_tip["imgUrl"], "api/tips/static/tip_images/belastingen.jpg"
+            belasting_tip["imgUrl"], "/tips/static/tip_images/belastingen.jpg"
         )
 
     def test_belasting_tip_no_optin(self):
